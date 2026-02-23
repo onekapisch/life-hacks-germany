@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="8" fill="#1b1f2a"/>
+  <rect y="0" width="48" height="16" rx="8" fill="#111"/>
+  <rect y="16" width="48" height="16" fill="#d62828"/>
+  <rect y="32" width="48" height="16" rx="0 0 8 8" fill="#f9c74f"/>
+  <text x="24" y="30" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="18" fill="white">LH</text>
+</svg>

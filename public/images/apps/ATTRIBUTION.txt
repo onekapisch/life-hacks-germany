@@ -1,0 +1,169 @@
+App icons in this folder are official app icons fetched from Apple App Store listing artwork (Germany storefront) on 2026-02-13.
+
+1) autoscout24.jpg
+App: AutoScout24: Auto kaufen
+App Store ID: 311785642
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/10/fe/cb/10fecbc7-ce65-add4-d8cc-0f473d757fa4/AppIcon-Live-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg
+
+2) bring.jpg
+App: Bring! Einkaufsliste & Rezepte
+App Store ID: 580669177
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/53/da/a5/53daa587-2eb9-be62-e1db-0b8659c327ed/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg
+
+3) bvg-fahrinfo.jpg
+App: BVG Fahrinfo: ÖPNV Berlin
+App Store ID: 284971745
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/27/7f/8b/277f8b75-e735-fb6f-ad86-1101f20a1187/AppIcon-0-1x_U007emarketing-0-11-0-85-220-0.png/512x512bb.jpg
+
+4) db-navigator.jpg
+App: DB Navigator
+App Store ID: 343555245
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3f/7c/0a/3f7c0a73-a624-241f-29e1-7fef35f235d9/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg
+
+5) deutschlandticket.jpg
+App: App deutschlandticket.de
+App Store ID: 1672638598
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d7/72/f8/d772f82c-612c-303e-73fa-970246000c37/AppIcon-transdev-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg
+
+6) doctolib.jpg
+App: Doctolib - Die Gesundheits-App
+App Store ID: 925339063
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e8/56/96/e85696d6-1fac-4af3-e080-34e3b5094768/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg
+
+7) ebay.jpg
+App: eBay: kaufen & verkaufen
+App Store ID: 282614216
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/bf/6c/7cbf6c31-fb8f-cc5b-f1eb-19e03d6cba8d/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg
+
+8) fax-plus.jpg
+App: Fax.Plus - Send Online Fax App
+App Store ID: 1170782544
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d3/d2/65/d3d2654b-8e3f-0c2b-4206-2bd15f932301/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg
+
+9) flixbus.jpg
+App: FlixBus & FlixTrain
+App Store ID: 778437357
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/3a/c8/3c3ac8b9-63f7-d2c2-2cf7-db82918625f2/flix-production-icon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg
+
+10) immoscout24.jpg
+App: ImmoScout24 - Immobilien
+App Store ID: 344176018
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/f4/37/61f43746-3e54-1ffd-3c44-553fef611377/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg
+
+11) immowelt.jpg
+App: immowelt – Immobilien Suche
+App Store ID: 354119842
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fc/88/d3/fc88d3d2-234c-76bf-f13d-b7398a2f39fb/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg
+
+12) jameda.jpg
+App: jameda: Ärzte finden & buchen
+App Store ID: 1635293480
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/43/92/e8439258-e5eb-9981-4690-bb6206d80467/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg
+
+13) kleinanzeigen.jpg
+App: Kleinanzeigen: Jetzt ohne eBay
+App Store ID: 382596778
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/3d/af/993daf6c-769b-4f19-b142-03e239de2823/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg
+
+14) komoot.jpg
+App: komoot - hike, bike & run
+App Store ID: 447374873
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/62/fc/ae/62fcae6f-6d60-6377-7d65-df5ee7cd1e14/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg
+
+15) lieferando.jpg
+App: Lieferando.de
+App Store ID: 419724490
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/43/c2/2143c294-2137-14b3-f651-1ba3fe18fd25/AppIcon-DE-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg
+
+16) mobile-de.jpg
+App: mobile.de: Autos kaufen & mehr
+App Store ID: 378563358
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b1/cf/bc/b1cfbcd4-de3c-64fb-6cb6-cab515869ba4/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg
+
+17) momox.jpg
+App: momox: Second Hand verkaufen
+App Store ID: 414543719
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/06/20/cc/0620cc74-bdd8-1316-64ad-094c2d6f07a8/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/512x512bb.jpg
+
+18) moovit.jpg
+App: Moovit: Bus, Bahn & ÖPNV Info
+App Store ID: 498477945
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/09/25/a6092558-b49e-d0fa-bbfe-f7295207183e/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg
+
+19) nina.jpg
+App: NINA
+App Store ID: 949360949
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a1/6c/ec/a16cec70-748e-8046-c736-a3512bda7ddd/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg
+
+20) nora.jpg
+App: nora - Notruf-App
+App Store ID: 1585173934
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2b/a4/bf/2ba4bf89-699f-7f07-da7a-12ba6a91a0db/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg
+
+21) post-dhl.jpg
+App: Post & DHL
+App Store ID: 329315203
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/48/e4/e9/48e4e918-23c1-7f25-ccbb-dceec31e001a/AppIcon.Prod-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg
+
+22) regenradar.jpg
+App: RegenRadar mit Wetterwarnungen
+App Store ID: 439839893
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0b/7c/36/0b7c3662-3e6a-7b87-e2a9-0a59cba1ee2c/AppIcon-RegenRadar-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg
+
+23) rewe.jpg
+App: REWE - Supermarkt
+App Store ID: 714121079
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4a/fa/e5/4afae52b-f75c-8bc7-9e58-5273b7d063ea/AppIcon-Release-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg
+
+24) too-good-to-go.jpg
+App: Too Good To Go: Essen retten
+App Store ID: 1060683933
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/77/45/f1/7745f1a6-ef91-0692-e4ed-8d80c86978ec/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg
+
+25) vinted.jpg
+App: Vinted: Secondhand-Marktplatz
+App Store ID: 632064380
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c3/6c/15/c36c15a1-9154-93c0-ebeb-d771693218c7/VintedAppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg
+
+26) warnwetter.jpg
+App: DWD WarnWetter
+App Store ID: 986420993
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1f/f6/f8/1ff6f8d6-4838-a7c0-3491-7a91c5cca533/AppIcon-0-0-1x_U007epad-0-9-0-0-85-220.png/512x512bb.jpg
+
+27) wg-gesucht.jpg
+App: WG-Gesucht - Wohnungen & WG's
+App Store ID: 1084293678
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fb/7d/e2/fb7de20c-fd0b-9a4f-279a-86d34a636f4b/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg
+
+28) windy.jpg
+App: Windy.com - Welt Wettertracker
+App Store ID: 1161387262
+Source artwork URL:
+https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4c/6b/84/4c6b8499-b598-1323-93a8-f5de481df7d0/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg

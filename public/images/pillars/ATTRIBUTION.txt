@@ -1,0 +1,27 @@
+Pillar card images are adapted from Wikimedia Commons and used under Creative Commons licenses.
+All images were resized/compressed for web delivery.
+
+1) bureaucracy-berlin-buergeramt.jpg
+Source: https://commons.wikimedia.org/wiki/File:Berlin_B%C3%BCrgeramt_Tegel_lub_2025-03-02.jpg
+Author: Lukas Beck
+License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0)
+
+2) money-finanzamt-hamburg.jpg
+Source: https://commons.wikimedia.org/wiki/File:Finanzamt_Hamburg_Borsteler_Chaussee.jpg
+Author: Soluvo
+License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+
+3) housing-berlin-prenzlauer-berg.jpg
+Source: https://commons.wikimedia.org/wiki/File:Berlin-Prenzlauer_Berg_-_Apartment_building_and_cafe_at_the_corner_of_Dunckerstra%C3%9Fe_%26_Raumerstra%C3%9Fe%2C_2018.jpg
+Author: Joe Mabel
+License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+
+4) mobility-db-ice-munich.jpg
+Source: https://commons.wikimedia.org/wiki/File:DB_ICE_1_M%C3%BCnchen_Hauptbahnhof_2015_01.jpg
+Author: Julian Herzog
+License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0)
+
+5) everyday-berlin-supermarket.jpg
+Source: https://commons.wikimedia.org/wiki/File:%2820240906%29_Berlin_supermarket_05.jpg
+Author: Roy Zuo
+License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
