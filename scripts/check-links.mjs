@@ -7,6 +7,8 @@ const URL_PATTERN = /https?:\/\/[^\s"'`)<>{}]+/g;
 const USER_AGENT = "Mozilla/5.0 (compatible; LifeHacksGermanyLinkCheck/1.0)";
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 8;
+const IS_CI = process.env.CI === "true";
+const FORCE_STRICT = process.env.LINK_CHECK_STRICT === "1";
 
 function walkFiles(entryPath, collected) {
   if (!fs.existsSync(entryPath)) return;
@@ -94,9 +96,23 @@ async function run() {
 
   const warnings = [];
   const failures = [];
+
+  function shouldWarn(result) {
+    if (result.status === 403 || result.status === 429) return true;
+    if (IS_CI && !FORCE_STRICT) {
+      if (result.status === "ERR") return true;
+      if (typeof result.status === "number") {
+        if (result.status === 404 || result.status === 410) return false;
+        if (result.status >= 400 && result.status < 500) return true;
+        if (result.status >= 500) return true;
+      }
+    }
+    return false;
+  }
+
   for (const result of results) {
     if (typeof result.status === "number" && result.status < 400) continue;
-    if (result.status === 403 || result.status === 429) {
+    if (shouldWarn(result)) {
       warnings.push(result);
       continue;
     }
@@ -104,7 +120,10 @@ async function run() {
   }
 
   if (warnings.length > 0) {
-    console.log("\nWarnings (403/429 - likely anti-bot or rate-limit):");
+    const reason = IS_CI && !FORCE_STRICT
+      ? "external sites may block CI runners or fail transiently"
+      : "likely anti-bot or rate-limit";
+    console.log(`\nWarnings (${reason}):`);
     for (const warning of warnings) {
       console.log(`- [${warning.status}] ${warning.url}`);
     }
