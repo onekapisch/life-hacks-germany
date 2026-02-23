@@ -7,7 +7,7 @@ const URL_PATTERN = /https?:\/\/[^\s"'`)<>{}]+/g;
 const USER_AGENT = "Mozilla/5.0 (compatible; LifeHacksGermanyLinkCheck/1.0)";
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 8;
-const IS_CI = process.env.CI === "true";
+const IS_CI = Boolean(process.env.CI) || process.env.GITHUB_ACTIONS === "true";
 const FORCE_STRICT = process.env.LINK_CHECK_STRICT === "1";
 
 function walkFiles(entryPath, collected) {
@@ -123,9 +123,9 @@ async function run() {
     const reason = IS_CI && !FORCE_STRICT
       ? "external sites may block CI runners or fail transiently"
       : "likely anti-bot or rate-limit";
-    console.log(`\nWarnings (${reason}):`);
+    console.error(`\nWarnings (${reason}):`);
     for (const warning of warnings) {
-      console.log(`- [${warning.status}] ${warning.url}`);
+      console.error(`- [${warning.status}] ${warning.url}`);
     }
   }
 
