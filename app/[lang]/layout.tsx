@@ -86,7 +86,7 @@ export default async function LangLayout({
     const stored = localStorage.getItem("lhg-theme");
     const theme = stored === "dark" || stored === "light"
       ? stored
-      : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      : "light";
     document.documentElement.dataset.theme = theme;
   } catch (_) {}
 })();`,
