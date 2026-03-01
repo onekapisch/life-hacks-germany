@@ -1,29 +1,43 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import type { Lang } from "@/lib/i18n";
 import { siteConfig } from "@/lib/i18n";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { createSocialMetadata } from "@/lib/seo";
 
-const impressumContent = {
-  title: "Impressum",
-  company: "Aeon GbR",
-  representatives: "vertretungsberechtigte Gesellschafter: Sophia Schmieder & Kapish Bhardwaj",
-  address: ["Brünnleinsweg 126", "90768 Fürth", "Deutschland"],
-  email: "golifehacks@gmx.de",
-  odrGerman: [
-    "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie hier finden:",
-    "Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht bereit.",
-  ],
-  odrEnglish: [
-    "The European Commission provides for an Online Dispute Resolution Platform, which you can access here:",
-    "Please see the following link for the nationally appointed Alternative Dispute Resolution bodies contact details:",
-  ],
-  links: {
-    odr: "https://ec.europa.eu/consumers/odr/",
-    adr: "https://ec.europa.eu/consumers/odr/main/?event=main.adr.show",
-  },
-} as const;
+const businessAddress = ["Bruennleinsweg 126", "90768 Fuerth", "Deutschland"];
+
+function getImpressumContent(lang: Lang) {
+  return {
+    title: lang === "en" ? "Legal Notice (Impressum)" : "Impressum",
+    intro:
+      lang === "en"
+        ? "Information pursuant to Section 5 DDG."
+        : "Angaben gemaess Section 5 DDG.",
+    company: "Aeon GbR",
+    representatives:
+      lang === "en"
+        ? "Represented by the managing partners Sophia Schmieder and Kapish Bhardwaj."
+        : "Vertreten durch die Gesellschafter Sophia Schmieder und Kapish Bhardwaj.",
+    editorial:
+      lang === "en"
+        ? "Responsible for editorial content pursuant to Section 18(2) MStV: Sophia Schmieder and Kapish Bhardwaj, address as above."
+        : "Verantwortlich fuer journalistisch-redaktionelle Inhalte gemaess Section 18(2) MStV: Sophia Schmieder und Kapish Bhardwaj, Anschrift wie oben.",
+    disputeHeading:
+      lang === "en"
+        ? "Consumer dispute resolution"
+        : "Verbraucherstreitbeilegung",
+    disputeParagraphs:
+      lang === "en"
+        ? [
+            "We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.",
+            "The former EU Online Dispute Resolution platform was discontinued on July 20, 2025.",
+          ]
+        : [
+            "Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+            "Die fruehere EU-Online-Streitbeilegungsplattform wurde am 20. Juli 2025 eingestellt.",
+          ],
+  };
+}
 
 export async function generateMetadata({
   params,
@@ -32,8 +46,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const l = lang as Lang;
+  const content = getImpressumContent(l);
   const social = createSocialMetadata({
-    title: impressumContent.title,
+    title: content.title,
     description:
       l === "en"
         ? "Legal disclosure and contact details for Life Hacks Germany."
@@ -42,7 +57,7 @@ export async function generateMetadata({
   });
 
   return {
-    title: impressumContent.title,
+    title: content.title,
     alternates: {
       canonical: `${siteConfig.domain}/${lang}/legal/impressum`,
       languages: {
@@ -61,7 +76,7 @@ export default async function ImpressumPage({
 }) {
   const { lang } = await params;
   const l = lang as Lang;
-  const tr = impressumContent;
+  const content = getImpressumContent(l);
 
   return (
     <>
@@ -69,71 +84,44 @@ export default async function ImpressumPage({
         lang={l}
         items={[
           { label: l === "en" ? "Legal" : "Rechtliches", href: undefined },
-          { label: tr.title },
+          { label: content.title },
         ]}
       />
 
       <section className="py-16 md:py-24">
         <div className="container-main max-w-3xl mx-auto">
-          <h1 className="text-4xl font-black tracking-tight mb-6">{tr.title}</h1>
+          <h1 className="text-4xl font-black tracking-tight mb-3">{content.title}</h1>
+          <p className="text-sm text-ink-3 mb-6">{content.intro}</p>
 
           <div className="content-shell flex flex-col gap-4">
-            <p className="text-ink text-lg font-black m-0">{tr.company}</p>
-            <p className="text-ink-2 leading-relaxed m-0">{tr.representatives}</p>
-            {tr.address.map((line) => (
+            <p className="text-ink text-lg font-black m-0">{content.company}</p>
+            <p className="text-ink-2 leading-relaxed m-0">{content.representatives}</p>
+            {businessAddress.map((line) => (
               <p key={line} className="text-ink-2 leading-relaxed m-0">
                 {line}
               </p>
             ))}
 
             <p className="text-ink-2 leading-relaxed m-0">
-              Mail:{" "}
-              <a href={`mailto:${tr.email}`} className="text-accent-2 font-semibold hover:underline">
-                {tr.email}
+              E-Mail:{" "}
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="text-accent-2 font-semibold hover:underline"
+              >
+                {siteConfig.email}
               </a>
             </p>
 
-            <h2 className="text-lg font-black tracking-tight mt-4 mb-0">
-              {l === "en" ? "Dispute resolution (DE)" : "Streitbeilegung"}
-            </h2>
-            <p className="text-ink-2 leading-relaxed m-0">{tr.odrGerman[0]}</p>
-            <p className="m-0">
-              <Link
-                href={tr.links.odr}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent-2 font-semibold hover:underline break-all"
-              >
-                {tr.links.odr}
-              </Link>
-            </p>
-            <p className="text-ink-2 leading-relaxed m-0">{tr.odrGerman[1]}</p>
+            <p className="text-ink-2 leading-relaxed m-0">{content.editorial}</p>
 
             <h2 className="text-lg font-black tracking-tight mt-4 mb-0">
-              {l === "en" ? "Dispute resolution (EN)" : "Streitbeilegung (EN)"}
+              {content.disputeHeading}
             </h2>
-            <p className="text-ink-2 leading-relaxed m-0">{tr.odrEnglish[0]}</p>
-            <p className="m-0">
-              <Link
-                href={tr.links.odr}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent-2 font-semibold hover:underline break-all"
-              >
-                {tr.links.odr}
-              </Link>
-            </p>
-            <p className="text-ink-2 leading-relaxed m-0">{tr.odrEnglish[1]}</p>
-            <p className="m-0">
-              <Link
-                href={tr.links.adr}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent-2 font-semibold hover:underline break-all"
-              >
-                {tr.links.adr}
-              </Link>
-            </p>
+            {content.disputeParagraphs.map((paragraph) => (
+              <p key={paragraph} className="text-ink-2 leading-relaxed m-0">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import type { Lang } from "./i18n";
 import { pillars } from "./i18n";
 import { getAllGuides } from "./guides";
 import { getAllBlogPosts } from "./blog";
+import { getAllOffers } from "./offers";
 
 export type SearchKind = "guide" | "blog" | "tool" | "page" | "pillar";
 
@@ -60,6 +61,14 @@ const STATIC_PAGES = {
       kind: "page" as const,
       section: "blog",
       keywords: "blog updates monthly changes germany 2026 law price visa tax transport",
+    },
+    {
+      title: "Top Offers in Germany",
+      summary: "Curated mainstream discounts, loyalty perks, and membership deals.",
+      href: "/en/offers",
+      kind: "page" as const,
+      section: "offers",
+      keywords: "offers discounts germany coupons loyalty payback lidl rewe ikea bahncard lieferando",
     },
     {
       title: "Tools & Calculators",
@@ -135,6 +144,14 @@ const STATIC_PAGES = {
       kind: "page" as const,
       section: "blog",
       keywords: "blog updates monatliche aenderungen deutschland 2026 gesetz preis visum steuer verkehr",
+    },
+    {
+      title: "Top-Angebote in Deutschland",
+      summary: "Kuratierte Mainstream-Rabatte, Treueprogramme und Mitgliedervorteile.",
+      href: "/de/offers",
+      kind: "page" as const,
+      section: "offers",
+      keywords: "angebote rabatte deutschland coupons bonus payback lidl rewe ikea bahncard lieferando",
     },
     {
       title: "Tools & Rechner",
@@ -481,7 +498,31 @@ function buildSearchIndex(lang: Lang): SearchIndexItem[] {
     };
   });
 
-  const items = [...staticItemsFor(lang), ...guideItems, ...blogItems];
+  const offerItems = getAllOffers(lang).map((offer) => {
+    const searchText = [
+      offer.title,
+      offer.summary,
+      offer.brand,
+      offer.benefit,
+      offer.eligibility,
+      offer.whyItMatters,
+      ...offer.watchouts,
+    ].join(" ");
+
+    return {
+      title: offer.title,
+      summary: offer.summary,
+      href: `/${lang}/offers#${offer.id}`,
+      kind: "page" as const,
+      section: "offers",
+      searchText,
+      titleNorm: normalizeText(offer.title),
+      summaryNorm: normalizeText(offer.summary),
+      textNorm: normalizeText(searchText),
+    };
+  });
+
+  const items = [...staticItemsFor(lang), ...guideItems, ...blogItems, ...offerItems];
   indexCache.set(lang, { expiresAt: Date.now() + CACHE_TTL_MS, items });
   return items;
 }

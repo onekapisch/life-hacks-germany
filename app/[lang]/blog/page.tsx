@@ -40,6 +40,9 @@ export async function generateMetadata({
         en: `${siteConfig.domain}/en/blog`,
         de: `${siteConfig.domain}/de/blog`,
       },
+      types: {
+        "application/rss+xml": `${siteConfig.domain}/${lang}/rss.xml`,
+      },
     },
     ...social,
   };
@@ -66,6 +69,16 @@ export default async function BlogPage({
             { name: l === "en" ? "Home" : "Start", url: `${siteConfig.domain}/${l}` },
             { name: tr.title, url: `${siteConfig.domain}/${l}/blog` },
           ],
+        }}
+      />
+      <JsonLd
+        type="itemlist"
+        lang={l}
+        data={{
+          items: posts.map((post) => ({
+            name: post.frontmatter.title,
+            url: `${siteConfig.domain}/${l}/blog/${post.frontmatter.slug}`,
+          })),
         }}
       />
 

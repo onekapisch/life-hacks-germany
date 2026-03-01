@@ -2,6 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import {
+  analyticsUsesCookies,
+  getAnalyticsProvider,
+  getAnalyticsProviderLabel,
+} from "@/lib/analyticsConfig";
 import type { Lang } from "@/lib/i18n";
 import {
   COOKIE_CONSENT_CHANGED_EVENT,
@@ -12,6 +17,9 @@ import {
 
 export default function CookieConsentBanner({ lang }: { lang: Lang }) {
   const [forcedOpen, setForcedOpen] = useState(false);
+  const provider = getAnalyticsProvider();
+  const providerLabel = getAnalyticsProviderLabel(provider);
+  const usesCookies = analyticsUsesCookies(provider);
 
   const copy = useMemo(
     () =>
@@ -20,7 +28,9 @@ export default function CookieConsentBanner({ lang }: { lang: Lang }) {
             badge: "Datenschutz & Analyse",
             title: "Cookie-Einstellungen",
             body:
-              "Wir nutzen optionale Analyse-Cookies (Google Analytics), um Seitenaufrufe und Nutzungsmuster zu verstehen. Notwendige Funktionen laufen auch ohne Zustimmung.",
+              `Wir nutzen optionale ${
+                usesCookies ? "Analyse-Cookies" : "Analyse-Skripte"
+              }${providerLabel ? ` (${providerLabel})` : ""}, um Seitenaufrufe und Nutzungsmuster zu verstehen. Diese werden erst nach deiner Zustimmung geladen.`,
             accept: "Analyse akzeptieren",
             decline: "Nur notwendige",
             privacy: "Datenschutz ansehen",
@@ -29,12 +39,14 @@ export default function CookieConsentBanner({ lang }: { lang: Lang }) {
             badge: "Privacy & Analytics",
             title: "Cookie preferences",
             body:
-              "We use optional analytics cookies (Google Analytics) to understand page views and usage patterns. Core site features work without this consent.",
+              `We use optional ${
+                usesCookies ? "analytics cookies" : "analytics scripts"
+              }${providerLabel ? ` (${providerLabel})` : ""} to understand page views and usage patterns. They load only after you accept.`,
             accept: "Accept analytics",
             decline: "Only necessary",
             privacy: "View privacy policy",
           },
-    [lang]
+    [lang, providerLabel, usesCookies]
   );
 
   const hasSavedChoice = useSyncExternalStore(
@@ -57,6 +69,8 @@ export default function CookieConsentBanner({ lang }: { lang: Lang }) {
     window.addEventListener(COOKIE_CONSENT_OPEN_EVENT, onOpen);
     return () => window.removeEventListener(COOKIE_CONSENT_OPEN_EVENT, onOpen);
   }, []);
+
+  if (!provider) return null;
 
   const isVisible = forcedOpen || !hasSavedChoice;
   if (!isVisible) return null;

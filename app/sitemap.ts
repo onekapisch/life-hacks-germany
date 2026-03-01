@@ -2,12 +2,14 @@ import type { MetadataRoute } from "next";
 import { pillars } from "@/lib/i18n";
 import { getAllGuides } from "@/lib/guides";
 import { getAllBlogPosts } from "@/lib/blog";
+import { getLatestSiteUpdateDate } from "@/lib/siteFreshness";
 
 const BASE = "https://lifehacksgermany.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const langs = ["en", "de"] as const;
   const entries: MetadataRoute.Sitemap = [];
+  const latestSiteUpdate = new Date(getLatestSiteUpdateDate());
 
   // Static pages
   const staticPages = [
@@ -16,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/guides",
     "/tips",
     "/blog",
+    "/offers",
     "/tools",
     "/about",
     "/editorial-standards",
@@ -27,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const page of staticPages) {
       entries.push({
         url: `${BASE}/${lang}${page}`,
-        lastModified: new Date("2026-02-08"),
+        lastModified: latestSiteUpdate,
         changeFrequency: page === "" ? "weekly" : "monthly",
         priority: page === "" ? 1.0 : page === "/guides" ? 0.9 : 0.7,
         alternates: {
@@ -45,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const pillarKey of Object.keys(pillars)) {
       entries.push({
         url: `${BASE}/${lang}/guides/${pillarKey}`,
-        lastModified: new Date("2026-02-08"),
+        lastModified: latestSiteUpdate,
         changeFrequency: "weekly",
         priority: 0.8,
         alternates: {

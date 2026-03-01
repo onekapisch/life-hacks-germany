@@ -9,7 +9,7 @@ import { getBlogPost, getAllBlogPosts, getAllBlogSlugs } from "@/lib/blog";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import GuideShareActions from "@/components/GuideShareActions";
-import { createSocialMetadata } from "@/lib/seo";
+import { createOgImageUrl, createSocialMetadata } from "@/lib/seo";
 
 function formatDate(date: string, lang: Lang): string {
   const parsed = new Date(date);
@@ -77,6 +77,11 @@ export default async function BlogPostPage({
 
   const base = `/${l}`;
   const canonicalUrl = `${siteConfig.domain}/${l}/blog/${slug}`;
+  const ogImage = createOgImageUrl({
+    title: post.frontmatter.title,
+    subtitle: post.frontmatter.summary,
+    badge: l === "en" ? "Blog" : "Blog",
+  });
   const related = getAllBlogPosts(l).filter((item) => item.frontmatter.slug !== slug).slice(0, 2);
 
   return (
@@ -87,8 +92,10 @@ export default async function BlogPostPage({
         data={{
           title: post.frontmatter.title,
           summary: post.frontmatter.summary,
+          published: post.frontmatter.published,
           updated: post.frontmatter.updated,
           url: canonicalUrl,
+          image: ogImage,
         }}
       />
       <JsonLd

@@ -1,11 +1,13 @@
 import Link from "next/link";
 import type { Lang } from "@/lib/i18n";
 import { t, siteConfig } from "@/lib/i18n";
+import { getLatestSiteUpdateDate } from "@/lib/siteFreshness";
 import CookiePreferencesButton from "@/components/CookiePreferencesButton";
 
 export default function Footer({ lang }: { lang: Lang }) {
   const tr = t[lang].footer;
   const base = `/${lang}`;
+  const latestVerification = getLatestSiteUpdateDate();
 
   return (
     <footer className="site-footer pt-16 pb-10">
@@ -33,6 +35,9 @@ export default function Footer({ lang }: { lang: Lang }) {
               </Link>
               <Link href={`${base}/blog`} className="footer-link transition-colors">
                 {tr.blog}
+              </Link>
+              <Link href={`${base}/offers`} className="footer-link transition-colors">
+                {tr.offers}
               </Link>
               <Link href={`${base}/tools`} className="footer-link transition-colors">
                 {t[lang].nav.tools}
@@ -84,7 +89,7 @@ export default function Footer({ lang }: { lang: Lang }) {
           </p>
           <p className="flex items-center gap-1.5">
             <span className="inline-block w-2 h-2 rounded-full bg-accent-4 animate-pulse" />
-            {t[lang].home.lastVerification}: 2026-02-08
+            {t[lang].home.lastVerification}: {latestVerification}
           </p>
         </div>
       </div>

@@ -14,7 +14,8 @@ npm run dev
 Copy `.env.example` to `.env.local` and set the required values:
 
 - `NEXT_PUBLIC_ANALYTICS_PROVIDER` and provider variables
-- `RESEND_API_KEY` and `RESEND_AUDIENCE_ID` for newsletter signup
+- `NEWSLETTER_SIGNUP_ENABLED=1` plus `RESEND_API_KEY` and `RESEND_AUDIENCE_ID` when newsletter signup is ready to go live
+- Optional: `GOOGLE_SITE_VERIFICATION` and `BING_SITE_VERIFICATION` for Search Console / Webmaster Tools verification
 
 ## Quality Checks
 

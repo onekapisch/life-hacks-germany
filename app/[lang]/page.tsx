@@ -3,8 +3,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import type { Lang, PillarKey } from "@/lib/i18n";
 import { t, pillars, siteConfig } from "@/lib/i18n";
+import { getAllBlogPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
-import EmailCapture from "@/components/EmailCapture";
+import { getFeaturedOffers } from "@/lib/offers";
 import JsonLd from "@/components/JsonLd";
 import { createSocialMetadata } from "@/lib/seo";
 
@@ -58,6 +59,8 @@ export default async function HomePage({
   const tr = t[l].home;
   const base = `/${l}`;
   const guides = getAllGuides(l);
+  const latestBlogPost = getAllBlogPosts(l)[0];
+  const featuredOffers = getFeaturedOffers(l);
   const guideCount = guides.length;
 
   return (
@@ -76,14 +79,14 @@ export default async function HomePage({
             {
               q: l === "en" ? "How much does the Deutschlandticket cost?" : "Wie viel kostet das Deutschlandticket?",
               a: l === "en"
-                ? "The Deutschlandticket costs EUR 63 per month (as of January 2026) and covers regional and local transport."
-                : "Das Deutschlandticket kostet 63 Euro pro Monat (seit Januar 2026) und gilt im Regional- und Nahverkehr.",
+                ? "The Deutschlandticket list price is EUR 63 per month and covers regional and local transport."
+                : "Der Listenpreis des Deutschlandtickets betraegt 63 Euro pro Monat und gilt im Regional- und Nahverkehr.",
             },
             {
               q: l === "en" ? "What is the Rundfunkbeitrag?" : "Was ist der Rundfunkbeitrag?",
               a: l === "en"
-                ? "The Rundfunkbeitrag is a broadcasting contribution of EUR 18.36 per household per month, mandatory for all households in Germany."
-                : "Der Rundfunkbeitrag betraegt 18,36 Euro pro Haushalt und Monat und ist fuer alle Haushalte in Deutschland verpflichtend.",
+                ? "The Rundfunkbeitrag is currently EUR 18.36 per household per month and is generally mandatory for households in Germany."
+                : "Der Rundfunkbeitrag betraegt derzeit 18,36 Euro pro Haushalt und Monat und ist in Deutschland grundsaetzlich verpflichtend.",
             },
           ],
         }}
@@ -211,6 +214,44 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* Featured Offers */}
+      <section className="py-8 md:py-12">
+        <div className="container-main">
+          <div className="highlight-band">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-6">
+              <div className="max-w-3xl">
+                <span className="badge mb-4">{tr.offersBadge}</span>
+                <h2 className="text-3xl md:text-4xl font-black tracking-tight mt-0 mb-3">
+                  {tr.offersTitle}
+                </h2>
+                <p className="text-ink-2 text-lg m-0">{tr.offersCopy}</p>
+              </div>
+              <Link href={`${base}/offers`} className="btn btn-secondary">
+                {tr.offersCta}
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {featuredOffers.map((offer) => (
+                <Link
+                  key={offer.id}
+                  href={`${base}/offers#${offer.id}`}
+                  className="content-shell no-underline text-ink hover:border-[rgba(15,23,42,0.16)] transition-colors"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="badge-solid">#{offer.rank}</span>
+                    <span className="badge">{offer.brand}</span>
+                  </div>
+                  <h3 className="text-xl font-black leading-[1.12] tracking-tight m-0 mb-2">
+                    {offer.title}
+                  </h3>
+                  <p className="text-sm text-ink-2 m-0">{offer.benefit}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Maps Section */}
       <section className="py-16 md:py-20">
         <div className="container-main">
@@ -323,7 +364,14 @@ export default async function HomePage({
                   href={`${base}/blog`}
                   className="glass-card-link p-3.5 text-sm font-semibold no-underline text-ink hover:text-accent-2 transition-colors"
                 >
-                  {l === "en" ? "Top Changes in Germany (2026)" : "Top-Aenderungen in Deutschland (2026)"}
+                  {latestBlogPost?.frontmatter.title ??
+                    (l === "en" ? "Top Changes in Germany" : "Top-Aenderungen in Deutschland")}
+                </Link>
+                <Link
+                  href={`${base}/offers`}
+                  className="glass-card-link p-3.5 text-sm font-semibold no-underline text-ink hover:text-accent-2 transition-colors"
+                >
+                  {t[l].nav.offers}
                 </Link>
                 <Link
                   href={`${base}/guides/bureaucracy/anmeldung`}
@@ -355,12 +403,6 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="py-16 md:py-20">
-        <div className="container-main">
-          <EmailCapture lang={l} />
-        </div>
-      </section>
     </>
   );
 }

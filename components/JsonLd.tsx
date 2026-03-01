@@ -2,7 +2,14 @@ import type { Lang } from "@/lib/i18n";
 import { siteConfig } from "@/lib/i18n";
 
 interface JsonLdProps {
-  type: "website" | "article" | "howto" | "faq" | "breadcrumb" | "organization";
+  type:
+    | "website"
+    | "article"
+    | "howto"
+    | "faq"
+    | "breadcrumb"
+    | "organization"
+    | "itemlist";
   lang: Lang;
   data?: Record<string, unknown>;
 }
@@ -33,6 +40,8 @@ function getOrganizationSchema() {
     name: siteConfig.name,
     url: siteConfig.domain,
     logo: `${siteConfig.domain}/icons/logo.svg`,
+    email: siteConfig.email,
+    publishingPrinciples: `${siteConfig.domain}/en/editorial-standards`,
     contactPoint: {
       "@type": "ContactPoint",
       email: siteConfig.email,
@@ -45,13 +54,17 @@ function getArticleSchema(
   lang: Lang,
   data: Record<string, unknown>
 ) {
+  const image = data.image || `${siteConfig.domain}/icons/logo.svg`;
+  const published = data.published || data.updated;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: data.title,
     description: data.summary,
-    datePublished: data.updated,
+    datePublished: published,
     dateModified: data.updated,
+    image,
+    isAccessibleForFree: true,
     author: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -119,6 +132,22 @@ function getBreadcrumbSchema(data: Record<string, unknown>) {
   };
 }
 
+function getItemListSchema(data: Record<string, unknown>) {
+  const items = (data.items as { name: string; url: string }[]) || [];
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: item.url,
+    })),
+  };
+}
+
 export default function JsonLd({ type, lang, data = {} }: JsonLdProps) {
   let schema: Record<string, unknown>;
 
@@ -140,6 +169,9 @@ export default function JsonLd({ type, lang, data = {} }: JsonLdProps) {
       break;
     case "breadcrumb":
       schema = getBreadcrumbSchema(data);
+      break;
+    case "itemlist":
+      schema = getItemListSchema(data);
       break;
     default:
       schema = {};

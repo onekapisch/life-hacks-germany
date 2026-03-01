@@ -3,18 +3,11 @@
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import AnalyticsPageview from "@/components/AnalyticsPageview";
+import { getAnalyticsProvider } from "@/lib/analyticsConfig";
 import { COOKIE_CONSENT_CHANGED_EVENT, hasAnalyticsConsent } from "@/lib/cookieConsent";
 
-type AnalyticsProvider = "plausible" | "umami" | "ga4";
-
-function getProvider(): AnalyticsProvider | null {
-  const raw = process.env.NEXT_PUBLIC_ANALYTICS_PROVIDER?.trim().toLowerCase();
-  if (raw === "plausible" || raw === "umami" || raw === "ga4") return raw;
-  return null;
-}
-
 export default function Analytics() {
-  const provider = getProvider();
+  const provider = getAnalyticsProvider();
   const [enabled, setEnabled] = useState(false);
   const [ready, setReady] = useState(false);
 

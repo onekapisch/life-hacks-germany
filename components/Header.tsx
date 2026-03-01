@@ -21,6 +21,7 @@ export default function Header({ lang }: { lang: Lang }) {
     { label: tr.guides, href: `${base}/guides`, match: `${base}/guides` },
     { label: tr.tips, href: `${base}/tips`, match: `${base}/tips` },
     { label: tr.blog, href: `${base}/blog`, match: `${base}/blog` },
+    { label: tr.offers, href: `${base}/offers`, match: `${base}/offers` },
     { label: tr.tools, href: `${base}/tools`, match: `${base}/tools` },
     { label: tr.about, href: `${base}/about`, match: `${base}/about` },
   ];

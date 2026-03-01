@@ -2,9 +2,62 @@ import { NextResponse } from "next/server";
 
 const MAX_EMAIL_LENGTH = 254;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const rateLimitStore = new Map<string, { count: number; resetAt: number }>();
 
 function isValidEmail(email: string): boolean {
   return email.length <= MAX_EMAIL_LENGTH && EMAIL_REGEX.test(email);
+}
+
+function getClientKey(request: Request): string {
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  if (forwardedFor) {
+    const first = forwardedFor.split(",")[0]?.trim();
+    if (first) return first;
+  }
+
+  const realIp = request.headers.get("x-real-ip")?.trim();
+  return realIp || "unknown";
+}
+
+function isRateLimited(clientKey: string): boolean {
+  const now = Date.now();
+
+  for (const [key, value] of rateLimitStore.entries()) {
+    if (value.resetAt <= now) {
+      rateLimitStore.delete(key);
+    }
+  }
+
+  const current = rateLimitStore.get(clientKey);
+  if (!current || current.resetAt <= now) {
+    rateLimitStore.set(clientKey, {
+      count: 1,
+      resetAt: now + RATE_LIMIT_WINDOW_MS,
+    });
+    return false;
+  }
+
+  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return true;
+  }
+
+  current.count += 1;
+  rateLimitStore.set(clientKey, current);
+  return false;
+}
+
+function unavailableResponse() {
+  return NextResponse.json(
+    { error: "Newsletter signup is not available right now." },
+    {
+      status: 503,
+      headers: {
+        "Cache-Control": "no-store",
+      },
+    }
+  );
 }
 
 type SubscribePayload = {
@@ -12,6 +65,22 @@ type SubscribePayload = {
 };
 
 export async function POST(request: Request) {
+  if (process.env.NEWSLETTER_SIGNUP_ENABLED !== "1") {
+    return unavailableResponse();
+  }
+
+  if (isRateLimited(getClientKey(request))) {
+    return NextResponse.json(
+      { error: "Too many signup attempts. Please try again later." },
+      {
+        status: 429,
+        headers: {
+          "Cache-Control": "no-store",
+        },
+      }
+    );
+  }
+
   let payload: SubscribePayload;
 
   try {
@@ -19,7 +88,12 @@ export async function POST(request: Request) {
   } catch {
     return NextResponse.json(
       { error: "Invalid request body." },
-      { status: 400 }
+      {
+        status: 400,
+        headers: {
+          "Cache-Control": "no-store",
+        },
+      }
     );
   }
 
@@ -27,7 +101,12 @@ export async function POST(request: Request) {
   if (!isValidEmail(email)) {
     return NextResponse.json(
       { error: "Please provide a valid email address." },
-      { status: 400 }
+      {
+        status: 400,
+        headers: {
+          "Cache-Control": "no-store",
+        },
+      }
     );
   }
 
@@ -35,10 +114,7 @@ export async function POST(request: Request) {
   const resendAudienceId = process.env.RESEND_AUDIENCE_ID;
 
   if (!resendApiKey || !resendAudienceId) {
-    return NextResponse.json(
-      { error: "Newsletter is not configured yet." },
-      { status: 503 }
-    );
+    return unavailableResponse();
   }
 
   const response = await fetch(
@@ -56,9 +132,9 @@ export async function POST(request: Request) {
     }
   );
 
-  if (response.ok) {
+  if (response.ok || response.status === 409) {
     return NextResponse.json(
-      { status: "subscribed" },
+      { status: "accepted" },
       {
         headers: {
           "Cache-Control": "no-store",
@@ -72,16 +148,15 @@ export async function POST(request: Request) {
     const body = (await response.json()) as { message?: string };
     responseError = body.message || "";
   } catch {
-    // no-op
+    // Ignore invalid upstream error bodies.
   }
 
   const alreadySubscribed =
-    response.status === 409 ||
-    (response.status === 422 && /already exists|already subscribed/i.test(responseError));
+    response.status === 422 && /already exists|already subscribed/i.test(responseError);
 
   if (alreadySubscribed) {
     return NextResponse.json(
-      { status: "already-subscribed" },
+      { status: "accepted" },
       {
         headers: {
           "Cache-Control": "no-store",
@@ -92,6 +167,11 @@ export async function POST(request: Request) {
 
   return NextResponse.json(
     { error: "Subscription failed. Please try again later." },
-    { status: 502 }
+    {
+      status: 502,
+      headers: {
+        "Cache-Control": "no-store",
+      },
+    }
   );
 }

@@ -51,3 +51,14 @@ export function createSocialMetadata({
     },
   };
 }
+
+export function createPublisherMetadata() {
+  return {
+    authors: [{ name: siteConfig.name }],
+    creator: siteConfig.name,
+    publisher: siteConfig.name,
+    applicationName: siteConfig.name,
+    category: "reference",
+    referrer: "strict-origin-when-cross-origin" as const,
+  };
+}

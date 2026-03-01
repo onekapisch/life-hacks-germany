@@ -8,7 +8,7 @@ import Analytics from "@/components/Analytics";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import type { Lang } from "@/lib/i18n";
 import { t, siteConfig } from "@/lib/i18n";
-import { createSocialMetadata } from "@/lib/seo";
+import { createPublisherMetadata, createSocialMetadata } from "@/lib/seo";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -48,11 +48,15 @@ export async function generateMetadata({
       template: `%s | ${siteConfig.name}`,
     },
     description: tr.description,
+    ...createPublisherMetadata(),
     alternates: {
       canonical: `${siteConfig.domain}/${lang}`,
       languages: {
         en: `${siteConfig.domain}/en`,
         de: `${siteConfig.domain}/de`,
+      },
+      types: {
+        "application/rss+xml": `${siteConfig.domain}/${lang}/rss.xml`,
       },
     },
     openGraph: {
@@ -60,7 +64,6 @@ export async function generateMetadata({
       url: `${siteConfig.domain}/${lang}`,
       siteName: siteConfig.name,
       locale: lang === "en" ? "en_US" : "de_DE",
-      type: "website",
     },
     twitter: social.twitter,
   };

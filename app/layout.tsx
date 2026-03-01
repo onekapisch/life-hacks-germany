@@ -1,12 +1,28 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { createOgImageUrl } from "@/lib/seo";
+import { createOgImageUrl, createPublisherMetadata } from "@/lib/seo";
 
 const defaultOgImage = createOgImageUrl({
   title: "Life Hacks Germany",
   subtitle: "Verified guides for living in Germany",
   badge: "Verified Guides",
 });
+
+const verification =
+  process.env.GOOGLE_SITE_VERIFICATION || process.env.BING_SITE_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.GOOGLE_SITE_VERIFICATION,
+          ...(process.env.BING_SITE_VERIFICATION
+            ? {
+                other: {
+                  "msvalidate.01": process.env.BING_SITE_VERIFICATION,
+                },
+              }
+            : {}),
+        },
+      }
+    : {};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lifehacksgermany.com"),
@@ -33,9 +49,18 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [defaultOgImage],
   },
+  ...createPublisherMetadata(),
+  ...verification,
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
   },
 };
 

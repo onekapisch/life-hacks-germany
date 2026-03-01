@@ -12,7 +12,7 @@ import JsonLd from "@/components/JsonLd";
 import ReadingProgress from "@/components/ReadingProgress";
 import GuideShareActions from "@/components/GuideShareActions";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
-import { createSocialMetadata } from "@/lib/seo";
+import { createOgImageUrl, createSocialMetadata } from "@/lib/seo";
 
 const TIP_GUIDE_SLUGS = new Set([
   "buergeramt-appointment-blitz",
@@ -528,6 +528,11 @@ export default async function GuidePage({
   const pillarEntry = pillars[p][l];
   const isTipGuide = TIP_GUIDE_SLUGS.has(slug);
   const canonicalUrl = `${siteConfig.domain}/${l}/guides/${pillar}/${slug}`;
+  const ogImage = createOgImageUrl({
+    title: fm.title,
+    subtitle: fm.summary,
+    badge: l === "en" ? "Guide" : "Guide",
+  });
 
   // Get related guides from same pillar
   const manualRelated = new Set(fm.relatedGuides ?? []);
@@ -660,8 +665,10 @@ export default async function GuidePage({
         data={{
           title: fm.title,
           summary: fm.summary,
+          published: fm.updated,
           updated: fm.updated,
           url: canonicalUrl,
+          image: ogImage,
         }}
       />
       <JsonLd
