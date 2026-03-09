@@ -1,5 +1,7 @@
 "use client";
 
+import { getAnalyticsProvider } from "@/lib/analyticsConfig";
+
 declare global {
   interface Window {
     plausible?: (eventName: string, options?: { props?: Record<string, string | number | boolean> }) => void;
@@ -13,7 +15,7 @@ type EventProps = Record<string, string | number | boolean>;
 export function trackEvent(eventName: string, props: EventProps = {}) {
   if (typeof window === "undefined") return;
 
-  const provider = process.env.NEXT_PUBLIC_ANALYTICS_PROVIDER?.trim().toLowerCase();
+  const provider = getAnalyticsProvider();
   if (!provider) return;
 
   if (provider === "plausible" && typeof window.plausible === "function") {

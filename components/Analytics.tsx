@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import AnalyticsPageview from "@/components/AnalyticsPageview";
-import { getAnalyticsProvider } from "@/lib/analyticsConfig";
+import { getAnalyticsProvider, getGa4MeasurementId } from "@/lib/analyticsConfig";
 import { COOKIE_CONSENT_CHANGED_EVENT, hasAnalyticsConsent } from "@/lib/cookieConsent";
 
 export default function Analytics() {
@@ -66,7 +66,7 @@ export default function Analytics() {
     );
   }
 
-  const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim();
+  const ga4MeasurementId = getGa4MeasurementId();
   if (!ga4MeasurementId) return null;
 
   return (

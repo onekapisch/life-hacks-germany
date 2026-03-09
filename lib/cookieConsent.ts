@@ -26,8 +26,24 @@ export function readCookieConsent(): CookieConsentRecord | null {
       updatedAt: parsed.updatedAt,
     };
   } catch {
-    return null;
+    // Continue to cookie fallback below.
   }
+
+  const cookieChoice = document.cookie
+    .split(";")
+    .map((chunk) => chunk.trim())
+    .find((chunk) => chunk.startsWith(`${COOKIE_CONSENT_COOKIE_KEY}=`))
+    ?.split("=")[1];
+
+  if (cookieChoice === "accepted" || cookieChoice === "declined") {
+    return {
+      choice: cookieChoice,
+      // Cookie storage does not keep the timestamp; use current time for a valid record shape.
+      updatedAt: new Date().toISOString(),
+    };
+  }
+
+  return null;
 }
 
 export function hasAnalyticsConsent(): boolean {
@@ -56,4 +72,3 @@ export function openCookieConsent(): void {
   if (typeof window === "undefined") return;
   window.dispatchEvent(new CustomEvent(COOKIE_CONSENT_OPEN_EVENT));
 }
-
