@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const isDev = process.env.NODE_ENV !== "production";
 const scriptSrc = ["'self'", "'unsafe-inline'"];
-const analyticsProvider = process.env.NEXT_PUBLIC_ANALYTICS_PROVIDER?.trim().toLowerCase();
+const analyticsProviderRaw = process.env.NEXT_PUBLIC_ANALYTICS_PROVIDER?.trim().toLowerCase();
+const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "G-V4VKJJQHPF";
+const analyticsProvider =
+  analyticsProviderRaw === "none" || analyticsProviderRaw === "off" || analyticsProviderRaw === "disabled"
+    ? null
+    : analyticsProviderRaw || (ga4MeasurementId ? "ga4" : null);
 
 function pushOriginIfValid(target: string[], rawUrl?: string) {
   if (!rawUrl) return;
@@ -27,7 +32,7 @@ if (analyticsProvider === "umami") {
   pushOriginIfValid(scriptSrc, process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL);
 }
 
-if (analyticsProvider === "ga4") {
+if (analyticsProvider === "ga4" && ga4MeasurementId) {
   scriptSrc.push("https://www.googletagmanager.com");
 }
 
