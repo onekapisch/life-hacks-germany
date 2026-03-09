@@ -6,6 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import JsonLd from "@/components/JsonLd";
 import Analytics from "@/components/Analytics";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import type { Lang } from "@/lib/i18n";
 import { t, siteConfig } from "@/lib/i18n";
 import { createPublisherMetadata, createSocialMetadata } from "@/lib/seo";
@@ -111,6 +112,7 @@ export default async function LangLayout({
         <ScrollToTop />
         <CookieConsentBanner lang={l} />
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
