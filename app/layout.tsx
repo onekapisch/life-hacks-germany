@@ -25,7 +25,7 @@ const verification =
     : {};
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lifehacksgermany.com"),
+  metadataBase: new URL("https://www.lifehacksgermany.com"),
   title: {
     default: "Life Hacks Germany | Verified Guides for Living in Germany",
     template: "%s | Life Hacks Germany",

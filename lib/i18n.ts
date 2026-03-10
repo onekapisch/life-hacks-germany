@@ -7,7 +7,7 @@ export const languages = {
 
 export const siteConfig = {
   name: "Life Hacks Germany",
-  domain: "https://lifehacksgermany.com",
+  domain: "https://www.lifehacksgermany.com",
   email: "golifehacks@gmx.de",
 };
 

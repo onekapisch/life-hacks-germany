@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
-import { pillars } from "@/lib/i18n";
+import { pillars, siteConfig } from "@/lib/i18n";
 import { getAllGuides } from "@/lib/guides";
 import { getAllBlogPosts } from "@/lib/blog";
 import { getLatestSiteUpdateDate } from "@/lib/siteFreshness";
 
-const BASE = "https://lifehacksgermany.com";
+const BASE = siteConfig.domain;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const langs = ["en", "de"] as const;
