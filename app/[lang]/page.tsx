@@ -49,6 +49,152 @@ const pillarIcons: Record<PillarKey, string> = {
   everyday: "❤️",
 };
 
+type SmartLifeTool = {
+  name: string;
+  href: string;
+  kicker: string;
+  features: string[];
+  outcome: string;
+};
+
+type SmartLifeSectionCopy = {
+  badge: string;
+  title: string;
+  intro: string;
+  tools: SmartLifeTool[];
+  benefitsTitle: string;
+  benefits: { title: string; body: string }[];
+  blogCta: string;
+  toolsCta: string;
+  disclosure: string;
+};
+
+function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
+  if (lang === "de") {
+    return {
+      badge: "Featured Smart-Life Tools",
+      title: "Smart-Life Stack: schneller handeln, sauberer entscheiden, Kosten senken",
+      intro:
+        "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und praezise Standorthilfe.",
+      tools: [
+        {
+          name: "T-Minus AI",
+          href: "https://www.tminusai.com",
+          kicker: "KI-Workflows fuer Behoerden, Jobsuche und Alltagsplanung",
+          features: [
+            "Prompt-Frameworks fuer Mails, Checklisten und Formulare",
+            "Modellauswahl nach Aufgabentyp statt Zufall",
+            "Wiederverwendbare Arbeitsroutinen fuer wiederkehrende Prozesse",
+          ],
+          outcome: "Spart vor allem bei wiederkehrender Adminarbeit mehrere Stunden pro Woche.",
+        },
+        {
+          name: "Tank Alert",
+          href: "https://www.tankalert.de",
+          kicker: "Live-Spritpreise, Alerts und Kostenrechner fuer Autofahrer",
+          features: [
+            "Stationen vergleichen und Preisalarme setzen",
+            "Detour-Rechner fuer echte Nettoersparnis",
+            "Bessere Tank-Entscheidungen fuer Pendelroutinen",
+          ],
+          outcome: "Hilft, vermeidbare Mobilitaetskosten im Alltag sichtbar zu senken.",
+        },
+        {
+          name: "SkyLocation",
+          href: "https://www.skylocation.app",
+          kicker: "Schnelle Standorthilfe fuer Reisen, Treffen und Sicherheit",
+          features: [
+            "Standorte klar teilen und schneller koordinieren",
+            "Nuetzlich bei neuen Wegen, Ausfluegen und Umzugslogistik",
+            "Reduziert Reibung bei Navigation und Treffpunkten",
+          ],
+          outcome: "Verkuerzt Abstimmungen unterwegs und reduziert Fehlwege.",
+        },
+      ],
+      benefitsTitle: "Wie dir das konkret hilft",
+      benefits: [
+        {
+          title: "Mehr Zeit",
+          body: "Weniger Leerlauf bei Formularen, E-Mails und Terminvorbereitung.",
+        },
+        {
+          title: "Weniger Kosten",
+          body: "Bessere Entscheidungen bei Mobilitaet, Abos und Alltagsausgaben.",
+        },
+        {
+          title: "Weniger Fehler",
+          body: "Klarere Prozesse, bessere Vorbereitung, weniger frustrierende Rueckfragen.",
+        },
+      ],
+      blogCta: "AI-Anwendungsfaelle fuer Expats lesen",
+      toolsCta: "Alle Smart-Life Tools ansehen",
+      disclosure:
+        "Hinweis: Diese Featured Tools werden vom gleichen Publisher betrieben und sind hier als praktische Helfer integriert.",
+    };
+  }
+
+  return {
+    badge: "Featured Smart-Life Tools",
+    title: "Smart-Life Stack: move faster, decide better, spend less",
+    intro:
+      "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
+    tools: [
+      {
+        name: "T-Minus AI",
+        href: "https://www.tminusai.com",
+        kicker: "AI workflows for bureaucracy, job search, and daily planning",
+        features: [
+          "Prompt frameworks for emails, checklists, and forms",
+          "Model guidance by task type instead of guesswork",
+          "Reusable workflows for recurring Germany admin tasks",
+        ],
+        outcome: "Saves significant time each week on repetitive admin and planning work.",
+      },
+      {
+        name: "Tank Alert",
+        href: "https://www.tankalert.de",
+        kicker: "Live fuel prices, alerts, and cost calculators for drivers",
+        features: [
+          "Compare stations and set price alerts",
+          "Detour calculator to protect real net savings",
+          "Better refuel decisions for commute routines",
+        ],
+        outcome: "Helps reduce avoidable transport spend in everyday driving.",
+      },
+      {
+        name: "SkyLocation",
+        href: "https://www.skylocation.app",
+        kicker: "Fast location support for travel, meetups, and safety",
+        features: [
+          "Share location clearly and coordinate faster",
+          "Useful for new routes, weekend trips, and moving logistics",
+          "Reduces friction around navigation and meeting points",
+        ],
+        outcome: "Cuts coordination overhead and wrong-turn stress while on the move.",
+      },
+    ],
+    benefitsTitle: "What this helps you do",
+    benefits: [
+      {
+        title: "Save Time",
+        body: "Less friction in forms, emails, and appointment preparation.",
+      },
+      {
+        title: "Save Money",
+        body: "Stronger day-to-day decisions on mobility and recurring costs.",
+      },
+      {
+        title: "Reduce Errors",
+        body: "Clearer workflows and better prep before you submit anything important.",
+      },
+    ],
+    blogCta: "Read AI use cases for expats",
+    toolsCta: "Explore all smart-life tools",
+    disclosure:
+      "Disclosure: these featured tools are operated by the same publisher and are integrated here as practical helpers.",
+  };
+}
+
 export default async function HomePage({
   params,
 }: {
@@ -62,6 +208,7 @@ export default async function HomePage({
   const latestBlogPost = getAllBlogPosts(l)[0];
   const featuredOffers = getFeaturedOffers(l);
   const guideCount = guides.length;
+  const smartLife = getSmartLifeSectionCopy(l);
 
   return (
     <>
@@ -175,41 +322,72 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Featured Mobility Tool */}
+      {/* Featured Smart-Life Tools */}
       <section className="py-8 md:py-12">
         <div className="container-main">
           <div className="highlight-band">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 items-center">
-              <div>
-                <span className="badge mb-4">{tr.mobilityLaunchBadge}</span>
-                <h2 className="text-3xl md:text-4xl font-black tracking-tight mt-0 mb-3">
-                  {tr.mobilityLaunchTitle}
-                </h2>
-                <p className="text-ink-2 text-lg max-w-2xl mb-5">{tr.mobilityLaunchCopy}</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="badge-solid">{tr.mobilityLaunchBullet1}</span>
-                  <span className="badge-solid">{tr.mobilityLaunchBullet2}</span>
-                </div>
-                <div className="flex gap-3 flex-wrap">
-                  <Link href={`${base}/tools#last-train-weekend-escape`} className="btn btn-primary">
-                    {tr.mobilityLaunchCta}
-                  </Link>
-                  <Link href={`${base}/tools`} className="btn btn-secondary">
-                    {tr.mobilityLaunchSecondary}
-                  </Link>
-                </div>
-              </div>
-              <div className="content-shell text-left">
-                <p className="text-xs uppercase tracking-[0.1em] text-ink-3 font-bold mt-0 mb-2">
-                  {l === "en" ? "Best for" : "Ideal fuer"}
-                </p>
-                <ul className="m-0 pl-5 text-sm text-ink-2 leading-relaxed space-y-2">
-                  <li>{l === "en" ? "Students planning late returns after events." : "Studierende mit spaeter Heimfahrt nach Events."}</li>
-                  <li>{l === "en" ? "Young professionals optimizing weekend plans." : "Young Professionals mit smarten Wochenendplaenen."}</li>
-                  <li>{l === "en" ? "Locals comparing trip quality before booking." : "Locals, die vor der Buchung Optionen vergleichen."}</li>
-                </ul>
+            <div className="mb-7">
+              <span className="badge mb-4">{smartLife.badge}</span>
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight mt-0 mb-3">
+                {smartLife.title}
+              </h2>
+              <p className="text-ink-2 text-lg max-w-3xl m-0">{smartLife.intro}</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {smartLife.tools.map((tool) => (
+                <a
+                  key={tool.name}
+                  href={tool.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card-link no-underline text-ink rounded-2xl p-5 h-full flex flex-col"
+                >
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <span className="badge">{tool.name}</span>
+                    <span className="text-[0.65rem] font-bold uppercase tracking-[0.1em] text-accent-2">
+                      {l === "en" ? "Open" : "Oeffnen"}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-black leading-[1.12] tracking-tight m-0 mb-2">
+                    {tool.kicker}
+                  </h3>
+                  <ul className="m-0 pl-5 text-sm text-ink-2 leading-relaxed space-y-1.5">
+                    {tool.features.map((feature) => (
+                      <li key={feature}>{feature}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 mb-0 text-sm font-semibold text-accent-2">{tool.outcome}</p>
+                </a>
+              ))}
+            </div>
+
+            <div className="mt-7">
+              <p className="text-xs uppercase tracking-[0.1em] text-ink-3 font-bold mt-0 mb-3">
+                {smartLife.benefitsTitle}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {smartLife.benefits.map((item) => (
+                  <div key={item.title} className="content-shell !p-4 text-left">
+                    <h3 className="text-base font-black tracking-tight mt-0 mb-1.5">{item.title}</h3>
+                    <p className="text-sm text-ink-2 m-0">{item.body}</p>
+                  </div>
+                ))}
               </div>
             </div>
+
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <Link href={`${base}/blog/ai-for-expats-germany-time-money`} className="btn btn-primary">
+                {smartLife.blogCta}
+              </Link>
+              <Link href={`${base}/tools`} className="btn btn-secondary">
+                {smartLife.toolsCta}
+              </Link>
+            </div>
+
+            <p className="mt-4 mb-0 text-xs text-ink-3">
+              {smartLife.disclosure}
+            </p>
           </div>
         </div>
       </section>
