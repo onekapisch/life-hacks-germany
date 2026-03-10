@@ -7,6 +7,7 @@ import { getAllBlogPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
 import { getFeaturedOffers } from "@/lib/offers";
 import JsonLd from "@/components/JsonLd";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { createSocialMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -52,6 +53,7 @@ const pillarIcons: Record<PillarKey, string> = {
 type SmartLifeTool = {
   name: string;
   href: string;
+  utmContent: string;
   kicker: string;
   features: string[];
   outcome: string;
@@ -80,6 +82,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         {
           name: "T-Minus AI",
           href: "https://www.tminusai.com",
+          utmContent: "tminusai-card",
           kicker: "KI-Workflows fuer Behoerden, Jobsuche und Alltagsplanung",
           features: [
             "Prompt-Frameworks fuer Mails, Checklisten und Formulare",
@@ -91,6 +94,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         {
           name: "Tank Alert",
           href: "https://www.tankalert.de",
+          utmContent: "tankalert-card",
           kicker: "Live-Spritpreise, Alerts und Kostenrechner fuer Autofahrer",
           features: [
             "Stationen vergleichen und Preisalarme setzen",
@@ -102,6 +106,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         {
           name: "SkyLocation",
           href: "https://www.skylocation.app",
+          utmContent: "skylocation-card",
           kicker: "Offline GPS fuer iPhone: Koordinaten ueberall, auch im Flugzeug",
           features: [
             "Praezise GPS-Koordinaten ohne Internet, SIM oder Roaming",
@@ -143,6 +148,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       {
         name: "T-Minus AI",
         href: "https://www.tminusai.com",
+        utmContent: "tminusai-card",
         kicker: "AI workflows for bureaucracy, job search, and daily planning",
         features: [
           "Prompt frameworks for emails, checklists, and forms",
@@ -154,6 +160,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       {
         name: "Tank Alert",
         href: "https://www.tankalert.de",
+        utmContent: "tankalert-card",
         kicker: "Live fuel prices, alerts, and cost calculators for drivers",
         features: [
           "Compare stations and set price alerts",
@@ -165,6 +172,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       {
         name: "SkyLocation",
         href: "https://www.skylocation.app",
+        utmContent: "skylocation-card",
         kicker: "Offline GPS for iPhone: coordinates anywhere, even in-flight",
         features: [
           "Precise GPS coordinates without internet, SIM, or roaming",
@@ -195,6 +203,20 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
     disclosure:
       "Disclosure: these featured tools are operated by the same publisher and are integrated here as practical helpers.",
   };
+}
+
+function withSmartLifeUtm(url: string, lang: Lang, content: string): string {
+  try {
+    const nextUrl = new URL(url);
+    nextUrl.searchParams.set("utm_source", "lifehacksgermany.com");
+    nextUrl.searchParams.set("utm_medium", "referral");
+    nextUrl.searchParams.set("utm_campaign", "smart-life-featured");
+    nextUrl.searchParams.set("utm_content", content);
+    nextUrl.searchParams.set("utm_term", lang);
+    return nextUrl.toString();
+  } catch {
+    return url;
+  }
 }
 
 export default async function HomePage({
@@ -338,11 +360,11 @@ export default async function HomePage({
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {smartLife.tools.map((tool) => (
-                <a
+                <TrackedExternalLink
                   key={tool.name}
-                  href={tool.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={withSmartLifeUtm(tool.href, l, tool.utmContent)}
+                  lang={l}
+                  context="app_official"
                   className="glass-card-link no-underline text-ink rounded-2xl p-5 h-full flex flex-col"
                 >
                   <div className="flex items-center justify-between gap-3 mb-2">
@@ -360,7 +382,7 @@ export default async function HomePage({
                     ))}
                   </ul>
                   <p className="mt-4 mb-0 text-sm font-semibold text-accent-2">{tool.outcome}</p>
-                </a>
+                </TrackedExternalLink>
               ))}
             </div>
 
