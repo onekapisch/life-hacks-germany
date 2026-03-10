@@ -63,6 +63,16 @@ type SmartLifeSectionCopy = {
   badge: string;
   title: string;
   intro: string;
+  fuelWatch: {
+    badge: string;
+    title: string;
+    body: string;
+    stats: string[];
+    lastChecked: string;
+    sourcePrimary: { label: string; href: string };
+    sourceSecondary: { label: string; href: string };
+    cta: string;
+  };
   tools: SmartLifeTool[];
   benefitsTitle: string;
   benefits: { title: string; body: string }[];
@@ -78,6 +88,23 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       title: "Smart-Life Stack: schneller handeln, sauberer entscheiden, Kosten senken",
       intro:
         "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und praezise Standorthilfe.",
+      fuelWatch: {
+        badge: "Spritpreis-Watch",
+        title: "Deutschland: deutlicher Preissprung in der letzten Erhebungswoche",
+        body:
+          "Laut ADAC-Update sind die Preise zuletzt spuerbar gestiegen. Gerade jetzt helfen Stationsvergleich und Preisalarme, damit du nicht zur teuersten Zeit tankst.",
+        stats: ["Super E10: +12,1 Cent/Liter", "Diesel: +17,7 Cent/Liter"],
+        lastChecked: "10. Maerz 2026",
+        sourcePrimary: {
+          label: "ADAC Presse (04.03.2026)",
+          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-springen-stark-nach-oben.html",
+        },
+        sourceSecondary: {
+          label: "ADAC Presse (02.03.2026)",
+          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/benzin-und-diesel-im-februar-teurer-als-im-vormonat.html",
+        },
+        cta: "Tank Alert Preisalarm setzen",
+      },
       tools: [
         {
           name: "T-Minus AI",
@@ -144,6 +171,23 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
     title: "Smart-Life Stack: move faster, decide better, spend less",
     intro:
       "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
+    fuelWatch: {
+      badge: "Fuel Price Watch",
+      title: "Germany: notable week-on-week fuel jump",
+      body:
+        "Recent ADAC reporting shows sharp weekly increases. Right now, station comparison and price alarms are the easiest way to reduce overpaying at the pump.",
+      stats: ["Super E10: +12.1 cents/liter", "Diesel: +17.7 cents/liter"],
+      lastChecked: "March 10, 2026",
+      sourcePrimary: {
+        label: "ADAC press (March 4, 2026)",
+        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-springen-stark-nach-oben.html",
+      },
+      sourceSecondary: {
+        label: "ADAC press (March 2, 2026)",
+        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/benzin-und-diesel-im-februar-teurer-als-im-vormonat.html",
+      },
+      cta: "Set Tank Alert price alarms",
+    },
     tools: [
       {
         name: "T-Minus AI",
@@ -205,12 +249,17 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
   };
 }
 
-function withSmartLifeUtm(url: string, lang: Lang, content: string): string {
+function withSmartLifeUtm(
+  url: string,
+  lang: Lang,
+  content: string,
+  campaign = "smart-life-featured"
+): string {
   try {
     const nextUrl = new URL(url);
     nextUrl.searchParams.set("utm_source", "lifehacksgermany.com");
     nextUrl.searchParams.set("utm_medium", "referral");
-    nextUrl.searchParams.set("utm_campaign", "smart-life-featured");
+    nextUrl.searchParams.set("utm_campaign", campaign);
     nextUrl.searchParams.set("utm_content", content);
     nextUrl.searchParams.set("utm_term", lang);
     return nextUrl.toString();
@@ -356,6 +405,55 @@ export default async function HomePage({
                 {smartLife.title}
               </h2>
               <p className="text-ink-2 text-lg max-w-3xl m-0">{smartLife.intro}</p>
+            </div>
+
+            <div className="content-shell !p-5 md:!p-6 mb-6 border border-[rgba(15,23,42,0.12)]">
+              <div className="flex flex-wrap items-center gap-2 mb-3">
+                <span className="badge">{smartLife.fuelWatch.badge}</span>
+                <span className="badge-solid text-[0.7rem]">
+                  {l === "en" ? "Last checked" : "Zuletzt geprueft"}: {smartLife.fuelWatch.lastChecked}
+                </span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-black tracking-tight mt-0 mb-2">
+                {smartLife.fuelWatch.title}
+              </h3>
+              <p className="text-sm md:text-base text-ink-2 mt-0 mb-4">{smartLife.fuelWatch.body}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {smartLife.fuelWatch.stats.map((stat) => (
+                  <span key={stat} className="badge-solid">{stat}</span>
+                ))}
+              </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <TrackedExternalLink
+                  href={withSmartLifeUtm(
+                    "https://www.tankalert.de",
+                    l,
+                    "fuel-watch-cta",
+                    "fuel-price-watch"
+                  )}
+                  lang={l}
+                  context="app_official"
+                  className="btn btn-primary"
+                >
+                  {smartLife.fuelWatch.cta}
+                </TrackedExternalLink>
+                <TrackedExternalLink
+                  href={smartLife.fuelWatch.sourcePrimary.href}
+                  lang={l}
+                  context="app_official"
+                  className="text-xs font-semibold text-accent-2 hover:underline"
+                >
+                  {smartLife.fuelWatch.sourcePrimary.label}
+                </TrackedExternalLink>
+                <TrackedExternalLink
+                  href={smartLife.fuelWatch.sourceSecondary.href}
+                  lang={l}
+                  context="app_official"
+                  className="text-xs font-semibold text-accent-2 hover:underline"
+                >
+                  {smartLife.fuelWatch.sourceSecondary.label}
+                </TrackedExternalLink>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
