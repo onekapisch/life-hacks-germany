@@ -102,13 +102,14 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         {
           name: "SkyLocation",
           href: "https://www.skylocation.app",
-          kicker: "Schnelle Standorthilfe fuer Reisen, Treffen und Sicherheit",
+          kicker: "Offline GPS fuer iPhone: Koordinaten ueberall, auch im Flugzeug",
           features: [
-            "Standorte klar teilen und schneller koordinieren",
-            "Nuetzlich bei neuen Wegen, Ausfluegen und Umzugslogistik",
-            "Reduziert Reibung bei Navigation und Treffpunkten",
+            "Praezise GPS-Koordinaten ohne Internet, SIM oder Roaming",
+            "In-Flight Tracking mit Position, Hoehe und Ground Speed",
+            "SOS-orientierte Koordinatenfreigabe fuer Notfaelle",
           ],
-          outcome: "Verkuerzt Abstimmungen unterwegs und reduziert Fehlwege.",
+          outcome:
+            "Hilft bei Reisen, Outdoor und Notfaellen mit offline verfuetbaren Positionsdaten; Pro als Einmalkauf ohne Abo.",
         },
       ],
       benefitsTitle: "Wie dir das konkret hilft",
@@ -164,13 +165,14 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       {
         name: "SkyLocation",
         href: "https://www.skylocation.app",
-        kicker: "Fast location support for travel, meetups, and safety",
+        kicker: "Offline GPS for iPhone: coordinates anywhere, even in-flight",
         features: [
-          "Share location clearly and coordinate faster",
-          "Useful for new routes, weekend trips, and moving logistics",
-          "Reduces friction around navigation and meeting points",
+          "Precise GPS coordinates without internet, SIM, or roaming",
+          "In-flight tracking with position, altitude, and ground speed",
+          "SOS-ready coordinate sharing for emergency situations",
         ],
-        outcome: "Cuts coordination overhead and wrong-turn stress while on the move.",
+        outcome:
+          "Useful for travel, outdoor routes, and safety scenarios where offline coordinates matter; Pro is one-time, no subscription.",
       },
     ],
     benefitsTitle: "What this helps you do",
