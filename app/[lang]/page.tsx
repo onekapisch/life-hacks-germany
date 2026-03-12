@@ -3,7 +3,6 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import type { Lang, PillarKey } from "@/lib/i18n";
 import { t, pillars, siteConfig } from "@/lib/i18n";
-import { getAllBlogPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
 import { getFeaturedOffers } from "@/lib/offers";
 import JsonLd from "@/components/JsonLd";
@@ -17,15 +16,36 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const l = lang as Lang;
-  const tr = t[l].home;
+  const metaTitle = l === "en"
+    ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing, Daily Systems"
+    : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen, Alltagssysteme";
+  const metaDescription = l === "en"
+    ? "Verification-first Germany guides for expats and locals: Anmeldung, ELSTER taxes, rent rules, transport, and practical decision tools."
+    : "Verifizierte Deutschland-Guides fuer Expats und Einheimische: Anmeldung, ELSTER, Mietregeln, Mobilitaet und praktische Entscheidungstools.";
   const social = createSocialMetadata({
-    title: tr.heroTitle,
-    description: t[l].description,
+    title: metaTitle,
+    description: metaDescription,
     badge: l === "en" ? "Start Here" : "Start hier",
   });
   return {
-    title: tr.heroTitle,
-    description: t[l].description,
+    title: metaTitle,
+    description: metaDescription,
+    keywords:
+      l === "en"
+        ? [
+            "Germany life hacks",
+            "Anmeldung guide",
+            "ELSTER tax setup",
+            "housing Germany guide",
+            "Deutschlandticket",
+          ]
+        : [
+            "Deutschland Life Hacks",
+            "Anmeldung Guide",
+            "ELSTER Steuer",
+            "Wohnen Deutschland",
+            "Deutschlandticket",
+          ],
     alternates: {
       canonical: `${siteConfig.domain}/${lang}`,
       languages: { en: `${siteConfig.domain}/en`, de: `${siteConfig.domain}/de` },
@@ -79,6 +99,12 @@ type SmartLifeSectionCopy = {
   blogCta: string;
   toolsCta: string;
   disclosure: string;
+};
+
+type WeeklyQuickRoute = {
+  href: string;
+  title: string;
+  note: string;
 };
 
 function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
@@ -249,6 +275,56 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
   };
 }
 
+function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
+  if (lang === "de") {
+    return [
+      {
+        href: "/de/guides/bureaucracy/anmeldung",
+        title: "Anmeldung Schritt-fuer-Schritt",
+        note: "Fristen, Unterlagen, Wohnungsgeberbestaetigung",
+      },
+      {
+        href: "/de/guides/money-taxes/elster",
+        title: "ELSTER in der Praxis",
+        note: "Steuerkonto aufsetzen und erste Erklaerung vorbereiten",
+      },
+      {
+        href: "/de/guides/everyday/family-benefits-kindergeld-elterngeld",
+        title: "Kindergeld & Elterngeld",
+        note: "Anspruch pruefen und Antragstaktik verstehen",
+      },
+      {
+        href: "/de/guides/everyday/offline-gps-safety-hack",
+        title: "Offline-GPS Sicherheits-Hack",
+        note: "Koordinaten nutzen, auch ohne Internet oder Roaming",
+      },
+    ];
+  }
+
+  return [
+    {
+      href: "/en/guides/bureaucracy/anmeldung",
+      title: "Anmeldung Step-by-Step",
+      note: "Deadlines, documents, and landlord confirmation flow",
+    },
+    {
+      href: "/en/guides/money-taxes/elster",
+      title: "ELSTER Made Practical",
+      note: "Set up your tax account and avoid first-return mistakes",
+    },
+    {
+      href: "/en/guides/everyday/family-benefits-kindergeld-elterngeld",
+      title: "Kindergeld + Elterngeld",
+      note: "Check eligibility and sequence your applications correctly",
+    },
+    {
+      href: "/en/guides/everyday/offline-gps-safety-hack",
+      title: "Offline GPS Safety Hack",
+      note: "Get coordinates even without data, SIM, or roaming",
+    },
+  ];
+}
+
 function withSmartLifeUtm(
   url: string,
   lang: Lang,
@@ -278,10 +354,10 @@ export default async function HomePage({
   const tr = t[l].home;
   const base = `/${l}`;
   const guides = getAllGuides(l);
-  const latestBlogPost = getAllBlogPosts(l)[0];
   const featuredOffers = getFeaturedOffers(l);
   const guideCount = guides.length;
   const smartLife = getSmartLifeSectionCopy(l);
+  const weeklyQuickRoutes = getWeeklyQuickRoutes(l);
 
   return (
     <>
@@ -390,6 +466,49 @@ export default async function HomePage({
                 <strong className="block text-sm font-black text-ink">{l === "en" ? "Ongoing" : "Laufend"}</strong>
                 <span className="text-[0.65rem] text-ink-3">{l === "en" ? "Review cadence" : "Pruefungsrhythmus"}</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Start In 60 Seconds */}
+      <section className="py-7 md:py-9">
+        <div className="container-main">
+          <div className="highlight-band">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-6">
+              <div className="max-w-3xl">
+                <span className="badge mb-3">
+                  {l === "en" ? "Start in 60 seconds" : "In 60 Sekunden starten"}
+                </span>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight mt-0 mb-2">
+                  {l === "en"
+                    ? "Most useful first clicks this week"
+                    : "Die nuetzlichsten ersten Klicks diese Woche"}
+                </h2>
+                <p className="text-ink-2 m-0">
+                  {l === "en"
+                    ? "Pick one high-impact route now, then continue from the guide's next-action block."
+                    : "Waehle jetzt einen hochrelevanten Einstieg und gehe dann im Guide direkt zu den naechsten Schritten."}
+                </p>
+              </div>
+              <Link href={`${base}/guides`} className="btn btn-primary">
+                {l === "en" ? "Open all guides" : "Alle Guides oeffnen"}
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+              {weeklyQuickRoutes.map((route) => (
+                <Link
+                  key={route.href}
+                  href={route.href}
+                  className="glass-card-link p-4 no-underline text-ink group"
+                >
+                  <p className="text-sm font-black tracking-tight mt-0 mb-2 group-hover:text-accent-2 transition-colors">
+                    {route.title}
+                  </p>
+                  <p className="text-xs text-ink-2 m-0 leading-relaxed">{route.note}</p>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -649,29 +768,28 @@ export default async function HomePage({
               </h3>
               <div className="flex flex-col gap-3">
                 <Link
-                  href={`${base}/tools#last-train-weekend-escape`}
+                  href={`${base}/guides/everyday/family-benefits-kindergeld-elterngeld`}
                   className="glass-card-link p-3.5 text-sm font-semibold no-underline text-ink hover:text-accent-2 transition-colors"
                 >
-                  {l === "en" ? "Last Train Home + Weekend Escape Finder" : "Last Train Home + Weekend Escape Finder"}
+                  {l === "en" ? "Family benefits: Kindergeld + Elterngeld" : "Familienleistungen: Kindergeld + Elterngeld"}
                 </Link>
                 <Link
-                  href={`${base}/tips`}
+                  href={`${base}/guides/everyday/offline-gps-safety-hack`}
                   className="glass-card-link p-3.5 text-sm font-semibold no-underline text-ink hover:text-accent-2 transition-colors"
                 >
-                  {l === "en" ? "Hacks & Tips Hub" : "Hacks & Tipps Hub"}
+                  {l === "en" ? "Offline GPS safety guide" : "Offline-GPS Sicherheitsguide"}
                 </Link>
                 <Link
-                  href={`${base}/blog`}
+                  href={`${base}/guides/money-taxes/elster`}
                   className="glass-card-link p-3.5 text-sm font-semibold no-underline text-ink hover:text-accent-2 transition-colors"
                 >
-                  {latestBlogPost?.frontmatter.title ??
-                    (l === "en" ? "Top Changes in Germany" : "Top-Aenderungen in Deutschland")}
+                  {l === "en" ? "ELSTER setup and first filing" : "ELSTER einrichten und erste Abgabe"}
                 </Link>
                 <Link
-                  href={`${base}/offers`}
+                  href={`${base}/guides/housing/kuendigungsfrist-miete`}
                   className="glass-card-link p-3.5 text-sm font-semibold no-underline text-ink hover:text-accent-2 transition-colors"
                 >
-                  {t[l].nav.offers}
+                  {l === "en" ? "Rent notice period in Germany" : "Kuendigungsfrist der Miete in Deutschland"}
                 </Link>
                 <Link
                   href={`${base}/guides/bureaucracy/anmeldung`}

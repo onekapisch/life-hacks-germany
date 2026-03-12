@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { Lang, PillarKey } from "@/lib/i18n";
 import { t, pillars, siteConfig } from "@/lib/i18n";
-import { getGuidesByPillar } from "@/lib/guides";
+import { getGuide, getGuidesByPillar } from "@/lib/guides";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { createSocialMetadata } from "@/lib/seo";
 
@@ -13,15 +13,36 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const l = lang as Lang;
-  const tr = t[l].guides;
+  const metaTitle = l === "en"
+    ? "Germany Guides 2026: Anmeldung, Taxes, Housing, Mobility"
+    : "Deutschland Guides 2026: Anmeldung, Steuern, Wohnen, Mobilitaet";
+  const metaDescription = l === "en"
+    ? "Step-by-step Germany guides with official sources: Anmeldung, ELSTER taxes, housing contracts, and transport decisions."
+    : "Schritt-fuer-Schritt Guides mit offiziellen Quellen: Anmeldung, ELSTER, Mietvertrag, und Mobilitaetsentscheidungen.";
   const social = createSocialMetadata({
-    title: tr.title,
-    description: tr.subtitle,
+    title: metaTitle,
+    description: metaDescription,
     badge: l === "en" ? "Guides" : "Guides",
   });
   return {
-    title: tr.title,
-    description: tr.subtitle,
+    title: metaTitle,
+    description: metaDescription,
+    keywords:
+      l === "en"
+        ? [
+            "Germany guides",
+            "Anmeldung guide",
+            "ELSTER tax guide",
+            "housing Germany",
+            "Deutschlandticket guide",
+          ]
+        : [
+            "Deutschland Guides",
+            "Anmeldung Anleitung",
+            "ELSTER Anleitung",
+            "Wohnen Deutschland",
+            "Deutschlandticket Guide",
+          ],
     alternates: {
       canonical: `${siteConfig.domain}/${lang}/guides`,
       languages: {
@@ -50,6 +71,29 @@ export default async function GuidesPage({
   const l = lang as Lang;
   const tr = t[l].guides;
   const base = `/${l}`;
+  const highIntentGuideSlugs = l === "en"
+    ? [
+        "anmeldung",
+        "elster",
+        "tax-return-deadlines",
+        "family-benefits-kindergeld-elterngeld",
+        "kuendigungsfrist-miete",
+        "offline-gps-safety-hack",
+      ]
+    : [
+        "anmeldung",
+        "elster",
+        "tax-return-deadlines",
+        "family-benefits-kindergeld-elterngeld",
+        "kuendigungsfrist-miete",
+        "offline-gps-safety-hack",
+      ];
+  const highIntentGuides = highIntentGuideSlugs
+    .map((slug) => getGuide(l, slug))
+    .filter(
+      (guide): guide is NonNullable<ReturnType<typeof getGuide>> =>
+        guide !== null
+    );
 
   return (
     <>
@@ -83,6 +127,49 @@ export default async function GuidesPage({
                   {tr.toolsDesc}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-10">
+        <div className="container-main">
+          <div className="highlight-band">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-6">
+              <div className="max-w-3xl">
+                <span className="badge mb-3">
+                  {l === "en" ? "Most clicked this week" : "Diese Woche oft geklickt"}
+                </span>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight m-0 mb-2">
+                  {l === "en"
+                    ? "Fast paths for immediate progress"
+                    : "Schnelle Pfade fuer sofortigen Fortschritt"}
+                </h2>
+                <p className="text-ink-2 m-0">
+                  {l === "en"
+                    ? "Use these high-intent guides first, then drill down by pillar."
+                    : "Starte mit diesen hochrelevanten Guides und vertiefe danach nach Themenbereich."}
+                </p>
+              </div>
+              <Link href={`${base}/tools`} className="btn btn-primary">
+                {l === "en" ? "Open practical tools" : "Praktische Tools oeffnen"}
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+              {highIntentGuides.map((guide) => (
+                <Link
+                  key={guide.frontmatter.slug}
+                  href={`${base}/guides/${guide.frontmatter.pillar}/${guide.frontmatter.slug}`}
+                  className="glass-card-link p-4 no-underline text-ink group"
+                >
+                  <p className="text-sm font-black tracking-tight m-0 group-hover:text-accent-2 transition-colors">
+                    {guide.frontmatter.title}
+                  </p>
+                  <p className="text-xs text-ink-2 mt-2 mb-0 line-clamp-2">
+                    {guide.frontmatter.summary}
+                  </p>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

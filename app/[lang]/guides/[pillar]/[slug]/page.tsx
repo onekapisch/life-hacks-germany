@@ -61,6 +61,29 @@ type AppDirectoryCategory = {
   apps: AppDirectoryItem[];
 };
 
+const GUIDE_KEYWORDS: Record<PillarKey, { en: string[]; de: string[] }> = {
+  bureaucracy: {
+    en: ["Germany anmeldung", "Buergeramt", "Steuer ID Germany", "residence registration"],
+    de: ["Anmeldung Deutschland", "Buergeramt", "Steuer-ID", "Wohnsitz anmelden"],
+  },
+  "money-taxes": {
+    en: ["ELSTER guide", "tax return Germany", "Rundfunkbeitrag", "German taxes"],
+    de: ["ELSTER Anleitung", "Steuererklaerung", "Rundfunkbeitrag", "Steuern Deutschland"],
+  },
+  housing: {
+    en: ["rent deposit Germany", "notice period rent Germany", "Mietkaution", "housing Germany"],
+    de: ["Mietkaution", "Kuendigungsfrist Miete", "Wohnung Deutschland", "Mietvertrag"],
+  },
+  mobility: {
+    en: ["Deutschlandticket", "public transport Germany", "fuel savings Germany", "driving Germany"],
+    de: ["Deutschlandticket", "OePNV Deutschland", "Sprit sparen", "Mobilitaet Deutschland"],
+  },
+  everyday: {
+    en: ["kindergeld guide", "doctor appointments Germany", "offline GPS Germany", "daily life Germany"],
+    de: ["Kindergeld", "Arzttermine Deutschland", "Offline GPS", "Alltag Deutschland"],
+  },
+};
+
 const ESSENTIAL_APP_STACK_CONFIG: AppStackCardConfig[] = [
   {
     id: "nora",
@@ -481,15 +504,24 @@ export async function generateMetadata({
   const guide = getGuide(l, slug);
   if (!guide || !pillars[p] || guide.frontmatter.pillar !== p) return {};
   const fm = guide.frontmatter;
+  const metaDescription = l === "en"
+    ? `${fm.summary} Step-by-step checklist, official sources, and practical next actions. Updated ${fm.updated}.`
+    : `${fm.summary} Schritt-fuer-Schritt-Checkliste, offizielle Quellen und konkrete naechste Schritte. Aktualisiert am ${fm.updated}.`;
+  const keywordBase = GUIDE_KEYWORDS[p]?.[l] ?? [];
+  const keywordTail = l === "en"
+    ? ["Germany guide", "verified official sources", fm.slug.replace(/-/g, " ")]
+    : ["Deutschland Guide", "verifizierte offizielle Quellen", fm.slug.replace(/-/g, " ")];
+  const keywords = [...keywordBase, ...keywordTail];
   const social = createSocialMetadata({
     title: fm.title,
-    description: fm.summary,
+    description: metaDescription,
     badge: l === "en" ? "Guide" : "Guide",
   });
 
   return {
     title: fm.title,
-    description: fm.summary,
+    description: metaDescription,
+    keywords,
     alternates: {
       canonical: `${siteConfig.domain}/${lang}/guides/${pillar}/${slug}`,
       languages: {
@@ -541,6 +573,35 @@ export default async function GuidePage({
   const relatedFallback = inPillar.filter((g) => !manualRelated.has(g.frontmatter.slug));
   const related = [...relatedByFrontmatter, ...relatedFallback];
   const isEn = l === "en";
+  const topActionCards = [
+    {
+      href: isTipGuide ? `${base}/tips` : `${base}/guides/${pillar}`,
+      title: isEn ? "Keep momentum in this topic" : "Im Thema direkt weitermachen",
+      body: isEn
+        ? "Open the full path to avoid missing critical steps."
+        : "Oeffne den kompletten Pfad, damit kein wichtiger Schritt fehlt.",
+    },
+    {
+      href: `${base}/tools`,
+      title: isEn ? "Use a calculator or checklist" : "Mit Tool oder Checkliste beschleunigen",
+      body: isEn
+        ? "Turn this guide into concrete numbers and decisions."
+        : "Uebersetze den Guide direkt in Zahlen und klare Entscheidungen.",
+    },
+    related[0]
+      ? {
+          href: `${base}/guides/${related[0].frontmatter.pillar}/${related[0].frontmatter.slug}`,
+          title: isEn ? "Read the next best guide" : "Naechsten passenden Guide lesen",
+          body: related[0].frontmatter.title,
+        }
+      : {
+          href: `${base}/guides`,
+          title: isEn ? "Browse all verified guides" : "Alle verifizierten Guides ansehen",
+          body: isEn
+            ? "Jump to the guide hub and pick your next priority."
+            : "Gehe zum Guide-Hub und waehle die naechste Prioritaet.",
+        },
+  ];
   const quickSteps = fm.steps.slice(0, Math.min(3, fm.steps.length));
   const totalWords =
     fm.summary.split(/\s+/).length +
@@ -727,6 +788,25 @@ export default async function GuidePage({
             {fm.summary}
           </p>
           <GuideShareActions lang={l} title={fm.title} url={canonicalUrl} />
+          <div className="mt-6">
+            <p className="text-xs font-bold uppercase tracking-[0.1em] text-ink-3 mb-3">
+              {isEn ? "Best next actions" : "Beste naechste Schritte"}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {topActionCards.map((action) => (
+                <Link
+                  key={action.href}
+                  href={action.href}
+                  className="glass-card-link p-4 no-underline text-ink group"
+                >
+                  <p className="text-sm font-black tracking-tight m-0 group-hover:text-accent-2 transition-colors">
+                    {action.title}
+                  </p>
+                  <p className="text-xs text-ink-2 mt-2 mb-0">{action.body}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
