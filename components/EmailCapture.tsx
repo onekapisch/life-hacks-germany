@@ -76,13 +76,21 @@ export default function EmailCapture({ lang }: { lang: Lang }) {
         </div>
         <form onSubmit={handleSubmit} className="w-full md:w-auto flex flex-col gap-3">
           <div className="flex flex-col sm:flex-row gap-2">
+            <label htmlFor="newsletter-email" className="sr-only">
+              {lang === "en" ? "Email address" : "E-Mail-Adresse"}
+            </label>
             <input
+              id="newsletter-email"
               type="email"
+              name="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               placeholder={tr.emailPlaceholder}
               required
               className="min-w-[260px] rounded-lg border border-[rgba(15,23,42,0.15)] bg-paper px-3.5 py-2.5 text-sm text-ink outline-none focus:border-accent-2"
+              autoComplete="email"
+              spellCheck={false}
+              inputMode="email"
             />
             <button
               type="submit"
@@ -91,14 +99,17 @@ export default function EmailCapture({ lang }: { lang: Lang }) {
             >
               {status === "loading"
                 ? lang === "en"
-                  ? "Joining..."
-                  : "Wird eingetragen..."
+                  ? "Joining…"
+                  : "Wird eingetragen…"
                 : tr.joinList}
             </button>
           </div>
 
           {(status === "success" || status === "error" || status === "unavailable") && (
-            <div className={`text-sm ${status === "success" ? "text-accent-4" : "text-accent"}`}>
+            <div
+              className={`text-sm ${status === "success" ? "text-accent-4" : "text-accent"}`}
+              aria-live="polite"
+            >
               {message}
             </div>
           )}

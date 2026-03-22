@@ -3,44 +3,16 @@
 import { useState } from "react";
 import type { Lang } from "@/lib/i18n";
 import { trackEvent } from "@/lib/analyticsClient";
-
-type TaxClass = "I" | "II" | "III" | "IV" | "V" | "VI";
-type CityKey = "berlin" | "munich" | "hamburg" | "frankfurt" | "cologne";
-type CityCosts = { rent: number; transport: number; groceries: number; utilities: number };
+import {
+  calculateGrossNetComparison,
+  CITY_ORDER,
+  CITY_PRESETS,
+  parseLocalizedNumber,
+  type CityCosts,
+  type CityKey,
+  type TaxClass,
+} from "@/lib/grossNetCalculator";
 type CalcResult = { kind: "success" | "error"; message: string };
-
-const CITY_PRESETS: Record<CityKey, CityCosts> = {
-  berlin: { rent: 1250, transport: 63, groceries: 340, utilities: 190 },
-  munich: { rent: 1700, transport: 63, groceries: 360, utilities: 210 },
-  hamburg: { rent: 1450, transport: 63, groceries: 350, utilities: 200 },
-  frankfurt: { rent: 1550, transport: 63, groceries: 350, utilities: 200 },
-  cologne: { rent: 1350, transport: 63, groceries: 340, utilities: 190 },
-};
-
-const CITY_ORDER: CityKey[] = ["berlin", "munich", "hamburg", "frankfurt", "cologne"];
-
-function parseNumber(value: string): number {
-  return Number(value.trim().replace(",", "."));
-}
-
-function getTaxClassFactor(taxClass: TaxClass): number {
-  switch (taxClass) {
-    case "II": return 0.95;
-    case "III": return 0.72;
-    case "IV": return 1;
-    case "V": return 1.35;
-    case "VI": return 1.45;
-    default: return 1;
-  }
-}
-
-function calculateIncomeTaxApprox(taxableIncome: number): number {
-  if (taxableIncome <= 12000) return 0;
-  if (taxableIncome <= 20000) return (taxableIncome - 12000) * 0.14;
-  if (taxableIncome <= 66000) return 1120 + (taxableIncome - 20000) * 0.3;
-  if (taxableIncome <= 278000) return 14920 + (taxableIncome - 66000) * 0.42;
-  return 103960 + (taxableIncome - 278000) * 0.45;
-}
 
 export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
   const isEn = lang === "en";
@@ -51,7 +23,6 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
     currency: "EUR",
     maximumFractionDigits: 2,
   });
-  const numberFormatter = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 });
 
   const [salaryGross, setSalaryGross] = useState("");
   const [salaryTaxClass, setSalaryTaxClass] = useState<TaxClass>("I");
@@ -95,50 +66,48 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
 
   const calculate = () => {
     trackEvent("tool_calculate", { tool: "gross_net_city_surplus_standalone", lang });
-    const gross = parseNumber(salaryGross);
-    const healthRate = parseNumber(salaryHealthRate);
-    const allCosts = [...Object.values(costsA), ...Object.values(costsB)];
+    const gross = parseLocalizedNumber(salaryGross);
+    const comparison = calculateGrossNetComparison({
+      grossAnnual: gross,
+      taxClass: salaryTaxClass,
+      healthRate: parseLocalizedNumber(salaryHealthRate),
+      churchTax: salaryChurchTax,
+      childlessCare: salaryChildless,
+      cityA: costsA,
+      cityB: costsB,
+    });
 
-    if (
-      !Number.isFinite(gross) || !Number.isFinite(healthRate) ||
-      gross <= 0 || healthRate <= 0 || healthRate > 30 ||
-      allCosts.some((v) => !Number.isFinite(v) || v < 0)
-    ) {
+    if (!comparison) {
       setSalaryResult({ kind: "error", message: invalidMessage });
       setBreakdown(null);
       return;
     }
 
-    const pension = gross * 0.093;
-    const unemployment = gross * 0.013;
-    const health = gross * ((healthRate / 100) / 2);
-    const care = gross * (salaryChildless ? 0.024 : 0.018);
-    const socialContributions = pension + unemployment + health + care;
-
-    const taxable = Math.max(gross - socialContributions - 12000, 0);
-    const estimatedTaxBase = calculateIncomeTaxApprox(taxable);
-    const incomeTax = estimatedTaxBase * getTaxClassFactor(salaryTaxClass);
-    const solidarity = incomeTax > 18000 ? incomeTax * 0.055 : 0;
-    const churchTax = salaryChurchTax ? incomeTax * 0.09 : 0;
-
-    const annualNet = Math.max(gross - socialContributions - incomeTax - solidarity - churchTax, 0);
-    const monthlyNet = annualNet / 12;
-
-    const totalA = costsA.rent + costsA.transport + costsA.groceries + costsA.utilities;
-    const totalB = costsB.rent + costsB.transport + costsB.groceries + costsB.utilities;
-    const surplusA = monthlyNet - totalA;
-    const surplusB = monthlyNet - totalB;
-
     const betterCity =
-      surplusA === surplusB ? null : surplusA > surplusB ? cityLabels[cityA] : cityLabels[cityB];
-    const diff = Math.abs(surplusA - surplusB);
+      comparison.betterCity === null
+        ? null
+        : comparison.betterCity === "A"
+          ? cityLabels[cityA]
+          : cityLabels[cityB];
 
     const message = isEn
-      ? `Estimated monthly net: ${euro.format(monthlyNet)}. ${cityLabels[cityA]} surplus: ${euro.format(surplusA)}. ${cityLabels[cityB]} surplus: ${euro.format(surplusB)}.${betterCity ? ` Better monthly balance in ${betterCity} by ${euro.format(diff)}.` : ""}`
-      : `Gesch. monatl. Netto: ${euro.format(monthlyNet)}. ${cityLabels[cityA]} Ueberschuss: ${euro.format(surplusA)}. ${cityLabels[cityB]} Ueberschuss: ${euro.format(surplusB)}.${betterCity ? ` Besseres Plus in ${betterCity} um ${euro.format(diff)}.` : ""}`;
+      ? `Estimated monthly net: ${euro.format(comparison.monthlyNet)}. ${cityLabels[cityA]} surplus: ${euro.format(comparison.surplusA)}. ${cityLabels[cityB]} surplus: ${euro.format(comparison.surplusB)}.${betterCity ? ` Better monthly balance in ${betterCity} by ${euro.format(comparison.diff)}.` : ""}`
+      : `Gesch. monatl. Netto: ${euro.format(comparison.monthlyNet)}. ${cityLabels[cityA]} Ueberschuss: ${euro.format(comparison.surplusA)}. ${cityLabels[cityB]} Ueberschuss: ${euro.format(comparison.surplusB)}.${betterCity ? ` Besseres Plus in ${betterCity} um ${euro.format(comparison.diff)}.` : ""}`;
 
     setSalaryResult({ kind: "success", message });
-    setBreakdown({ gross, pension, unemployment, health, care, incomeTax, solidarity, churchTax, monthlyNet, surplusA, surplusB });
+    setBreakdown({
+      gross,
+      pension: comparison.pension,
+      unemployment: comparison.unemployment,
+      health: comparison.health,
+      care: comparison.care,
+      incomeTax: comparison.incomeTax,
+      solidarity: comparison.solidarity,
+      churchTax: comparison.churchTax,
+      monthlyNet: comparison.monthlyNet,
+      surplusA: comparison.surplusA,
+      surplusB: comparison.surplusB,
+    });
   };
 
   return (
@@ -246,7 +215,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
             <input
               type="number"
               value={costsA.rent}
-              onChange={(e) => setCostsA((prev) => ({ ...prev, rent: parseNumber(e.target.value) || 0 }))}
+              onChange={(e) => setCostsA((prev) => ({ ...prev, rent: parseLocalizedNumber(e.target.value) || 0 }))}
               className="glass-input w-full px-4 py-3 text-sm focus:border-accent-3/80 focus:outline-none transition-colors"
               min="0"
             />
@@ -257,7 +226,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
               <input
                 type="number"
                 value={costsA.transport}
-                onChange={(e) => setCostsA((prev) => ({ ...prev, transport: parseNumber(e.target.value) || 0 }))}
+                onChange={(e) => setCostsA((prev) => ({ ...prev, transport: parseLocalizedNumber(e.target.value) || 0 }))}
                 className="glass-input w-full px-3 py-2.5 text-sm focus:border-accent-3/80 focus:outline-none transition-colors"
                 min="0"
               />
@@ -267,7 +236,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
               <input
                 type="number"
                 value={costsA.groceries}
-                onChange={(e) => setCostsA((prev) => ({ ...prev, groceries: parseNumber(e.target.value) || 0 }))}
+                onChange={(e) => setCostsA((prev) => ({ ...prev, groceries: parseLocalizedNumber(e.target.value) || 0 }))}
                 className="glass-input w-full px-3 py-2.5 text-sm focus:border-accent-3/80 focus:outline-none transition-colors"
                 min="0"
               />
@@ -277,7 +246,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
               <input
                 type="number"
                 value={costsA.utilities}
-                onChange={(e) => setCostsA((prev) => ({ ...prev, utilities: parseNumber(e.target.value) || 0 }))}
+                onChange={(e) => setCostsA((prev) => ({ ...prev, utilities: parseLocalizedNumber(e.target.value) || 0 }))}
                 className="glass-input w-full px-3 py-2.5 text-sm focus:border-accent-3/80 focus:outline-none transition-colors"
                 min="0"
               />
@@ -311,7 +280,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
             <input
               type="number"
               value={costsB.rent}
-              onChange={(e) => setCostsB((prev) => ({ ...prev, rent: parseNumber(e.target.value) || 0 }))}
+              onChange={(e) => setCostsB((prev) => ({ ...prev, rent: parseLocalizedNumber(e.target.value) || 0 }))}
               className="glass-input w-full px-4 py-3 text-sm focus:border-accent-3/80 focus:outline-none transition-colors"
               min="0"
             />
@@ -322,7 +291,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
               <input
                 type="number"
                 value={costsB.transport}
-                onChange={(e) => setCostsB((prev) => ({ ...prev, transport: parseNumber(e.target.value) || 0 }))}
+                onChange={(e) => setCostsB((prev) => ({ ...prev, transport: parseLocalizedNumber(e.target.value) || 0 }))}
                 className="glass-input w-full px-3 py-2.5 text-sm focus:border-accent-3/80 focus:outline-none transition-colors"
                 min="0"
               />
@@ -332,7 +301,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
               <input
                 type="number"
                 value={costsB.groceries}
-                onChange={(e) => setCostsB((prev) => ({ ...prev, groceries: parseNumber(e.target.value) || 0 }))}
+                onChange={(e) => setCostsB((prev) => ({ ...prev, groceries: parseLocalizedNumber(e.target.value) || 0 }))}
                 className="glass-input w-full px-3 py-2.5 text-sm focus:border-accent-3/80 focus:outline-none transition-colors"
                 min="0"
               />
@@ -342,7 +311,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
               <input
                 type="number"
                 value={costsB.utilities}
-                onChange={(e) => setCostsB((prev) => ({ ...prev, utilities: parseNumber(e.target.value) || 0 }))}
+                onChange={(e) => setCostsB((prev) => ({ ...prev, utilities: parseLocalizedNumber(e.target.value) || 0 }))}
                 className="glass-input w-full px-3 py-2.5 text-sm focus:border-accent-3/80 focus:outline-none transition-colors"
                 min="0"
               />

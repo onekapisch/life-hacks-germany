@@ -24,6 +24,25 @@ export default function SearchModal({
   lang: Lang;
   onClose: () => void;
 }) {
+  const copy = lang === "en"
+    ? {
+        inputLabel: "Search guides, tools, and updates",
+        placeholder: "Search guides, tools, tips…",
+        close: "Close search",
+        loading: "Searching…",
+        error: "Search is temporarily unavailable.",
+        empty: "No results found",
+        viewAll: "View all results",
+      }
+    : {
+        inputLabel: "Guides, Tools und Updates durchsuchen",
+        placeholder: "Guides, Tools, Tipps suchen…",
+        close: "Suche schliessen",
+        loading: "Suche laeuft…",
+        error: "Suche ist voruebergehend nicht verfuegbar.",
+        empty: "Keine Ergebnisse gefunden",
+        viewAll: "Alle Ergebnisse anzeigen",
+      };
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [results, setResults] = useState<SearchItem[]>([]);
@@ -33,6 +52,14 @@ export default function SearchModal({
   const trimmedQuery = query.trim();
 
   useEffect(() => { inputRef.current?.focus(); }, []);
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
 
   useEffect(() => {
     const handle = window.setTimeout(() => {
@@ -108,41 +135,58 @@ export default function SearchModal({
 
   return (
     <div className="search-overlay" onClick={onClose}>
-      <div className="search-modal" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="search-modal"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="site-search-input"
+      >
         <div className="flex items-center gap-3 px-5 py-4 border-b border-[rgba(15,23,42,0.06)]">
           <svg className="w-5 h-5 text-ink-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
+          <label htmlFor="site-search-input" className="sr-only">
+            {copy.inputLabel}
+          </label>
           <input
+            id="site-search-input"
             ref={inputRef}
             type="text"
+            name="q"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder={lang === "en" ? "Search guides, tools, tips..." : "Guides, Tools, Tipps suchen..."}
+            placeholder={copy.placeholder}
             className="flex-1 bg-transparent text-ink text-sm outline-none placeholder:text-ink-3"
+            aria-label={copy.inputLabel}
+            autoComplete="off"
+            spellCheck={false}
+            enterKeyHint="search"
           />
-          <kbd
+          <button
+            type="button"
             className="text-[0.6rem] px-1.5 py-0.5 rounded bg-paper-3 text-ink-3 font-mono cursor-pointer"
             onClick={onClose}
+            aria-label={copy.close}
           >
             ESC
-          </kbd>
+          </button>
         </div>
 
-        <div className="overflow-y-auto flex-1 max-h-[50vh]">
+        <div className="overflow-y-auto flex-1 max-h-[50vh]" aria-live="polite">
           {isLoading && (
             <div className="px-5 py-8 text-center text-sm text-ink-3">
-              {lang === "en" ? "Searching..." : "Suche laeuft..."}
+              {copy.loading}
             </div>
           )}
           {!isLoading && hasError && (
             <div className="px-5 py-8 text-center text-sm text-ink-3">
-              {lang === "en" ? "Search is temporarily unavailable." : "Suche ist voruebergehend nicht verfuegbar."}
+              {copy.error}
             </div>
           )}
           {!isLoading && !hasError && results.length === 0 && (
             <div className="px-5 py-8 text-center text-sm text-ink-3">
-              {lang === "en" ? "No results found" : "Keine Ergebnisse gefunden"}
+              {copy.empty}
             </div>
           )}
           {!isLoading && !hasError && results.length > 0 && (
@@ -173,7 +217,7 @@ export default function SearchModal({
                 onClick={onClose}
                 className="text-xs font-semibold text-accent-2 no-underline hover:underline"
               >
-                {lang === "en" ? "View all results" : "Alle Ergebnisse anzeigen"} &rarr;
+                {copy.viewAll} &rarr;
               </Link>
             </div>
           )}

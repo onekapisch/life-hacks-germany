@@ -45,32 +45,14 @@ export default async function StartHerePage({
     <>
       <Breadcrumbs lang={l} items={[{ label: tr.title }]} />
 
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="container-main">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <span className="badge mb-5">{tr.personalizedRoutes}</span>
-              <h1 className="text-4xl md:text-5xl font-black leading-[1.05] tracking-tight mb-4">
-                {tr.title}
-              </h1>
-              <p className="text-lg text-ink-2 max-w-lg">{tr.subtitle}</p>
-            </div>
-            <div className="card p-6">
-              <h3 className="text-sm font-bold uppercase tracking-[0.1em] mt-0 mb-4">
-                {tr.whatYouGet}
-              </h3>
-              <div className="flex flex-col gap-3">
-                <div className="glass-tile text-sm">
-                  {tr.stepByStep}
-                </div>
-                <div className="glass-tile text-sm">
-                  {tr.verifiedLinks}
-                </div>
-                <div className="glass-tile text-sm">
-                  {tr.costTools}
-                </div>
-              </div>
-            </div>
+          <div className="max-w-2xl">
+            <span className="badge mb-4">{tr.personalizedRoutes}</span>
+            <h1 className="text-4xl md:text-5xl font-black leading-[1.05] tracking-tight mb-4">
+              {tr.title}
+            </h1>
+            <p className="text-lg text-ink-2 leading-relaxed m-0">{tr.subtitle}</p>
           </div>
         </div>
       </section>

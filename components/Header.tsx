@@ -46,11 +46,39 @@ export default function Header({ lang }: { lang: Lang }) {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    document.body.style.overflow = mobileOpen || searchOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen, searchOpen]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
   }, [mobileOpen]);
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
+  const uiCopy = lang === "en"
+    ? {
+        search: "Search",
+        searchShortcut: "Search the site",
+        openMenu: "Open menu",
+        closeMenu: "Close menu",
+        mobileMenu: "Main menu",
+      }
+    : {
+        search: "Suche",
+        searchShortcut: "Website durchsuchen",
+        openMenu: "Menue oeffnen",
+        closeMenu: "Menue schliessen",
+        mobileMenu: "Hauptmenue",
+      };
 
   return (
     <>
@@ -83,12 +111,12 @@ export default function Header({ lang }: { lang: Lang }) {
                 type="button"
                 onClick={() => setSearchOpen(true)}
                 className="header-search-btn flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-colors cursor-pointer"
-                aria-label="Search"
+                aria-label={uiCopy.searchShortcut}
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-                <span className="hidden md:inline text-xs">Search</span>
+                <span className="hidden md:inline text-xs">{uiCopy.search}</span>
                 <kbd className="header-hotkey hidden md:inline text-[0.6rem] px-1.5 py-0.5 rounded font-mono">{"\u2318"}K</kbd>
               </button>
 
@@ -119,7 +147,9 @@ export default function Header({ lang }: { lang: Lang }) {
                 type="button"
                 onClick={() => setMobileOpen(true)}
                 className="header-mobile-btn lg:hidden flex items-center justify-center w-9 h-9 rounded-lg transition-colors cursor-pointer"
-                aria-label="Open menu"
+                aria-label={uiCopy.openMenu}
+                aria-expanded={mobileOpen}
+                aria-controls="site-mobile-menu"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -132,14 +162,20 @@ export default function Header({ lang }: { lang: Lang }) {
 
       {/* Mobile Drawer */}
       <div className={`mobile-menu-overlay ${mobileOpen ? "open" : ""}`} onClick={closeMobile} />
-      <div className={`mobile-menu-drawer ${mobileOpen ? "open" : ""}`}>
+      <div
+        id="site-mobile-menu"
+        className={`mobile-menu-drawer ${mobileOpen ? "open" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label={uiCopy.mobileMenu}
+      >
         <div className="mobile-drawer-head flex items-center justify-between p-4">
           <span className="font-bold text-sm uppercase tracking-wide">{siteConfig.name}</span>
           <button
             type="button"
             onClick={closeMobile}
             className="mobile-close-btn w-8 h-8 flex items-center justify-center rounded-lg transition-colors cursor-pointer"
-            aria-label="Close menu"
+            aria-label={uiCopy.closeMenu}
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />

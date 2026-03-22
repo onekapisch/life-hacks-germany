@@ -93,6 +93,7 @@ export default async function SearchPage({
   const subtitle = l === "en"
     ? "Search across guides, tips, tools, pages, and monthly Germany updates."
     : "Suche ueber Guides, Tipps, Tools, Seiten und monatliche Deutschland-Updates.";
+  const searchLabel = l === "en" ? "Search query" : "Suchanfrage";
 
   return (
     <>
@@ -109,12 +110,19 @@ export default async function SearchPage({
           <p className="text-ink-2 mb-6">{subtitle}</p>
 
           <form action={`${base}/search`} method="get" className="flex flex-col sm:flex-row gap-2 mb-8">
+            <label htmlFor="search-page-query" className="sr-only">
+              {searchLabel}
+            </label>
             <input
+              id="search-page-query"
               type="text"
               name="q"
               defaultValue={normalizedQuery}
-              placeholder={l === "en" ? "Try: tax return, anmeldung, deutschlandticket..." : "Z. B. steuererklaerung, anmeldung, deutschlandticket..."}
+              placeholder={l === "en" ? "Try: tax return, anmeldung, deutschlandticket…" : "Z. B. steuererklaerung, anmeldung, deutschlandticket…"}
               className="w-full rounded-lg border border-[rgba(15,23,42,0.15)] bg-paper px-3.5 py-2.5 text-sm text-ink outline-none focus:border-accent-2"
+              autoComplete="off"
+              spellCheck={false}
+              enterKeyHint="search"
             />
             <button type="submit" className="btn btn-primary whitespace-nowrap">
               {l === "en" ? "Search" : "Suchen"}

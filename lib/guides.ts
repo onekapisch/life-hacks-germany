@@ -33,6 +33,7 @@ export interface GuideFrontmatter {
   sources: GuideSource[];
   offers?: GuideOffer[];
   relatedGuides?: string[];
+  draft?: boolean;
 }
 
 export interface Guide {

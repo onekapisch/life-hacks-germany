@@ -15,11 +15,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/start-here",
+    "/work-relocation",
     "/guides",
     "/tips",
     "/blog",
     "/offers",
     "/tools",
+    "/tools/gross-net-salary-calculator",
     "/about",
     "/editorial-standards",
     "/legal/privacy",
@@ -66,6 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const guides = getAllGuides(lang);
     for (const guide of guides) {
       const fm = guide.frontmatter;
+      if (fm.draft) continue;
       entries.push({
         url: `${BASE}/${lang}/guides/${fm.pillar}/${fm.slug}`,
         lastModified: new Date(fm.updated),

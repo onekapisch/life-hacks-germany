@@ -26,3 +26,7 @@ npm run test
 npm run build
 npm run check:links
 ```
+
+## Runbooks
+
+- Analytics health check: `docs/analytics-health-check.md`

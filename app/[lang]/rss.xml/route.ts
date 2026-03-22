@@ -21,7 +21,7 @@ export function GET(
     const feedTitle =
       l === "en"
         ? "Life Hacks Germany RSS Feed"
-        : "Life Hacks Germany RSS Feed";
+        : "Life Hacks Germany RSS-Feed";
     const feedDescription =
       l === "en"
         ? "Verified monthly Germany updates, practical guides, and launch-ready content."

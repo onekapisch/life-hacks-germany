@@ -602,7 +602,6 @@ export default async function GuidePage({
             : "Gehe zum Guide-Hub und waehle die naechste Prioritaet.",
         },
   ];
-  const quickSteps = fm.steps.slice(0, Math.min(3, fm.steps.length));
   const totalWords =
     fm.summary.split(/\s+/).length +
     fm.steps.join(" ").split(/\s+/).length +
@@ -631,7 +630,6 @@ export default async function GuidePage({
   const flowLabels = isEn
     ? {
         howToUse: "Read this page in order",
-        quickStart: "Quick Start",
         stepPlan: "Step-by-step plan",
         context: "Key context",
         deepDive: "Detailed walkthrough",
@@ -644,8 +642,6 @@ export default async function GuidePage({
         estimatedRead: "Estimated read time",
         sourceRefresh: "Source refresh",
         startNow: "Start now",
-        todayPlan:
-          "Follow these first actions before reading the full guide. Most users resolve 80% of confusion with these steps.",
         atGlance: "At a glance",
         appStack: "Recommended App Stack",
         appStackDesc:
@@ -658,7 +654,6 @@ export default async function GuidePage({
       }
     : {
         howToUse: "So liest du diese Seite",
-        quickStart: "Schnellstart",
         stepPlan: "Schritt-fuer-Schritt Plan",
         context: "Wichtiger Kontext",
         deepDive: "Detaillierte Erklaerung",
@@ -671,8 +666,6 @@ export default async function GuidePage({
         estimatedRead: "Geschaetzte Lesezeit",
         sourceRefresh: "Quellen-Update",
         startNow: "Jetzt starten",
-        todayPlan:
-          "Fuehre zuerst diese Kernschritte aus. Bei den meisten Nutzern loesen sie den groessten Teil der Unsicherheit.",
         atGlance: "Auf einen Blick",
         appStack: "Empfohlener App-Stack",
         appStackDesc:
@@ -685,7 +678,6 @@ export default async function GuidePage({
       };
 
   const sectionLinks = [
-    { id: "quick-start", label: flowLabels.quickStart },
     { id: "step-plan", label: flowLabels.stepPlan },
     ...(appStackCards.length > 0 ? [{ id: "app-stack", label: flowLabels.appStack }] : []),
     ...(appDirectoryCategories.length > 0
@@ -842,21 +834,6 @@ export default async function GuidePage({
             </aside>
 
             <div className="flex flex-col gap-8">
-              <section id="quick-start" className="content-shell">
-                <h2 className="text-2xl font-black tracking-tight mt-0 mb-2">
-                  {flowLabels.quickStart}
-                </h2>
-                <p className="text-ink-2 mb-6">{flowLabels.todayPlan}</p>
-                <div className="guide-quick-list">
-                  {quickSteps.map((step, i) => (
-                    <div key={i} className="guide-quick-item">
-                      <span className="guide-quick-index">{i + 1}</span>
-                      <div className="text-sm leading-relaxed">{step}</div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
               {appStackCards.length > 0 && (
                 <section id="app-stack" className="content-shell">
                   <h2 className="text-2xl font-black tracking-tight mt-0 mb-2">

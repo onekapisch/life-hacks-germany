@@ -6,21 +6,19 @@ import { t } from "@/lib/i18n";
 import { subtractMonthsClamped } from "@/lib/permitDate";
 import { trackEvent } from "@/lib/analyticsClient";
 import LastTrainEscapeFinder from "@/components/LastTrainEscapeFinder";
+import {
+  calculateGrossNetComparison,
+  CITY_ORDER,
+  CITY_PRESETS,
+  parseLocalizedNumber,
+  type CityCosts,
+  type CityKey,
+  type TaxClass,
+} from "@/lib/grossNetCalculator";
 
 type CalcResult = {
   kind: "success" | "error";
   message: string;
-};
-
-type TaxClass = "I" | "II" | "III" | "IV" | "V" | "VI";
-
-type CityKey = "berlin" | "munich" | "hamburg" | "frankfurt" | "cologne";
-
-type CityCosts = {
-  rent: number;
-  transport: number;
-  groceries: number;
-  utilities: number;
 };
 
 type LaneKey = "mobility" | "money" | "admin";
@@ -37,19 +35,8 @@ type ToolOutcome = {
   actions: NextAction[];
 };
 
-const CITY_PRESETS: Record<CityKey, CityCosts> = {
-  berlin: { rent: 1250, transport: 63, groceries: 340, utilities: 190 },
-  munich: { rent: 1700, transport: 63, groceries: 360, utilities: 210 },
-  hamburg: { rent: 1450, transport: 63, groceries: 350, utilities: 200 },
-  frankfurt: { rent: 1550, transport: 63, groceries: 350, utilities: 200 },
-  cologne: { rent: 1350, transport: 63, groceries: 340, utilities: 190 },
-};
-
-const CITY_ORDER: CityKey[] = ["berlin", "munich", "hamburg", "frankfurt", "cologne"];
-
 function parseNumber(value: string): number {
-  const cleaned = value.trim().replace(",", ".");
-  return Number(cleaned);
+  return parseLocalizedNumber(value);
 }
 
 export default function ToolsClient({ lang }: { lang: Lang }) {
@@ -172,32 +159,6 @@ export default function ToolsClient({ lang }: { lang: Lang }) {
     }
     setCityB(city);
     setCostsB(preset);
-  };
-
-  const getTaxClassFactor = (taxClass: TaxClass) => {
-    switch (taxClass) {
-      case "II":
-        return 0.95;
-      case "III":
-        return 0.72;
-      case "IV":
-        return 1;
-      case "V":
-        return 1.35;
-      case "VI":
-        return 1.45;
-      case "I":
-      default:
-        return 1;
-    }
-  };
-
-  const calculateIncomeTaxApprox = (taxableIncome: number) => {
-    if (taxableIncome <= 12000) return 0;
-    if (taxableIncome <= 20000) return (taxableIncome - 12000) * 0.14;
-    if (taxableIncome <= 66000) return 1120 + (taxableIncome - 20000) * 0.3;
-    if (taxableIncome <= 278000) return 14920 + (taxableIncome - 66000) * 0.42;
-    return 103960 + (taxableIncome - 278000) * 0.45;
   };
 
   const calculateRent = () => {
@@ -538,47 +499,29 @@ export default function ToolsClient({ lang }: { lang: Lang }) {
 
   const calculateGrossNetAndSurplus = () => {
     trackEvent("tool_calculate", { tool: "gross_net_city_surplus", lang });
-    const gross = parseNumber(salaryGross);
-    const healthRate = parseNumber(salaryHealthRate);
+    const comparison = calculateGrossNetComparison({
+      grossAnnual: parseNumber(salaryGross),
+      taxClass: salaryTaxClass,
+      healthRate: parseNumber(salaryHealthRate),
+      churchTax: salaryChurchTax,
+      childlessCare: salaryChildless,
+      cityA: costsA,
+      cityB: costsB,
+    });
 
-    const allCosts = [...Object.values(costsA), ...Object.values(costsB)];
-    if (
-      !Number.isFinite(gross) ||
-      !Number.isFinite(healthRate) ||
-      gross <= 0 ||
-      healthRate <= 0 ||
-      healthRate > 30 ||
-      allCosts.some((v) => !Number.isFinite(v) || v < 0)
-    ) {
+    if (!comparison) {
       setSalaryResult({ kind: "error", message: invalidMessage });
       return;
     }
-
-    const pension = gross * 0.093;
-    const unemployment = gross * 0.013;
-    const health = gross * ((healthRate / 100) / 2);
-    const care = gross * (salaryChildless ? 0.024 : 0.018);
-    const socialContributions = pension + unemployment + health + care;
-
-    const taxable = Math.max(gross - socialContributions - 12000, 0);
-    const estimatedTaxBase = calculateIncomeTaxApprox(taxable);
-    const incomeTax = estimatedTaxBase * getTaxClassFactor(salaryTaxClass);
-    const solidarity = incomeTax > 18000 ? incomeTax * 0.055 : 0;
-    const churchTax = salaryChurchTax ? incomeTax * 0.09 : 0;
-
-    const annualNet = Math.max(gross - socialContributions - incomeTax - solidarity - churchTax, 0);
-    const monthlyNet = annualNet / 12;
-
-    const totalA = costsA.rent + costsA.transport + costsA.groceries + costsA.utilities;
-    const totalB = costsB.rent + costsB.transport + costsB.groceries + costsB.utilities;
-    const surplusA = monthlyNet - totalA;
-    const surplusB = monthlyNet - totalB;
-
-    const betterCity = surplusA === surplusB ? null : surplusA > surplusB ? cityLabels[cityA] : cityLabels[cityB];
-    const betterDifference = Math.abs(surplusA - surplusB);
+    const betterCity =
+      comparison.betterCity === null
+        ? null
+        : comparison.betterCity === "A"
+          ? cityLabels[cityA]
+          : cityLabels[cityB];
     const message = isEn
-      ? `Estimated monthly net: ${euro.format(monthlyNet)}. ${cityLabels[cityA]} surplus: ${euro.format(surplusA)}. ${cityLabels[cityB]} surplus: ${euro.format(surplusB)}.${betterCity ? ` Better monthly balance in ${betterCity} by ${euro.format(betterDifference)}.` : ""}`
-      : `Geschaetztes monatliches Netto: ${euro.format(monthlyNet)}. Ueberschuss in ${cityLabels[cityA]}: ${euro.format(surplusA)}. Ueberschuss in ${cityLabels[cityB]}: ${euro.format(surplusB)}.${betterCity ? ` Besseres Monatsplus in ${betterCity} mit ${euro.format(betterDifference)} Unterschied.` : ""}`;
+      ? `Estimated monthly net: ${euro.format(comparison.monthlyNet)}. ${cityLabels[cityA]} surplus: ${euro.format(comparison.surplusA)}. ${cityLabels[cityB]} surplus: ${euro.format(comparison.surplusB)}.${betterCity ? ` Better monthly balance in ${betterCity} by ${euro.format(comparison.diff)}.` : ""}`
+      : `Geschaetztes monatliches Netto: ${euro.format(comparison.monthlyNet)}. Ueberschuss in ${cityLabels[cityA]}: ${euro.format(comparison.surplusA)}. Ueberschuss in ${cityLabels[cityB]}: ${euro.format(comparison.surplusB)}.${betterCity ? ` Besseres Monatsplus in ${betterCity} mit ${euro.format(comparison.diff)} Unterschied.` : ""}`;
 
     setSalaryResult({
       kind: "success",

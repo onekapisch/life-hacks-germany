@@ -6,7 +6,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import JsonLd from "@/components/JsonLd";
 import Analytics from "@/components/Analytics";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
-import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import type { Lang } from "@/lib/i18n";
 import { t, siteConfig } from "@/lib/i18n";
 import { createPublisherMetadata, createSocialMetadata } from "@/lib/seo";
@@ -104,7 +103,7 @@ export default async function LangLayout({
           href="#main"
           className="absolute left-[-999px] top-3 bg-ink text-white py-2 px-4 rounded-full z-10 focus:left-4"
         >
-          Skip to content
+          {l === "en" ? "Skip to content" : "Zum Inhalt springen"}
         </a>
         <Header lang={l} />
         <main id="main">{children}</main>
@@ -112,7 +111,6 @@ export default async function LangLayout({
         <ScrollToTop />
         <CookieConsentBanner lang={l} />
         <Analytics />
-        <VercelAnalytics />
       </body>
     </html>
   );

@@ -39,6 +39,15 @@ const STATIC_PAGES = {
       keywords: "start here checklist route onboarding germany newcomer expat student local",
     },
     {
+      title: "Work Relocation to Germany",
+      summary: "First 30 days, payslip orientation, family setup, and HR or payroll questions for corporate expats.",
+      href: "/en/work-relocation",
+      kind: "page" as const,
+      section: "onboarding",
+      keywords:
+        "work relocation germany corporate expat internal transfer employer sponsored move first payslip payroll hr mobility support family setup",
+    },
+    {
       title: "All Guides",
       summary: "Browse all verified step-by-step guides by pillar.",
       href: "/en/guides",
@@ -120,6 +129,15 @@ const STATIC_PAGES = {
       kind: "page" as const,
       section: "onboarding",
       keywords: "start hier checklist route onboarding deutschland neuankunft expat studium",
+    },
+    {
+      title: "Job-Relocation nach Deutschland",
+      summary: "Erste 30 Tage, Gehaltsorientierung, Familien-Setup und bessere Fragen fuer HR oder Payroll.",
+      href: "/de/work-relocation",
+      kind: "page" as const,
+      section: "onboarding",
+      keywords:
+        "job relocation deutschland corporate expat interner transfer employer sponsored umzug erste gehaltsabrechnung payroll hr mobility familie",
     },
     {
       title: "Alle Guides",
@@ -211,7 +229,7 @@ const TOOL_ENTRIES: Record<Lang, StaticSearchEntry[]> = {
     {
       title: "Gross-to-Net + City Surplus Calculator",
       summary: "Estimate net salary and compare monthly surplus across two German cities.",
-      href: "/en/tools#gross-net-city-surplus",
+      href: "/en/tools/gross-net-salary-calculator",
       kind: "tool",
       section: "tools",
       keywords:
@@ -287,7 +305,7 @@ const TOOL_ENTRIES: Record<Lang, StaticSearchEntry[]> = {
     {
       title: "Brutto-Netto + Stadt-Ueberschuss Rechner",
       summary: "Nettogehalt schaetzen und Monatsplus in zwei deutschen Staedten vergleichen.",
-      href: "/de/tools#gross-net-city-surplus",
+      href: "/de/tools/gross-net-salary-calculator",
       kind: "tool",
       section: "tools",
       keywords:

@@ -36,10 +36,78 @@ relatedGuides:
   - "kuendigungsfrist-miete"
 ---
 
-## Alert-Stack Setup
+## Was dir der Mietspiegel sagt
 
-Nutze parallele Alerts in mehreren Portalen, damit du nicht von einem Feed abhaengig bist. Filter woechentlich nachschaerfen.
+Der **Mietspiegel** ist eine amtliche Übersicht lokaler Marktmieten, die von Gemeinden herausgegeben und regelmäßig aktualisiert wird. §558c BGB regelt den einfachen Mietspiegel; §558d BGB den qualifizierten, methodisch strengeren. Nicht jede Stadt veröffentlicht einen, aber die meisten umkämpften Mietmärkte tun es.
 
-## Entscheidungsregel
+Der praktische Nutzen: Du bekommst eine belastbare Preisorientierung für Wohnungen nach Lage, Größe, Baujahr und Ausstattung (Balkon, Einbauküche, Modernisierungsstand). Ein Inserat über dem Mietspiegel ist nicht automatisch unzulässig — aber es signalisiert entweder eine Prämienpositionierung oder eine Überforderung. Die Kenntnis der Spanne verhindert emotionale Übergebote unter Zeitdruck.
 
-Wenn ein Inserat deine Preisleitplanke oder Vertragscheckliste verletzt, direkt weitergehen und Suchtempo hochhalten.
+---
+
+## Den Mietspiegel deiner Stadt finden
+
+Viele Städte bieten einen Online-Rechner an:
+
+| Stadt | Quelle |
+|---|---|
+| Berlin | berlin.de/mietspiegelberechner |
+| München | muenchen.de/rathaus/stadtrecht-mietspiegel |
+| Hamburg | hamburg.de/mietpreise |
+| Frankfurt | frankfurt.de/mietpreisspiegel |
+| Köln | stadt-koeln.de (Suche: Mietspiegel) |
+| Stuttgart | stuttgart.de/mietpreisspiegel |
+
+Für andere Städte: Suche `[Stadtname] Mietspiegel [Jahr]` auf der offiziellen Stadtwebseite (.de-Domain). Drittanbieter-Aggregatoren vermeiden, die veraltete Daten aufbereiten.
+
+**Kenngrößen, die die Spanne verschieben:**
+
+| Variable | Wirkung auf die Miete |
+|---|---|
+| Lage/Stadtteil | Größter Einzelfaktor — Innenstadt vs. Peripherie vs. Kiez |
+| Wohnfläche (m²) | Qm-Miete oft niedriger bei größeren Wohnungen |
+| Baujahr | Vor 1918 und nach 2010 oft mit Aufschlag gegenüber Nachkriegsbestand |
+| Ausstattung | Balkon, Einbauküche, Modernisierungsstand, Etage |
+
+---
+
+## Alert-Stack: parallele Feeds, strenge Filter
+
+Alerts mindestens auf 2–3 Plattformen gleichzeitig einrichten. Ein Inserat kann auf einer Plattform Tage vor einer anderen erscheinen.
+
+| Plattform | Besonders geeignet für | Alert-Funktion |
+|---|---|---|
+| ImmoScout24 | Breitestes professionelles Angebot | Kostenlos — E-Mail oder Push |
+| Immowelt | Überschneidungen + Exklusives | Kostenlos — E-Mail |
+| WG-Gesucht | Zimmer und WGs | Kostenlos — E-Mail |
+| Kleinanzeigen | Privatangebote, oft günstiger | Filter + Benachrichtigung |
+
+**Filter-Setup das funktioniert:**
+- Warmmiete-Obergrenze: Mietspiegel-Obergrenze + 5–8 % Puffer
+- Stadtteil: konkret — ein stadtweiter Filter erzeugt Rauschen
+- Fläche: ±10 m² um Zielgröße
+- Einzugstermin: Mindestdatum setzen — damit entfallen Inserate, die du nicht nehmen kannst
+
+Filter alle 2 Wochen nachschärfen. Zu enger Filter lässt reale Angebote durch; zu weiter Filter begräbt dich in irrelevanten Ergebnissen.
+
+---
+
+## Entscheidungsregel: schnell, aber mit Leitplanken
+
+Tempo zählt in umkämpften Märkten — aber Tempo ohne Framework erzeugt teure Fehler. Vor jeder Bewerbung drei Prüfpunkte:
+
+1. **Preis:** Liegt die Warmmiete im Mietspiegel-Korridor + Puffer? Falls nicht: überspringen.
+2. **Vertrag:** Wird ein Zeitmietvertrag, eine Renovierungspflicht oder ein unüblicher Passus erwähnt? Falls unklar: vor der Besichtigung fragen — nicht während.
+3. **Unterlagen:** Sind Schufa, Einkommensnachweise, Anmeldebestätigung und Anschreiben fertig? Eine unvollständige Bewerbung in einem schnellen Markt schadet mehr als eine vollständige Bewerbung einen Tag später.
+
+Wenn das Inserat alle drei Punkte besteht: sofort bewerben — nicht auf hypothetisch bessere Inserate warten.
+
+---
+
+## Wenn die Preise dauerhaft über deiner Spanne liegen
+
+Wenn in deinem Zielgebiet Inserate 20–30 % über dem Mietspiegel liegen, hast du ein Ziel-Problem, kein Timing-Problem:
+
+- **Stadtteile erweitern:** Angrenzende Lagen sind oft 15–25 % günstiger bei ähnlichem Angebot
+- **Flächenanforderung reduzieren:** Kleinere Wohnungen haben mehr Fluktuation und kürzere Leerstandsphasen
+- **Ältere Bausubstanz prüfen:** Wohnungen vor 2000 ohne Kernsanierung liegen häufig unter dem Preis modernisierter Einheiten
+- **Suchzeitpunkt anpassen:** Januar bis März hat in der Regel mehr Wohnungswechsel vor dem Sommersemester und dem typischen Sommerumzugspeak
