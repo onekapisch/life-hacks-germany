@@ -98,7 +98,7 @@ export const t = {
       offersBadge: "Verified savings section",
       offersTitle: "Top offers Germans actually use",
       offersCopy:
-        "A curated list of mainstream discounts, membership perks, and app deals that are still worth checking in March 2026.",
+        "A curated list of mainstream discounts, membership perks, and app deals worth checking regularly.",
       offersCta: "Browse top offers",
     },
     startHere: {
@@ -215,7 +215,7 @@ export const t = {
       rankingTitle: "What makes the list",
       ranking1: "Mainstream brand reach in Germany",
       ranking2: "Real recurring value, not fake max-discount marketing",
-      ranking3: "Official source link plus exact verification time",
+      ranking3: "Official source link plus visible review timestamp",
       ranking4: "Clear watch-outs where the savings can be overstated",
       verifiedLabel: "Verified",
       statusLabel: "Status",
@@ -224,7 +224,7 @@ export const t = {
       whyLabel: "Why it matters",
       watchoutsLabel: "Watch-outs",
       officialLink: "Open official offer",
-      allOffersVerified: "All 20 offers checked on official brand pages.",
+      allOffersVerified: "Offers are listed with official source links and review timestamps.",
       disclaimer:
         "Offers can change quickly. We do not list affiliate links, and we do not publish community rumours without an official source.",
       statusOngoing: "Ongoing",
@@ -375,7 +375,7 @@ export const t = {
       offersBadge: "Verifizierter Sparbereich",
       offersTitle: "Top-Angebote, die in Deutschland wirklich genutzt werden",
       offersCopy:
-        "Eine kuratierte Liste mit Mainstream-Rabatten, Mitglieder-Vorteilen und App-Deals, die im Maerz 2026 noch relevant sind.",
+        "Eine kuratierte Liste mit Mainstream-Rabatten, Mitglieder-Vorteilen und App-Deals, die regelmaessig relevant sind.",
       offersCta: "Top-Angebote ansehen",
     },
     startHere: {
@@ -491,7 +491,7 @@ export const t = {
       rankingTitle: "Wodurch die Liste entsteht",
       ranking1: "Mainstream-Reichweite der Marke in Deutschland",
       ranking2: "Wiederkehrender Nutzen statt unrealistische Maximalrabatte",
-      ranking3: "Offizieller Quellenlink plus exakte Pruefzeit",
+      ranking3: "Offizieller Quellenlink plus sichtbarer Pruefzeitpunkt",
       ranking4: "Klare Hinweise, wenn der Sparvorteil leicht ueberschaetzt wird",
       verifiedLabel: "Geprueft",
       statusLabel: "Status",
@@ -500,7 +500,7 @@ export const t = {
       whyLabel: "Warum es relevant ist",
       watchoutsLabel: "Worauf du achten solltest",
       officialLink: "Offizielle Angebotsseite",
-      allOffersVerified: "Alle 20 Angebote wurden auf offiziellen Markenseiten geprueft.",
+      allOffersVerified: "Angebote sind mit offiziellen Quellenlinks und Pruefzeitpunkten gelistet.",
       disclaimer:
         "Angebote koennen sich schnell aendern. Wir listen keine Affiliate-Links und uebernehmen keine Community-Geruechte ohne offizielle Quelle.",
       statusOngoing: "Laufend",

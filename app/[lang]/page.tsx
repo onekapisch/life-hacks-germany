@@ -116,18 +116,18 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und praezise Standorthilfe.",
       fuelWatch: {
         badge: "Spritpreis-Watch",
-        title: "Deutschland: deutlicher Preissprung in der letzten Erhebungswoche",
+        title: "Deutschland: Kraftstoffpreise bleiben auf hohem Niveau",
         body:
-          "Laut ADAC-Update sind die Preise zuletzt spuerbar gestiegen. Gerade jetzt helfen Stationsvergleich und Preisalarme, damit du nicht zur teuersten Zeit tankst.",
-        stats: ["Super E10: +12,1 Cent/Liter", "Diesel: +17,7 Cent/Liter"],
-        lastChecked: "10. Maerz 2026",
+          "Die ADAC-Auswertung vom 11.03.2026 meldete beide Sorten gleichzeitig ueber 2 Euro pro Liter. Gerade jetzt helfen Stationsvergleich und Preisalarme, damit du nicht zur teuersten Zeit tankst.",
+        stats: ["Super E10: 2,045 Euro/Liter", "Diesel: 2,188 Euro/Liter"],
+        lastChecked: "23. Maerz 2026",
         sourcePrimary: {
-          label: "ADAC Presse (04.03.2026)",
-          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-springen-stark-nach-oben.html",
+          label: "ADAC Presse (11.03.2026)",
+          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/diesel-im-wochenvergleich-um-ueber-27-cent-teurer.html",
         },
         sourceSecondary: {
-          label: "ADAC Presse (02.03.2026)",
-          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/benzin-und-diesel-im-februar-teurer-als-im-vormonat.html",
+          label: "ADAC Presse (04.03.2026)",
+          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-springen-stark-nach-oben.html",
         },
         cta: "Tank Alert Preisalarm setzen",
       },
@@ -199,18 +199,18 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
     fuelWatch: {
       badge: "Fuel Price Watch",
-      title: "Germany: notable week-on-week fuel jump",
+      title: "Germany: fuel prices remain elevated",
       body:
-        "Recent ADAC reporting shows sharp weekly increases. Right now, station comparison and price alarms are the easiest way to reduce overpaying at the pump.",
-      stats: ["Super E10: +12.1 cents/liter", "Diesel: +17.7 cents/liter"],
-      lastChecked: "March 10, 2026",
+        "ADAC's March 11, 2026 weekly report showed both fuel types above EUR 2/liter at the same time. Right now, station comparison and price alarms are the easiest way to reduce overpaying at the pump.",
+      stats: ["Super E10: EUR 2.045/liter", "Diesel: EUR 2.188/liter"],
+      lastChecked: "March 23, 2026",
       sourcePrimary: {
-        label: "ADAC press (March 4, 2026)",
-        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-springen-stark-nach-oben.html",
+        label: "ADAC press (March 11, 2026)",
+        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/diesel-im-wochenvergleich-um-ueber-27-cent-teurer.html",
       },
       sourceSecondary: {
-        label: "ADAC press (March 2, 2026)",
-        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/benzin-und-diesel-im-februar-teurer-als-im-vormonat.html",
+        label: "ADAC press (March 4, 2026)",
+        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-springen-stark-nach-oben.html",
       },
       cta: "Set Tank Alert price alarms",
     },
