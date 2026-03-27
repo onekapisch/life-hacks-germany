@@ -8,7 +8,8 @@
     "start": "node .next/standalone/server.js",
     "lint": "eslint",
     "test": "node --test --import tsx \"tests/**/*.test.ts\"",
-    "check:links": "node scripts/check-links.mjs"
+    "check:links": "node scripts/check-links.mjs",
+    "check:editorial-tone": "node scripts/check-editorial-tone.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

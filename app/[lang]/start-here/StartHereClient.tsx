@@ -111,6 +111,13 @@ export default function StartHereClient({ lang }: { lang: Lang }) {
         : "Kaution, Mobilitaet, Krankenversicherung und Finanz-Setup — in der Reihenfolge, in der du sie brauchst.",
       links: [
         {
+          href: `${base}/guides/everyday/university-reality-check-hack`,
+          label: isEn ? "University reality check" : "Uni-Realitaetscheck",
+          note: isEn
+            ? "Use StudyCheck + official data before you commit"
+            : "StudyCheck + offizielle Daten vor der Zusage nutzen",
+        },
+        {
           href: `${base}/guides/mobility/deutschlandticket`,
           label: "Deutschlandticket",
           note: isEn
