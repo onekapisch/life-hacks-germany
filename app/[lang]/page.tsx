@@ -8,6 +8,7 @@ import { getFeaturedOffers } from "@/lib/offers";
 import JsonLd from "@/components/JsonLd";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { createSocialMetadata } from "@/lib/seo";
+import { AnimatedShaderBackground } from "@/components/ui/animated-shader-hero";
 
 export async function generateMetadata({
   params,
@@ -390,9 +391,12 @@ export default async function HomePage({
 
       {/* Hero */}
       <section className="hero-stage relative py-20 md:py-28 overflow-hidden">
+        <div className="hero-shader-bg absolute left-[2.2rem] right-[2.2rem] top-[1.2rem] bottom-[1.6rem] z-0 overflow-hidden rounded-[34px]">
+          <AnimatedShaderBackground />
+        </div>
         <div className="hero-glow hero-glow-right" />
         <div className="hero-glow hero-glow-left" />
-        <div className="container-main relative z-[1]">
+        <div className="container-main relative z-[2]">
           <div className="hero-premium-panel">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
