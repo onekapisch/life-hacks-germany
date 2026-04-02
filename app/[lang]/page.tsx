@@ -295,9 +295,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
         note: "Anspruch pruefen und Antragstaktik verstehen",
       },
       {
-        href: "/de/guides/everyday/offline-gps-safety-hack",
-        title: "Offline-GPS Sicherheits-Hack",
-        note: "Koordinaten nutzen, auch ohne Internet oder Roaming",
+        href: "/de/guides/everyday/learn-german-in-germany",
+        title: "Deutsch lernen in Deutschland",
+        note: "Alltagsfaehig von Null bis B1 statt in App-Chaos stecken zu bleiben",
       },
     ];
   }
@@ -319,9 +319,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
       note: "Check eligibility and sequence your applications correctly",
     },
     {
-      href: "/en/guides/everyday/offline-gps-safety-hack",
-      title: "Offline GPS Safety Hack",
-      note: "Get coordinates even without data, SIM, or roaming",
+      href: "/en/guides/everyday/learn-german-in-germany",
+      title: "Learn German In Germany",
+      note: "A survival-first route from zero to B1 for real daily-life use",
     },
   ];
 }

@@ -75,18 +75,18 @@ export default async function GuidesPage({
     ? [
         "anmeldung",
         "elster",
+        "learn-german-in-germany",
         "tax-return-deadlines",
         "family-benefits-kindergeld-elterngeld",
         "kuendigungsfrist-miete",
-        "offline-gps-safety-hack",
       ]
     : [
         "anmeldung",
         "elster",
+        "learn-german-in-germany",
         "tax-return-deadlines",
         "family-benefits-kindergeld-elterngeld",
         "kuendigungsfrist-miete",
-        "offline-gps-safety-hack",
       ];
   const highIntentGuides = highIntentGuideSlugs
     .map((slug) => getGuide(l, slug))

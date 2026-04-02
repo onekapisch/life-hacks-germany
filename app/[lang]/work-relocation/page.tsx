@@ -274,6 +274,11 @@ function getCopy(lang: Lang): WorkRelocationCopy {
           href: `${base}/guides/everyday/health-insurance-basics`,
         },
         {
+          title: "Deutsch lernen in Deutschland",
+          body: "Relevant, wenn Sprache zum naechsten Bottleneck bei Terminen, Wohnung, Arzt oder Job-Alltag wird.",
+          href: `${base}/guides/everyday/learn-german-in-germany`,
+        },
+        {
           title: "Blue Card und Arbeitserlaubnis",
           body: "Hilft bei Eligibility, Dokumentenlogik und typischen Verzoegerungen im Permit-Prozess.",
           href: `${base}/guides/bureaucracy/blue-card-work-permit`,
@@ -505,6 +510,11 @@ function getCopy(lang: Lang): WorkRelocationCopy {
         title: "Health insurance basics",
         body: "The fastest overview when you need to understand the German insurance setup for work and family.",
         href: `${base}/guides/everyday/health-insurance-basics`,
+      },
+      {
+        title: "Learn German in Germany",
+        body: "Use this when language becomes the next bottleneck in appointments, housing, healthcare, or work life.",
+        href: `${base}/guides/everyday/learn-german-in-germany`,
       },
       {
         title: "Blue Card and work permit",
