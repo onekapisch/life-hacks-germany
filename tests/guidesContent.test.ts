@@ -8,6 +8,12 @@ function getLearnGermanGuide() {
   return guide;
 }
 
+function getGermanLearnGermanGuide() {
+  const guide = getGuide("de", "learn-german-in-germany");
+  assert.ok(guide, "expected German learn-german guide to exist");
+  return guide;
+}
+
 function getH2Headings(markdown: string) {
   return [...markdown.matchAll(/^## (.+)$/gm)].map((match) => match[1]);
 }
@@ -152,30 +158,112 @@ test("English learn-german guide keeps the required section structure and plan-c
   assert.match(mistakesSection, /perfect pronunciation too early|accent perfection/i);
 });
 
-test("German learn-german guide exists with everyday classification", () => {
-  const guide = getGuide("de", "learn-german-in-germany");
+test("German learn-german guide frontmatter matches the required contract", () => {
+  const guide = getGermanLearnGermanGuide();
 
-  assert.ok(guide, "expected German learn-german guide to exist");
+  assert.equal(
+    guide.frontmatter.title,
+    "Deutsch lernen nach dem Umzug nach Deutschland",
+  );
+  assert.equal(
+    guide.frontmatter.summary,
+    "Ein Survival-Plan fuer Expats, die genug Deutsch fuer Wohnung, Termine, Arbeit und Alltag brauchen, ohne Monate an die falsche Methode zu verlieren.",
+  );
   assert.equal(guide.frontmatter.pillar, "everyday");
   assert.equal(guide.frontmatter.slug, "learn-german-in-germany");
-  assert.ok(
-    guide.frontmatter.relatedGuides?.includes("first-14-days"),
-    "expected German guide to link back to first-14-days",
+  assert.equal(guide.frontmatter.updated, "2026-04-02");
+  assert.equal(
+    guide.frontmatter.forWho,
+    "Expats, Studierende, Partnerinnen und Partner sowie Arbeitnehmende, die praktisches Deutsch fuer den Alltag in Deutschland brauchen.",
   );
+  assert.equal(
+    guide.frontmatter.costs,
+    "Zentrale offizielle Angebote wie Deutsche Welle und vhs-Lernportal sind kostenlos; Kurse, Integrationskurse und Pruefungen unterscheiden sich je nach Anbieter und Stadt.",
+  );
+  assert.equal(
+    guide.frontmatter.localNotes,
+    "Dein Tempo haengt stark davon ab, wie viel Deutsch du bei Arbeit, Wohnen, Behoerden, Einkaufen und im sozialen Umfeld wirklich hoerst und nutzt.",
+  );
+  assert.equal(
+    guide.frontmatter.disclaimer,
+    "Praktische Lernhilfe, keine wissenschaftliche Sprachdidaktik-Beratung.",
+  );
+
+  assert.deepEqual(guide.frontmatter.steps, [
+    "Setze nicht fliessendes Deutsch als Sofortziel, sondern baue zuerst Alltagstauglichkeit auf.",
+    "Arbeite in Phasen: Laute und Satzmuster, Survival-Wortschatz, gefuehrter Input und dann gezielte Grammatik.",
+    "Lerne zuerst Deutsch fuer Wohnung, Termine, Transport, Arbeit und Einkaufen.",
+    "Starte mit offiziellen oder belastbaren Ressourcen und nutze Zusatztools nur als Unterstuetzung.",
+    "Folge einem realistischen 90-Tage-System, das auch mit Umzugsstress und Vollzeitjob tragfaehig bleibt.",
+  ]);
+
+  assert.deepEqual(guide.frontmatter.facts, [
+    "CEFR-Stufen wie A1, A2 und B1 werden von grossen Sprachinstitutionen in Deutschland zur Einordnung von Sprachstand verwendet.",
+    "Deutsche Welle und vhs-Lernportal stellen kostenlose Deutschlernangebote bereit, die sich fuer selbststaendiges Lernen eignen.",
+  ]);
+
+  assert.deepEqual(guide.frontmatter.mistakes, [
+    "Pruefungsvorbereitung mit alltagstauglichem Deutsch gleichsetzen.",
+    "Als kompletter Anfaenger nur passiv zu konsumieren.",
+    "Grammatik komplett zu ignorieren oder sie vor jeder echten Nutzung perfektionieren zu wollen.",
+  ]);
+
+  assert.deepEqual(guide.frontmatter.sources, [
+    {
+      label: "Goethe-Institut Kurs- und Pruefungsstufen",
+      url: "https://www.goethe.de/resources/files/pdf288/quartale_kurssystem-kompletten.pdf",
+    },
+    {
+      label: "Deutsche Welle Deutsch lernen / Nicos Weg",
+      url: "https://static.dw.com/downloads/64698818/230203_DK_Broschuere_DINA5_en_Digital.pdf",
+    },
+    {
+      label: "BAMF Merkblatt Integrationskurs",
+      url: "https://www.bamf.de/SharedDocs/Anlagen/EN/Integration/Integrationskurse/Kursteilnehmer/Merkblaetter/630-121_merkblatt-oeffnung-Integrationskurse.pdf?__blob=publicationFile&v=6",
+    },
+    {
+      label: "vhs-Lernportal Infoblatt",
+      url: "https://www.vhs-lernportal.de/wws/bin/4007242-4008514-1-infoblatt_berufssprache_deutsch.pdf",
+    },
+  ]);
+
+  assert.deepEqual(guide.frontmatter.relatedGuides, [
+    "first-14-days",
+    "anmeldung",
+    "doctor-appointment-booking-hack",
+    "health-insurance-basics",
+    "essential-germany-app-stack",
+  ]);
 });
 
-test("guide inventories stay language-balanced after adding the new guide", () => {
-  const enSlugs = new Set(getAllGuides("en").map((guide) => guide.frontmatter.slug));
-  const deSlugs = new Set(getAllGuides("de").map((guide) => guide.frontmatter.slug));
+test("German learn-german guide keeps the required section structure", () => {
+  const guide = getGermanLearnGermanGuide();
+  const headings = getH2Headings(guide.content);
 
-  assert.ok(enSlugs.has("learn-german-in-germany"));
-  assert.ok(deSlugs.has("learn-german-in-germany"));
-  assert.deepEqual(
-    [...enSlugs].filter((slug) => !deSlugs.has(slug)),
-    [],
+  assert.deepEqual(headings, [
+    "Warum Deutschlernen in Deutschland trotzdem langsam wirken kann",
+    "Welches Niveau du in Deutschland wirklich brauchst",
+    "Der Survival-Plan von Null bis B1",
+    "Was du zuerst lernen solltest, wenn du schon in Deutschland lebst",
+    "Wie viel Grammatik du frueh wirklich brauchst",
+    "Ressourcen, die deine Zeit wirklich wert sind",
+    "Eine realistische Wochenroutine fuer beschaeftigte Expats",
+    "Fehler, die Expats festhaengen lassen",
+    "Ein 90-Tage-Plan",
+    "Was dieser Guide dir bewusst nicht verspricht",
+  ]);
+});
+
+test("learn-german guide remains available in both languages exactly once", () => {
+  const enGuides = getAllGuides("en").filter(
+    (guide) => guide.frontmatter.slug === "learn-german-in-germany",
   );
-  assert.deepEqual(
-    [...deSlugs].filter((slug) => !enSlugs.has(slug)),
-    [],
+  const deGuides = getAllGuides("de").filter(
+    (guide) => guide.frontmatter.slug === "learn-german-in-germany",
   );
+
+  assert.equal(enGuides.length, 1);
+  assert.equal(deGuides.length, 1);
+  assert.equal(enGuides[0]?.frontmatter.slug, "learn-german-in-germany");
+  assert.equal(deGuides[0]?.frontmatter.slug, "learn-german-in-germany");
 });
