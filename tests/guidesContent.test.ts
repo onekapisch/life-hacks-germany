@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { getGuide } from "../lib/guides";
+import { getAllGuides, getGuide } from "../lib/guides";
 
 function getLearnGermanGuide() {
   const guide = getGuide("en", "learn-german-in-germany");
@@ -150,4 +150,32 @@ test("English learn-german guide keeps the required section structure and plan-c
   assert.match(mistakesSection, /only classes|classes alone/i);
   assert.match(mistakesSection, /delay\w+\s+speaking\s+until\s+ready/i);
   assert.match(mistakesSection, /perfect pronunciation too early|accent perfection/i);
+});
+
+test("German learn-german guide exists with everyday classification", () => {
+  const guide = getGuide("de", "learn-german-in-germany");
+
+  assert.ok(guide, "expected German learn-german guide to exist");
+  assert.equal(guide.frontmatter.pillar, "everyday");
+  assert.equal(guide.frontmatter.slug, "learn-german-in-germany");
+  assert.ok(
+    guide.frontmatter.relatedGuides?.includes("first-14-days"),
+    "expected German guide to link back to first-14-days",
+  );
+});
+
+test("guide inventories stay language-balanced after adding the new guide", () => {
+  const enSlugs = new Set(getAllGuides("en").map((guide) => guide.frontmatter.slug));
+  const deSlugs = new Set(getAllGuides("de").map((guide) => guide.frontmatter.slug));
+
+  assert.ok(enSlugs.has("learn-german-in-germany"));
+  assert.ok(deSlugs.has("learn-german-in-germany"));
+  assert.deepEqual(
+    [...enSlugs].filter((slug) => !deSlugs.has(slug)),
+    [],
+  );
+  assert.deepEqual(
+    [...deSlugs].filter((slug) => !enSlugs.has(slug)),
+    [],
+  );
 });
