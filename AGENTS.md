@@ -47,7 +47,7 @@ Guide files live in `content/guides/{en,de}`. The current inventory is:
   - `money-taxes`: 9
   - `housing`: 6
   - `mobility`: 4
-  - `everyday`: 10
+  - `everyday`: 11
 
 Guide frontmatter fields in use:
 

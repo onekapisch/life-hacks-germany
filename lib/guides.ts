@@ -69,6 +69,34 @@ export function getGuidesByPillar(lang: Lang, pillar: PillarKey): Guide[] {
   return getAllGuides(lang).filter((g) => g.frontmatter.pillar === pillar);
 }
 
+export function getRelatedGuidesForGuide(
+  lang: Lang,
+  pillar: PillarKey,
+  slug: string,
+  manualRelatedSlugs: string[] = [],
+): Guide[] {
+  const related: Guide[] = [];
+  const seenSlugs = new Set([slug]);
+
+  for (const manualRelatedSlug of manualRelatedSlugs) {
+    const guide = getGuide(lang, manualRelatedSlug);
+
+    if (!guide || seenSlugs.has(guide.frontmatter.slug)) continue;
+
+    seenSlugs.add(guide.frontmatter.slug);
+    related.push(guide);
+  }
+
+  for (const guide of getGuidesByPillar(lang, pillar)) {
+    if (seenSlugs.has(guide.frontmatter.slug)) continue;
+
+    seenSlugs.add(guide.frontmatter.slug);
+    related.push(guide);
+  }
+
+  return related;
+}
+
 export function getAllGuideSlugs(): { lang: Lang; slug: string; pillar: PillarKey }[] {
   const results: { lang: Lang; slug: string; pillar: PillarKey }[] = [];
   for (const lang of ["en", "de"] as Lang[]) {

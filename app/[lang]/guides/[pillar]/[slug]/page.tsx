@@ -6,7 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import type { Lang, PillarKey } from "@/lib/i18n";
 import { t, pillars, siteConfig } from "@/lib/i18n";
-import { getGuide, getGuidesByPillar, getAllGuideSlugs } from "@/lib/guides";
+import { getGuide, getRelatedGuidesForGuide, getAllGuideSlugs } from "@/lib/guides";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import ReadingProgress from "@/components/ReadingProgress";
@@ -566,12 +566,7 @@ export default async function GuidePage({
     badge: l === "en" ? "Guide" : "Guide",
   });
 
-  // Get related guides from same pillar
-  const manualRelated = new Set(fm.relatedGuides ?? []);
-  const inPillar = getGuidesByPillar(l, p).filter((g) => g.frontmatter.slug !== slug);
-  const relatedByFrontmatter = inPillar.filter((g) => manualRelated.has(g.frontmatter.slug));
-  const relatedFallback = inPillar.filter((g) => !manualRelated.has(g.frontmatter.slug));
-  const related = [...relatedByFrontmatter, ...relatedFallback];
+  const related = getRelatedGuidesForGuide(l, p, slug, fm.relatedGuides);
   const isEn = l === "en";
   const topActionCards = [
     {
