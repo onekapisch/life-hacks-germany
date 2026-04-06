@@ -438,14 +438,14 @@ async function buildLastTrainResponse(params: URLSearchParams, lang: Lang) {
 
   if (!fromId || !toId) {
     return NextResponse.json(
-      { error: lang === "de" ? "Bitte Start- und Zielbahnhof waehlen." : "Please choose origin and destination stations." },
+      { error: lang === "de" ? "Bitte Start- und Zielbahnhof wählen." : "Please choose origin and destination stations." },
       { status: 400 }
     );
   }
 
   if (fromId === toId) {
     return NextResponse.json(
-      { error: lang === "de" ? "Start und Ziel duerfen nicht identisch sein." : "Origin and destination must be different." },
+      { error: lang === "de" ? "Start und Ziel dürfen nicht identisch sein." : "Origin and destination must be different." },
       { status: 400 }
     );
   }
@@ -458,7 +458,7 @@ async function buildLastTrainResponse(params: URLSearchParams, lang: Lang) {
 
   if (!from || !to) {
     return NextResponse.json(
-      { error: lang === "de" ? "Bahnhof konnte nicht aufgeloest werden." : "Could not resolve selected station." },
+      { error: lang === "de" ? "Bahnhof konnte nicht aufgelöst werden." : "Could not resolve selected station." },
       { status: 400 }
     );
   }
@@ -507,7 +507,7 @@ async function buildWeekendResponse(params: URLSearchParams, lang: Lang) {
   const originId = (params.get("originId") ?? "").trim();
   if (!originId) {
     return NextResponse.json(
-      { error: lang === "de" ? "Bitte Startbahnhof waehlen." : "Please select an origin station." },
+      { error: lang === "de" ? "Bitte Startbahnhof wählen." : "Please select an origin station." },
       { status: 400 }
     );
   }
@@ -606,7 +606,7 @@ async function buildWeekendResponse(params: URLSearchParams, lang: Lang) {
 
   if (recommendations.length === 0) {
     return NextResponse.json(
-      { error: lang === "de" ? "Keine Wochenendoptionen gefunden. Bitte spaeter erneut versuchen." : "No weekend options found. Please try again later." },
+      { error: lang === "de" ? "Keine Wochenendoptionen gefunden. Bitte später erneut versuchen." : "No weekend options found. Please try again later." },
       { status: 503 }
     );
   }
@@ -646,14 +646,14 @@ export async function GET(request: Request) {
       return await buildWeekendResponse(searchParams, lang);
     }
     return NextResponse.json(
-      { error: lang === "de" ? "Ungueltiger Modus." : "Invalid mode." },
+      { error: lang === "de" ? "Ungültiger Modus." : "Invalid mode." },
       { status: 400 }
     );
   } catch {
     return NextResponse.json(
       {
         error: lang === "de"
-          ? "Der Mobilitaetsdienst ist gerade ausgelastet. Bitte in 1-2 Minuten erneut versuchen."
+          ? "Der Mobilitätsdienst ist gerade ausgelastet. Bitte in 1-2 Minuten erneut versuchen."
           : "Mobility service is temporarily busy. Please retry in 1-2 minutes.",
       },
       { status: 502 }

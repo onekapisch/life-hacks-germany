@@ -80,7 +80,7 @@ function formatDuration(minutes: number, lang: Lang): string {
 function formatRisk(risk: RiskLevel, lang: Lang): string {
   if (risk === "low") return lang === "de" ? "Niedriges Risiko" : "Low risk";
   if (risk === "medium") return lang === "de" ? "Mittleres Risiko" : "Medium risk";
-  return lang === "de" ? "Hoeheres Risiko" : "Higher risk";
+  return lang === "de" ? "Höheres Risiko" : "Higher risk";
 }
 
 function riskClass(risk: RiskLevel): string {
@@ -295,16 +295,16 @@ export default function LastTrainEscapeFinder({
       const from = validateSelectedStation(
         fromQuery,
         fromStation,
-        isEn ? "Choose origin station from suggestions." : "Bitte Startbahnhof aus Vorschlaegen waehlen."
+        isEn ? "Choose origin station from suggestions." : "Bitte Startbahnhof aus Vorschlägen wählen."
       );
       const to = validateSelectedStation(
         toQuery,
         toStation,
-        isEn ? "Choose destination station from suggestions." : "Bitte Zielbahnhof aus Vorschlaegen waehlen."
+        isEn ? "Choose destination station from suggestions." : "Bitte Zielbahnhof aus Vorschlägen wählen."
       );
 
       if (from.id === to.id) {
-        throw new Error(isEn ? "Origin and destination cannot be the same." : "Start und Ziel duerfen nicht gleich sein.");
+        throw new Error(isEn ? "Origin and destination cannot be the same." : "Start und Ziel dürfen nicht gleich sein.");
       }
 
       const departureIso = new Date(`${departDate}T${departTime}:00`).toISOString();
@@ -335,7 +335,7 @@ export default function LastTrainEscapeFinder({
         title: isEn ? "Last train route ready" : "Letzte Zugverbindung bereit",
         message: isEn
           ? `Latest departure found: ${payload.from.name} to ${payload.to.name}, ${payload.bestJourney.lineLabel}.`
-          : `Spaeteste Abfahrt gefunden: ${payload.from.name} nach ${payload.to.name}, ${payload.bestJourney.lineLabel}.`,
+          : `Späteste Abfahrt gefunden: ${payload.from.name} nach ${payload.to.name}, ${payload.bestJourney.lineLabel}.`,
         actions: [
           {
             label: isEn ? "Book on DB" : "Bei DB buchen",
@@ -347,7 +347,7 @@ export default function LastTrainEscapeFinder({
             }),
           },
           {
-            label: isEn ? "View mobility guides" : "Mobilitaets-Guides",
+            label: isEn ? "View mobility guides" : "Mobilitäts-Guides",
             href: `${lang === "en" ? "/en" : "/de"}/guides/mobility`,
           },
         ],
@@ -369,7 +369,7 @@ export default function LastTrainEscapeFinder({
       const origin = validateSelectedStation(
         weekendOriginQuery,
         weekendOriginStation,
-        isEn ? "Choose origin station from suggestions." : "Bitte Startbahnhof aus Vorschlaegen waehlen."
+        isEn ? "Choose origin station from suggestions." : "Bitte Startbahnhof aus Vorschlägen wählen."
       );
 
       trackEvent("tool_calculate", {
@@ -412,7 +412,7 @@ export default function LastTrainEscapeFinder({
               }),
             },
             {
-              label: isEn ? "Open travel tips" : "Reise-Tipps oeffnen",
+              label: isEn ? "Open travel tips" : "Reise-Tipps öffnen",
               href: `${lang === "en" ? "/en" : "/de"}/tips`,
             },
           ],
@@ -489,14 +489,14 @@ export default function LastTrainEscapeFinder({
       <div className="highlight-band mb-6">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <span className="badge mb-4">{isEn ? "Featured mobility tool" : "Neues Mobilitaets-Tool"}</span>
+            <span className="badge mb-4">{isEn ? "Featured mobility tool" : "Neues Mobilitäts-Tool"}</span>
             <h2 className="text-2xl md:text-3xl font-black tracking-tight mt-0 mb-3">
               {isEn ? "Last Train Home + Weekend Escape Finder" : "Last Train Home + Weekend Escape Finder"}
             </h2>
             <p className="text-ink-2 max-w-3xl m-0">
               {isEn
                 ? "Built for students, young professionals, and locals: find your safest late return option and discover weekend trips ranked by time, weather, and practical budget fit."
-                : "Fuer Studierende, Young Professionals und Locals: Finde den spaetesten sicheren Heimweg und entdecke Wochenendtrips nach Zeit, Wetter und Budget-Fit."}
+                : "Für Studierende, Young Professionals und Locals: Finde den spätesten sicheren Heimweg und entdecke Wochenendtrips nach Zeit, Wetter und Budget-Fit."}
             </p>
           </div>
           <div className="notice !px-4 !py-3 max-w-sm text-sm">
@@ -582,7 +582,7 @@ export default function LastTrainEscapeFinder({
             disabled={loading}
           >
             {loading
-              ? (isEn ? "Loading..." : "Laedt...")
+              ? (isEn ? "Loading..." : "Lädt...")
               : (isEn ? "Find true last train" : "Echten letzten Zug finden")}
           </button>
         </div>
@@ -602,7 +602,7 @@ export default function LastTrainEscapeFinder({
 
           <div>
             <label className="block text-xs uppercase tracking-[0.1em] text-ink-2 mb-1.5 font-bold">
-              {isEn ? "Round-trip budget (EUR)" : "Budget Hin+Rueck (EUR)"}
+              {isEn ? "Round-trip budget (EUR)" : "Budget Hin+Rück (EUR)"}
             </label>
             <input
               type="number"
@@ -651,7 +651,7 @@ export default function LastTrainEscapeFinder({
             disabled={loading}
           >
             {loading
-              ? (isEn ? "Loading..." : "Laedt...")
+              ? (isEn ? "Loading..." : "Lädt...")
               : (isEn ? "Find weekend escapes" : "Wochenendtrips finden")}
           </button>
         </div>
@@ -665,7 +665,7 @@ export default function LastTrainEscapeFinder({
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
           <div className="card xl:col-span-2">
             <p className="text-xs uppercase tracking-[0.1em] text-ink-3 font-bold mt-0 mb-2">
-              {isEn ? "Latest same-day departure found" : "Spaeteste Verbindung am selben Tag gefunden"}
+              {isEn ? "Latest same-day departure found" : "Späteste Verbindung am selben Tag gefunden"}
             </p>
             <h3 className="text-xl font-black mt-0 mb-2">
               {lastTrainResult.from.name} {"->"} {lastTrainResult.to.name}
@@ -741,18 +741,18 @@ export default function LastTrainEscapeFinder({
             <p className="text-sm m-0">
               {lastTrainResult.destinationWeather.tempMax !== null
                 ? `${isEn ? "Max temp" : "Max Temp"}: ${Math.round(lastTrainResult.destinationWeather.tempMax)}C`
-                : (isEn ? "Temperature unavailable." : "Temperatur nicht verfuegbar.")}
+                : (isEn ? "Temperature unavailable." : "Temperatur nicht verfügbar.")}
             </p>
             <p className="text-sm m-0 mt-1">
               {lastTrainResult.destinationWeather.precipMax !== null
                 ? `${isEn ? "Rain probability" : "Regenwahrscheinlichkeit"}: ${Math.round(lastTrainResult.destinationWeather.precipMax)}%`
-                : (isEn ? "Rain probability unavailable." : "Regenwahrscheinlichkeit nicht verfuegbar.")}
+                : (isEn ? "Rain probability unavailable." : "Regenwahrscheinlichkeit nicht verfügbar.")}
             </p>
             {lastTrainResult.alternatives.length > 1 && (
               <p className="text-xs text-ink-3 mt-3 mb-0">
                 {isEn
                   ? `Checked ${lastTrainResult.alternatives.length} late departures for this route.`
-                  : `${lastTrainResult.alternatives.length} spaete Verbindungen fuer diese Route geprueft.`}
+                  : `${lastTrainResult.alternatives.length} späte Verbindungen für diese Route geprüft.`}
               </p>
             )}
           </div>
@@ -787,7 +787,7 @@ export default function LastTrainEscapeFinder({
                   {isEn ? "Outbound" : "Hinfahrt"}: {dateFormatter.format(new Date(item.outbound.departure))} · {formatDuration(item.outbound.durationMinutes, lang)} · {item.outbound.transfers} {isEn ? "transfer(s)" : "Umstieg(e)"}
                 </p>
                 <p className="text-sm text-ink-2 mt-0 mb-2">
-                  {isEn ? "Return" : "Rueckfahrt"}: {dateFormatter.format(new Date(item.inbound.departure))} · {formatDuration(item.inbound.durationMinutes, lang)} · {item.inbound.transfers} {isEn ? "transfer(s)" : "Umstieg(e)"}
+                  {isEn ? "Return" : "Rückfahrt"}: {dateFormatter.format(new Date(item.inbound.departure))} · {formatDuration(item.inbound.durationMinutes, lang)} · {item.inbound.transfers} {isEn ? "transfer(s)" : "Umstieg(e)"}
                 </p>
                 <p className={`text-sm font-semibold mt-0 mb-2 ${riskClass(item.risk)}`}>
                   {formatRisk(item.risk, lang)}
@@ -795,7 +795,7 @@ export default function LastTrainEscapeFinder({
                 <p className="text-sm mt-0 mb-2">
                   {item.totalPrice !== null
                     ? `${isEn ? "Indicative fare" : "Richtpreis"}: ${currencyFormatter.format(item.totalPrice)}`
-                    : (isEn ? "Fare not available in feed." : "Preis im Feed nicht verfuegbar.")}
+                    : (isEn ? "Fare not available in feed." : "Preis im Feed nicht verfügbar.")}
                 </p>
                 <p className="text-sm mt-0 mb-0 text-ink-2">
                   {item.weather.tempMax !== null
@@ -833,7 +833,7 @@ export default function LastTrainEscapeFinder({
       <div className="notice mt-6 text-center text-sm">
         {isEn
           ? "Journey and fare data comes from live transit feeds. Prices are indicative and can change at booking checkout."
-          : "Verbindungs- und Preisdaten kommen aus Live-Transit-Feeds. Preise sind Richtwerte und koennen sich beim Buchen aendern."}
+          : "Verbindungs- und Preisdaten kommen aus Live-Transit-Feeds. Preise sind Richtwerte und können sich beim Buchen ändern."}
       </div>
     </div>
   );

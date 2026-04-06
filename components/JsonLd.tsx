@@ -23,7 +23,7 @@ function getWebsiteSchema(lang: Lang) {
     description:
       lang === "en"
         ? "Verified, practical guidance for living well in Germany."
-        : "Verifizierte, praktische Hilfe fuer ein gutes Leben in Deutschland.",
+        : "Verifizierte, praktische Hilfe für ein gutes Leben in Deutschland.",
     inLanguage: lang === "en" ? "en-US" : "de-DE",
     potentialAction: {
       "@type": "SearchAction",

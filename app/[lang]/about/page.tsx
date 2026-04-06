@@ -31,12 +31,12 @@ const extras: Record<Lang, AboutSection[]> = {
   ],
   de: [
     {
-      title: "Fuer wen diese Seite ist",
-      body: "Fuer Menschen beim Umzug nach Deutschland, Studierende und Residents, die klare Schritt-fuer-Schritt-Hilfe ohne Rauschen brauchen.",
+      title: "Für wen diese Seite ist",
+      body: "Für Menschen beim Umzug nach Deutschland, Studierende und Residents, die klare Schritt-für-Schritt-Hilfe ohne Rauschen brauchen.",
     },
     {
       title: "So nutzt du die Seite",
-      body: "Starte mit Start hier und arbeite dann Bereich fuer Bereich. Nutze Tools fuer Planung und den Blog fuer monatliche Rechts- und Systemupdates.",
+      body: "Starte mit Start hier und arbeite dann Bereich für Bereich. Nutze Tools für Planung und den Blog für monatliche Rechts- und Systemupdates.",
     },
     {
       title: "Was den Unterschied macht",
@@ -65,7 +65,7 @@ export async function generateMetadata({
   const social = createSocialMetadata({
     title: tr.title,
     description: tr.subtitle,
-    badge: l === "en" ? "About" : "Ueber uns",
+    badge: l === "en" ? "About" : "Über uns",
   });
 
   return {

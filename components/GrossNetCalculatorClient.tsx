@@ -38,11 +38,11 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
 
   const cityLabels: Record<CityKey, string> = isEn
     ? { berlin: "Berlin", munich: "Munich", hamburg: "Hamburg", frankfurt: "Frankfurt", cologne: "Cologne" }
-    : { berlin: "Berlin", munich: "Muenchen", hamburg: "Hamburg", frankfurt: "Frankfurt", cologne: "Koeln" };
+    : { berlin: "Berlin", munich: "München", hamburg: "Hamburg", frankfurt: "Frankfurt", cologne: "Köln" };
 
   const invalidMessage = isEn
     ? "Please enter valid positive numbers in all required fields."
-    : "Bitte gib in allen Pflichtfeldern gueltige positive Zahlen ein.";
+    : "Bitte gib in allen Pflichtfeldern gültige positive Zahlen ein.";
 
   const setCityAndPreset = (target: "A" | "B", city: CityKey) => {
     const preset = CITY_PRESETS[city];
@@ -92,7 +92,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
 
     const message = isEn
       ? `Estimated monthly net: ${euro.format(comparison.monthlyNet)}. ${cityLabels[cityA]} surplus: ${euro.format(comparison.surplusA)}. ${cityLabels[cityB]} surplus: ${euro.format(comparison.surplusB)}.${betterCity ? ` Better monthly balance in ${betterCity} by ${euro.format(comparison.diff)}.` : ""}`
-      : `Gesch. monatl. Netto: ${euro.format(comparison.monthlyNet)}. ${cityLabels[cityA]} Ueberschuss: ${euro.format(comparison.surplusA)}. ${cityLabels[cityB]} Ueberschuss: ${euro.format(comparison.surplusB)}.${betterCity ? ` Besseres Plus in ${betterCity} um ${euro.format(comparison.diff)}.` : ""}`;
+      : `Gesch. monatl. Netto: ${euro.format(comparison.monthlyNet)}. ${cityLabels[cityA]} Überschuss: ${euro.format(comparison.surplusA)}. ${cityLabels[cityB]} Überschuss: ${euro.format(comparison.surplusB)}.${betterCity ? ` Besseres Plus in ${betterCity} um ${euro.format(comparison.diff)}.` : ""}`;
 
     setSalaryResult({ kind: "success", message });
     setBreakdown({
@@ -113,12 +113,12 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
   return (
     <div className="content-shell text-center">
       <h2 className="text-xl font-black tracking-tight mt-0 mb-2">
-        {isEn ? "Gross-to-Net + City Surplus Calculator" : "Brutto-Netto + Stadt-Ueberschuss Rechner"}
+        {isEn ? "Gross-to-Net + City Surplus Calculator" : "Brutto-Netto + Stadt-Überschuss Rechner"}
       </h2>
       <p className="text-sm text-ink-2 mb-6">
         {isEn
           ? "Estimate your monthly net income after all German taxes and social contributions, then compare your remaining budget in two cities."
-          : "Schaetze dein monatliches Netto nach allen Steuern und Sozialabgaben und vergleiche dein verbleibendes Budget in zwei Staedten."}
+          : "Schätze dein monatliches Netto nach allen Steuern und Sozialabgaben und vergleiche dein verbleibendes Budget in zwei Städten."}
       </p>
 
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 text-left mb-5">
@@ -176,7 +176,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
               onChange={(e) => setSalaryChurchTax(e.target.checked)}
               className="rounded"
             />
-            {isEn ? "Apply church tax estimate" : "Kirchensteuer abschaetzen"}
+            {isEn ? "Apply church tax estimate" : "Kirchensteuer abschätzen"}
           </label>
           <label className="flex items-center gap-2 text-sm text-ink-2 cursor-pointer">
             <input
@@ -335,7 +335,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
           <div className="w-full text-left grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
             <div className="content-shell">
               <p className="text-xs uppercase tracking-[0.1em] text-ink-3 font-bold mt-0 mb-3">
-                {isEn ? "Annual deductions breakdown" : "Jaehrliche Abzuege"}
+                {isEn ? "Annual deductions breakdown" : "Jährliche Abzüge"}
               </p>
               <div className="flex flex-col gap-1.5 text-sm">
                 <div className="flex justify-between"><span className="text-ink-2">{isEn ? "Pension (9.3%)" : "Rente (9,3%)"}</span><span className="font-bold">{euro.format(breakdown.pension)}</span></div>
@@ -369,7 +369,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
                   </span>
                 </div>
                 <p className="text-xs text-ink-3 mt-2 m-0">
-                  {isEn ? "Surplus = monthly net minus rent, transport, groceries, and utilities." : "Ueberschuss = Monatsnetto minus Miete, Transport, Lebensmittel und Nebenkosten."}
+                  {isEn ? "Surplus = monthly net minus rent, transport, groceries, and utilities." : "Überschuss = Monatsnetto minus Miete, Transport, Lebensmittel und Nebenkosten."}
                 </p>
               </div>
             </div>
@@ -379,7 +379,7 @@ export default function GrossNetCalculatorClient({ lang }: { lang: Lang }) {
         <p className="text-xs text-ink-3 m-0 max-w-2xl">
           {isEn
             ? "Orientation only. Tax and net income are estimated with simplified assumptions and do not replace payroll or tax advisor calculations. City cost presets are planning estimates."
-            : "Nur zur Orientierung. Steuer und Netto werden mit vereinfachten Annahmen geschaetzt und ersetzen keine Lohnabrechnung oder Steuerberatung. Stadtkosten sind Planungssschaetzungen."}
+            : "Nur zur Orientierung. Steuer und Netto werden mit vereinfachten Annahmen geschätzt und ersetzen keine Lohnabrechnung oder Steuerberatung. Stadtkosten sind Planungsschätzungen."}
         </p>
       </div>
     </div>

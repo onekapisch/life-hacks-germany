@@ -58,7 +58,7 @@ For 2026, the GKV contribution ceiling is EUR 5,812.50/month — if you earn mor
         a: "The Grundfreibetrag is the amount of annual income exempt from income tax. For 2026, it is EUR 12,096. This calculator uses an approximation of EUR 12,000 for simplicity. If your annual income is below this threshold, you pay no income tax.",
       },
       {
-        q: "What is the Solidaritaetszuschlag (solidarity surcharge)?",
+        q: "What is the Solidaritätszuschlag (solidarity surcharge)?",
         a: "The solidarity surcharge (Soli) was originally introduced to fund German reunification. As of 2021, it was abolished for most employees. It now only applies if your income tax liability exceeds approximately EUR 18,130 per year — which corresponds to high earners. This calculator includes the Soli only when applicable.",
       },
       {
@@ -83,65 +83,65 @@ For 2026, the GKV contribution ceiling is EUR 5,812.50/month — if you earn mor
     subtitle:
       "Berechne dein exaktes monatliches Nettoeinkommen nach allen deutschen Steuern und Sozialabgaben. Vergleiche die Lebenshaltungskosten nach Stadt.",
     metaDescription:
-      "Kostenloser Brutto-Netto-Rechner fuer Deutschland 2026. Berechne dein Nettoeinkommen nach Einkommensteuer und Sozialversicherung und vergleiche Kosten in Berlin, Muenchen, Hamburg, Frankfurt und Koeln.",
+      "Kostenloser Brutto-Netto-Rechner für Deutschland 2026. Berechne dein Nettoeinkommen nach Einkommensteuer und Sozialversicherung und vergleiche Kosten in Berlin, München, Hamburg, Frankfurt und Köln.",
     intro: `
-Deutschland hat eines der umfassendsten Sozialversicherungssysteme der Welt – und eine der komplexesten Steuerstrukturen fuer Neuankoemmlinge. Dein Bruttogehalt und dein tatsaechliches Nettoeinkommen koennen sich je nach Steuerklasse, Krankenkassenwahl und Kirchensteuerpflicht um 35 bis 45 Prozent unterscheiden.
+Deutschland hat eines der umfassendsten Sozialversicherungssysteme der Welt – und eine der komplexesten Steuerstrukturen für Neuankömmlinge. Dein Bruttogehalt und dein tatsächliches Nettoeinkommen können sich je nach Steuerklasse, Krankenkassenwahl und Kirchensteuerpflicht um 35 bis 45 Prozent unterscheiden.
 
-Dieser Rechner fuehrt durch alle Abzuege, die dein Nettoeinkommen beeinflussen: Rentenbeitrag, Arbeitslosenversicherung, Krankenversicherung, Pflegeversicherung und Einkommensteuer. Ausserdem laesst er sich verwenden, um zu vergleichen, wie sich das Nettoeinkommen als monatlicher Ueberschuss in zwei deutschen Staedten darstellt – nach typischen Kosten wie Miete, Transport, Lebensmittel und Nebenkosten.
+Dieser Rechner führt durch alle Abzüge, die dein Nettoeinkommen beeinflussen: Rentenbeitrag, Arbeitslosenversicherung, Krankenversicherung, Pflegeversicherung und Einkommensteuer. Außerdem lässt er sich verwenden, um zu vergleichen, wie sich das Nettoeinkommen als monatlicher Überschuss in zwei deutschen Städten darstellt – nach typischen Kosten wie Miete, Transport, Lebensmittel und Nebenkosten.
 
-Nutze diesen Rechner fuer die Gehaltsverhandlung, einen Stadtvergleich oder deinen ersten deutschen Budgetplan.
+Nutze diesen Rechner für die Gehaltsverhandlung, einen Stadtvergleich oder deinen ersten deutschen Budgetplan.
     `,
     taxClassExplainer: `
-**Deutsche Steuerklassen erklaert**
+**Deutsche Steuerklassen erklärt**
 
-Jeder beschaeftigte Einwohner Deutschlands erhaelt eine Steuerklasse, die bestimmt, wie viel Lohnsteuer vom Gehalt einbehalten wird:
+Jeder beschäftigte Einwohner Deutschlands erhält eine Steuerklasse, die bestimmt, wie viel Lohnsteuer vom Gehalt einbehalten wird:
 
-- **Klasse I** – Ledig, keine Kinder, Standardabzug (haeufigste Klasse fuer unverheiratete Beschaeftigte)
+- **Klasse I** – Ledig, keine Kinder, Standardabzug (häufigste Klasse für unverheiratete Beschäftigte)
 - **Klasse II** – Alleinerziehend mit Kinderfreibetrag (reduzierter Abzug)
 - **Klasse III** – Verheiratet, Partner in Klasse V; deutlich niedrigerer Abzug (besserverdienender Ehepartner)
-- **Klasse IV** – Verheiratet, beide Partner mit aehnlichem Einkommen; Standardabzug fuer beide
-- **Klasse V** – Verheiratet, Partner in Klasse III; hoeherer Abzug (geringerverdienender Ehepartner)
-- **Klasse VI** – Zweites oder weiteres Beschaeftigungsverhaeltnis; hoechster Abzug
+- **Klasse IV** – Verheiratet, beide Partner mit ähnlichem Einkommen; Standardabzug für beide
+- **Klasse V** – Verheiratet, Partner in Klasse III; höherer Abzug (geringerverdienender Ehepartner)
+- **Klasse VI** – Zweites oder weiteres Beschäftigungsverhältnis; höchster Abzug
 
-Wer in Deutschland erstmals beschaeftigt wird, erhaelt in der Regel Klasse I. Aenderungsantrag ueber ELSTER oder das lokale Finanzamt stellen.
+Wer in Deutschland erstmals beschäftigt wird, erhält in der Regel Klasse I. Änderungsantrag über ELSTER oder das lokale Finanzamt stellen.
     `,
     socialInsuranceExplainer: `
-**Deutschlands vier Sozialversicherungsbeitraege**
+**Deutschlands vier Sozialversicherungsbeiträge**
 
-Alle Beschaeftigten zahlen vier Pflichtbeitraege zur Sozialversicherung. Sie werden aufgeteilt zwischen Arbeitnehmer und Arbeitgeber (du zahlst die Haelfte):
+Alle Beschäftigten zahlen vier Pflichtbeiträge zur Sozialversicherung. Sie werden aufgeteilt zwischen Arbeitnehmer und Arbeitgeber (du zahlst die Hälfte):
 
 - **Rentenversicherung:** 18,6% Gesamtbeitrag → du zahlst 9,3%
 - **Arbeitslosenversicherung:** 2,6% Gesamtbeitrag → du zahlst 1,3%
-- **Krankenversicherung:** 14,6% Grundbeitrag + kassenspezifscher Zusatzbeitrag – du zahlst die Haelfte
-- **Pflegeversicherung:** 3,4% mit Kindern, 4,4% kinderlos → du zahlst die Haelfte (1,8% oder 2,4%)
+- **Krankenversicherung:** 14,6% Grundbeitrag + kassenspezifscher Zusatzbeitrag – du zahlst die Hälfte
+- **Pflegeversicherung:** 3,4% mit Kindern, 4,4% kinderlos → du zahlst die Hälfte (1,8% oder 2,4%)
 
-Fuer 2026 gilt als GKV-Beitragsbemessungsgrenze EUR 5.812,50/Monat – bei hoeherem Einkommen werden Beitraege auf dieser Hoehe gekappt.
+Für 2026 gilt als GKV-Beitragsbemessungsgrenze EUR 5.812,50/Monat – bei höherem Einkommen werden Beiträge auf dieser Höhe gekappt.
     `,
-    faqTitle: "Haeufig gestellte Fragen",
+    faqTitle: "Häufig gestellte Fragen",
     faqs: [
       {
         q: "Wie genau ist dieser Rechner?",
-        a: "Dieser Rechner verwendet ein vereinfachtes Modell der deutschen Einkommensteuer und liefert Orientierungsschaetzungen. Die tatsaechliche Lohnsteuer, die dein Arbeitgeber einbehaelt, wird nach offiziellen Lohnsteuertabellen berechnet und kann abweichen – insbesondere bei bestimmten Einkommen, Sonderabzuegen oder Steuervorauszahlungen. Fuer Planung und Gehaltsvergleich geeignet, nicht fuer offizielle Steuererklaerungen.",
+        a: "Dieser Rechner verwendet ein vereinfachtes Modell der deutschen Einkommensteuer und liefert Orientierungsschätzungen. Die tatsächliche Lohnsteuer, die dein Arbeitgeber einbehält, wird nach offiziellen Lohnsteuertabellen berechnet und kann abweichen – insbesondere bei bestimmten Einkommen, Sonderabzügen oder Steuervorauszahlungen. Für Planung und Gehaltsvergleich geeignet, nicht für offizielle Steuererklärungen.",
       },
       {
         q: "Was ist der Grundfreibetrag 2026?",
-        a: "Der Grundfreibetrag ist der steuerfreie Jahresbetrag. Fuer 2026 betraegt er EUR 12.096. Dieser Rechner verwendet eine Naeherung von EUR 12.000. Liegt das Jahreseinkommen darunter, faellt keine Einkommensteuer an.",
+        a: "Der Grundfreibetrag ist der steuerfreie Jahresbetrag. Für 2026 beträgt er EUR 12.096. Dieser Rechner verwendet eine Näherung von EUR 12.000. Liegt das Jahreseinkommen darunter, fällt keine Einkommensteuer an.",
       },
       {
-        q: "Was ist der Solidaritaetszuschlag?",
-        a: "Der Solidaritaetszuschlag (Soli) wurde urspruenglich zur Finanzierung der deutschen Wiedervereinigung eingefuehrt. Seit 2021 gilt er fuer die meisten Arbeitnehmer nicht mehr. Er faellt nur noch an, wenn die Einkommensteuerlast ca. EUR 18.130/Jahr uebersteigt – also bei Topverdienenden. Dieser Rechner beruecksichtigt den Soli nur bei Zutreffen.",
+        q: "Was ist der Solidaritätszuschlag?",
+        a: "Der Solidaritätszuschlag (Soli) wurde ursprünglich zur Finanzierung der deutschen Wiedervereinigung eingeführt. Seit 2021 gilt er für die meisten Arbeitnehmer nicht mehr. Er fällt nur noch an, wenn die Einkommensteuerlast ca. EUR 18.130/Jahr übersteigt – also bei Topverdienenden. Dieser Rechner berücksichtigt den Soli nur bei Zutreffen.",
       },
       {
-        q: "Wie finde ich meine tatsaechliche Steuerklasse heraus?",
-        a: "Die Steuerklasse steht auf der Gehaltsabrechnung unter 'Steuerklasse'. Bei Neuankommenden wird in der Regel Klasse I zugeteilt, solange kein Aenderungsantrag gestellt wurde. Pruefbar auch ueber ELSTER oder das lokale Finanzamt.",
+        q: "Wie finde ich meine tatsächliche Steuerklasse heraus?",
+        a: "Die Steuerklasse steht auf der Gehaltsabrechnung unter 'Steuerklasse'. Bei Neuankommenden wird in der Regel Klasse I zugeteilt, solange kein Änderungsantrag gestellt wurde. Prüfbar auch über ELSTER oder das lokale Finanzamt.",
       },
       {
         q: "Was ist der Unterschied zwischen Kaltmiete und Warmmiete?",
-        a: "Kaltmiete ist die Grundmiete ohne Nebenkosten. Warmmiete umfasst Heizung, Wasser und Gebaeudenebenkosten. Fuer die Budgetplanung immer mit Warmmiete rechnen. Die Stadtkosten-Presets in diesem Rechner verwenden Warmmiete-Schaetzungen.",
+        a: "Kaltmiete ist die Grundmiete ohne Nebenkosten. Warmmiete umfasst Heizung, Wasser und Gebäudenebenkosten. Für die Budgetplanung immer mit Warmmiete rechnen. Die Stadtkosten-Presets in diesem Rechner verwenden Warmmiete-Schätzungen.",
       },
       {
-        q: "Kann ich diesen Rechner fuer Freiberufler-Einkommen nutzen?",
-        a: "Nein – dieser Rechner ist fuer Arbeitnehmer ausgelegt, die Lohnsteuer direkt vom Gehalt abfuehren. Fuer Freiberufler und Selbststaendige funktioniert die Steuerberechnung anders: Einkommensteuervorauszahlungen und jaehrliche Steuererklaerung. Nur fuer Beschaeftigungsplanung geeignet.",
+        q: "Kann ich diesen Rechner für Freiberufler-Einkommen nutzen?",
+        a: "Nein – dieser Rechner ist für Arbeitnehmer ausgelegt, die Lohnsteuer direkt vom Gehalt abführen. Für Freiberufler und Selbstständige funktioniert die Steuerberechnung anders: Einkommensteuervorauszahlungen und jährliche Steuererklärung. Nur für Beschäftigungsplanung geeignet.",
       },
     ],
     relatedGuides: "Verwandte Guides",

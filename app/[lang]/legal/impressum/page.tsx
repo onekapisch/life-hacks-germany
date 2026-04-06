@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/i18n";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { createSocialMetadata } from "@/lib/seo";
 
-const businessAddress = ["Bruennleinsweg 126", "90768 Fuerth", "Deutschland"];
+const businessAddress = ["Brünnleinsweg 126", "90768 Fürth", "Deutschland"];
 
 function getImpressumContent(lang: Lang) {
   return {
@@ -12,7 +12,7 @@ function getImpressumContent(lang: Lang) {
     intro:
       lang === "en"
         ? "Information pursuant to Section 5 DDG."
-        : "Angaben gemaess Section 5 DDG.",
+        : "Angaben gemäß Section 5 DDG.",
     company: "Aeon GbR",
     representatives:
       lang === "en"
@@ -21,7 +21,7 @@ function getImpressumContent(lang: Lang) {
     editorial:
       lang === "en"
         ? "Responsible for editorial content pursuant to Section 18(2) MStV: Sophia Schmieder and Kapish Bhardwaj, address as above."
-        : "Verantwortlich fuer journalistisch-redaktionelle Inhalte gemaess Section 18(2) MStV: Sophia Schmieder und Kapish Bhardwaj, Anschrift wie oben.",
+        : "Verantwortlich für journalistisch-redaktionelle Inhalte gemäß Section 18(2) MStV: Sophia Schmieder und Kapish Bhardwaj, Anschrift wie oben.",
     disputeHeading:
       lang === "en"
         ? "Consumer dispute resolution"
@@ -34,7 +34,7 @@ function getImpressumContent(lang: Lang) {
           ]
         : [
             "Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
-            "Die fruehere EU-Online-Streitbeilegungsplattform wurde am 20. Juli 2025 eingestellt.",
+            "Die frühere EU-Online-Streitbeilegungsplattform wurde am 20. Juli 2025 eingestellt.",
           ],
   };
 }
@@ -52,7 +52,7 @@ export async function generateMetadata({
     description:
       l === "en"
         ? "Legal disclosure and contact details for Life Hacks Germany."
-        : "Rechtliche Angaben und Kontaktdaten fuer Life Hacks Germany.",
+        : "Rechtliche Angaben und Kontaktdaten für Life Hacks Germany.",
     badge: l === "en" ? "Legal" : "Rechtliches",
   });
 

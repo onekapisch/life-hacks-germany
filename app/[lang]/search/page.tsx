@@ -40,13 +40,13 @@ export async function generateMetadata({
   const title = normalizedQuery
     ? l === "en"
       ? `Search results for "${normalizedQuery}"`
-      : `Suchergebnisse fuer "${normalizedQuery}"`
+      : `Suchergebnisse für "${normalizedQuery}"`
     : l === "en"
       ? "Search"
       : "Suche";
   const description = l === "en"
     ? "Search verified guides for living in Germany."
-    : "Suche in verifizierten Guides fuer das Leben in Deutschland.";
+    : "Suche in verifizierten Guides für das Leben in Deutschland.";
   const social = createSocialMetadata({
     title,
     description,
@@ -92,7 +92,7 @@ export default async function SearchPage({
   const heading = l === "en" ? "Search guides" : "Guides durchsuchen";
   const subtitle = l === "en"
     ? "Search across guides, tips, tools, pages, and monthly Germany updates."
-    : "Suche ueber Guides, Tipps, Tools, Seiten und monatliche Deutschland-Updates.";
+    : "Suche über Guides, Tipps, Tools, Seiten und monatliche Deutschland-Updates.";
   const searchLabel = l === "en" ? "Search query" : "Suchanfrage";
 
   return (
@@ -118,7 +118,7 @@ export default async function SearchPage({
               type="text"
               name="q"
               defaultValue={normalizedQuery}
-              placeholder={l === "en" ? "Try: tax return, anmeldung, deutschlandticket…" : "Z. B. steuererklaerung, anmeldung, deutschlandticket…"}
+              placeholder={l === "en" ? "Try: tax return, anmeldung, deutschlandticket…" : "Z. B. steuererklärung, anmeldung, deutschlandticket…"}
               className="w-full rounded-lg border border-[rgba(15,23,42,0.15)] bg-paper px-3.5 py-2.5 text-sm text-ink outline-none focus:border-accent-2"
               autoComplete="off"
               spellCheck={false}
@@ -136,7 +136,7 @@ export default async function SearchPage({
               </p>
             ) : (
               <p className="text-sm text-ink-3 mt-0 mb-4">
-                {results.length} {l === "en" ? "result(s)" : "Ergebnis(se)"} {l === "en" ? "for" : "fuer"} &quot;{normalizedQuery}&quot;
+                {results.length} {l === "en" ? "result(s)" : "Ergebnis(se)"} {l === "en" ? "for" : "für"} &quot;{normalizedQuery}&quot;
               </p>
             )}
 

@@ -34,14 +34,14 @@ export default function StartHereClient({ lang }: { lang: Lang }) {
       kicker: isEn ? "Employer-sponsored move" : "Employer-sponsored Umzug",
       summary: isEn
         ? "Your job is tied to the move. Use this for payroll setup, permit timing, and parallel family admin."
-        : "Dein Umzug ist an deinen Job gebunden. Fuer Payroll-Setup, Permit-Timing und Familien-Admin.",
+        : "Dein Umzug ist an deinen Job gebunden. Für Payroll-Setup, Permit-Timing und Familien-Admin.",
       links: [
         {
           href: `${base}/work-relocation`,
           label: tr.workRelocationGuide,
           note: isEn
             ? "The dedicated corporate-expat route"
-            : "Die eigene Route fuer Corporate Expats",
+            : "Die eigene Route für Corporate Expats",
         },
         {
           href: `${base}/guides/bureaucracy/first-14-days`,
@@ -55,14 +55,14 @@ export default function StartHereClient({ lang }: { lang: Lang }) {
           label: tr.salaryCheck,
           note: isEn
             ? "Check net pay before salary shock hits"
-            : "Netto pruefen, bevor der Gehaltsschock kommt",
+            : "Netto prüfen, bevor der Gehaltsschock kommt",
         },
         {
           href: `${base}/guides/bureaucracy/blue-card-work-permit`,
           label: tr.workPermit,
           note: isEn
             ? "Permit path, documents, and delay points"
-            : "Permit-Pfad, Unterlagen und Verzoegerungen",
+            : "Permit-Pfad, Unterlagen und Verzögerungen",
         },
       ],
     },
@@ -92,7 +92,7 @@ export default function StartHereClient({ lang }: { lang: Lang }) {
           label: tr.healthBasics,
           note: isEn
             ? "Choose the right insurance path early"
-            : "Den richtigen Versicherungsweg frueh waehlen",
+            : "Den richtigen Versicherungsweg früh wählen",
         },
         {
           href: `${base}/guides/bureaucracy/first-14-days`,
@@ -108,11 +108,11 @@ export default function StartHereClient({ lang }: { lang: Lang }) {
       kicker: isEn ? "Campus and city life" : "Campus und Stadtleben",
       summary: isEn
         ? "Rent deposit, transport, health insurance, and finance setup — in the order you actually need them."
-        : "Kaution, Mobilitaet, Krankenversicherung und Finanz-Setup — in der Reihenfolge, in der du sie brauchst.",
+        : "Kaution, Mobilität, Krankenversicherung und Finanz-Setup — in der Reihenfolge, in der du sie brauchst.",
       links: [
         {
           href: `${base}/guides/everyday/university-reality-check-hack`,
-          label: isEn ? "University reality check" : "Uni-Realitaetscheck",
+          label: isEn ? "University reality check" : "Uni-Realitätscheck",
           note: isEn
             ? "Use StudyCheck + official data before you commit"
             : "StudyCheck + offizielle Daten vor der Zusage nutzen",
@@ -136,7 +136,7 @@ export default function StartHereClient({ lang }: { lang: Lang }) {
           label: isEn ? "ELSTER setup" : "ELSTER Setup",
           note: isEn
             ? "Set up the tax portal early, even if filing comes later"
-            : "Steuerportal frueh einrichten, auch wenn die Abgabe spaeter kommt",
+            : "Steuerportal früh einrichten, auch wenn die Abgabe später kommt",
         },
         {
           href: `${base}/guides/everyday/health-insurance-basics`,
@@ -159,25 +159,25 @@ export default function StartHereClient({ lang }: { lang: Lang }) {
           label: "Rundfunkbeitrag",
           note: isEn
             ? "Avoid late fees and understand the household logic"
-            : "Spaetgebuehren vermeiden, Haushaltslogik verstehen",
+            : "Spätgebühren vermeiden, Haushaltslogik verstehen",
         },
         {
           href: `${base}/guides/housing/kuendigungsfrist-miete`,
           label: tr.noticePeriod,
           note: isEn
             ? "How cancellation timing really works"
-            : "Wie Kuendigungsfristen wirklich laufen",
+            : "Wie Kündigungsfristen wirklich laufen",
         },
         {
           href: `${base}/guides/money-taxes/tax-return-deadlines`,
           label: tr.taxDeadlines,
           note: isEn
             ? "Stay ahead of timing instead of reacting late"
-            : "Fristen voraus sein statt spaet reagieren",
+            : "Fristen voraus sein statt spät reagieren",
         },
         {
           href: `${base}/guides/money-taxes/tax-return-setup`,
-          label: isEn ? "Tax return setup" : "Steuererklaerung vorbereiten",
+          label: isEn ? "Tax return setup" : "Steuererklärung vorbereiten",
           note: isEn
             ? "Build a cleaner recurring filing workflow"
             : "Saubereren Filing-Ablauf aufbauen",
@@ -269,7 +269,7 @@ export default function StartHereClient({ lang }: { lang: Lang }) {
                 {tr.browseAll}
               </Link>
               <Link href={`${base}/tools`} className="btn btn-primary">
-                {isEn ? "Open practical tools" : "Praktische Tools oeffnen"}
+                {isEn ? "Open practical tools" : "Praktische Tools öffnen"}
               </Link>
             </div>
           </div>

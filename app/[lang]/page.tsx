@@ -22,7 +22,7 @@ export async function generateMetadata({
     : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen, Alltagssysteme";
   const metaDescription = l === "en"
     ? "Verification-first Germany guides for expats and locals: Anmeldung, ELSTER taxes, rent rules, transport, and practical decision tools."
-    : "Verifizierte Deutschland-Guides fuer Expats und Einheimische: Anmeldung, ELSTER, Mietregeln, Mobilitaet und praktische Entscheidungstools.";
+    : "Verifizierte Deutschland-Guides für Expats und Einheimische: Anmeldung, ELSTER, Mietregeln, Mobilität und praktische Entscheidungstools.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
@@ -114,21 +114,21 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       badge: "Featured Smart-Life Tools",
       title: "Smart-Life Stack: schneller handeln, sauberer entscheiden, Kosten senken",
       intro:
-        "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und praezise Standorthilfe.",
+        "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und präzise Standorthilfe.",
       fuelWatch: {
         badge: "Spritpreis-Watch",
         title: "Deutschland: Kraftstoffpreise bleiben auf hohem Niveau",
         body:
-          "Die ADAC-Auswertung vom 11.03.2026 meldete beide Sorten gleichzeitig ueber 2 Euro pro Liter. Gerade jetzt helfen Stationsvergleich und Preisalarme, damit du nicht zur teuersten Zeit tankst.",
-        stats: ["Super E10: 2,045 Euro/Liter", "Diesel: 2,188 Euro/Liter"],
-        lastChecked: "23. Maerz 2026",
+          "Die ADAC-Auswertung vom 18.03.2026 zeigt weiterhin ein hohes Preisniveau. Gerade jetzt helfen Stationsvergleich und Preisalarme, damit du nicht zur teuersten Zeit tankst.",
+        stats: ["Super E10: 2,042 Euro/Liter", "Diesel: 2,162 Euro/Liter"],
+        lastChecked: "30. März 2026",
         sourcePrimary: {
-          label: "ADAC Presse (11.03.2026)",
-          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/diesel-im-wochenvergleich-um-ueber-27-cent-teurer.html",
+          label: "ADAC Presse (18.03.2026)",
+          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-folgen-dem-oelpreis-nach-oben.html",
         },
         sourceSecondary: {
-          label: "ADAC Presse (04.03.2026)",
-          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-springen-stark-nach-oben.html",
+          label: "ADAC Presse (11.03.2026)",
+          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/diesel-im-wochenvergleich-um-ueber-27-cent-teurer.html",
         },
         cta: "Tank Alert Preisalarm setzen",
       },
@@ -137,11 +137,11 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
           name: "T-Minus AI",
           href: "https://www.tminusai.com",
           utmContent: "tminusai-card",
-          kicker: "KI-Workflows fuer Behoerden, Jobsuche und Alltagsplanung",
+          kicker: "KI-Workflows für Behörden, Jobsuche und Alltagsplanung",
           features: [
-            "Prompt-Frameworks fuer Mails, Checklisten und Formulare",
+            "Prompt-Frameworks für Mails, Checklisten und Formulare",
             "Modellauswahl nach Aufgabentyp statt Zufall",
-            "Wiederverwendbare Arbeitsroutinen fuer wiederkehrende Prozesse",
+            "Wiederverwendbare Arbeitsroutinen für wiederkehrende Prozesse",
           ],
           outcome: "Spart vor allem bei wiederkehrender Adminarbeit mehrere Stunden pro Woche.",
         },
@@ -149,26 +149,26 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
           name: "Tank Alert",
           href: "https://www.tankalert.de",
           utmContent: "tankalert-card",
-          kicker: "Live-Spritpreise, Alerts und Kostenrechner fuer Autofahrer",
+          kicker: "Live-Spritpreise, Alerts und Kostenrechner für Autofahrer",
           features: [
             "Stationen vergleichen und Preisalarme setzen",
-            "Detour-Rechner fuer echte Nettoersparnis",
-            "Bessere Tank-Entscheidungen fuer Pendelroutinen",
+            "Detour-Rechner für echte Nettoersparnis",
+            "Bessere Tank-Entscheidungen für Pendelroutinen",
           ],
-          outcome: "Hilft, vermeidbare Mobilitaetskosten im Alltag sichtbar zu senken.",
+          outcome: "Hilft, vermeidbare Mobilitätskosten im Alltag sichtbar zu senken.",
         },
         {
           name: "SkyLocation",
           href: "https://www.skylocation.app",
           utmContent: "skylocation-card",
-          kicker: "Offline GPS fuer iPhone: Koordinaten ueberall, auch im Flugzeug",
+          kicker: "Offline GPS für iPhone: Koordinaten überall, auch im Flugzeug",
           features: [
-            "Praezise GPS-Koordinaten ohne Internet, SIM oder Roaming",
-            "In-Flight Tracking mit Position, Hoehe und Ground Speed",
-            "SOS-orientierte Koordinatenfreigabe fuer Notfaelle",
+            "Präzise GPS-Koordinaten ohne Internet, SIM oder Roaming",
+            "In-Flight Tracking mit Position, Höhe und Ground Speed",
+            "SOS-orientierte Koordinatenfreigabe für Notfälle",
           ],
           outcome:
-            "Hilft bei Reisen, Outdoor und Notfaellen mit offline verfuetbaren Positionsdaten; Pro als Einmalkauf ohne Abo.",
+            "Hilft bei Reisen, Outdoor und Notfällen mit offline verfügbaren Positionsdaten; Pro als Einmalkauf ohne Abo.",
         },
       ],
       benefitsTitle: "Wie dir das konkret hilft",
@@ -179,14 +179,14 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         },
         {
           title: "Weniger Kosten",
-          body: "Bessere Entscheidungen bei Mobilitaet, Abos und Alltagsausgaben.",
+          body: "Bessere Entscheidungen bei Mobilität, Abos und Alltagsausgaben.",
         },
         {
           title: "Weniger Fehler",
-          body: "Klarere Prozesse, bessere Vorbereitung, weniger frustrierende Rueckfragen.",
+          body: "Klarere Prozesse, bessere Vorbereitung, weniger frustrierende Rückfragen.",
         },
       ],
-      blogCta: "AI-Anwendungsfaelle fuer Expats lesen",
+      blogCta: "AI-Anwendungsfälle für Expats lesen",
       toolsCta: "Alle Smart-Life Tools ansehen",
       disclosure:
         "Hinweis: Diese Featured Tools werden vom gleichen Publisher betrieben und sind hier als praktische Helfer integriert.",
@@ -202,16 +202,16 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       badge: "Fuel Price Watch",
       title: "Germany: fuel prices remain elevated",
       body:
-        "ADAC's March 11, 2026 weekly report showed both fuel types above EUR 2/liter at the same time. Right now, station comparison and price alarms are the easiest way to reduce overpaying at the pump.",
-      stats: ["Super E10: EUR 2.045/liter", "Diesel: EUR 2.188/liter"],
-      lastChecked: "March 23, 2026",
+        "ADAC's March 18, 2026 weekly report still shows elevated fuel prices. Right now, station comparison and price alarms are the easiest way to reduce overpaying at the pump.",
+      stats: ["Super E10: EUR 2.042/liter", "Diesel: EUR 2.162/liter"],
+      lastChecked: "March 30, 2026",
       sourcePrimary: {
-        label: "ADAC press (March 11, 2026)",
-        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/diesel-im-wochenvergleich-um-ueber-27-cent-teurer.html",
+        label: "ADAC press (March 18, 2026)",
+        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-folgen-dem-oelpreis-nach-oben.html",
       },
       sourceSecondary: {
-        label: "ADAC press (March 4, 2026)",
-        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-springen-stark-nach-oben.html",
+        label: "ADAC press (March 11, 2026)",
+        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/diesel-im-wochenvergleich-um-ueber-27-cent-teurer.html",
       },
       cta: "Set Tank Alert price alarms",
     },
@@ -281,23 +281,23 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
     return [
       {
         href: "/de/guides/bureaucracy/anmeldung",
-        title: "Anmeldung Schritt-fuer-Schritt",
-        note: "Fristen, Unterlagen, Wohnungsgeberbestaetigung",
+        title: "Anmeldung Schritt-für-Schritt",
+        note: "Fristen, Unterlagen, Wohnungsgeberbestätigung",
       },
       {
         href: "/de/guides/money-taxes/elster",
         title: "ELSTER in der Praxis",
-        note: "Steuerkonto aufsetzen und erste Erklaerung vorbereiten",
+        note: "Steuerkonto aufsetzen und erste Erklärung vorbereiten",
       },
       {
         href: "/de/guides/everyday/family-benefits-kindergeld-elterngeld",
         title: "Kindergeld & Elterngeld",
-        note: "Anspruch pruefen und Antragstaktik verstehen",
+        note: "Anspruch prüfen und Antragstaktik verstehen",
       },
       {
         href: "/de/guides/everyday/learn-german-in-germany",
         title: "Deutsch lernen in Deutschland",
-        note: "Alltagsfaehig von Null bis B1 statt in App-Chaos stecken zu bleiben",
+        note: "Alltagsfähig von Null bis B1 statt in App-Chaos stecken zu bleiben",
       },
     ];
   }
@@ -371,19 +371,19 @@ export default async function HomePage({
               q: l === "en" ? "What is the Anmeldung deadline in Germany?" : "Was ist die Anmeldefrist in Deutschland?",
               a: l === "en"
                 ? "You must register your address within two weeks of moving in, as required by the Federal Registration Act (BMG)."
-                : "Du musst deine Adresse innerhalb von zwei Wochen nach dem Einzug anmelden, gemaess dem Bundesmeldegesetz (BMG).",
+                : "Du musst deine Adresse innerhalb von zwei Wochen nach dem Einzug anmelden, gemäß dem Bundesmeldegesetz (BMG).",
             },
             {
               q: l === "en" ? "How much does the Deutschlandticket cost?" : "Wie viel kostet das Deutschlandticket?",
               a: l === "en"
                 ? "The Deutschlandticket list price is EUR 63 per month and covers regional and local transport."
-                : "Der Listenpreis des Deutschlandtickets betraegt 63 Euro pro Monat und gilt im Regional- und Nahverkehr.",
+                : "Der Listenpreis des Deutschlandtickets beträgt 63 Euro pro Monat und gilt im Regional- und Nahverkehr.",
             },
             {
               q: l === "en" ? "What is the Rundfunkbeitrag?" : "Was ist der Rundfunkbeitrag?",
               a: l === "en"
                 ? "The Rundfunkbeitrag is currently EUR 18.36 per household per month and is generally mandatory for households in Germany."
-                : "Der Rundfunkbeitrag betraegt derzeit 18,36 Euro pro Haushalt und Monat und ist in Deutschland grundsaetzlich verpflichtend.",
+                : "Der Rundfunkbeitrag beträgt derzeit 18,36 Euro pro Haushalt und Monat und ist in Deutschland grundsätzlich verpflichtend.",
             },
           ],
         }}
@@ -468,7 +468,7 @@ export default async function HomePage({
               <div className="w-px h-6 bg-ink-3/20" />
               <div className="text-center">
                 <strong className="block text-sm font-black text-ink">{l === "en" ? "Ongoing" : "Laufend"}</strong>
-                <span className="text-[0.65rem] text-ink-3">{l === "en" ? "Review cadence" : "Pruefungsrhythmus"}</span>
+                <span className="text-[0.65rem] text-ink-3">{l === "en" ? "Review cadence" : "Prüfungsrhythmus"}</span>
               </div>
             </div>
           </div>
@@ -487,16 +487,16 @@ export default async function HomePage({
                 <h2 className="text-2xl md:text-3xl font-black tracking-tight mt-0 mb-2">
                   {l === "en"
                     ? "Most useful first clicks this week"
-                    : "Die nuetzlichsten ersten Klicks diese Woche"}
+                    : "Die nützlichsten ersten Klicks diese Woche"}
                 </h2>
                 <p className="text-ink-2 m-0">
                   {l === "en"
                     ? "Pick one high-impact route now, then continue from the guide's next-action block."
-                    : "Waehle jetzt einen hochrelevanten Einstieg und gehe dann im Guide direkt zu den naechsten Schritten."}
+                    : "Wähle jetzt einen hochrelevanten Einstieg und gehe dann im Guide direkt zu den nächsten Schritten."}
                 </p>
               </div>
               <Link href={`${base}/guides`} className="btn btn-primary">
-                {l === "en" ? "Open all guides" : "Alle Guides oeffnen"}
+                {l === "en" ? "Open all guides" : "Alle Guides öffnen"}
               </Link>
             </div>
 
@@ -534,7 +534,7 @@ export default async function HomePage({
               <div className="flex flex-wrap items-center gap-2 mb-3">
                 <span className="badge">{smartLife.fuelWatch.badge}</span>
                 <span className="badge-solid text-[0.7rem]">
-                  {l === "en" ? "Last checked" : "Zuletzt geprueft"}: {smartLife.fuelWatch.lastChecked}
+                  {l === "en" ? "Last checked" : "Zuletzt geprüft"}: {smartLife.fuelWatch.lastChecked}
                 </span>
               </div>
               <h3 className="text-2xl md:text-3xl font-black tracking-tight mt-0 mb-2">
@@ -591,7 +591,7 @@ export default async function HomePage({
                   <div className="flex items-center justify-between gap-3 mb-2">
                     <span className="badge">{tool.name}</span>
                     <span className="text-[0.65rem] font-bold uppercase tracking-[0.1em] text-accent-2">
-                      {l === "en" ? "Open" : "Oeffnen"}
+                      {l === "en" ? "Open" : "Öffnen"}
                     </span>
                   </div>
                   <h3 className="text-xl font-black leading-[1.12] tracking-tight m-0 mb-2">
@@ -793,7 +793,7 @@ export default async function HomePage({
                   href={`${base}/guides/housing/kuendigungsfrist-miete`}
                   className="glass-card-link p-3.5 text-sm font-semibold no-underline text-ink hover:text-accent-2 transition-colors"
                 >
-                  {l === "en" ? "Rent notice period in Germany" : "Kuendigungsfrist der Miete in Deutschland"}
+                  {l === "en" ? "Rent notice period in Germany" : "Kündigungsfrist der Miete in Deutschland"}
                 </Link>
                 <Link
                   href={`${base}/guides/bureaucracy/anmeldung`}

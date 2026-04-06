@@ -86,29 +86,29 @@ function getCopy(lang: Lang): WorkRelocationCopy {
       title: "Job-Relocation nach Deutschland",
       metaTitle: "Job-Relocation nach Deutschland: erste 30 Tage, Gehaltscheck, Familie",
       metaDescription:
-        "Unabhaengige Orientierung fuer employer-sponsored Relocations und interne Transfers: erste 30 Tage, erste Gehaltsabrechnung, Familien-Setup und die richtigen Fragen fuer HR oder Payroll.",
-      badge: "Fuer employer-sponsored Umzuege",
+        "Unabhängige Orientierung für employer-sponsored Relocations und interne Transfers: erste 30 Tage, erste Gehaltsabrechnung, Familien-Setup und die richtigen Fragen für HR oder Payroll.",
+      badge: "Für employer-sponsored Umzüge",
       subtitle:
-        "Diese Route ist fuer Menschen gedacht, die wegen eines Jobs nach Deutschland gekommen sind. Nicht generisch, nicht policy-lastig, sondern fokussiert auf die Momente, in denen Corporate Expats Zeit verlieren, Geld falsch einschaetzen oder intern die falsche Frage stellen.",
-      primaryCta: "Start hier fuer Job-Relocation",
+        "Diese Route ist für Menschen gedacht, die wegen eines Jobs nach Deutschland gekommen sind. Nicht generisch, nicht policy-lastig, sondern fokussiert auf die Momente, in denen Corporate Expats Zeit verlieren, Geld falsch einschätzen oder intern die falsche Frage stellen.",
+      primaryCta: "Start hier für Job-Relocation",
       secondaryCta: "Checkliste erste 14 Tage",
       panelTitle: "Nutze diese Seite, wenn ...",
       panelItems: [
         "dein Arbeitgeber Teile des Umzugs organisiert hat, aber nicht die deutschen Detailprozesse.",
         "deine erste deutsche Gehaltsabrechnung ungewohnt aussieht.",
         "dein Partner oder deine Familie parallel mitziehen und eigene To-dos haben.",
-        "du fuer HR, Mobility oder Payroll die naechste saubere Frage brauchst.",
+        "du für HR, Mobility oder Payroll die nächste saubere Frage brauchst.",
       ],
       disclaimer:
-        "Unabhaengige Orientierung von Life Hacks Germany. Kein Arbeitgeber-Portal, keine Rechts- oder Steuerberatung, keine Aussage ueber interne Siemens Prozesse.",
-      frictionBadge: "Wo Corporate Relocations oft haengen",
-      frictionTitle: "Die vier Reibungspunkte, die bei Job-Umzuegen wirklich zaehlen",
+        "Unabhängige Orientierung von Life Hacks Germany. Kein Arbeitgeber-Portal, keine Rechts- oder Steuerberatung, keine Aussage über interne Siemens Prozesse.",
+      frictionBadge: "Wo Corporate Relocations oft hängen",
+      frictionTitle: "Die vier Reibungspunkte, die bei Job-Umzügen wirklich zählen",
       frictionIntro:
         "Corporate Expats scheitern selten am Basiswissen. Der Engpass ist meist Sequenz, Verantwortung und Timing zwischen dir, dem Arbeitgeber und den deutschen Stellen.",
       frictionPoints: [
         {
           title: "Adresse und Anmeldung",
-          body: "Temporaires Wohnen, fehlende Wohnungsgeberbestaetigung oder knappe Termine bremsen alles Weitere aus.",
+          body: "Temporäres Wohnen, fehlende Wohnungsgeberbestätigung oder knappe Termine bremsen alles Weitere aus.",
         },
         {
           title: "Erste Gehaltsabrechnung",
@@ -120,23 +120,23 @@ function getCopy(lang: Lang): WorkRelocationCopy {
         },
         {
           title: "Arbeitgeber-Koordination",
-          body: "Oft ist unklar, was HR, Payroll, Mobility Provider oder du selbst liefern muessen.",
+          body: "Oft ist unklar, was HR, Payroll, Mobility Provider oder du selbst liefern müssen.",
         },
       ],
       timelineBadge: "Erste 30 Tage",
-      timelineTitle: "Die richtige Reihenfolge fuer die ersten 30 Tage",
+      timelineTitle: "Die richtige Reihenfolge für die ersten 30 Tage",
       timelineIntro:
-        "Nutze die Route unten nicht als starre Liste, sondern als Priorisierung. Jede Phase soll das naechste Problem entsperren.",
+        "Nutze die Route unten nicht als starre Liste, sondern als Priorisierung. Jede Phase soll das nächste Problem entsperren.",
       timeline: [
         {
           title: "Phase 1",
           window: "Tag 1 bis 7",
           summary: "Adresse absichern, Anmeldung vorbereiten, Versicherungs- und Arbeitgeber-Basis aufsetzen.",
           items: [
-            "Pruefe, ob deine Wohnsituation fuer Anmeldung taugt und fordere die Wohnungsgeberbestaetigung sofort an.",
-            "Buche den Termin direkt oder pruefe die Online-Anmeldung deiner Stadt.",
-            "Waehle die Krankenversicherung und gib den Nachweis an Arbeitgeber oder Hochschule weiter.",
-            "Klaere mit HR oder Mobility, welche Dokumente intern noch fuer Payroll oder Permit fehlen.",
+            "Prüfe, ob deine Wohnsituation für Anmeldung taugt und fordere die Wohnungsgeberbestätigung sofort an.",
+            "Buche den Termin direkt oder prüfe die Online-Anmeldung deiner Stadt.",
+            "Wähle die Krankenversicherung und gib den Nachweis an Arbeitgeber oder Hochschule weiter.",
+            "Kläre mit HR oder Mobility, welche Dokumente intern noch für Payroll oder Permit fehlen.",
           ],
           links: [
             { label: "Erste 14 Tage", href: `${base}/guides/bureaucracy/first-14-days` },
@@ -150,7 +150,7 @@ function getCopy(lang: Lang): WorkRelocationCopy {
           items: [
             "Richte dein deutsches Konto ein und gib die IBAN an Payroll weiter.",
             "Dokumentiere, dass die Steuer-ID noch unterwegs ist, wenn sie vor dem ersten Payroll-Lauf nicht da ist.",
-            "Klaere fuer Blue Card oder Arbeitserlaubnis, welche Unterlagen und Fristen fuer deinen Fall gelten.",
+            "Kläre für Blue Card oder Arbeitserlaubnis, welche Unterlagen und Fristen für deinen Fall gelten.",
             "Vergleiche dein erwartetes Netto und deine Stadtkosten, bevor du Miet- oder Familienentscheidungen triffst.",
           ],
           links: [
@@ -163,10 +163,10 @@ function getCopy(lang: Lang): WorkRelocationCopy {
           window: "Tag 22 bis 30",
           summary: "Die erste Gehaltsabrechnung lesen, Familien-To-dos sauber sequenzieren und Folgefehler vermeiden.",
           items: [
-            "Pruefe auf der ersten Abrechnung Tax class, Kirchensteuer, Krankenversicherung und auffaellige Einmalposten.",
+            "Prüfe auf der ersten Abrechnung Tax class, Kirchensteuer, Krankenversicherung und auffällige Einmalposten.",
             "Stelle offene Fragen an Payroll sofort mit konkreten Posten, nicht nur mit dem Satz 'mein Netto wirkt falsch'.",
             "Wenn Partner oder Kinder mitgezogen sind: Krankenversicherung, Kindergeld, Betreuung und Bank/Adresse separat mitdenken.",
-            "Plane jetzt schon Permit-Fristen, Einzugsbudget und laufende Fixkosten fuer Monat zwei und drei.",
+            "Plane jetzt schon Permit-Fristen, Einzugsbudget und laufende Fixkosten für Monat zwei und drei.",
           ],
           links: [
             { label: "Familienleistungen", href: `${base}/guides/everyday/family-benefits-kindergeld-elterngeld` },
@@ -175,39 +175,39 @@ function getCopy(lang: Lang): WorkRelocationCopy {
         },
       ],
       payslipBadge: "Erste Gehaltsabrechnung",
-      payslipTitle: "Was du vor Panik zuerst auf der ersten Gehaltsabrechnung pruefen solltest",
+      payslipTitle: "Was du vor Panik zuerst auf der ersten Gehaltsabrechnung prüfen solltest",
       payslipIntro:
-        "Die erste deutsche Abrechnung fuehlt sich oft niedriger und komplizierter an als erwartet. Die richtige Reaktion ist nicht Raten, sondern systematischer Abgleich.",
+        "Die erste deutsche Abrechnung fühlt sich oft niedriger und komplizierter an als erwartet. Die richtige Reaktion ist nicht Raten, sondern systematischer Abgleich.",
       payslipChecks: [
         {
           title: "Tax class passt sie zu deinem Fall?",
-          body: "Pruefe zuerst, ob die eingetragene Steuerklasse zu Familienstand und Meldestatus passt.",
+          body: "Prüfe zuerst, ob die eingetragene Steuerklasse zu Familienstand und Meldestatus passt.",
         },
         {
           title: "Steuer-ID fehlt noch?",
-          body: "Wenn die ID noch nicht vorlag, kann Payroll vorlaeufig mit unguenstigerem Setup laufen.",
+          body: "Wenn die ID noch nicht vorlag, kann Payroll vorläufig mit ungünstigerem Setup laufen.",
         },
         {
-          title: "Krankenversicherung richtig uebernommen?",
-          body: "Ein falscher oder fehlender Versicherungsstatus veraendert Netto und Nachfragen an HR deutlich.",
+          title: "Krankenversicherung richtig übernommen?",
+          body: "Ein falscher oder fehlender Versicherungsstatus verändert Netto und Nachfragen an HR deutlich.",
         },
         {
           title: "Kirchensteuer oder Einmalzahlung?",
-          body: "Auffaellige Netto-Abweichungen kommen oft durch Kirchensteuer-Flag oder einmalige Relocation- und Bonusposten.",
+          body: "Auffällige Netto-Abweichungen kommen oft durch Kirchensteuer-Flag oder einmalige Relocation- und Bonusposten.",
         },
       ],
       questionsBadge: "Fragen statt Raten",
-      questionsTitle: "Mit diesen Fragen wirst du fuer HR, Payroll und Mobility deutlich schneller",
+      questionsTitle: "Mit diesen Fragen wirst du für HR, Payroll und Mobility deutlich schneller",
       questionsIntro:
-        "Starke interne Fragen sparen Wochen. Gute Relocation-Unterstuetzung funktioniert nur, wenn klar ist, welche Stelle was beantworten soll.",
+        "Starke interne Fragen sparen Wochen. Gute Relocation-Unterstützung funktioniert nur, wenn klar ist, welche Stelle was beantworten soll.",
       questions: [
         {
           title: "HR oder Mobility fragen",
-          intro: "Diese Punkte loesen Zustands- und Dokumentfragen.",
+          intro: "Diese Punkte lösen Zustands- und Dokumentfragen.",
           items: [
-            "Kann ich mich an der aktuellen temporaeren Adresse anmelden oder brauche ich eine andere Wohnbestaetigung?",
-            "Welche Unterlagen erwartet ihr fuer den Permit- oder Blue-Card-Prozess noch von mir?",
-            "Wer hilft bei spouse oder family setup, falls Partner spaeter nachzieht?",
+            "Kann ich mich an der aktuellen temporären Adresse anmelden oder brauche ich eine andere Wohnbestätigung?",
+            "Welche Unterlagen erwartet ihr für den Permit- oder Blue-Card-Prozess noch von mir?",
+            "Wer hilft bei spouse oder family setup, falls Partner später nachzieht?",
             "Gibt es Fristen oder interne Deadlines vor dem ersten Payroll-Lauf?",
           ],
         },
@@ -218,24 +218,24 @@ function getCopy(lang: Lang): WorkRelocationCopy {
             "Mit welcher Steuerklasse und welchem Versicherungsstatus wurde meine erste Abrechnung verarbeitet?",
             "Wie wurde mein Fall behandelt, falls die Steuer-ID beim ersten Lauf noch nicht vorlag?",
             "Welche Posten sind einmalige Relocation- oder Bonusbestandteile und welche laufen dauerhaft weiter?",
-            "Welche Position erklaert den groessten Unterschied zwischen meinem erwarteten und dem ausgezahlten Netto?",
+            "Welche Position erklärt den größten Unterschied zwischen meinem erwarteten und dem ausgezahlten Netto?",
           ],
         },
         {
           title: "Familie und Alltag mitdenken",
-          intro: "Das wird oft zu spaet geplant, obwohl es den groessten Reibungsverlust erzeugt.",
+          intro: "Das wird oft zu spät geplant, obwohl es den größten Reibungsverlust erzeugt.",
           items: [
             "Ist dein Partner in einem eigenen Verwaltungs- und Versicherungsprozess oder in deinem mitabgedeckt?",
-            "Welche Unterlagen brauchst du fuer Kindergeld, Elterngeld oder Kita-Anmeldung realistisch zuerst?",
+            "Welche Unterlagen brauchst du für Kindergeld, Elterngeld oder Kita-Anmeldung realistisch zuerst?",
             "Welche Kosten kommen in Monat eins und zwei parallel zur Miete noch auf dich zu?",
-            "Ist das aktuelle Stadt- und Wohnkostenmodell mit deinem echten Netto ueberhaupt tragfaehig?",
+            "Ist das aktuelle Stadt- und Wohnkostenmodell mit deinem echten Netto überhaupt tragfähig?",
           ],
         },
       ],
-      toolsBadge: "Tools fuer Corporate Expats",
-      toolsTitle: "Die drei nuetzlichsten Tools fuer diese Zielgruppe",
+      toolsBadge: "Tools für Corporate Expats",
+      toolsTitle: "Die drei nützlichsten Tools für diese Zielgruppe",
       toolsIntro:
-        "Diese Tools helfen dir nicht beim Erklaeren deutscher Regeln, sondern bei Entscheidungen, die du trotz Arbeitgeber-Support selbst treffen musst.",
+        "Diese Tools helfen dir nicht beim Erklären deutscher Regeln, sondern bei Entscheidungen, die du trotz Arbeitgeber-Support selbst treffen musst.",
       tools: [
         {
           title: "Brutto-Netto + Stadtplus",
@@ -249,72 +249,72 @@ function getCopy(lang: Lang): WorkRelocationCopy {
         },
         {
           title: "Permit Timeline Planner",
-          body: "Setze frueh deine eigenen Fristen, statt dich nur auf den naechsten Termin oder interne Erinnerungen zu verlassen.",
+          body: "Setze früh deine eigenen Fristen, statt dich nur auf den nächsten Termin oder interne Erinnerungen zu verlassen.",
           href: `${base}/tools#permit-timeline`,
         },
       ],
       guidesBadge: "Beste Anschluss-Guides",
-      guidesTitle: "Was Corporate Expats als Naechstes wirklich brauchen",
+      guidesTitle: "Was Corporate Expats als Nächstes wirklich brauchen",
       guidesIntro:
         "Diese Guides decken die Folgeprobleme ab, die nach dem eigentlichen Umzug schnell relevant werden.",
       guides: [
         {
           title: "Erste 14 Tage in Deutschland",
-          body: "Die Grundsequenz fuer Anmeldung, Steuer-ID und die ersten operativen Freischaltungen.",
+          body: "Die Grundsequenz für Anmeldung, Steuer-ID und die ersten operativen Freischaltungen.",
           href: `${base}/guides/bureaucracy/first-14-days`,
         },
         {
-          title: "Anmeldung Schritt fuer Schritt",
+          title: "Anmeldung Schritt für Schritt",
           body: "Wenn Adresse, Frist oder Dokumente der erste Bottleneck sind, beginnt alles hier.",
           href: `${base}/guides/bureaucracy/anmeldung`,
         },
         {
           title: "Krankenversicherung Grundlagen",
-          body: "Der schnellste Ueberblick, wenn du den deutschen Versicherungsrahmen fuer Arbeit und Familie verstehen musst.",
+          body: "Der schnellste Überblick, wenn du den deutschen Versicherungsrahmen für Arbeit und Familie verstehen musst.",
           href: `${base}/guides/everyday/health-insurance-basics`,
         },
         {
           title: "Deutsch lernen in Deutschland",
-          body: "Relevant, wenn Sprache zum naechsten Bottleneck bei Terminen, Wohnung, Arzt oder Job-Alltag wird.",
+          body: "Relevant, wenn Sprache zum nächsten Bottleneck bei Terminen, Wohnung, Arzt oder Job-Alltag wird.",
           href: `${base}/guides/everyday/learn-german-in-germany`,
         },
         {
           title: "Blue Card und Arbeitserlaubnis",
-          body: "Hilft bei Eligibility, Dokumentenlogik und typischen Verzoegerungen im Permit-Prozess.",
+          body: "Hilft bei Eligibility, Dokumentenlogik und typischen Verzögerungen im Permit-Prozess.",
           href: `${base}/guides/bureaucracy/blue-card-work-permit`,
         },
         {
           title: "Deutsches Konto vergleichen",
-          body: "Relevant fuer den ersten Payroll-Lauf, Mietzahlungen und den Umstieg von Uebergangsloesungen.",
+          body: "Relevant für den ersten Payroll-Lauf, Mietzahlungen und den Umstieg von Übergangslösungen.",
           href: `${base}/guides/money-taxes/german-bank-account-comparison`,
         },
         {
           title: "Kindergeld und Elterngeld",
-          body: "Wichtig fuer Familien, die parallel zu Job und Umzug noch die deutsche Familienlogik aufsetzen muessen.",
+          body: "Wichtig für Familien, die parallel zu Job und Umzug noch die deutsche Familienlogik aufsetzen müssen.",
           href: `${base}/guides/everyday/family-benefits-kindergeld-elterngeld`,
         },
       ],
-      finalTitle: "Nutze diese Route als Arbeitsflaeche, nicht nur als Leseseite",
+      finalTitle: "Nutze diese Route als Arbeitsfläche, nicht nur als Leseseite",
       finalBody:
-        "Die beste Nutzung ist simpel: erst deine naechste Phase waehlen, dann die offenen Fragen fuers interne Gespraech notieren, dann mit den richtigen Guides und Tools tiefergehen.",
+        "Die beste Nutzung ist simpel: erst deine nächste Phase wählen, dann die offenen Fragen fürs interne Gespräch notieren, dann mit den richtigen Guides und Tools tiefergehen.",
       finalPrimaryCta: "Zu Start hier",
       finalSecondaryCta: "Alle Guides ansehen",
       faqs: [
         {
           q: "Ist diese Seite offizielles HR- oder Siemens-Material?",
-          a: "Nein. Das ist eine unabhaengige praktische Route von Life Hacks Germany und keine Aussage ueber interne Arbeitgeberprozesse.",
+          a: "Nein. Das ist eine unabhängige praktische Route von Life Hacks Germany und keine Aussage über interne Arbeitgeberprozesse.",
         },
         {
-          q: "Fuer wen ist diese Route gedacht?",
-          a: "Fuer Menschen, die wegen Arbeit nach Deutschland gezogen sind, zum Beispiel bei internen Transfers, employer-sponsored Relocations oder Blue-Card Setups.",
+          q: "Für wen ist diese Route gedacht?",
+          a: "Für Menschen, die wegen Arbeit nach Deutschland gezogen sind, zum Beispiel bei internen Transfers, employer-sponsored Relocations oder Blue-Card Setups.",
         },
         {
           q: "Ersetzt diese Seite Rechts-, Steuer- oder Payroll-Beratung?",
-          a: "Nein. Sie hilft dir, schneller zu verstehen, was du zuerst klaeren solltest und welche Fragen du an die richtige Stelle gibst.",
+          a: "Nein. Sie hilft dir, schneller zu verstehen, was du zuerst klären solltest und welche Fragen du an die richtige Stelle gibst.",
         },
         {
-          q: "Was sollte ich vor meiner ersten deutschen Gehaltsabrechnung klaeren?",
-          a: "Pruefe Steuerklasse, Status der Steuer-ID, Krankenversicherung, IBAN-Uebergabe und auffaellige Einmalposten wie Relocation- oder Bonuszahlungen.",
+          q: "Was sollte ich vor meiner ersten deutschen Gehaltsabrechnung klären?",
+          a: "Prüfe Steuerklasse, Status der Steuer-ID, Krankenversicherung, IBAN-Übergabe und auffällige Einmalposten wie Relocation- oder Bonuszahlungen.",
         },
       ],
     };

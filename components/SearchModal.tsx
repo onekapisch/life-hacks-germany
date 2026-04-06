@@ -37,9 +37,9 @@ export default function SearchModal({
     : {
         inputLabel: "Guides, Tools und Updates durchsuchen",
         placeholder: "Guides, Tools, Tipps suchen…",
-        close: "Suche schliessen",
-        loading: "Suche laeuft…",
-        error: "Suche ist voruebergehend nicht verfuegbar.",
+        close: "Suche schließen",
+        loading: "Suche läuft…",
+        error: "Suche ist vorübergehend nicht verfügbar.",
         empty: "Keine Ergebnisse gefunden",
         viewAll: "Alle Ergebnisse anzeigen",
       };

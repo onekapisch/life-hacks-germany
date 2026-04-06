@@ -39,7 +39,7 @@ export interface Offer extends OfferCopy {
   verifiedAt: string;
 }
 
-const VERIFIED_AT = "2026-03-01T14:32:28+01:00";
+const VERIFIED_AT = "2026-03-30T08:44:00+02:00";
 
 const offerDefinitions: OfferDefinition[] = [
   {
@@ -68,15 +68,15 @@ const offerDefinitions: OfferDefinition[] = [
       de: {
         title: "Kostenlose Lieferung bei vielen Lieferando-Bestellungen mit Amazon Prime",
         summary:
-          "Prime-Mitglieder koennen bei teilnehmenden Lieferando-Restaurants die Liefergebuehr sparen, meist ab EUR 15 Mindestbestellwert.",
-        benefit: "Keine Liefergebuehr bei teilnehmenden Restaurants.",
+          "Prime-Mitglieder können bei teilnehmenden Lieferando-Restaurants die Liefergebühr sparen, meist ab EUR 15 Mindestbestellwert.",
+        benefit: "Keine Liefergebühr bei teilnehmenden Restaurants.",
         eligibility:
-          "Amazon Prime, verknuepftes Konto, teilnehmende Restaurants und Mindestbestellwert sind noetig.",
+          "Amazon Prime, verknüpftes Konto, teilnehmende Restaurants und Mindestbestellwert sind nötig.",
         whyItMatters:
-          "Lieferando ist fuer viele Haushalte in Deutschland ein haeufiger Ausgabenpunkt und damit ein echter Alltagshebel.",
+          "Lieferando ist für viele Haushalte in Deutschland ein häufiger Ausgabenpunkt und damit ein echter Alltagshebel.",
         watchouts: [
           "Gilt nicht bei allen Restaurants.",
-          "Servicegebuehren und hoehere Menuepreise koennen trotzdem anfallen.",
+          "Servicegebühren und höhere Menüpreise können trotzdem anfallen.",
         ],
       },
     },
@@ -104,16 +104,16 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Woechentliche Coupons und Bonus-Booster in der REWE App stapeln",
+        title: "Wöchentliche Coupons und Bonus-Booster in der REWE App stapeln",
         summary:
-          "REWE Bonus kombiniert App-Coupons, Kategorie-Booster und regulaere Aktionsvorteile in einem Konto.",
-        benefit: "Coupon-Ersparnisse und Bonusaktionen auf den alltaeglichen Lebensmitteleinkauf.",
+          "REWE Bonus kombiniert App-Coupons, Kategorie-Booster und reguläre Aktionsvorteile in einem Konto.",
+        benefit: "Coupon-Ersparnisse und Bonusaktionen auf den alltäglichen Lebensmitteleinkauf.",
         eligibility: "REWE Konto und aktive Nutzung der App.",
         whyItMatters:
-          "REWE ist fuer viele Menschen in Deutschland ein Stamm-Supermarkt, daher ist der Nutzen regelmaessig statt einmalig.",
+          "REWE ist für viele Menschen in Deutschland ein Stamm-Supermarkt, daher ist der Nutzen regelmäßig statt einmalig.",
         watchouts: [
           "Der beste Effekt kommt meist nur mit aktivierten Angeboten vor dem Einkauf.",
-          "Viele Vorteile gelten nur fuer einzelne Kategorien.",
+          "Viele Vorteile gelten nur für einzelne Kategorien.",
         ],
       },
     },
@@ -141,16 +141,16 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Ein Punkte-System fuer viele grosse Ketten in Deutschland nutzen",
+        title: "Ein Punkte-System für viele große Ketten in Deutschland nutzen",
         summary:
-          "PAYBACK bleibt eines der am weitesten verbreiteten Bonusprogramme in Deutschland fuer Supermarkt, Drogerie, Tanken und Online-Shopping.",
+          "PAYBACK bleibt eines der am weitesten verbreiteten Bonusprogramme in Deutschland für Supermarkt, Drogerie, Tanken und Online-Shopping.",
         benefit: "Punkte plus App-Coupons bei vielen Partnern.",
         eligibility: "PAYBACK Konto oder App.",
         whyItMatters:
-          "Das Programm funktioniert ueber mehrere Marken hinweg und zwingt Nutzer nicht in nur eine Kette.",
+          "Das Programm funktioniert über mehrere Marken hinweg und zwingt Nutzer nicht in nur eine Kette.",
         watchouts: [
           "Die Basispunkte allein sind oft klein, wenn keine Extra-Coupons aktiviert werden.",
-          "Richtig stark wird es erst bei konsequenter Nutzung ueber mehrere Partner hinweg.",
+          "Richtig stark wird es erst bei konsequenter Nutzung über mehrere Partner hinweg.",
         ],
       },
     },
@@ -178,13 +178,13 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "PAYBACK bei dm auf haeufige Haushaltskaeufe mitnehmen",
+        title: "PAYBACK bei dm auf häufige Haushaltskäufe mitnehmen",
         summary:
-          "Bei dm lassen sich Alltagskaeufe in der Drogerie mit PAYBACK Punkten und App-Vorteilen kombinieren.",
+          "Bei dm lassen sich Alltagskäufe in der Drogerie mit PAYBACK Punkten und App-Vorteilen kombinieren.",
         benefit: "Punkte und Coupon-Stacking auf wiederkehrende Basics.",
         eligibility: "PAYBACK Karte oder App-Barcode an der dm Kasse.",
         whyItMatters:
-          "Drogerie-Einkaeufe kommen regelmaessig vor und bringen deshalb ueber die Zeit mehr als ein einmaliger Gutschein.",
+          "Drogerie-Einkäufe kommen regelmäßig vor und bringen deshalb über die Zeit mehr als ein einmaliger Gutschein.",
         watchouts: [
           "Nicht alle Artikel sind gleichzeitig geboostert.",
           "Am meisten bringt die Kombination aus dm Aktionen und aktivierten PAYBACK Coupons.",
@@ -198,7 +198,7 @@ const offerDefinitions: OfferDefinition[] = [
     brand: "dm Glueckskind",
     category: "family",
     status: "ongoing",
-    officialUrl: "https://www.dm.de/services/kundenprogramme/glueckskind",
+    officialUrl: "https://www.dm.de/glueckskind",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
@@ -215,16 +215,16 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "dm Glueckskind bringt gezielte Vorteile fuer Schwangerschaft und junge Familien",
+        title: "dm Glückskind bringt gezielte Vorteile für Schwangerschaft und junge Familien",
         summary:
-          "Das Familienprogramm von dm richtet sich an Schwangerschaft, Babyzeit und fruehe Familienphase in einer Kette, die viele Haushalte ohnehin nutzen.",
+          "Das Familienprogramm von dm richtet sich an Schwangerschaft, Babyzeit und frühe Familienphase in einer Kette, die viele Haushalte ohnehin nutzen.",
         benefit: "Familienbezogene Coupons, Proben und gezielte dm Vorteile.",
         eligibility: "Passende Lebensphase plus Teilnahme am dm Programm.",
         whyItMatters:
-          "Gerade fuer junge Familien koennen gezielte Baby- und Pflegevorteile deutlich wertvoller sein als allgemeine Prozentaktionen.",
+          "Gerade für junge Familien können gezielte Baby- und Pflegevorteile deutlich wertvoller sein als allgemeine Prozentaktionen.",
         watchouts: [
-          "Sinnvoll ist das nur fuer passende Haushaltssituationen.",
-          "Der Vorteilsmix kann sich je nach Phase und Kampagne aendern.",
+          "Sinnvoll ist das nur für passende Haushaltssituationen.",
+          "Der Vorteilsmix kann sich je nach Phase und Kampagne ändern.",
         ],
       },
     },
@@ -252,16 +252,16 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Lidl Plus fuer woechentliche Coupons und App-Rabatte im Supermarkt nutzen",
+        title: "Lidl Plus für wöchentliche Coupons und App-Rabatte im Supermarkt nutzen",
         summary:
-          "Lidl Plus buendelt woechentliche Coupons, Partner-Vorteile, digitale Bons und wechselnde Marktaktionen in einer App.",
-        benefit: "App-Coupons und zeitlich begrenzte Rabatte bei einem der groessten Discounter Deutschlands.",
+          "Lidl Plus bündelt wöchentliche Coupons, Partner-Vorteile, digitale Bons und wechselnde Marktaktionen in einer App.",
+        benefit: "App-Coupons und zeitlich begrenzte Rabatte bei einem der größten Discounter Deutschlands.",
         eligibility: "Lidl Plus App-Konto.",
         whyItMatters:
-          "Fuer preisbewusstes Einkaufen in Deutschland ist das einer der praktischsten wiederkehrenden Sparhebel.",
+          "Für preisbewusstes Einkaufen in Deutschland ist das einer der praktischsten wiederkehrenden Sparhebel.",
         watchouts: [
           "Viele Rabatte funktionieren nur nach manueller Aktivierung.",
-          "Einige Partner-Vorteile koennen sich kurzfristig aendern.",
+          "Einige Partner-Vorteile können sich kurzfristig ändern.",
         ],
       },
     },
@@ -292,13 +292,13 @@ const offerDefinitions: OfferDefinition[] = [
         title: "Den aktuellen Lidl Plus Disney+ Partnervorteil nutzen, solange er live ist",
         summary:
           "Lidl Plus hebt derzeit ein Disney+ Angebot im Vorteilebereich hervor und macht es damit zu einem der sichtbarsten App-Perks.",
-        benefit: "Verguenstigter Disney+ Zugang ueber den Lidl Plus Partnervorteil.",
+        benefit: "Vergünstigter Disney+ Zugang über den Lidl Plus Partnervorteil.",
         eligibility: "Lidl Plus Konto und die aktuell laufende Partneraktion.",
         whyItMatters:
-          "Der Vorteil verbindet einen Mainstream-Streamingdienst mit einer sehr verbreiteten Einkaufs-App und ist dadurch fuer viele sofort nutzbar.",
+          "Der Vorteil verbindet einen Mainstream-Streamingdienst mit einer sehr verbreiteten Einkaufs-App und ist dadurch für viele sofort nutzbar.",
         watchouts: [
           "Als Partneraktion kann das Angebot angepasst oder beendet werden.",
-          "Vor Aktivierung die genauen Tarifbedingungen pruefen.",
+          "Vor Aktivierung die genauen Tarifbedingungen prüfen.",
         ],
       },
     },
@@ -326,16 +326,16 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Familien koennen die Lidl Family Club Vorteile aktivieren",
+        title: "Familien können die Lidl Family Club Vorteile aktivieren",
         summary:
-          "Lidl Plus bewirbt derzeit einen Family Club Bereich mit zusaetzlichen familienbezogenen Angeboten und Vorteilen.",
-        benefit: "Zusatzvorteile fuer Familien innerhalb des Lidl Oekosystems.",
+          "Lidl Plus bewirbt derzeit einen Family Club Bereich mit zusätzlichen familienbezogenen Angeboten und Vorteilen.",
+        benefit: "Zusatzvorteile für Familien innerhalb des Lidl Ökosystems.",
         eligibility: "Lidl Plus und die Teilnahme am Family Club.",
         whyItMatters:
-          "Fuer Haushalte mit Kindern koennen familienbezogene Einkaufsangebote deutlich mehr bringen als allgemeine Coupons.",
+          "Für Haushalte mit Kindern können familienbezogene Einkaufsangebote deutlich mehr bringen als allgemeine Coupons.",
         watchouts: [
-          "Relevant ist das nur fuer passende Haushaltssituationen.",
-          "Die Tiefe der Vorteile kann sich im Zeitverlauf aendern.",
+          "Relevant ist das nur für passende Haushaltssituationen.",
+          "Die Tiefe der Vorteile kann sich im Zeitverlauf ändern.",
         ],
       },
     },
@@ -363,16 +363,16 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Kaufland Card XTRA fuer Coupons, Punkte und Marktaktionen nutzen",
+        title: "Kaufland Card XTRA für Coupons, Punkte und Marktaktionen nutzen",
         summary:
-          "Das Kaufland Programm verbindet personalisierte Rabatte, Punkte und Aktionsvorteile fuer eines der groessten Einkaufsformate in Deutschland.",
-        benefit: "Coupons, Punkte und regelmaessige Bonusaktionen.",
+          "Das Kaufland Programm verbindet personalisierte Rabatte, Punkte und Aktionsvorteile für eines der größten Einkaufsformate in Deutschland.",
+        benefit: "Coupons, Punkte und regelmäßige Bonusaktionen.",
         eligibility: "Registrierte Kaufland Card.",
         whyItMatters:
-          "Bei grossen Einkaufskoerben koennen schon kleine Prozentvorteile schnell relevant werden.",
+          "Bei großen Einkaufskörben können schon kleine Prozentvorteile schnell relevant werden.",
         watchouts: [
-          "Viele Vorteile sind personalisiert und daher nicht fuer alle gleich.",
-          "Aktionsmechaniken koennen je nach Kampagne wechseln.",
+          "Viele Vorteile sind personalisiert und daher nicht für alle gleich.",
+          "Aktionsmechaniken können je nach Kampagne wechseln.",
         ],
       },
     },
@@ -383,7 +383,7 @@ const offerDefinitions: OfferDefinition[] = [
     brand: "ROSSMANN App",
     category: "shopping",
     status: "ongoing",
-    officialUrl: "https://www.rossmann.de/de/app",
+    officialUrl: "https://www.rossmann.de/de/service-und-hilfe/rossmann-app",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
@@ -400,15 +400,15 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Vor jedem Drogerie-Einkauf die ROSSMANN App pruefen",
+        title: "Vor jedem Drogerie-Einkauf die ROSSMANN App prüfen",
         summary:
-          "Die ROSSMANN App bleibt eine der haeufigsten Quellen fuer rotierende Prozent-Coupons und Produktangebote in Deutschland.",
+          "Die ROSSMANN App bleibt eine der häufigsten Quellen für rotierende Prozent-Coupons und Produktangebote in Deutschland.",
         benefit: "Wiederkehrende App-Coupons und Marktvorteile.",
         eligibility: "Nutzung der ROSSMANN App.",
         whyItMatters:
-          "Gerade fuer Haushalt, Baby und Pflege ist das eine der verbreitetsten Spargewohnheiten im Alltag.",
+          "Gerade für Haushalt, Baby und Pflege ist das eine der verbreitetsten Spargewohnheiten im Alltag.",
         watchouts: [
-          "Coupon-Sets wechseln haeufig und es gelten Ausschluesse.",
+          "Coupon-Sets wechseln häufig und es gelten Ausschlüsse.",
           "Der Prozent-Coupon ist nicht immer universell einsetzbar.",
         ],
       },
@@ -439,13 +439,13 @@ const offerDefinitions: OfferDefinition[] = [
       de: {
         title: "DeutschlandCard bei Netto, Esso und Partnern einsetzen",
         summary:
-          "Die DeutschlandCard bleibt ein grosses deutsches Bonusnetzwerk mit App-Coupons, Punkten und Partner-Vorteilen.",
-        benefit: "Punkte und Angebote ueber mehrere Partnermarken hinweg.",
+          "Die DeutschlandCard bleibt ein großes deutsches Bonusnetzwerk mit App-Coupons, Punkten und Partner-Vorteilen.",
+        benefit: "Punkte und Angebote über mehrere Partnermarken hinweg.",
         eligibility: "DeutschlandCard Konto oder App.",
         whyItMatters:
-          "Sie ist neben PAYBACK die wichtigste Alternative, vor allem fuer Netto und Esso Nutzer.",
+          "Sie ist neben PAYBACK die wichtigste Alternative, vor allem für Netto und Esso Nutzer.",
         watchouts: [
-          "Der Nutzen haengt stark vom Partner-Mix und aktivierten Coupons ab.",
+          "Der Nutzen hängt stark vom Partner-Mix und aktivierten Coupons ab.",
           "Punkteprogramme lohnen sich vor allem bei konsequenter Nutzung.",
         ],
       },
@@ -457,7 +457,7 @@ const offerDefinitions: OfferDefinition[] = [
     brand: "ROSSMANN babywelt",
     category: "family",
     status: "ongoing",
-    officialUrl: "https://www.rossmann.de/de/babywelt",
+    officialUrl: "https://www.rossmann.de/de/baby-kind/babywelt",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
@@ -482,8 +482,8 @@ const offerDefinitions: OfferDefinition[] = [
         whyItMatters:
           "Viele Familien nutzen sowohl dm als auch ROSSMANN, daher lohnt sich der Vergleich beider Programme direkt.",
         watchouts: [
-          "Relevant ist das nur fuer passende Haushaltssituationen.",
-          "Die Gutschein-Tiefe aendert sich je nach Phase und Kampagne.",
+          "Relevant ist das nur für passende Haushaltssituationen.",
+          "Die Gutschein-Tiefe ändert sich je nach Phase und Kampagne.",
         ],
       },
     },
@@ -511,16 +511,16 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "IKEA Family Rewards legt eine zweite Sparschicht ueber die normalen Mitgliederpreise",
+        title: "IKEA Family Rewards legt eine zweite Sparschicht über die normalen Mitgliederpreise",
         summary:
           "IKEA hebt inzwischen Reward-Vorteile neben dem allgemeinen IKEA Family Programm hervor und macht das Sparmodell greifbarer.",
         benefit: "Reward-basierte Gutscheine und Zusatzvorteile oberhalb der normalen IKEA Family Nutzung.",
         eligibility: "IKEA Family Teilnahme und die jeweils geltenden Reward-Regeln.",
         whyItMatters:
-          "Gerade bei Umzug oder Haushaltsaufbau kann die Kombination aus Mitgliederpreisen und Rewards deutlich staerker sein als kleine Wochen-Coupons.",
+          "Gerade bei Umzug oder Haushaltsaufbau kann die Kombination aus Mitgliederpreisen und Rewards deutlich stärker sein als kleine Wochen-Coupons.",
         watchouts: [
-          "Wirklich relevant wird das nur bei spuerbaren IKEA Ausgaben.",
-          "Die Reward-Bedingungen sollten vor der Nutzung aktuell geprueft werden.",
+          "Wirklich relevant wird das nur bei spürbaren IKEA Ausgaben.",
+          "Die Reward-Bedingungen sollten vor der Nutzung aktuell geprüft werden.",
         ],
       },
     },
@@ -550,14 +550,14 @@ const offerDefinitions: OfferDefinition[] = [
       de: {
         title: "IKEA Family bleibt einer der einfachsten Mitglieder-Vorteile in Deutschland",
         summary:
-          "IKEA Family bietet Mitgliederpreise und Shop-Vorteile ueber ein kostenloses, sehr bekanntes Retail-Programm.",
-        benefit: "Mitgliederpreise und zusaetzliche Store-Vorteile.",
+          "IKEA Family bietet Mitgliederpreise und Shop-Vorteile über ein kostenloses, sehr bekanntes Retail-Programm.",
+        benefit: "Mitgliederpreise und zusätzliche Store-Vorteile.",
         eligibility: "Kostenlose IKEA Family Mitgliedschaft.",
         whyItMatters:
-          "Gerade nach Umzug oder beim Haushaltsaufbau koennen IKEA Vorteile in Deutschland ueberdurchschnittlich nuetzlich sein.",
+          "Gerade nach Umzug oder beim Haushaltsaufbau können IKEA Vorteile in Deutschland überdurchschnittlich nützlich sein.",
         watchouts: [
-          "Der Nutzen haengt davon ab, ob du wirklich bei IKEA einkaufst.",
-          "Vorteile koennen online und im Markt unterschiedlich ausfallen.",
+          "Der Nutzen hängt davon ab, ob du wirklich bei IKEA einkaufst.",
+          "Vorteile können online und im Markt unterschiedlich ausfallen.",
         ],
       },
     },
@@ -568,7 +568,7 @@ const offerDefinitions: OfferDefinition[] = [
     brand: "myMediaMarkt",
     category: "shopping",
     status: "ongoing",
-    officialUrl: "https://www.mediamarkt.de/de/specials/mymediamarkt",
+    officialUrl: "https://www.mediamarkt.de/de/legal/teilnahmebedingungen-my-mediamarkt/teilnahmebedingungen-my-mediamarkt",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
@@ -587,13 +587,13 @@ const offerDefinitions: OfferDefinition[] = [
       de: {
         title: "myMediaMarkt bringt Mitgliederpreise und Technik-Coupons",
         summary:
-          "Die MediaMarkt Mitgliedschaft setzt auf Aktionspreise, Coupons und accountbezogene Vorteile rund um Technik-Einkaeufe.",
-        benefit: "Mitgliederdeals und couponartige Ersparnisse bei Elektronik-Kaeufen.",
+          "Die MediaMarkt Mitgliedschaft setzt auf Aktionspreise, Coupons und accountbezogene Vorteile rund um Technik-Einkäufe.",
+        benefit: "Mitgliederdeals und couponartige Ersparnisse bei Elektronik-Käufen.",
         eligibility: "myMediaMarkt Registrierung.",
         whyItMatters:
-          "Elektronik ist oft ein grosser Einzelposten, daher koennen Mitgliederpreise hier mehr bringen als viele kleine Supermarkt-Coupons.",
+          "Elektronik ist oft ein großer Einzelposten, daher können Mitgliederpreise hier mehr bringen als viele kleine Supermarkt-Coupons.",
         watchouts: [
-          "Relevant ist das vor allem, wenn ohnehin Technik-Kaeufe geplant sind.",
+          "Relevant ist das vor allem, wenn ohnehin Technik-Käufe geplant sind.",
           "Viele Aktionen laufen nur in kurzen Kampagnenfenstern.",
         ],
       },
@@ -622,16 +622,16 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "H&M Member bietet weiter Mitgliederpreise, Punkte und regelmaessige App-Aktionen",
+        title: "H&M Member bietet weiter Mitgliederpreise, Punkte und regelmäßige App-Aktionen",
         summary:
           "Das H&M Programm kombiniert Punkte, Mitgliederpreise und Fashion-Angebote innerhalb einer sehr sichtbaren Retail-Marke.",
-        benefit: "Mitgliederpreise, Punkte und kampagnenbasierte Rabatte fuer Kleidung.",
+        benefit: "Mitgliederpreise, Punkte und kampagnenbasierte Rabatte für Kleidung.",
         eligibility: "H&M Member Konto.",
         whyItMatters:
-          "Fuer Basic-Kleidung und saisonale Einkaeufe bleibt H&M eines der bekanntesten Programme in Deutschland.",
+          "Für Basic-Kleidung und saisonale Einkäufe bleibt H&M eines der bekanntesten Programme in Deutschland.",
         watchouts: [
-          "Mode-Rabatte verleiten leicht zu Impulskaeufen.",
-          "Der echte Nutzen haengt davon ab, ob relevante Artikel gerade als Member-Preis laufen.",
+          "Mode-Rabatte verleiten leicht zu Impulskäufen.",
+          "Der echte Nutzen hängt davon ab, ob relevante Artikel gerade als Member-Preis laufen.",
         ],
       },
     },
@@ -659,15 +659,15 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Die McDonald's App fuer rotierende Coupons und Rewards nutzen",
+        title: "Die McDonald's App für rotierende Coupons und Rewards nutzen",
         summary:
-          "Die MyMcDonald's App bleibt einer der bekanntesten Sparkanaele fuer Fast Food in Deutschland.",
+          "Die MyMcDonald's App bleibt einer der bekanntesten Sparkanäle für Fast Food in Deutschland.",
         benefit: "App-Coupons und Reward-Punkte in einer Mainstream-Food-App.",
         eligibility: "McDonald's App-Konto.",
         whyItMatters:
-          "Wer dort ohnehin kauft, bekommt ueber die App meist bessere Preise als ohne App-Bestellung.",
+          "Wer dort ohnehin kauft, bekommt über die App meist bessere Preise als ohne App-Bestellung.",
         watchouts: [
-          "Die Coupon-Qualitaet wechselt haeufig.",
+          "Die Coupon-Qualität wechselt häufig.",
           "Sparen funktioniert nur, wenn der Kauf ohnehin geplant war.",
         ],
       },
@@ -698,14 +698,14 @@ const offerDefinitions: OfferDefinition[] = [
       de: {
         title: "Too Good To Go bleibt eine der praktischsten Apps zum Sparen bei Essen",
         summary:
-          "Die App hilft dabei, uebrig gebliebenes Essen von Baeckereien, Supermaerkten und Restaurants in der Naehe guenstiger abzuholen.",
-        benefit: "Verguenstigte Ueberraschungstueten lokaler Food-Anbieter.",
-        eligibility: "Too Good To Go App und teilnehmende Laeden in der Umgebung.",
+          "Die App hilft dabei, übrig gebliebenes Essen von Bäckereien, Supermärkten und Restaurants in der Nähe günstiger abzuholen.",
+        benefit: "Vergünstigte Überraschungstüten lokaler Food-Anbieter.",
+        eligibility: "Too Good To Go App und teilnehmende Läden in der Umgebung.",
         whyItMatters:
-          "Die App verbindet Ersparnis und Alltagstauglichkeit und funktioniert in vielen deutschen Staedten, besonders bei Baeckern und Supermaerkten.",
+          "Die App verbindet Ersparnis und Alltagstauglichkeit und funktioniert in vielen deutschen Städten, besonders bei Bäckern und Supermärkten.",
         watchouts: [
-          "Verfuegbarkeit haengt stark von Ort und Uhrzeit ab.",
-          "Der genaue Inhalt ist vorher nicht frei waehlbar.",
+          "Verfügbarkeit hängt stark von Ort und Uhrzeit ab.",
+          "Der genaue Inhalt ist vorher nicht frei wählbar.",
         ],
       },
     },
@@ -735,14 +735,14 @@ const offerDefinitions: OfferDefinition[] = [
       de: {
         title: "Die BahnCard 25 bleibt der einfachste wiederkehrende Bahn-Rabatt",
         summary:
-          "Die BahnCard 25 der Deutschen Bahn bietet eine leicht verstaendliche Preisreduktion fuer viele Zugfahrten.",
+          "Die BahnCard 25 der Deutschen Bahn bietet eine leicht verständliche Preisreduktion für viele Zugfahrten.",
         benefit: "25 Prozent Rabatt auf viele Deutsche-Bahn-Tarife.",
         eligibility: "Kostenpflichtige BahnCard 25.",
         whyItMatters:
-          "Wer mehr als nur selten Fernverkehr faehrt, holt die Kosten oft schnell wieder rein.",
+          "Wer mehr als nur selten Fernverkehr fährt, holt die Kosten oft schnell wieder rein.",
         watchouts: [
           "Sie lohnt sich nur bei ausreichend hohem Bahn-Umsatz im Jahr.",
-          "Vor dem Kauf die Verlaengerungsbedingungen pruefen.",
+          "Vor dem Kauf die Verlängerungsbedingungen prüfen.",
         ],
       },
     },
@@ -753,7 +753,7 @@ const offerDefinitions: OfferDefinition[] = [
     brand: "Thalia KultClub",
     category: "shopping",
     status: "ongoing",
-    officialUrl: "https://www.thalia.de/vorteile/kultclub",
+    officialUrl: "https://www.thalia.de/vorteile/club/club-aktion",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
@@ -770,15 +770,15 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Thalia KultClub bringt Versand- und Coupon-Vorteile fuer regelmaessige Leser",
+        title: "Thalia KultClub bringt Versand- und Coupon-Vorteile für regelmäßige Leser",
         summary:
-          "Das Thalia Programm buendelt Aktionen wie Coupons, Partner-Vorteile und praktische Versandvorteile.",
-        benefit: "Mitglieder-Coupons und Komfortvorteile fuer Buecher und Geschenke.",
+          "Das Thalia Programm bündelt Aktionen wie Coupons, Partner-Vorteile und praktische Versandvorteile.",
+        benefit: "Mitglieder-Coupons und Komfortvorteile für Bücher und Geschenke.",
         eligibility: "Thalia KultClub Mitgliedschaft.",
         whyItMatters:
-          "Buecher, Schulbedarf und Geschenke sind wiederkehrende Ausgaben, daher kann das fuer regelmaessige Thalia Kunden sinnvoll sein.",
+          "Bücher, Schulbedarf und Geschenke sind wiederkehrende Ausgaben, daher kann das für regelmäßige Thalia Kunden sinnvoll sein.",
         watchouts: [
-          "Relevant ist das vor allem fuer Menschen, die ohnehin bei Thalia kaufen.",
+          "Relevant ist das vor allem für Menschen, die ohnehin bei Thalia kaufen.",
           "Die Buchpreisbindung in Deutschland begrenzt bei vielen Titeln die Rabatt-Tiefe.",
         ],
       },

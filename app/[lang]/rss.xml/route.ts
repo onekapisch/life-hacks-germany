@@ -25,7 +25,7 @@ export function GET(
     const feedDescription =
       l === "en"
         ? "Verified monthly Germany updates, practical guides, and launch-ready content."
-        : "Verifizierte Monatsupdates, praktische Guides und redaktionell gepflegte Inhalte fuer Deutschland.";
+        : "Verifizierte Monatsupdates, praktische Guides und redaktionell gepflegte Inhalte für Deutschland.";
     const feedUrl = `${siteConfig.domain}/${l}/rss.xml`;
     const siteUrl = `${siteConfig.domain}/${l}`;
 

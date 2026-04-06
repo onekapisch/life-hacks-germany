@@ -75,9 +75,9 @@ export default function Header({ lang }: { lang: Lang }) {
     : {
         search: "Suche",
         searchShortcut: "Website durchsuchen",
-        openMenu: "Menue oeffnen",
-        closeMenu: "Menue schliessen",
-        mobileMenu: "Hauptmenue",
+        openMenu: "Menü öffnen",
+        closeMenu: "Menü schließen",
+        mobileMenu: "Hauptmenü",
       };
 
   return (

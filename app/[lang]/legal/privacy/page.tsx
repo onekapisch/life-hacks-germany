@@ -33,9 +33,9 @@ function getPrivacyContent(lang: Lang) {
                   "Google Analytics can involve processing outside the EEA. We rely on Google's current contractual and transfer mechanisms where required. You can withdraw consent at any time via the cookie preferences button in the footer.",
                 ]
               : [
-                  "Wir nutzen derzeit Google Analytics 4 nur dann, wenn du im Cookie-Banner oder ueber die Cookie-Einstellungen aktiv zustimmst. Vor der Zustimmung wird das Analyse-Skript nicht geladen.",
-                  "Bei Zustimmung kann Google Seitenaufrufe, Geraete-, Browser- und ungefaehre Standortdaten verarbeiten und dabei Cookies oder aehnliche Technologien auf deinem Geraet verwenden. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit Section 25(1) TDDDG.",
-                  "Bei Google Analytics kann es zu Verarbeitungen ausserhalb des EWR kommen. Soweit erforderlich, stuetzen wir uns auf die aktuellen Vertrags- und Transfermechanismen von Google. Deine Zustimmung kannst du jederzeit ueber die Cookie-Einstellungen im Footer widerrufen.",
+                  "Wir nutzen derzeit Google Analytics 4 nur dann, wenn du im Cookie-Banner oder über die Cookie-Einstellungen aktiv zustimmst. Vor der Zustimmung wird das Analyse-Skript nicht geladen.",
+                  "Bei Zustimmung kann Google Seitenaufrufe, Geräte-, Browser- und ungefähre Standortdaten verarbeiten und dabei Cookies oder ähnliche Technologien auf deinem Gerät verwenden. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit Section 25(1) TDDDG.",
+                  "Bei Google Analytics kann es zu Verarbeitungen außerhalb des EWR kommen. Soweit erforderlich, stützen wir uns auf die aktuellen Vertrags- und Transfermechanismen von Google. Deine Zustimmung kannst du jederzeit über die Cookie-Einstellungen im Footer widerrufen.",
                 ],
         }
       : provider
@@ -50,7 +50,7 @@ function getPrivacyContent(lang: Lang) {
                   ]
                 : [
                     `Wir nutzen derzeit ${providerLabel} nur nach aktiver Zustimmung. Vor der Zustimmung wird das Analyse-Skript nicht geladen.`,
-                    `Bei Zustimmung kann ${providerLabel} die fuer aggregierte Nutzungsstatistiken erforderlichen Seitenaufrufs-, Browser- und Geraetedaten verarbeiten.${usesCookies ? " Dabei koennen Cookies oder aehnliche Technologien auf deinem Geraet eingesetzt werden." : ""} Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit Section 25 TDDDG, soweit ein Zugriff auf dein Endgeraet erforderlich ist.`,
+                    `Bei Zustimmung kann ${providerLabel} die für aggregierte Nutzungsstatistiken erforderlichen Seitenaufrufs-, Browser- und Gerätedaten verarbeiten.${usesCookies ? " Dabei können Cookies oder ähnliche Technologien auf deinem Gerät eingesetzt werden." : ""} Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit Section 25 TDDDG, soweit ein Zugriff auf dein Endgerät erforderlich ist.`,
                   ],
           }
         : {
@@ -61,12 +61,12 @@ function getPrivacyContent(lang: Lang) {
                     "We do not currently load any optional analytics tool on the live site. If this changes, this policy will be updated before rollout.",
                   ]
                 : [
-                    "Wir laden auf der Live-Seite derzeit kein optionales Analyse-Tool. Falls sich das aendert, aktualisieren wir diese Datenschutzerklaerung vor dem Rollout.",
+                    "Wir laden auf der Live-Seite derzeit kein optionales Analyse-Tool. Falls sich das ändert, aktualisieren wir diese Datenschutzerklärung vor dem Rollout.",
                   ],
           };
 
   return {
-    title: lang === "en" ? "Privacy Policy" : "Datenschutzerklaerung",
+    title: lang === "en" ? "Privacy Policy" : "Datenschutzerklärung",
     intro:
       lang === "en"
         ? [
@@ -74,8 +74,8 @@ function getPrivacyContent(lang: Lang) {
             "Life Hacks Germany is an editorial content website. We do not offer user accounts, checkout, or public comments on the live site at this time.",
           ]
         : [
-            "Diese Erklaerung beschreibt, welche personenbezogenen Daten Life Hacks Germany im aktuellen Launch-Zustand verarbeitet.",
-            "Life Hacks Germany ist eine redaktionelle Inhaltsseite. Auf der Live-Seite bieten wir derzeit keine Nutzerkonten, keinen Checkout und keine oeffentlichen Kommentare an.",
+            "Diese Erklärung beschreibt, welche personenbezogenen Daten Life Hacks Germany im aktuellen Launch-Zustand verarbeitet.",
+            "Life Hacks Germany ist eine redaktionelle Inhaltsseite. Auf der Live-Seite bieten wir derzeit keine Nutzerkonten, keinen Checkout und keine öffentlichen Kommentare an.",
           ],
     sections: [
       {
@@ -84,10 +84,10 @@ function getPrivacyContent(lang: Lang) {
         paragraphs:
           lang === "en"
             ? [
-                `Controller: Aeon GbR, Bruennleinsweg 126, 90768 Fuerth, Germany. Email: ${siteConfig.email}.`,
+                `Controller: Aeon GbR, Brünnleinsweg 126, 90768 Fürth, Germany. Email: ${siteConfig.email}.`,
               ]
             : [
-                `Verantwortlicher: Aeon GbR, Bruennleinsweg 126, 90768 Fuerth, Deutschland. E-Mail: ${siteConfig.email}.`,
+                `Verantwortlicher: Aeon GbR, Brünnleinsweg 126, 90768 Fürth, Deutschland. E-Mail: ${siteConfig.email}.`,
               ],
       },
       {
@@ -103,14 +103,14 @@ function getPrivacyContent(lang: Lang) {
               ]
             : [
                 "Beim Aufruf der Seite verarbeitet unsere Hosting- und Auslieferungsinfrastruktur technisch notwendige Request-Daten wie IP-Adresse, Datum und Uhrzeit, aufgerufene URL, Referrer, Statuscode und User-Agent.",
-                "Wir nutzen diese Daten, um die Seite sicher bereitzustellen, Missbrauch abzuwehren und Stoerungen zu analysieren. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.",
+                "Wir nutzen diese Daten, um die Seite sicher bereitzustellen, Missbrauch abzuwehren und Störungen zu analysieren. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.",
               ],
       },
       {
         heading:
           lang === "en"
             ? "Local settings stored on your device"
-            : "Lokale Einstellungen auf deinem Geraet",
+            : "Lokale Einstellungen auf deinem Gerät",
         paragraphs:
           lang === "en"
             ? [
@@ -119,7 +119,7 @@ function getPrivacyContent(lang: Lang) {
               ]
             : [
                 "Wir speichern deine Theme-Auswahl in localStorage (`lhg-theme`), damit die Seite den Light- oder Dark-Mode merken kann.",
-                "Ausserdem speichern wir deine Analyse-Einstellung in localStorage (`lhg-cookie-consent-v1`) und in einem Cookie (`lhg_cookie_consent`), damit wir merken koennen, ob optionale Analyse geladen werden darf. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO fuer die Speicherung von Praeferenzen sowie Art. 6 Abs. 1 lit. a DSGVO, soweit die Einwilligung optionale Analyse steuert.",
+                "Außerdem speichern wir deine Analyse-Einstellung in localStorage (`lhg-cookie-consent-v1`) und in einem Cookie (`lhg_cookie_consent`), damit wir merken können, ob optionale Analyse geladen werden darf. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO für die Speicherung von Präferenzen sowie Art. 6 Abs. 1 lit. a DSGVO, soweit die Einwilligung optionale Analyse steuert.",
               ],
       },
       analyticsSection,
@@ -136,7 +136,7 @@ function getPrivacyContent(lang: Lang) {
               ]
             : [
                 "Wenn du uns direkt per E-Mail kontaktierst, verarbeiten wir deine E-Mail-Adresse und den Inhalt deiner Nachricht, um zu antworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO oder Art. 6 Abs. 1 lit. b DSGVO, wenn es um vorvertragliche Anfragen geht.",
-                "Ein oeffentliches Newsletter-Formular ist auf der Live-Seite derzeit nicht aktiviert. Falls wir es spaeter starten, aktualisieren wir diese Datenschutzerklaerung vor dem oeffentlichen Rollout.",
+                "Ein öffentliches Newsletter-Formular ist auf der Live-Seite derzeit nicht aktiviert. Falls wir es später starten, aktualisieren wir diese Datenschutzerklärung vor dem öffentlichen Rollout.",
               ],
       },
       {
@@ -147,7 +147,7 @@ function getPrivacyContent(lang: Lang) {
                 "We keep technical logs only as long as needed for security and operations. Stored device preferences remain until you clear them or overwrite them. Email correspondence is kept as long as needed to handle the request and any follow-up obligations.",
               ]
             : [
-                "Technische Logs speichern wir nur so lange, wie sie fuer Sicherheit und Betrieb erforderlich sind. Lokal gespeicherte Praeferenzen bleiben bestehen, bis du sie loeschst oder ueberschreibst. E-Mail-Korrespondenz speichern wir nur so lange, wie dies fuer die Bearbeitung der Anfrage und etwaige Anschlussfragen erforderlich ist.",
+                "Technische Logs speichern wir nur so lange, wie sie für Sicherheit und Betrieb erforderlich sind. Lokal gespeicherte Präferenzen bleiben bestehen, bis du sie löschst oder überschreibst. E-Mail-Korrespondenz speichern wir nur so lange, wie dies für die Bearbeitung der Anfrage und etwaige Anschlussfragen erforderlich ist.",
               ],
       },
       {
@@ -158,7 +158,7 @@ function getPrivacyContent(lang: Lang) {
                 "Many pages link to official German authorities and third-party services. Once you leave this site, the privacy policy of the external provider applies.",
               ]
             : [
-                "Viele Seiten verlinken auf deutsche Behoerden und Drittanbieter. Sobald du diese Seite verlaesst, gilt die Datenschutzerklaerung des jeweiligen externen Anbieters.",
+                "Viele Seiten verlinken auf deutsche Behörden und Drittanbieter. Sobald du diese Seite verlässt, gilt die Datenschutzerklärung des jeweiligen externen Anbieters.",
               ],
       },
       {
@@ -170,8 +170,8 @@ function getPrivacyContent(lang: Lang) {
                 `If you want to exercise a right or ask a privacy question, contact us at ${siteConfig.email}. You also have the right to lodge a complaint with a competent data protection authority.`,
               ]
             : [
-                "Nach der DSGVO hast du grundsaetzlich das Recht auf Auskunft, Berichtigung, Loeschung, Einschraenkung der Verarbeitung, Widerspruch und Datenuebertragbarkeit, soweit die jeweiligen Voraussetzungen vorliegen.",
-                `Wenn du ein Recht ausueben oder eine Datenschutzfrage stellen moechtest, kontaktiere uns unter ${siteConfig.email}. Ausserdem hast du das Recht, dich bei einer zustaendigen Datenschutzaufsichtsbehoerde zu beschweren.`,
+                "Nach der DSGVO hast du grundsätzlich das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Datenübertragbarkeit, soweit die jeweiligen Voraussetzungen vorliegen.",
+                `Wenn du ein Recht ausüben oder eine Datenschutzfrage stellen möchtest, kontaktiere uns unter ${siteConfig.email}. Außerdem hast du das Recht, dich bei einer zuständigen Datenschutzaufsichtsbehörde zu beschweren.`,
               ],
         list:
           lang === "en"
@@ -182,9 +182,9 @@ function getPrivacyContent(lang: Lang) {
                 "Withdrawal of analytics consent at any time",
               ]
             : [
-                "Auskunft ueber gespeicherte personenbezogene Daten",
+                "Auskunft über gespeicherte personenbezogene Daten",
                 "Berichtigung unrichtiger Daten",
-                "Loeschung, soweit keine Aufbewahrungspflicht mehr besteht",
+                "Löschung, soweit keine Aufbewahrungspflicht mehr besteht",
                 "Widerruf einer Analyse-Einwilligung jederzeit",
               ],
       },

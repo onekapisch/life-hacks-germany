@@ -15,10 +15,10 @@ export async function generateMetadata({
   const l = lang as Lang;
   const metaTitle = l === "en"
     ? "Germany Guides 2026: Anmeldung, Taxes, Housing, Mobility"
-    : "Deutschland Guides 2026: Anmeldung, Steuern, Wohnen, Mobilitaet";
+    : "Deutschland Guides 2026: Anmeldung, Steuern, Wohnen, Mobilität";
   const metaDescription = l === "en"
     ? "Step-by-step Germany guides with official sources: Anmeldung, ELSTER taxes, housing contracts, and transport decisions."
-    : "Schritt-fuer-Schritt Guides mit offiziellen Quellen: Anmeldung, ELSTER, Mietvertrag, und Mobilitaetsentscheidungen.";
+    : "Schritt-für-Schritt Guides mit offiziellen Quellen: Anmeldung, ELSTER, Mietvertrag, und Mobilitätsentscheidungen.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
@@ -143,7 +143,7 @@ export default async function GuidesPage({
                 <h2 className="text-2xl md:text-3xl font-black tracking-tight m-0 mb-2">
                   {l === "en"
                     ? "Fast paths for immediate progress"
-                    : "Schnelle Pfade fuer sofortigen Fortschritt"}
+                    : "Schnelle Pfade für sofortigen Fortschritt"}
                 </h2>
                 <p className="text-ink-2 m-0">
                   {l === "en"
@@ -152,7 +152,7 @@ export default async function GuidesPage({
                 </p>
               </div>
               <Link href={`${base}/tools`} className="btn btn-primary">
-                {l === "en" ? "Open practical tools" : "Praktische Tools oeffnen"}
+                {l === "en" ? "Open practical tools" : "Praktische Tools öffnen"}
               </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
