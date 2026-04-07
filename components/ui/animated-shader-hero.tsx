@@ -338,7 +338,15 @@ const useShaderBackground = (shaderSource = defaultShaderSource) => {
       pointersRef.current?.updateScale(dpr);
     };
 
+    // Respect prefers-reduced-motion: skip WebGL animation entirely
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      canvas.style.background = "linear-gradient(135deg, #1a0a00 0%, #3d1a00 50%, #0a0a1a 100%)";
+      return;
+    }
+
     let resizeObserver: ResizeObserver | null = null;
+    let intersectionObserver: IntersectionObserver | null = null;
+    let isVisible = true;
 
     try {
       rendererRef.current = new WebGLRenderer(canvas, Math.max(1, window.devicePixelRatio), shaderSource);
@@ -366,8 +374,51 @@ const useShaderBackground = (shaderSource = defaultShaderSource) => {
       animationFrameRef.current = window.requestAnimationFrame(loop);
     };
 
+    const startLoop = () => {
+      if (animationFrameRef.current === null) {
+        animationFrameRef.current = window.requestAnimationFrame(loop);
+      }
+    };
+
+    const stopLoop = () => {
+      if (animationFrameRef.current !== null) {
+        window.cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
+      }
+    };
+
+    // Pause/resume based on document visibility
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopLoop();
+      } else if (isVisible) {
+        startLoop();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    // Pause/resume based on canvas intersection with viewport
+    if (typeof IntersectionObserver !== "undefined") {
+      intersectionObserver = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+          if (entry) {
+            isVisible = entry.isIntersecting;
+            if (isVisible && !document.hidden) {
+              startLoop();
+            } else {
+              stopLoop();
+            }
+          }
+        },
+        { threshold: 0 }
+      );
+      intersectionObserver.observe(canvas);
+    }
+
     resize();
-    animationFrameRef.current = window.requestAnimationFrame(loop);
+    startLoop();
 
     window.addEventListener("resize", resize);
     if (typeof ResizeObserver !== "undefined") {
@@ -377,10 +428,10 @@ const useShaderBackground = (shaderSource = defaultShaderSource) => {
 
     return () => {
       window.removeEventListener("resize", resize);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       resizeObserver?.disconnect();
-      if (animationFrameRef.current !== null) {
-        window.cancelAnimationFrame(animationFrameRef.current);
-      }
+      intersectionObserver?.disconnect();
+      stopLoop();
       rendererRef.current?.reset();
       rendererRef.current = null;
       pointersRef.current = null;

@@ -1,11 +1,29 @@
 import type { Lang } from "@/lib/i18n";
 import { siteConfig } from "@/lib/i18n";
 
+const PUBLISHER = {
+  "@type": "Organization",
+  name: "Life Hacks Germany",
+  url: "https://www.lifehacksgermany.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.lifehacksgermany.com/icons/logo.svg",
+    width: 600,
+    height: 60,
+  },
+};
+
+const DEFAULT_AUTHOR = {
+  "@type": "Person",
+  name: "Life Hacks Germany Editorial Team",
+  url: "https://www.lifehacksgermany.com/en/about",
+};
+
 interface JsonLdProps {
   type:
     | "website"
     | "article"
-    | "howto"
+    | "newsarticle"
     | "faq"
     | "breadcrumb"
     | "organization"
@@ -39,7 +57,12 @@ function getOrganizationSchema() {
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.domain,
-    logo: `${siteConfig.domain}/icons/logo.svg`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteConfig.domain}/icons/logo.svg`,
+      width: 600,
+      height: 60,
+    },
     email: siteConfig.email,
     publishingPrinciples: `${siteConfig.domain}/en/editorial-standards`,
     contactPoint: {
@@ -47,58 +70,66 @@ function getOrganizationSchema() {
       email: siteConfig.email,
       contactType: "customer service",
     },
+    sameAs: [],
   };
+}
+
+function buildEstimatedCost(costs: unknown): Record<string, unknown> | null {
+  if (!costs) return null;
+  const raw = String(costs).trim();
+  // Treat "free", "0", "kostenlos", empty, or "€0" as zero-cost
+  if (
+    raw === "" ||
+    raw === "0" ||
+    /^(free|kostenlos|gratis|€\s*0)$/i.test(raw)
+  ) {
+    return { "@type": "MonetaryAmount", value: 0, currency: "EUR" };
+  }
+  // Try to parse a numeric value (with optional € prefix or suffix)
+  const numeric = parseFloat(raw.replace(/[€,\s]/g, ""));
+  if (!Number.isNaN(numeric)) {
+    return { "@type": "MonetaryAmount", value: numeric, currency: "EUR" };
+  }
+  // Prose description — omit rather than emit invalid schema
+  return null;
 }
 
 function getArticleSchema(
   lang: Lang,
-  data: Record<string, unknown>
+  data: Record<string, unknown>,
+  articleType: "Article" | "NewsArticle" = "Article"
 ) {
   const image = data.image || `${siteConfig.domain}/icons/logo.svg`;
   const published = data.published || data.updated;
+
+  const steps = data.steps as string[] | undefined;
+  const hasPart =
+    steps && steps.length > 0
+      ? steps.map((step, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: `Step ${i + 1}`,
+          text: step,
+        }))
+      : undefined;
+
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": articleType,
     headline: data.title,
     description: data.summary,
     datePublished: published,
     dateModified: data.updated,
     image,
     isAccessibleForFree: true,
-    author: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.domain,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.domain,
-    },
+    author: DEFAULT_AUTHOR,
+    publisher: PUBLISHER,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": data.url,
     },
     inLanguage: lang === "en" ? "en-US" : "de-DE",
-  };
-}
-
-function getHowToSchema(
-  lang: Lang,
-  data: Record<string, unknown>
-) {
-  const steps = (data.steps as string[]) || [];
-  return {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: data.title,
-    description: data.summary,
-    step: steps.map((step, i) => ({
-      "@type": "HowToStep",
-      position: i + 1,
-      text: step,
-    })),
-    ...(data.costs ? { estimatedCost: { "@type": "MonetaryAmount", value: data.costs, currency: "EUR" } } : {}),
+    ...(hasPart ? { hasPart } : {}),
   };
 }
 
@@ -159,10 +190,10 @@ export default function JsonLd({ type, lang, data = {} }: JsonLdProps) {
       schema = getOrganizationSchema();
       break;
     case "article":
-      schema = getArticleSchema(lang, data);
+      schema = getArticleSchema(lang, data, "Article");
       break;
-    case "howto":
-      schema = getHowToSchema(lang, data);
+    case "newsarticle":
+      schema = getArticleSchema(lang, data, "NewsArticle");
       break;
     case "faq":
       schema = getFaqSchema(data);
@@ -186,3 +217,6 @@ export default function JsonLd({ type, lang, data = {} }: JsonLdProps) {
     />
   );
 }
+
+// Re-export helper for callers that need to build estimatedCost outside this module
+export { buildEstimatedCost };

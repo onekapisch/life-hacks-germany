@@ -18,8 +18,8 @@ export async function generateMetadata({
   const { lang } = await params;
   const l = lang as Lang;
   const metaTitle = l === "en"
-    ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing, Daily Systems"
-    : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen, Alltagssysteme";
+    ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing & More"
+    : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen & mehr";
   const metaDescription = l === "en"
     ? "Verification-first Germany guides for expats and locals: Anmeldung, ELSTER taxes, rent rules, transport, and practical decision tools."
     : "Verifizierte Deutschland-Guides für Expats und Einheimische: Anmeldung, ELSTER, Mietregeln, Mobilität und praktische Entscheidungstools.";
@@ -31,22 +31,6 @@ export async function generateMetadata({
   return {
     title: metaTitle,
     description: metaDescription,
-    keywords:
-      l === "en"
-        ? [
-            "Germany life hacks",
-            "Anmeldung guide",
-            "ELSTER tax setup",
-            "housing Germany guide",
-            "Deutschlandticket",
-          ]
-        : [
-            "Deutschland Life Hacks",
-            "Anmeldung Guide",
-            "ELSTER Steuer",
-            "Wohnen Deutschland",
-            "Deutschlandticket",
-          ],
     alternates: {
       canonical: `${siteConfig.domain}/${lang}`,
       languages: { en: `${siteConfig.domain}/en`, de: `${siteConfig.domain}/de` },

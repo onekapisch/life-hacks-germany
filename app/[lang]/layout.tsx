@@ -54,6 +54,7 @@ export async function generateMetadata({
       languages: {
         en: `${siteConfig.domain}/en`,
         de: `${siteConfig.domain}/de`,
+        "x-default": `${siteConfig.domain}/en`,
       },
       types: {
         "application/rss+xml": `${siteConfig.domain}/${lang}/rss.xml`,
@@ -64,6 +65,7 @@ export async function generateMetadata({
       url: `${siteConfig.domain}/${lang}`,
       siteName: siteConfig.name,
       locale: lang === "en" ? "en_US" : "de_DE",
+      alternateLocale: lang === "en" ? ["de_DE"] : ["en_US"],
     },
     twitter: social.twitter,
   };

@@ -13,8 +13,8 @@
   --color-accent-4: #059669;
   --color-white: #ffffff;
 
-  --font-sans: "Lato", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-display: "Montserrat", "Avenir Next", "Lato", system-ui, sans-serif;
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-display: Georgia, serif;
 
   --radius-sm: 10px;
   --radius-md: 14px;
@@ -25,7 +25,6 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
     color-scheme: light;
   }
 
@@ -407,8 +406,9 @@
   }
 
   .lang-pill {
-    min-width: 2.3rem;
-    padding: 6px 8px;
+    min-width: 2.75rem;
+    min-height: 44px;
+    padding: 12px 8px;
     border-radius: 8px;
     text-align: center;
     text-transform: uppercase;
@@ -446,7 +446,8 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    min-height: 34px;
+    min-height: 44px;
+    min-width: 44px;
     border-radius: 10px;
     border: 1px solid rgba(15, 23, 42, 0.1);
     background: linear-gradient(180deg, var(--color-paper), var(--color-paper-2));

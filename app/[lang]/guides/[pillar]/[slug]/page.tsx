@@ -504,6 +504,7 @@ export async function generateMetadata({
   const guide = getGuide(l, slug);
   if (!guide || !pillars[p] || guide.frontmatter.pillar !== p) return {};
   const fm = guide.frontmatter;
+  if (fm.draft) return { robots: { index: false, follow: false } };
   const metaDescription = l === "en"
     ? `${fm.summary} Step-by-step checklist, official sources, and practical next actions. Updated ${fm.updated}.`
     : `${fm.summary} Schritt-fuer-Schritt-Checkliste, offizielle Quellen und konkrete naechste Schritte. Aktualisiert am ${fm.updated}.`;
@@ -686,23 +687,8 @@ export default async function GuidePage({
     { id: "next", label: flowLabels.next },
   ];
 
-  // Build FAQ from mistakes + facts
-  const faqs = [
-    ...fm.facts.map((fact) => ({
-      q: l === "en"
-        ? `What should I know about: ${fact.replace(/\.$/, "")}?`
-        : `Was sollte ich wissen zu: ${fact.replace(/\.$/, "")}?`,
-      a: fact,
-    })),
-    ...fm.mistakes.map((m) => ({
-      q: l === "en"
-        ? `How can I avoid this mistake: ${m}?`
-        : `Wie vermeide ich diesen Fehler: ${m}?`,
-      a: l === "en"
-        ? `Avoid this by following the step-by-step process in this guide and checking the official source links before submitting documents.`
-        : `Vermeide das, indem du die Schrittfolge im Guide befolgst und die offiziellen Quellen vor Einreichung pruefst.`,
-    })),
-  ];
+  // Build FAQ: use real faqs frontmatter if present, otherwise skip schema
+  const faqs = fm.faqs && fm.faqs.length > 0 ? fm.faqs : [];
 
   return (
     <>
@@ -717,19 +703,10 @@ export default async function GuidePage({
           updated: fm.updated,
           url: canonicalUrl,
           image: ogImage,
-        }}
-      />
-      <JsonLd
-        type="howto"
-        lang={l}
-        data={{
-          title: fm.title,
-          summary: fm.summary,
           steps: fm.steps,
-          costs: fm.costs,
         }}
       />
-      <JsonLd type="faq" lang={l} data={{ faqs }} />
+      {faqs.length > 0 && <JsonLd type="faq" lang={l} data={{ faqs }} />}
       <JsonLd
         type="breadcrumb"
         lang={l}

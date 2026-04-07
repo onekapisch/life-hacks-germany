@@ -87,7 +87,7 @@ export default async function BlogPostPage({
   return (
     <>
       <JsonLd
-        type="article"
+        type="newsarticle"
         lang={l}
         data={{
           title: post.frontmatter.title,

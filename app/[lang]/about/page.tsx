@@ -145,6 +145,17 @@ export default async function AboutPage({
               </article>
             ))}
           </div>
+
+          <article className="content-shell mt-5 text-center md:col-span-2">
+            <h2 className="text-xl font-black tracking-tight mt-0 mb-3">
+              {l === "en" ? "Editorial team" : "Redaktionsteam"}
+            </h2>
+            <p className="text-ink-2 leading-relaxed m-0 max-w-3xl mx-auto">
+              {l === "en"
+                ? "Content is researched and written by the Life Hacks Germany Editorial Team — a group of writers and researchers with direct experience navigating German bureaucracy, housing, taxes, and daily life. Every guide is tied to official German government sources and reviewed for accuracy before publication."
+                : "Die Inhalte werden vom Redaktionsteam von Life Hacks Germany recherchiert und verfasst – einem Team aus Autorinnen, Autoren und Rechercheurinnen mit eigener Erfahrung in deutschen Behörden, beim Wohnen, Steuern und im Alltag. Jeder Guide wird mit offiziellen deutschen Behördenquellen verknüpft und vor Veröffentlichung auf Richtigkeit geprüft."}
+            </p>
+          </article>
         </div>
       </section>
     </>
