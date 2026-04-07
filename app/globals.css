@@ -391,6 +391,7 @@
   .lang-switch {
     display: inline-flex;
     align-items: center;
+    height: 38px;
     gap: 2px;
     border: 1px solid rgba(15, 23, 42, 0.1);
     border-radius: 10px;
@@ -406,9 +407,12 @@
   }
 
   .lang-pill {
-    min-width: 2.75rem;
-    min-height: 44px;
-    padding: 12px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 34px;
+    padding: 0 10px;
     border-radius: 8px;
     text-align: center;
     text-transform: uppercase;
@@ -445,13 +449,14 @@
   .theme-toggle {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
-    min-height: 44px;
-    min-width: 44px;
+    height: 38px;
+    min-width: 38px;
     border-radius: 10px;
     border: 1px solid rgba(15, 23, 42, 0.1);
     background: linear-gradient(180deg, var(--color-paper), var(--color-paper-2));
-    padding: 4px 8px 4px 5px;
+    padding: 0 8px 0 6px;
     cursor: pointer;
     transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
   }
