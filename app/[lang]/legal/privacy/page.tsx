@@ -126,6 +126,26 @@ function getPrivacyContent(lang: Lang) {
       {
         heading:
           lang === "en"
+            ? "Mobility tool data providers"
+            : "Datenanbieter der Mobilitäts-Tools",
+        paragraphs:
+          lang === "en"
+            ? [
+                "Some tools on this site use live third-party data to return station, journey, fare, and weather information.",
+                "The mobility tools currently use transport.rest (`v6.db.transport.rest`) for station and journey data and Open-Meteo (`api.open-meteo.com`) for weather forecast data.",
+                "When you use these tools, our server sends the request data needed to retrieve the result you asked for, such as station names, station IDs, travel date and time, and route parameters. These providers may also receive technical request data from our server infrastructure that is needed to deliver their response.",
+                "We use these providers only to generate the mobility results you request. Legal basis: Article 6(1)(b) GDPR where the request is necessary to provide the tool output you asked for, or Article 6(1)(f) GDPR for the reliable operation of the site’s utility features.",
+              ]
+            : [
+                "Einige Tools auf dieser Seite nutzen Live-Daten von Drittanbietern, um Stations-, Verbindungs-, Preis- und Wetterinformationen bereitzustellen.",
+                "Die Mobilitäts-Tools nutzen derzeit transport.rest (`v6.db.transport.rest`) für Stations- und Verbindungsdaten sowie Open-Meteo (`api.open-meteo.com`) für Wettervorhersagen.",
+                "Wenn du diese Tools nutzt, sendet unser Server die für das gewünschte Ergebnis erforderlichen Request-Daten, etwa Stationsnamen, Stations-IDs, Reisezeitpunkt und Routenparameter. Diese Anbieter können außerdem technische Request-Daten aus unserer Server-Infrastruktur erhalten, soweit dies für die Antwort erforderlich ist.",
+                "Wir nutzen diese Anbieter ausschließlich, um die von dir angeforderten Mobilitäts-Ergebnisse zu erzeugen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage zur Bereitstellung des gewünschten Tool-Ergebnisses erforderlich ist, oder Art. 6 Abs. 1 lit. f DSGVO für den zuverlässigen Betrieb dieser Nutzwert-Funktionen.",
+              ],
+      },
+      {
+        heading:
+          lang === "en"
             ? "Email contact and newsletter status"
             : "E-Mail-Kontakt und Newsletter-Status",
         paragraphs:

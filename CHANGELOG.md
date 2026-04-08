@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026-04-08
+
+- Updated the live privacy-policy copy to disclose the mobility tool data providers `transport.rest` and `Open-Meteo`, including the data flow and legal-basis wording for those tool requests.
+
 ## 2026-04-02
 
 - Added a new flagship bilingual guide on learning German in Germany for expats, students, workers, and spouses who need a survival-first path from zero to B1.
