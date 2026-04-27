@@ -14,6 +14,7 @@
     - Health insurance basics
   - Re-verified March 2026 monthly update posts and refreshed their updated timestamps.
   - Replaced moved or blocked official/source links for BMG health insurance pages, BaFin banking pages, and ImmoScout24 references.
+  - Added permanent redirects for legacy indexed URLs (`/facts-de`, `/hacks-de`, `/life-hacks-`) and their language-prefixed variants to prevent Search Console 404 coverage issues.
 
 ## 2026-04-13
 

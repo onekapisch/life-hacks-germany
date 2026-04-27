@@ -53,6 +53,18 @@ const contentSecurityPolicy = [
   "form-action 'self' mailto:",
 ].join("; ");
 
+const legacyRedirects = [
+  { source: "/facts-de", destination: "/de/editorial-standards" },
+  { source: "/en/facts-de", destination: "/de/editorial-standards" },
+  { source: "/de/facts-de", destination: "/de/editorial-standards" },
+  { source: "/hacks-de", destination: "/de/tips" },
+  { source: "/en/hacks-de", destination: "/de/tips" },
+  { source: "/de/hacks-de", destination: "/de/tips" },
+  { source: "/life-hacks-", destination: "/en/tips" },
+  { source: "/en/life-hacks-", destination: "/en/tips" },
+  { source: "/de/life-hacks-", destination: "/en/tips" },
+];
+
 const nextConfig: NextConfig = {
   output: "standalone",
   turbopack: {
@@ -69,6 +81,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...legacyRedirects.map(({ source, destination }) => ({
+        source,
+        destination,
+        permanent: true,
+      })),
       {
         source: "/",
         destination: "/en",
