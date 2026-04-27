@@ -101,18 +101,18 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und präzise Standorthilfe.",
       fuelWatch: {
         badge: "Spritpreis-Watch",
-        title: "Deutschland: Kraftstoffpreise bleiben auf hohem Niveau",
+        title: "Deutschland: Kraftstoffpreise sinken Ende April weiter",
         body:
-          "Die ADAC-Auswertung vom 18.03.2026 zeigt weiterhin ein hohes Preisniveau. Gerade jetzt helfen Stationsvergleich und Preisalarme, damit du nicht zur teuersten Zeit tankst.",
-        stats: ["Super E10: 2,042 Euro/Liter", "Diesel: 2,162 Euro/Liter"],
-        lastChecked: "30. März 2026",
+          "Laut ADAC-Wochenauswertung vom 22.04.2026 sind die Kraftstoffpreise erneut gesunken. Super E10 und Diesel bleiben trotzdem auf einem Niveau, bei dem aktiver Preisvergleich wichtig bleibt.",
+        stats: ["Super E10: 2,059 Euro/Liter", "Diesel: 2,129 Euro/Liter"],
+        lastChecked: "27. April 2026",
         sourcePrimary: {
-          label: "ADAC Presse (18.03.2026)",
-          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-folgen-dem-oelpreis-nach-oben.html",
+          label: "ADAC Presse (22.04.2026)",
+          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/dieselpreis-sackt-erneut-deutlich-ab.html",
         },
         sourceSecondary: {
-          label: "ADAC Presse (11.03.2026)",
-          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/diesel-im-wochenvergleich-um-ueber-27-cent-teurer.html",
+          label: "ADAC Kraftstoffmarkt",
+          href: "https://www.adac.de/tanken/",
         },
         cta: "Tank Alert Preisalarm setzen",
       },
@@ -184,18 +184,18 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
     fuelWatch: {
       badge: "Fuel Price Watch",
-      title: "Germany: fuel prices remain elevated",
+      title: "Germany: fuel prices kept falling in late April",
       body:
-        "ADAC's March 18, 2026 weekly report still shows elevated fuel prices. Right now, station comparison and price alarms are the easiest way to reduce overpaying at the pump.",
-      stats: ["Super E10: EUR 2.042/liter", "Diesel: EUR 2.162/liter"],
-      lastChecked: "March 30, 2026",
+        "ADAC's April 22, 2026 weekly report shows another drop in fuel prices. Super E10 and diesel still justify active station comparison before refueling.",
+      stats: ["Super E10: EUR 2.059/liter", "Diesel: EUR 2.129/liter"],
+      lastChecked: "April 27, 2026",
       sourcePrimary: {
-        label: "ADAC press (March 18, 2026)",
-        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/kraftstoffpreise-folgen-dem-oelpreis-nach-oben.html",
+        label: "ADAC press (April 22, 2026)",
+        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/dieselpreis-sackt-erneut-deutlich-ab.html",
       },
       sourceSecondary: {
-        label: "ADAC press (March 11, 2026)",
-        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/diesel-im-wochenvergleich-um-ueber-27-cent-teurer.html",
+        label: "ADAC fuel market",
+        href: "https://www.adac.de/tanken/",
       },
       cta: "Set Tank Alert price alarms",
     },

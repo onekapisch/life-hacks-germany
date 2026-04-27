@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## 2026-04-27
+
+- Weekly factual audit refresh:
+  - Added April 2026 monthly updates for EN/DE with current federal legal changes and verified baseline values.
+  - Updated homepage EN/DE fuel-watch panel to ADAC's April 22, 2026 weekly values and refreshed source links/check date.
+  - Re-verified high-risk recurring guides and refreshed verification dates for EN/DE pages:
+    - Deutschlandticket
+    - Rundfunkbeitrag
+    - EU Blue Card
+    - Blocked account
+    - Tax return deadlines
+    - Health insurance basics
+  - Re-verified March 2026 monthly update posts and refreshed their updated timestamps.
+  - Replaced moved or blocked official/source links for BMG health insurance pages, BaFin banking pages, and ImmoScout24 references.
+
+## 2026-04-13
+
+- Weekly factual audit refresh:
+  - Re-verified high-risk baseline facts against primary official sources (Deutschlandticket EUR 63, Rundfunkbeitrag EUR 18.36 with reduced EUR 6.12 context, EU Blue Card 2026 thresholds, blocked-account 2026 baseline).
+  - Updated homepage EN/DE fuel-watch panel to the latest April ADAC references with refreshed values, links, and "last checked" date.
+  - Updated EN/DE March 2026 monthly update post verification timestamps.
+  - Refreshed EN/DE high-risk guide verification timestamps (Deutschlandticket, Rundfunkbeitrag, Blue Card, blocked account, tax deadlines/setup).
+  - Corrected stale EN tax-return setup FAQ deadline examples from tax year 2024 to tax year 2025.
+  - Updated Top Offers verification timestamp and refreshed H&M / MyMcDonald’s official offer URLs.
+
 ## 2026-04-08
 
 - Updated the live privacy-policy copy to disclose the mobility tool data providers `transport.rest` and `Open-Meteo`, including the data flow and legal-basis wording for those tool requests.

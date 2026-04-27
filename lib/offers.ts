@@ -39,7 +39,7 @@ export interface Offer extends OfferCopy {
   verifiedAt: string;
 }
 
-const VERIFIED_AT = "2026-03-30T08:44:00+02:00";
+const VERIFIED_AT = "2026-04-13T09:45:00+02:00";
 
 const offerDefinitions: OfferDefinition[] = [
   {
@@ -605,7 +605,7 @@ const offerDefinitions: OfferDefinition[] = [
     brand: "H&M Member",
     category: "shopping",
     status: "ongoing",
-    officialUrl: "https://www2.hm.com/de_de/member.html",
+    officialUrl: "https://www2.hm.com/de_de/member/info.html/main-content",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
@@ -642,7 +642,7 @@ const offerDefinitions: OfferDefinition[] = [
     brand: "MyMcDonald's",
     category: "food",
     status: "ongoing",
-    officialUrl: "https://www.mcdonalds.com/de/de-de/app.html",
+    officialUrl: "https://www.mcdonalds.com/de/de-de/mymcdonalds.html",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {

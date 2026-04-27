@@ -284,7 +284,7 @@ const GERMANY_APPS_DIRECTORY: AppDirectoryCategory[] = [
         id: "immoscout24",
         icon: "/images/apps/immoscout24.jpg",
         iosUrl: "https://apps.apple.com/de/app/immoscout24-immobilien/id344176018",
-        officialUrl: "https://www.immobilienscout24.de/",
+        officialUrl: "https://apps.apple.com/de/app/immoscout24-immobilien/id344176018",
         name: { en: "ImmoScout24", de: "ImmoScout24" },
         purpose: {
           en: "Apartment and house search with alerts.",
