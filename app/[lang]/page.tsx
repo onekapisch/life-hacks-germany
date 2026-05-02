@@ -101,14 +101,14 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und präzise Standorthilfe.",
       fuelWatch: {
         badge: "Spritpreis-Watch",
-        title: "Deutschland: Kraftstoffpreise sinken Ende April weiter",
+        title: "Deutschland: Spritpreise steigen vor Mai-Steuerentlastung wieder",
         body:
-          "Laut ADAC-Wochenauswertung vom 22.04.2026 sind die Kraftstoffpreise erneut gesunken. Super E10 und Diesel bleiben trotzdem auf einem Niveau, bei dem aktiver Preisvergleich wichtig bleibt.",
-        stats: ["Super E10: 2,059 Euro/Liter", "Diesel: 2,129 Euro/Liter"],
-        lastChecked: "27. April 2026",
+          "Laut ADAC-Wochenauswertung vom 29.04.2026 sind Super E10 und Diesel vor der Energiesteuersenkung zum 1. Mai wieder teurer geworden. Livevergleich bleibt wichtig, weil die Entlastung schrittweise ankommen kann.",
+        stats: ["Super E10: 2,103 Euro/Liter", "Diesel: 2,200 Euro/Liter"],
+        lastChecked: "2. Mai 2026",
         sourcePrimary: {
-          label: "ADAC Presse (22.04.2026)",
-          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/dieselpreis-sackt-erneut-deutlich-ab.html",
+          label: "ADAC Presse (29.04.2026)",
+          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/tanken-wieder-deutlich-teurer.html",
         },
         sourceSecondary: {
           label: "ADAC Kraftstoffmarkt",
@@ -184,14 +184,14 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
     fuelWatch: {
       badge: "Fuel Price Watch",
-      title: "Germany: fuel prices kept falling in late April",
+      title: "Germany: fuel prices rose again before May tax relief",
       body:
-        "ADAC's April 22, 2026 weekly report shows another drop in fuel prices. Super E10 and diesel still justify active station comparison before refueling.",
-      stats: ["Super E10: EUR 2.059/liter", "Diesel: EUR 2.129/liter"],
-      lastChecked: "April 27, 2026",
+        "ADAC's April 29, 2026 weekly report shows Super E10 and diesel rose again before the May 1 energy-tax relief. Compare live prices because the tax cut may be passed through gradually.",
+      stats: ["Super E10: EUR 2.103/liter", "Diesel: EUR 2.200/liter"],
+      lastChecked: "May 2, 2026",
       sourcePrimary: {
-        label: "ADAC press (April 22, 2026)",
-        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/dieselpreis-sackt-erneut-deutlich-ab.html",
+        label: "ADAC press (April 29, 2026)",
+        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/tanken-wieder-deutlich-teurer.html",
       },
       sourceSecondary: {
         label: "ADAC fuel market",

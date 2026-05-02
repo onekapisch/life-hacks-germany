@@ -21,7 +21,7 @@ test("homepage surfaces the learn-german quick route in German and English", () 
     `{
         href: "/de/guides/everyday/learn-german-in-germany",
         title: "Deutsch lernen in Deutschland",
-        note: "Alltagsfaehig von Null bis B1 statt in App-Chaos stecken zu bleiben",
+        note: "Alltagsfähig von Null bis B1 statt in App-Chaos stecken zu bleiben",
       }`,
     "homepage German quick route"
   );
@@ -74,7 +74,7 @@ test("work-relocation surfaces the learn-german guide card in German and English
     workRelocation,
     `{
           title: "Deutsch lernen in Deutschland",
-          body: "Relevant, wenn Sprache zum naechsten Bottleneck bei Terminen, Wohnung, Arzt oder Job-Alltag wird.",
+          body: "Relevant, wenn Sprache zum nächsten Bottleneck bei Terminen, Wohnung, Arzt oder Job-Alltag wird.",
           href: \`\${base}/guides/everyday/learn-german-in-germany\`,
         }`,
     "work-relocation German guide card"
@@ -99,7 +99,7 @@ test("guide mdx cross-links include the learn-german path and preserve first-14-
   const first14DaysEnParagraph =
     "If German is the next blocker after your first admin setup, use [How To Learn German After Moving To Germany](/en/guides/everyday/learn-german-in-germany) as your next operating guide. It is built for people who need German for appointments, landlords, transport, and daily life, not just for classes or exams.";
   const first14DaysDeParagraph =
-    "Wenn Deutsch nach dem ersten Admin-Setup dein naechster Engpass ist, nutze [Deutsch lernen nach dem Umzug nach Deutschland](/de/guides/everyday/learn-german-in-germany) als naechsten Arbeitsguide. Er ist fuer Menschen gebaut, die Deutsch fuer Termine, Vermieter, Transport und Alltag brauchen und nicht nur fuer Unterricht oder Pruefungen.";
+    "Wenn Deutsch nach dem ersten Admin-Setup dein nächster Engpass ist, nutze [Deutsch lernen nach dem Umzug nach Deutschland](/de/guides/everyday/learn-german-in-germany) als nächsten Arbeitsguide. Er ist für Menschen gebaut, die Deutsch für Termine, Vermieter, Transport und Alltag brauchen und nicht nur für Unterricht oder Prüfungen.";
   const doctorEnChecklist =
     "- [ ] If language is slowing you down, build a medical-survival vocabulary track with [How To Learn German After Moving To Germany](/en/guides/everyday/learn-german-in-germany)";
   const doctorDeChecklist =
@@ -112,7 +112,7 @@ test("guide mdx cross-links include the learn-german path and preserve first-14-
   );
   assertIncludes(
     first14DaysDe,
-    `${first14DaysDeParagraph}\n\n## Risikokontrollen fuer die gesamte Sequenz`,
+    `${first14DaysDeParagraph}\n\n## Risikokontrollen für die gesamte Sequenz`,
     "German first-14-days paragraph immediately before risk controls"
   );
   assertIncludes(doctorEn, doctorEnChecklist, "English doctor guide checklist item");
