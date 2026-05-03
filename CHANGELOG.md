@@ -7,6 +7,9 @@
   - Updated homepage EN/DE fuel-watch panel to ADAC's April 29, 2026 weekly values and May 2 verification date.
   - Updated EN/DE fuel-price timing guides for the April 2026 12:00 price-rise rule and May 2026 fuel-tax relief context.
   - Corrected EN/DE Kindergeld guide amount from EUR 250 to EUR 259/month per child based on the Federal Employment Agency 2026 update.
+- Reach and discoverability refresh:
+  - Promoted the May 2026 monthly update from the homepage quick-entry section and refreshed homepage meta descriptions for current May intent.
+  - Updated `public/llms.txt` with current bilingual high-priority pages, corrected family-benefits URLs, and added the May 2026 update cluster for AI/search discovery.
 
 ## 2026-04-27
 

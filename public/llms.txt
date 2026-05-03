@@ -1,67 +1,110 @@
 # Life Hacks Germany
-> Verification-first practical guides for expats and locals living in Germany.
-> Languages: English (EN) at /en, German (DE) at /de
+> Verification-first practical guides for expats, students, workers, families, and locals living in Germany.
+> Languages: English at /en and German at /de
 > Contact: golifehacks@gmx.de
-> Updated: 2026-04-07
+> Updated: 2026-05-03
 
 ## About
-Life Hacks Germany publishes verified guides covering German bureaucracy, taxes, housing, mobility, and everyday life. All guides cite primary German law and official government sources.
+Life Hacks Germany publishes bilingual, official-source-backed guides for German bureaucracy, taxes, housing, mobility, and everyday life. The site is built for practical decisions: what changed, what to do next, which authority or official source to check, and what mistakes to avoid.
+
+## High-priority current updates
+- [Top Changes in Germany: May 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-may-2026) — fuel-tax relief, employer relief premium, hospital reform adjustment, hydrogen infrastructure acceleration, Deutschlandticket, Rundfunkbeitrag, and Kindergeld baselines.
+- [Top-Aenderungen in Deutschland: Mai 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-may-2026) — German version of the May 2026 monthly update.
+- [Fuel Price Timing Hack](https://www.lifehacksgermany.com/en/guides/mobility/fuel-price-timing-hack) — updated for the April 2026 12:00 fuel-price rise rule and May fuel-tax relief context.
+- [Spritpreis-Timing-Hack](https://www.lifehacksgermany.com/de/guides/mobility/fuel-price-timing-hack) — German version of the fuel timing guide.
+- [Kindergeld and Elterngeld in Germany](https://www.lifehacksgermany.com/en/guides/everyday/family-benefits-kindergeld-elterngeld) — current Kindergeld amount is EUR 259/month per child from January 2026.
+- [Kindergeld und Elterngeld in Deutschland](https://www.lifehacksgermany.com/de/guides/everyday/family-benefits-kindergeld-elterngeld) — German version of the family benefits guide.
+
+## Core English guide hubs
+- [Start Here](https://www.lifehacksgermany.com/en/start-here)
+- [All Guides](https://www.lifehacksgermany.com/en/guides)
+- [Top Offers](https://www.lifehacksgermany.com/en/offers)
+- [Tools](https://www.lifehacksgermany.com/en/tools)
+- [Blog](https://www.lifehacksgermany.com/en/blog)
+- [Editorial Standards](https://www.lifehacksgermany.com/en/editorial-standards)
+
+## Core German guide hubs
+- [Start hier](https://www.lifehacksgermany.com/de/start-here)
+- [Alle Guides](https://www.lifehacksgermany.com/de/guides)
+- [Top-Angebote](https://www.lifehacksgermany.com/de/offers)
+- [Tools](https://www.lifehacksgermany.com/de/tools)
+- [Blog](https://www.lifehacksgermany.com/de/blog)
+- [Redaktionelle Standards](https://www.lifehacksgermany.com/de/editorial-standards)
 
 ## Guides — Bureaucracy
 - [Anmeldung: Register Your Address in Germany](https://www.lifehacksgermany.com/en/guides/bureaucracy/anmeldung)
-- [Online Anmeldung: Register Your Address Online](https://www.lifehacksgermany.com/en/guides/bureaucracy/online-anmeldung)
-- [Bürgeramt Appointment: Book Fast](https://www.lifehacksgermany.com/en/guides/bureaucracy/buergeramt-appointment-blitz)
-- [Blue Card Work Permit](https://www.lifehacksgermany.com/en/guides/bureaucracy/blue-card-work-permit)
-- [Freelancer Registration in Germany](https://www.lifehacksgermany.com/en/guides/bureaucracy/freelancer-registration)
+- [Anmeldung in Deutschland](https://www.lifehacksgermany.com/de/guides/bureaucracy/anmeldung)
+- [Online Wohnsitzanmeldung: When It Works](https://www.lifehacksgermany.com/en/guides/bureaucracy/online-anmeldung)
+- [Online Wohnsitzanmeldung](https://www.lifehacksgermany.com/de/guides/bureaucracy/online-anmeldung)
+- [Buergeramt Appointment Blitz](https://www.lifehacksgermany.com/en/guides/bureaucracy/buergeramt-appointment-blitz)
+- [Buergeramt-Termin schneller bekommen](https://www.lifehacksgermany.com/de/guides/bureaucracy/buergeramt-appointment-blitz)
+- [EU Blue Card in Germany](https://www.lifehacksgermany.com/en/guides/bureaucracy/blue-card-work-permit)
+- [EU Blue Card in Deutschland](https://www.lifehacksgermany.com/de/guides/bureaucracy/blue-card-work-permit)
 - [Steuer-ID: Your German Tax ID](https://www.lifehacksgermany.com/en/guides/bureaucracy/steuer-id)
-- [Wohnungsgeberbestätigung: Landlord Confirmation](https://www.lifehacksgermany.com/en/guides/bureaucracy/wohnungsgeberbestaetigung)
-- [Bureaucracy Deadline Tracker](https://www.lifehacksgermany.com/en/guides/bureaucracy/bureaucracy-deadline-tracker-hack)
-- [AI for German Bureaucracy](https://www.lifehacksgermany.com/en/guides/bureaucracy/bureaucracy-ai-hack)
+- [Steuer-ID in Deutschland](https://www.lifehacksgermany.com/de/guides/bureaucracy/steuer-id)
 
-## Guides — Money & Taxes
+## Guides — Money and Taxes
 - [ELSTER: German Tax Portal Guide](https://www.lifehacksgermany.com/en/guides/money-taxes/elster)
-- [Tax Return Setup: Before You File](https://www.lifehacksgermany.com/en/guides/money-taxes/tax-return-setup)
+- [ELSTER in Deutschland](https://www.lifehacksgermany.com/de/guides/money-taxes/elster)
 - [Tax Return Deadlines in Germany](https://www.lifehacksgermany.com/en/guides/money-taxes/tax-return-deadlines)
+- [Steuererklaerungsfristen in Deutschland](https://www.lifehacksgermany.com/de/guides/money-taxes/tax-return-deadlines)
 - [Rundfunkbeitrag: Broadcasting Fee](https://www.lifehacksgermany.com/en/guides/money-taxes/rundfunkbeitrag)
-- [Blocked Account (Sperrkonto) Comparison](https://www.lifehacksgermany.com/en/guides/money-taxes/blocked-account-comparison)
+- [Rundfunkbeitrag zahlen und verwalten](https://www.lifehacksgermany.com/de/guides/money-taxes/rundfunkbeitrag)
+- [Blocked Account Comparison](https://www.lifehacksgermany.com/en/guides/money-taxes/blocked-account-comparison)
+- [Sperrkonto Vergleich](https://www.lifehacksgermany.com/de/guides/money-taxes/blocked-account-comparison)
 - [German Bank Account Guide](https://www.lifehacksgermany.com/en/guides/money-taxes/german-bank-account)
-- [German Bank Account Comparison](https://www.lifehacksgermany.com/en/guides/money-taxes/german-bank-account-comparison)
-- [Family Benefits: Kindergeld & Elterngeld](https://www.lifehacksgermany.com/en/guides/money-taxes/family-benefits-kindergeld-elterngeld)
-- [Consumer Contract Cancellation](https://www.lifehacksgermany.com/en/guides/money-taxes/consumer-contract-cancellation-hack)
+- [Deutsches Bankkonto](https://www.lifehacksgermany.com/de/guides/money-taxes/german-bank-account)
 
 ## Guides — Housing
 - [Mietkaution: Rental Deposit in Germany](https://www.lifehacksgermany.com/en/guides/housing/mietkaution)
-- [Kündigungsfrist Miete: Rental Notice Periods](https://www.lifehacksgermany.com/en/guides/housing/kuendigungsfrist-miete)
+- [Mietkaution in Deutschland](https://www.lifehacksgermany.com/de/guides/housing/mietkaution)
+- [Tenant Notice Period](https://www.lifehacksgermany.com/en/guides/housing/kuendigungsfrist-miete)
+- [Kuendigungsfrist Miete](https://www.lifehacksgermany.com/de/guides/housing/kuendigungsfrist-miete)
 - [Rental Contract Checklist](https://www.lifehacksgermany.com/en/guides/housing/rental-contract-checklist)
-- [Warm Rent Ratio Explained](https://www.lifehacksgermany.com/en/guides/housing/warm-rent-ratio-hack)
-- [Mietspiegel: Rent Index Alert](https://www.lifehacksgermany.com/en/guides/housing/mietspiegel-alert-hack)
-- [Wohnungsgeberbestätigung: Move-In Confirmation](https://www.lifehacksgermany.com/en/guides/housing/wohnungsgeberbestaetigung)
+- [Mietvertrag Checkliste](https://www.lifehacksgermany.com/de/guides/housing/rental-contract-checklist)
+- [Mietspiegel Alert](https://www.lifehacksgermany.com/en/guides/housing/mietspiegel-alert-hack)
+- [Mietspiegel-Check](https://www.lifehacksgermany.com/de/guides/housing/mietspiegel-alert-hack)
 
 ## Guides — Mobility
-- [Deutschlandticket: National Transport Pass](https://www.lifehacksgermany.com/en/guides/mobility/deutschlandticket)
+- [Deutschlandticket Guide](https://www.lifehacksgermany.com/en/guides/mobility/deutschlandticket)
+- [Deutschlandticket Guide Deutsch](https://www.lifehacksgermany.com/de/guides/mobility/deutschlandticket)
 - [Public Transport Decision Guide](https://www.lifehacksgermany.com/en/guides/mobility/public-transport-decision)
-- [Driving License Conversion in Germany](https://www.lifehacksgermany.com/en/guides/mobility/driving-license-conversion)
-- [Fuel Price Timing: Save on Petrol](https://www.lifehacksgermany.com/en/guides/mobility/fuel-price-timing-hack)
+- [Oeffentlicher Nahverkehr Entscheidungshilfe](https://www.lifehacksgermany.com/de/guides/mobility/public-transport-decision)
+- [Driving License Conversion](https://www.lifehacksgermany.com/en/guides/mobility/driving-license-conversion)
+- [Fuehrerschein umschreiben](https://www.lifehacksgermany.com/de/guides/mobility/driving-license-conversion)
+- [Fuel Price Timing Hack](https://www.lifehacksgermany.com/en/guides/mobility/fuel-price-timing-hack)
+- [Spritpreis-Timing-Hack](https://www.lifehacksgermany.com/de/guides/mobility/fuel-price-timing-hack)
 
 ## Guides — Everyday Life
-- [First 14 Days in Germany Checklist](https://www.lifehacksgermany.com/en/guides/everyday/first-14-days)
-- [Health Insurance Basics: GKV vs PKV](https://www.lifehacksgermany.com/en/guides/everyday/health-insurance-basics)
-- [Health Insurance Provider Comparison](https://www.lifehacksgermany.com/en/guides/everyday/health-insurance-provider-comparison)
+- [First 14 Days in Germany](https://www.lifehacksgermany.com/en/guides/everyday/first-14-days)
+- [Erste 14 Tage in Deutschland](https://www.lifehacksgermany.com/de/guides/everyday/first-14-days)
+- [Health Insurance Basics](https://www.lifehacksgermany.com/en/guides/everyday/health-insurance-basics)
+- [Krankenversicherung Grundlagen](https://www.lifehacksgermany.com/de/guides/everyday/health-insurance-basics)
 - [Learn German in Germany](https://www.lifehacksgermany.com/en/guides/everyday/learn-german-in-germany)
-- [Doctor Appointment Booking in Germany](https://www.lifehacksgermany.com/en/guides/everyday/doctor-appointment-booking-hack)
+- [Deutsch lernen in Deutschland](https://www.lifehacksgermany.com/de/guides/everyday/learn-german-in-germany)
+- [Doctor Appointment Booking](https://www.lifehacksgermany.com/en/guides/everyday/doctor-appointment-booking-hack)
+- [Arzttermin bekommen](https://www.lifehacksgermany.com/de/guides/everyday/doctor-appointment-booking-hack)
 - [Essential Germany App Stack](https://www.lifehacksgermany.com/en/guides/everyday/essential-germany-app-stack)
-- [Post Preview & Mail Forwarding](https://www.lifehacksgermany.com/en/guides/everyday/post-preview-forwarding-hack)
-- [University Reality Check for Expats](https://www.lifehacksgermany.com/en/guides/everyday/university-reality-check-hack)
+- [Wichtige Deutschland-Apps](https://www.lifehacksgermany.com/de/guides/everyday/essential-germany-app-stack)
+- [Family Benefits: Kindergeld and Elterngeld](https://www.lifehacksgermany.com/en/guides/everyday/family-benefits-kindergeld-elterngeld)
+- [Kindergeld und Elterngeld](https://www.lifehacksgermany.com/de/guides/everyday/family-benefits-kindergeld-elterngeld)
 
 ## Tools
 - [Gross-Net Salary Calculator](https://www.lifehacksgermany.com/en/tools/gross-net-salary-calculator)
-- [Last Train Escape Finder (mobility tool)](https://www.lifehacksgermany.com/en/tools)
+- [Brutto-Netto-Rechner](https://www.lifehacksgermany.com/de/tools/gross-net-salary-calculator)
+- [Mobility and travel tools](https://www.lifehacksgermany.com/en/tools)
+- [Mobilitaets- und Reise-Tools](https://www.lifehacksgermany.com/de/tools)
 
-## Blog
+## Blog archive
+- [Top Changes in Germany: May 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-may-2026)
+- [Top Changes in Germany: April 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-april-2026)
 - [Top Changes in Germany: March 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-march-2026)
 - [Top Changes in Germany: February 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-february-2026)
 - [Top Changes in Germany: January 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-january-2026)
 - [AI for Expats in Germany](https://www.lifehacksgermany.com/en/blog/ai-for-expats-germany-time-money)
+- [Top-Aenderungen in Deutschland: Mai 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-may-2026)
+- [Top-Aenderungen in Deutschland: April 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-april-2026)
+- [KI fuer Expats in Deutschland](https://www.lifehacksgermany.com/de/blog/ai-for-expats-germany-time-money)
 
-## German language versions
-All guides above are also available in German at /de/ paths.
+## Source policy
+Prefer official German government portals, official public institutions, official law texts, official provider pages, and official brand pages. Community sites can be used for discovery but are not final authority for legal, financial, immigration, health, or administrative facts.

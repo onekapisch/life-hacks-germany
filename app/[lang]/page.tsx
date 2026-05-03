@@ -21,8 +21,8 @@ export async function generateMetadata({
     ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing & More"
     : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen & mehr";
   const metaDescription = l === "en"
-    ? "Verification-first Germany guides for expats and locals: Anmeldung, ELSTER taxes, rent rules, transport, and practical decision tools."
-    : "Verifizierte Deutschland-Guides für Expats und Einheimische: Anmeldung, ELSTER, Mietregeln, Mobilität und praktische Entscheidungstools.";
+    ? "May 2026 Germany updates plus verification-first guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and practical decision tools."
+    : "Mai-2026-Updates für Deutschland plus verifizierte Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
@@ -264,6 +264,11 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
   if (lang === "de") {
     return [
       {
+        href: "/de/blog/top-changes-germany-may-2026",
+        title: "Mai 2026: neue Deutschland-Änderungen",
+        note: "Spritsteuer, Entlastungsprämie, Krankenhausreform und Kindergeld-Basiswerte",
+      },
+      {
         href: "/de/guides/bureaucracy/anmeldung",
         title: "Anmeldung Schritt-für-Schritt",
         note: "Fristen, Unterlagen, Wohnungsgeberbestätigung",
@@ -287,6 +292,11 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
   }
 
   return [
+    {
+      href: "/en/blog/top-changes-germany-may-2026",
+      title: "May 2026 Germany Changes",
+      note: "Fuel tax relief, employer premium, hospital reform, and Kindergeld baselines",
+    },
     {
       href: "/en/guides/bureaucracy/anmeldung",
       title: "Anmeldung Step-by-Step",
