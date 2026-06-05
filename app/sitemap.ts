@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/gross-net-salary-calculator", lastmod: new Date("2026-02-01") },
     { path: "/about", lastmod: new Date("2026-01-01") },
     { path: "/editorial-standards", lastmod: new Date("2026-01-01") },
-    { path: "/legal/privacy", lastmod: new Date("2026-01-01") },
+    { path: "/legal/privacy", lastmod: new Date("2026-06-05") },
     { path: "/legal/impressum", lastmod: new Date("2026-01-01") },
   ];
 

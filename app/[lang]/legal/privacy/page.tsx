@@ -34,7 +34,7 @@ function getPrivacyContent(lang: Lang) {
                 ]
               : [
                   "Wir nutzen derzeit Google Analytics 4 nur dann, wenn du im Cookie-Banner oder über die Cookie-Einstellungen aktiv zustimmst. Vor der Zustimmung wird das Analyse-Skript nicht geladen.",
-                  "Bei Zustimmung kann Google Seitenaufrufe, Geräte-, Browser- und ungefähre Standortdaten verarbeiten und dabei Cookies oder ähnliche Technologien auf deinem Gerät verwenden. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit Section 25(1) TDDDG.",
+                  "Bei Zustimmung kann Google Seitenaufrufe, Geräte-, Browser- und ungefähre Standortdaten verarbeiten und dabei Cookies oder ähnliche Technologien auf deinem Gerät verwenden. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit § 25 Abs. 1 TDDDG.",
                   "Bei Google Analytics kann es zu Verarbeitungen außerhalb des EWR kommen. Soweit erforderlich, stützen wir uns auf die aktuellen Vertrags- und Transfermechanismen von Google. Deine Zustimmung kannst du jederzeit über die Cookie-Einstellungen im Footer widerrufen.",
                 ],
         }
@@ -50,7 +50,7 @@ function getPrivacyContent(lang: Lang) {
                   ]
                 : [
                     `Wir nutzen derzeit ${providerLabel} nur nach aktiver Zustimmung. Vor der Zustimmung wird das Analyse-Skript nicht geladen.`,
-                    `Bei Zustimmung kann ${providerLabel} die für aggregierte Nutzungsstatistiken erforderlichen Seitenaufrufs-, Browser- und Gerätedaten verarbeiten.${usesCookies ? " Dabei können Cookies oder ähnliche Technologien auf deinem Gerät eingesetzt werden." : ""} Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit Section 25 TDDDG, soweit ein Zugriff auf dein Endgerät erforderlich ist.`,
+                    `Bei Zustimmung kann ${providerLabel} die für aggregierte Nutzungsstatistiken erforderlichen Seitenaufrufs-, Browser- und Gerätedaten verarbeiten.${usesCookies ? " Dabei können Cookies oder ähnliche Technologien auf deinem Gerät eingesetzt werden." : ""} Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit § 25 TDDDG, soweit ein Zugriff auf dein Endgerät erforderlich ist.`,
                   ],
           }
         : {
@@ -98,11 +98,13 @@ function getPrivacyContent(lang: Lang) {
         paragraphs:
           lang === "en"
             ? [
-                "When you visit the site, our hosting and delivery infrastructure necessarily processes technical request data such as IP address, date and time, requested URL, referrer, status code, and user-agent information.",
+                "This site is hosted and delivered through Vercel Inc. and Vercel's deployment/CDN infrastructure.",
+                "When you visit the site, Vercel and our hosting and delivery infrastructure necessarily process technical request data such as IP address, date and time, requested URL, referrer, status code, and user-agent information.",
                 "We use this data to deliver the site securely, defend against abuse, and troubleshoot incidents. Legal basis: Article 6(1)(f) GDPR.",
               ]
             : [
-                "Beim Aufruf der Seite verarbeitet unsere Hosting- und Auslieferungsinfrastruktur technisch notwendige Request-Daten wie IP-Adresse, Datum und Uhrzeit, aufgerufene URL, Referrer, Statuscode und User-Agent.",
+                "Diese Seite wird über Vercel Inc. und die Deployment-/CDN-Infrastruktur von Vercel gehostet und ausgeliefert.",
+                "Beim Aufruf der Seite verarbeiten Vercel und unsere Hosting- und Auslieferungsinfrastruktur technisch notwendige Request-Daten wie IP-Adresse, Datum und Uhrzeit, aufgerufene URL, Referrer, Statuscode und User-Agent.",
                 "Wir nutzen diese Daten, um die Seite sicher bereitzustellen, Missbrauch abzuwehren und Störungen zu analysieren. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.",
               ],
       },
