@@ -39,7 +39,7 @@ export interface Offer extends OfferCopy {
   verifiedAt: string;
 }
 
-const VERIFIED_AT = "2026-04-13T09:45:00+02:00";
+const VERIFIED_AT = "2026-06-06T12:00:00+02:00";
 
 const offerDefinitions: OfferDefinition[] = [
   {
@@ -130,11 +130,11 @@ const offerDefinitions: OfferDefinition[] = [
       en: {
         title: "Use one points app across major German chains",
         summary:
-          "PAYBACK remains one of the most widely used loyalty systems in Germany for groceries, drugstores, fuel, and online shopping.",
+          "PAYBACK remains one of Germany's widest loyalty systems, now especially relevant for EDEKA, Netto Marken-Discount, dm, MediaMarkt, Thalia, fuel, and online shopping.",
         benefit: "Points plus app coupons across many partner brands.",
         eligibility: "PAYBACK account or app.",
         whyItMatters:
-          "It works across multiple stores, so users can collect value without locking themselves into one chain.",
+          "EDEKA and Netto moved into the PAYBACK ecosystem, so this is now the cleaner default points app for many mainstream grocery users.",
         watchouts: [
           "Base points are usually small unless you activate extra coupons.",
           "The best use case is consistent scanning across partner shops.",
@@ -143,11 +143,11 @@ const offerDefinitions: OfferDefinition[] = [
       de: {
         title: "Ein Punkte-System für viele große Ketten in Deutschland nutzen",
         summary:
-          "PAYBACK bleibt eines der am weitesten verbreiteten Bonusprogramme in Deutschland für Supermarkt, Drogerie, Tanken und Online-Shopping.",
+          "PAYBACK bleibt eines der am weitesten verbreiteten Bonusprogramme in Deutschland, besonders relevant für EDEKA, Netto Marken-Discount, dm, MediaMarkt, Thalia, Tanken und Online-Shopping.",
         benefit: "Punkte plus App-Coupons bei vielen Partnern.",
         eligibility: "PAYBACK Konto oder App.",
         whyItMatters:
-          "Das Programm funktioniert über mehrere Marken hinweg und zwingt Nutzer nicht in nur eine Kette.",
+          "Seit EDEKA und Netto in das PAYBACK Ökosystem gewechselt sind, ist PAYBACK für viele Supermarkt-Nutzer der sauberere Standard-Sparhebel.",
         watchouts: [
           "Die Basispunkte allein sind oft klein, wenn keine Extra-Coupons aktiviert werden.",
           "Richtig stark wird es erst bei konsequenter Nutzung über mehrere Partner hinweg.",
@@ -157,7 +157,7 @@ const offerDefinitions: OfferDefinition[] = [
   },
   {
     id: "dm-payback",
-    rank: 4,
+    rank: 7,
     brand: "dm + PAYBACK",
     category: "shopping",
     status: "ongoing",
@@ -194,7 +194,7 @@ const offerDefinitions: OfferDefinition[] = [
   },
   {
     id: "dm-glueckskind",
-    rank: 12,
+    rank: 14,
     brand: "dm Glueckskind",
     category: "family",
     status: "ongoing",
@@ -231,7 +231,7 @@ const offerDefinitions: OfferDefinition[] = [
   },
   {
     id: "lidl-plus",
-    rank: 5,
+    rank: 4,
     brand: "Lidl Plus",
     category: "groceries",
     status: "ongoing",
@@ -239,36 +239,36 @@ const offerDefinitions: OfferDefinition[] = [
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
-        title: "Use Lidl Plus for weekly coupons and app-only grocery savings",
+        title: "Use Lidl Plus points, coupons, and app-only grocery savings",
         summary:
-          "Lidl Plus combines weekly coupons, partner perks, receipts, and rotating supermarket deals in one app.",
-        benefit: "App coupons and limited weekly discounts at one of Germany's biggest discounters.",
-        eligibility: "Lidl Plus app account.",
+          "Lidl Plus now combines coupons, partner perks, digital receipts, and the new Lidl Points reward system launched in Germany on 1 June 2026.",
+        benefit: "Coupons plus Lidl Points that can be redeemed for selected rewards and value coupons.",
+        eligibility: "Lidl Plus app account and identification with the app at checkout or online.",
         whyItMatters:
-          "This is one of the most practical recurring savings tools for price-sensitive grocery shopping in Germany.",
+          "The new points system makes Lidl Plus more flexible than the old monthly collector because points can be saved toward chosen rewards.",
         watchouts: [
-          "Many discounts only work after manual activation in the app.",
-          "Some partner perks change without much notice.",
+          "Coupons and extra-points campaigns still need app activation.",
+          "Lidl Points expire after 24 months, so users should not treat them like cash.",
         ],
       },
       de: {
-        title: "Lidl Plus für wöchentliche Coupons und App-Rabatte im Supermarkt nutzen",
+        title: "Lidl Plus für Punkte, Coupons und App-Rabatte im Supermarkt nutzen",
         summary:
-          "Lidl Plus bündelt wöchentliche Coupons, Partner-Vorteile, digitale Bons und wechselnde Marktaktionen in einer App.",
-        benefit: "App-Coupons und zeitlich begrenzte Rabatte bei einem der größten Discounter Deutschlands.",
-        eligibility: "Lidl Plus App-Konto.",
+          "Lidl Plus bündelt Coupons, Partnervorteile, digitale Bons und seit 1. Juni 2026 das neue Lidl Punkte-System in Deutschland.",
+        benefit: "Coupons plus Lidl Punkte, die gegen ausgewählte Prämien und Wert-Coupons eingelöst werden können.",
+        eligibility: "Lidl Plus App-Konto und Identifikation per App an der Kasse oder online.",
         whyItMatters:
-          "Für preisbewusstes Einkaufen in Deutschland ist das einer der praktischsten wiederkehrenden Sparhebel.",
+          "Das neue Punktesystem ist flexibler als der alte monatliche Sammler, weil Punkte auf Wunschprämien angespart werden können.",
         watchouts: [
-          "Viele Rabatte funktionieren nur nach manueller Aktivierung.",
-          "Einige Partner-Vorteile können sich kurzfristig ändern.",
+          "Coupons und Extrapunkte-Aktionen müssen weiterhin in der App aktiviert werden.",
+          "Lidl Punkte verfallen nach 24 Monaten und sind kein Bargeldersatz.",
         ],
       },
     },
   },
   {
     id: "lidl-disney-plus",
-    rank: 6,
+    rank: 23,
     brand: "Lidl Plus x Disney+",
     category: "shopping",
     status: "limited",
@@ -305,44 +305,44 @@ const offerDefinitions: OfferDefinition[] = [
   },
   {
     id: "lidl-family-club",
-    rank: 10,
+    rank: 13,
     brand: "Lidl Family Club",
     category: "family",
     status: "ongoing",
-    officialUrl: "https://www.lidl.de/c/lidl-plus/s10007388",
+    officialUrl: "https://www.lidl.de/c/lidl-babyboxen/s10011221",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
         title: "Family households can activate Lidl's Family Club perks",
         summary:
-          "Lidl Plus currently promotes a Family Club area with additional family-oriented offers and advantages.",
-        benefit: "Extra family-targeted app deals inside the Lidl ecosystem.",
-        eligibility: "Lidl Plus and the Family Club participation flow.",
+          "Lidl's Family Club page says families with children aged 0 to 5 can receive family-specific weekly coupons inside Lidl Plus, alongside the baby box flow.",
+        benefit: "Age-targeted family coupons and Lidl baby box benefits inside the Lidl Plus ecosystem.",
+        eligibility: "Lidl Plus profile with relevant child age details entered.",
         whyItMatters:
-          "For households with children, family-specific grocery and baby offers can beat generic coupons.",
+          "For households with small children, recurring nappies, baby food, and family grocery purchases can make targeted coupons more valuable than generic offers.",
         watchouts: [
-          "This only makes sense for relevant household types.",
-          "Offer depth can vary over time.",
+          "This only makes sense for households with young children.",
+          "Coupons depend on the Lidl Plus profile data and current campaign rules.",
         ],
       },
       de: {
         title: "Familien können die Lidl Family Club Vorteile aktivieren",
         summary:
-          "Lidl Plus bewirbt derzeit einen Family Club Bereich mit zusätzlichen familienbezogenen Angeboten und Vorteilen.",
-        benefit: "Zusatzvorteile für Familien innerhalb des Lidl Ökosystems.",
-        eligibility: "Lidl Plus und die Teilnahme am Family Club.",
+          "Lidl schreibt auf der Family-Club-Seite, dass Familien mit Kindern von 0 bis 5 Jahren in Lidl Plus familienbezogene wöchentliche Coupons und Babybox-Vorteile erhalten können.",
+        benefit: "Altersbezogene Familien-Coupons und Lidl Babybox-Vorteile innerhalb von Lidl Plus.",
+        eligibility: "Lidl Plus Profil mit passenden Angaben zum Alter der Kinder.",
         whyItMatters:
-          "Für Haushalte mit Kindern können familienbezogene Einkaufsangebote deutlich mehr bringen als allgemeine Coupons.",
+          "Bei Haushalten mit kleinen Kindern können wiederkehrende Windel-, Babyfood- und Familieneinkäufe gezielte Coupons wertvoller machen als allgemeine Angebote.",
         watchouts: [
-          "Relevant ist das nur für passende Haushaltssituationen.",
-          "Die Tiefe der Vorteile kann sich im Zeitverlauf ändern.",
+          "Relevant ist das nur für Haushalte mit kleinen Kindern.",
+          "Coupons hängen von den Lidl Plus Profildaten und den aktuellen Aktionsregeln ab.",
         ],
       },
     },
   },
   {
     id: "kaufland-xtra",
-    rank: 7,
+    rank: 8,
     brand: "Kaufland Card XTRA",
     category: "groceries",
     status: "ongoing",
@@ -352,34 +352,34 @@ const offerDefinitions: OfferDefinition[] = [
       en: {
         title: "Use Kaufland Card XTRA for coupons, points, and supermarket promos",
         summary:
-          "Kaufland's program combines personalized savings, points, and campaign-based rewards for one of Germany's largest grocery formats.",
-        benefit: "Coupons, points, and periodic bonus actions.",
-        eligibility: "Kaufland Card registration.",
+          "Kaufland Card XTRA launched in Germany in February 2026 and combines personalized savings, points, and campaign-based rewards.",
+        benefit: "Coupons, points, and periodic bonus actions; Kaufland states that EUR 1 of shopping equals 1 point in the app.",
+        eligibility: "Kaufland Card XTRA registration and app/card scan at checkout or eligible online use.",
         whyItMatters:
-          "Kaufland baskets are often large, so even small percentage gains can scale quickly.",
+          "Kaufland baskets are often large, so a transparent points layer plus coupons can scale faster than small one-off promos.",
         watchouts: [
           "Many benefits are personalized, so two users may not see the same offers.",
-          "Promotional mechanics can change by campaign.",
+          "Points, coupons, and rewards can have campaign-specific expiry and redemption rules.",
         ],
       },
       de: {
         title: "Kaufland Card XTRA für Coupons, Punkte und Marktaktionen nutzen",
         summary:
-          "Das Kaufland Programm verbindet personalisierte Rabatte, Punkte und Aktionsvorteile für eines der größten Einkaufsformate in Deutschland.",
-        benefit: "Coupons, Punkte und regelmäßige Bonusaktionen.",
-        eligibility: "Registrierte Kaufland Card.",
+          "Kaufland Card XTRA ist im Februar 2026 in Deutschland gestartet und verbindet personalisierte Rabatte, Punkte und Aktionsvorteile.",
+        benefit: "Coupons, Punkte und regelmäßige Bonusaktionen; laut Kaufland entspricht EUR 1 Einkauf einem Punkt in der App.",
+        eligibility: "Kaufland Card XTRA Registrierung und App-/Kartenscan an der Kasse oder berechtigte Online-Nutzung.",
         whyItMatters:
-          "Bei großen Einkaufskörben können schon kleine Prozentvorteile schnell relevant werden.",
+          "Bei großen Kaufland-Einkaufskörben kann eine transparente Punkteschicht plus Coupons schneller relevant werden als kleine Einzelaktionen.",
         watchouts: [
           "Viele Vorteile sind personalisiert und daher nicht für alle gleich.",
-          "Aktionsmechaniken können je nach Kampagne wechseln.",
+          "Punkte, Coupons und Prämien können aktionsspezifische Ablauf- und Einlöseregeln haben.",
         ],
       },
     },
   },
   {
     id: "rossmann-app",
-    rank: 8,
+    rank: 9,
     brand: "ROSSMANN App",
     category: "shopping",
     status: "ongoing",
@@ -415,45 +415,8 @@ const offerDefinitions: OfferDefinition[] = [
     },
   },
   {
-    id: "deutschlandcard",
-    rank: 9,
-    brand: "DeutschlandCard",
-    category: "shopping",
-    status: "ongoing",
-    officialUrl: "https://www.deutschlandcard.de/",
-    verifiedAt: VERIFIED_AT,
-    copy: {
-      en: {
-        title: "Use DeutschlandCard across Netto, Esso, and partner shopping",
-        summary:
-          "DeutschlandCard remains a large-scale German loyalty network with app coupons, points, and partner shopping rewards.",
-        benefit: "Points and offers across multiple partner brands.",
-        eligibility: "DeutschlandCard account or app.",
-        whyItMatters:
-          "It gives users a second mainstream loyalty route beyond PAYBACK, especially for Netto and Esso shoppers.",
-        watchouts: [
-          "Value depends on partner mix and coupon activation.",
-          "Points programs work best when used consistently.",
-        ],
-      },
-      de: {
-        title: "DeutschlandCard bei Netto, Esso und Partnern einsetzen",
-        summary:
-          "Die DeutschlandCard bleibt ein großes deutsches Bonusnetzwerk mit App-Coupons, Punkten und Partner-Vorteilen.",
-        benefit: "Punkte und Angebote über mehrere Partnermarken hinweg.",
-        eligibility: "DeutschlandCard Konto oder App.",
-        whyItMatters:
-          "Sie ist neben PAYBACK die wichtigste Alternative, vor allem für Netto und Esso Nutzer.",
-        watchouts: [
-          "Der Nutzen hängt stark vom Partner-Mix und aktivierten Coupons ab.",
-          "Punkteprogramme lohnen sich vor allem bei konsequenter Nutzung.",
-        ],
-      },
-    },
-  },
-  {
     id: "rossmann-babywelt",
-    rank: 13,
+    rank: 15,
     brand: "ROSSMANN babywelt",
     category: "family",
     status: "ongoing",
@@ -489,45 +452,8 @@ const offerDefinitions: OfferDefinition[] = [
     },
   },
   {
-    id: "ikea-family-rewards",
-    rank: 14,
-    brand: "IKEA Family Rewards",
-    category: "shopping",
-    status: "ongoing",
-    officialUrl: "https://www.ikea.com/de/de/ikea-family/benefits/rewards/",
-    verifiedAt: VERIFIED_AT,
-    copy: {
-      en: {
-        title: "IKEA Family Rewards adds a second savings layer beyond member prices",
-        summary:
-          "IKEA now highlights reward-based benefits alongside the broader IKEA Family program, which makes the offer stack more tangible.",
-        benefit: "Reward-based vouchers and perks on top of core IKEA Family access.",
-        eligibility: "IKEA Family participation and the reward mechanics listed by IKEA.",
-        whyItMatters:
-          "For move-ins and home setup phases, combining member prices with rewards can create outsized savings compared with smaller weekly coupons.",
-        watchouts: [
-          "This matters most for users already spending meaningfully at IKEA.",
-          "Reward conditions can change, so check the current thresholds.",
-        ],
-      },
-      de: {
-        title: "IKEA Family Rewards legt eine zweite Sparschicht über die normalen Mitgliederpreise",
-        summary:
-          "IKEA hebt inzwischen Reward-Vorteile neben dem allgemeinen IKEA Family Programm hervor und macht das Sparmodell greifbarer.",
-        benefit: "Reward-basierte Gutscheine und Zusatzvorteile oberhalb der normalen IKEA Family Nutzung.",
-        eligibility: "IKEA Family Teilnahme und die jeweils geltenden Reward-Regeln.",
-        whyItMatters:
-          "Gerade bei Umzug oder Haushaltsaufbau kann die Kombination aus Mitgliederpreisen und Rewards deutlich stärker sein als kleine Wochen-Coupons.",
-        watchouts: [
-          "Wirklich relevant wird das nur bei spürbaren IKEA Ausgaben.",
-          "Die Reward-Bedingungen sollten vor der Nutzung aktuell geprüft werden.",
-        ],
-      },
-    },
-  },
-  {
     id: "ikea-family",
-    rank: 11,
+    rank: 16,
     brand: "IKEA Family",
     category: "shopping",
     status: "ongoing",
@@ -535,47 +461,47 @@ const offerDefinitions: OfferDefinition[] = [
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
-        title: "IKEA Family is still one of Germany's easiest membership perks",
+        title: "IKEA Family combines member prices with Rewards points",
         summary:
-          "IKEA Family gives member pricing and store perks through a free, widely recognised retail program.",
-        benefit: "Member prices and additional in-store advantages.",
-        eligibility: "Free IKEA Family membership.",
+          "IKEA Family now layers free membership perks with Rewards points that can be redeemed for vouchers such as purchase discounts, restaurant rewards, delivery discounts, or Click & Collect perks.",
+        benefit: "Member prices plus Rewards vouchers from regular IKEA shopping and account activity.",
+        eligibility: "Free IKEA Family membership and the current IKEA Rewards mechanics.",
         whyItMatters:
-          "Furniture, storage, and household setup costs can spike after moving, so IKEA perks are unusually useful in Germany.",
+          "Move-ins and home setup phases create large baskets, so IKEA member prices plus rewards can save more than small weekly coupons.",
         watchouts: [
-          "The value depends on actually shopping at IKEA.",
-          "Benefits can vary between online and in-store use.",
+          "This matters most for users already planning IKEA purchases.",
+          "Reward categories and thresholds can change, so check the current rules before relying on them.",
         ],
       },
       de: {
-        title: "IKEA Family bleibt einer der einfachsten Mitglieder-Vorteile in Deutschland",
+        title: "IKEA Family kombiniert Mitgliederpreise mit Rewards-Punkten",
         summary:
-          "IKEA Family bietet Mitgliederpreise und Shop-Vorteile über ein kostenloses, sehr bekanntes Retail-Programm.",
-        benefit: "Mitgliederpreise und zusätzliche Store-Vorteile.",
-        eligibility: "Kostenlose IKEA Family Mitgliedschaft.",
+          "IKEA Family verbindet kostenlose Mitglieder-Vorteile inzwischen mit Rewards-Punkten, die gegen Gutscheine wie Einkaufsrabatte, Restaurant-Vorteile, Liefer-Rabatte oder Click-&-Collect-Vorteile eingelöst werden können.",
+        benefit: "Mitgliederpreise plus Rewards-Gutscheine aus IKEA Einkäufen und Kontoaktivität.",
+        eligibility: "Kostenlose IKEA Family Mitgliedschaft und die jeweils geltenden IKEA Rewards-Regeln.",
         whyItMatters:
-          "Gerade nach Umzug oder beim Haushaltsaufbau können IKEA Vorteile in Deutschland überdurchschnittlich nützlich sein.",
+          "Gerade bei Umzug und Haushaltsaufbau entstehen große Warenkörbe, bei denen Mitgliederpreise plus Rewards mehr bringen können als kleine Wochen-Coupons.",
         watchouts: [
-          "Der Nutzen hängt davon ab, ob du wirklich bei IKEA einkaufst.",
-          "Vorteile können online und im Markt unterschiedlich ausfallen.",
+          "Relevant ist das vor allem bei ohnehin geplanten IKEA Käufen.",
+          "Reward-Kategorien und Schwellen können sich ändern, daher vor Nutzung die aktuellen Regeln prüfen.",
         ],
       },
     },
   },
   {
     id: "mymediamarkt",
-    rank: 15,
+    rank: 18,
     brand: "myMediaMarkt",
     category: "shopping",
     status: "ongoing",
-    officialUrl: "https://www.mediamarkt.de/de/legal/teilnahmebedingungen-my-mediamarkt/teilnahmebedingungen-my-mediamarkt",
+    officialUrl: "https://www.mediamarkt.de/de/about-us/app",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
-        title: "myMediaMarkt adds member prices and tech-shopping coupons",
+        title: "myMediaMarkt adds app coupons and tech-shopping perks",
         summary:
-          "MediaMarkt's membership layer focuses on promotional prices, coupons, and purchase-related account perks.",
-        benefit: "Member deals and coupon-style savings on electronics shopping.",
+          "The MediaMarkt app promotes myMediaMarkt and mySaturn membership benefits, including points, app coupons, price alerts, and purchase-related account perks.",
+        benefit: "Weekly app coupons, points, and member-style savings on electronics shopping.",
         eligibility: "myMediaMarkt registration.",
         whyItMatters:
           "Electronics purchases are often large-ticket, so occasional member pricing can save more than grocery coupons.",
@@ -585,10 +511,10 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "myMediaMarkt bringt Mitgliederpreise und Technik-Coupons",
+        title: "myMediaMarkt bringt App-Coupons und Technik-Vorteile",
         summary:
-          "Die MediaMarkt Mitgliedschaft setzt auf Aktionspreise, Coupons und accountbezogene Vorteile rund um Technik-Einkäufe.",
-        benefit: "Mitgliederdeals und couponartige Ersparnisse bei Elektronik-Käufen.",
+          "Die MediaMarkt App bewirbt myMediaMarkt und mySaturn Vorteile wie Punkte, App-Coupons, Preisalarm und accountbezogene Vorteile rund um Technik-Einkäufe.",
+        benefit: "Wöchentliche App-Coupons, Punkte und mitgliedsbezogene Ersparnisse bei Elektronik-Käufen.",
         eligibility: "myMediaMarkt Registrierung.",
         whyItMatters:
           "Elektronik ist oft ein großer Einzelposten, daher können Mitgliederpreise hier mehr bringen als viele kleine Supermarkt-Coupons.",
@@ -601,11 +527,11 @@ const offerDefinitions: OfferDefinition[] = [
   },
   {
     id: "hm-member",
-    rank: 16,
+    rank: 19,
     brand: "H&M Member",
     category: "shopping",
     status: "ongoing",
-    officialUrl: "https://www2.hm.com/de_de/member/info.html/main-content",
+    officialUrl: "https://www2.hm.com/de_de/member/info.html",
     verifiedAt: VERIFIED_AT,
     copy: {
       en: {
@@ -638,7 +564,7 @@ const offerDefinitions: OfferDefinition[] = [
   },
   {
     id: "mymcdonalds",
-    rank: 17,
+    rank: 20,
     brand: "MyMcDonald's",
     category: "food",
     status: "ongoing",
@@ -675,7 +601,7 @@ const offerDefinitions: OfferDefinition[] = [
   },
   {
     id: "too-good-to-go",
-    rank: 18,
+    rank: 12,
     brand: "Too Good To Go",
     category: "food",
     status: "ongoing",
@@ -712,7 +638,7 @@ const offerDefinitions: OfferDefinition[] = [
   },
   {
     id: "bahncard-25",
-    rank: 19,
+    rank: 11,
     brand: "BahnCard 25",
     category: "travel",
     status: "ongoing",
@@ -748,8 +674,230 @@ const offerDefinitions: OfferDefinition[] = [
     },
   },
   {
+    id: "edeka-app",
+    rank: 5,
+    brand: "EDEKA App",
+    category: "groceries",
+    status: "ongoing",
+    officialUrl: "https://www.edeka.de/services/edeka-app/",
+    verifiedAt: VERIFIED_AT,
+    copy: {
+      en: {
+        title: "Use the EDEKA app for weekly app discounts and PAYBACK in one flow",
+        summary:
+          "EDEKA promotes app-only discounts, coupons, loyalty actions, mobile payment, shopping lists, and PAYBACK linking inside the EDEKA app.",
+        benefit: "Weekly app discounts plus PAYBACK points and eCoupons at participating EDEKA stores.",
+        eligibility: "EDEKA app account, participating local market, and optional linked PAYBACK account.",
+        whyItMatters:
+          "EDEKA is a mainstream supermarket for many households, and the app can combine store-specific savings with PAYBACK without scanning two separate cards.",
+        watchouts: [
+          "EDEKA is cooperative, so participation and exact offers can vary by market.",
+          "PAYBACK linking is useful only if the user's preferred EDEKA market supports the flow.",
+        ],
+      },
+      de: {
+        title: "Die EDEKA App für Wochenrabatte und PAYBACK in einem Ablauf nutzen",
+        summary:
+          "EDEKA bewirbt App-Rabatte, Coupons, Treueaktionen, mobiles Bezahlen, Einkaufslisten und PAYBACK-Verknüpfung in der EDEKA App.",
+        benefit: "Wöchentliche App-Rabatte plus PAYBACK Punkte und eCoupons bei teilnehmenden EDEKA Märkten.",
+        eligibility: "EDEKA App-Konto, teilnehmender Markt und optional verknüpftes PAYBACK Konto.",
+        whyItMatters:
+          "EDEKA ist für viele Haushalte ein Standardsupermarkt und die App kann marktbezogene Vorteile mit PAYBACK bündeln, ohne zwei Karten zu scannen.",
+        watchouts: [
+          "EDEKA ist genossenschaftlich organisiert, daher können Teilnahme und konkrete Angebote je Markt variieren.",
+          "Die PAYBACK-Verknüpfung lohnt sich vor allem, wenn der Stamm-Markt den Ablauf unterstützt.",
+        ],
+      },
+    },
+  },
+  {
+    id: "netto-plus",
+    rank: 6,
+    brand: "Netto plus App",
+    category: "groceries",
+    status: "ongoing",
+    officialUrl: "https://www.netto-online.de/ueber-netto/Netto-App.chtm",
+    verifiedAt: VERIFIED_AT,
+    copy: {
+      en: {
+        title: "Netto plus App combines weekly coupons with PAYBACK linking",
+        summary:
+          "Netto Marken-Discount's app highlights weekly coupons, app offers, mobile payment, receipts, and PAYBACK card linking.",
+        benefit: "Netto app discounts plus PAYBACK points and coupons in one supermarket app.",
+        eligibility: "Registered Netto plus account and, for points, a linked PAYBACK account.",
+        whyItMatters:
+          "Netto is a large discount chain, so app coupons can matter for price-sensitive grocery baskets.",
+        watchouts: [
+          "Netto's advertised maximum savings depend on using multiple rotating app actions, not one guaranteed discount.",
+          "Coupons can exclude deposits, tobacco, books, infant formula, vouchers, and other categories.",
+        ],
+      },
+      de: {
+        title: "Netto plus App verbindet Wochen-Coupons mit PAYBACK-Verknüpfung",
+        summary:
+          "Die Netto Marken-Discount App bündelt wöchentliche Coupons, App-Angebote, mobiles Bezahlen, digitale Bons und PAYBACK-Verknüpfung.",
+        benefit: "Netto App-Rabatte plus PAYBACK Punkte und Coupons in einer Supermarkt-App.",
+        eligibility: "Registriertes Netto plus Konto und für Punkte ein verknüpftes PAYBACK Konto.",
+        whyItMatters:
+          "Netto ist ein großer Discounter, daher können App-Coupons bei preisbewussten Lebensmittelkörben spürbar sein.",
+        watchouts: [
+          "Die beworbenen Maximalersparnisse hängen von mehreren wechselnden App-Aktionen ab, nicht von einem garantierten Rabatt.",
+          "Coupons können Pfand, Tabak, Bücher, Säuglingsanfangsnahrung, Gutscheine und weitere Kategorien ausschließen.",
+        ],
+      },
+    },
+  },
+  {
+    id: "deutschlandticket",
+    rank: 10,
+    brand: "Deutschlandticket",
+    category: "travel",
+    status: "ongoing",
+    officialUrl: "https://int.bahn.de/en/offers/regional/deutschland-ticket",
+    verifiedAt: VERIFIED_AT,
+    copy: {
+      en: {
+        title: "Deutschlandticket gives nationwide local transport for EUR 63/month",
+        summary:
+          "The Deutschlandticket is a monthly cancellable subscription for local and regional public transport across Germany, priced at EUR 63 in 2026.",
+        benefit: "Unlimited local and regional public transport in Germany for one fixed monthly price.",
+        eligibility: "Personal subscription; local and regional transport only, not ICE/IC/EC long-distance trains.",
+        whyItMatters:
+          "For commuters, students, and city-to-city regional trips, this can beat separate monthly passes quickly.",
+        watchouts: [
+          "Cancel by the 10th of the month if you do not want the subscription to continue into the next month.",
+          "It is personal, non-transferable, and not valid on long-distance trains.",
+        ],
+      },
+      de: {
+        title: "Deutschlandticket: bundesweiter Nahverkehr für 63 EUR im Monat",
+        summary:
+          "Das Deutschlandticket ist ein monatlich kündbares Abo für den Nah- und Regionalverkehr in Deutschland und kostet 2026 EUR 63.",
+        benefit: "Deutschlandweit Nah- und Regionalverkehr für einen festen Monatspreis nutzen.",
+        eligibility: "Persönliches Abo; nur Nah- und Regionalverkehr, nicht ICE/IC/EC-Fernverkehr.",
+        whyItMatters:
+          "Für Pendler, Studierende und regionale Fahrten zwischen Städten kann es einzelne Monatskarten schnell schlagen.",
+        watchouts: [
+          "Bis zum 10. des Monats kündigen, wenn das Abo nicht in den Folgemonat laufen soll.",
+          "Das Ticket ist personenbezogen, nicht übertragbar und gilt nicht im Fernverkehr.",
+        ],
+      },
+    },
+  },
+  {
+    id: "mueller-app",
+    rank: 17,
+    brand: "Müller App",
+    category: "shopping",
+    status: "ongoing",
+    officialUrl: "https://www.mueller.de/service/app/",
+    verifiedAt: VERIFIED_AT,
+    copy: {
+      en: {
+        title: "Müller App adds coupons, points, receipts, and BabyClub access",
+        summary:
+          "Müller positions its app as a digital customer card with coupons, the Müller Blüten points program, receipts, mobile payment, and BabyClub features.",
+        benefit: "Drugstore coupons, points, digital receipts, and family-oriented app benefits.",
+        eligibility: "Registered Müller app account; coupons must be activated and customer card scanned.",
+        whyItMatters:
+          "Müller fills the gap for users whose local drugstore is not dm or ROSSMANN, especially in cities with strong Müller coverage.",
+        watchouts: [
+          "Müller Blüten cannot usually be credited after checkout if the card was not scanned.",
+          "Coupon conditions and BabyClub benefits vary by campaign.",
+        ],
+      },
+      de: {
+        title: "Müller App bringt Coupons, Blüten, Bons und BabyClub-Zugang",
+        summary:
+          "Müller positioniert die App als digitale Kundenkarte mit Coupons, Müller Blütenprogramm, digitalen Bons, mobilem Bezahlen und BabyClub-Funktionen.",
+        benefit: "Drogerie-Coupons, Punkte, digitale Bons und familienbezogene App-Vorteile.",
+        eligibility: "Registriertes Müller App-Konto; Coupons müssen aktiviert und die Kundenkarte gescannt werden.",
+        whyItMatters:
+          "Müller schließt die Lücke für Nutzer, deren nächste Drogerie nicht dm oder ROSSMANN ist, besonders in Städten mit guter Müller-Abdeckung.",
+        watchouts: [
+          "Müller Blüten können meist nicht nachträglich verbucht werden, wenn die Karte nicht gescannt wurde.",
+          "Coupon-Bedingungen und BabyClub-Vorteile wechseln je nach Aktion.",
+        ],
+      },
+    },
+  },
+  {
+    id: "decathlon-membership",
+    rank: 21,
+    brand: "Decathlon Membership",
+    category: "shopping",
+    status: "ongoing",
+    officialUrl: "https://www.decathlon.de/MyDecathlon-LP-Account_lp-GAOG77",
+    verifiedAt: VERIFIED_AT,
+    copy: {
+      en: {
+        title: "Decathlon Membership can save on sports and outdoor basics",
+        summary:
+          "Decathlon Germany promotes membership benefits such as a newsletter welcome discount, app customer card, account-based receipts, exclusive offers, and easier returns.",
+        benefit: "One-time welcome discount plus member services and future exclusive offers.",
+        eligibility: "Decathlon account and, for the welcome discount, newsletter confirmation under Decathlon's conditions.",
+        whyItMatters:
+          "Sports gear, bikes, backpacks, and kids' equipment can be large one-off purchases where a verified member discount matters.",
+        watchouts: [
+          "The welcome discount is one-time, online-only, time-limited, and excludes marketplace or reduced items.",
+          "Do not join just for coupons if you are not already planning a sports purchase.",
+        ],
+      },
+      de: {
+        title: "Decathlon Membership kann bei Sport- und Outdoor-Basics sparen",
+        summary:
+          "Decathlon Deutschland bewirbt Membership-Vorteile wie Newsletter-Willkommensrabatt, App-Kundenkarte, accountbasierte Bons, exklusive Angebote und einfachere Retouren.",
+        benefit: "Einmaliger Willkommensrabatt plus Member-Services und künftige exklusive Angebote.",
+        eligibility: "Decathlon Konto und für den Willkommensrabatt Newsletter-Bestätigung nach Decathlon-Bedingungen.",
+        whyItMatters:
+          "Sportausrüstung, Fahrradzubehör, Rucksäcke und Kinder-Equipment sind oft größere Einzelkäufe, bei denen ein verifizierter Member-Rabatt zählt.",
+        watchouts: [
+          "Der Willkommensrabatt ist einmalig, nur online, zeitlich begrenzt und nicht für Marktplatz- oder reduzierte Artikel gültig.",
+          "Nur wegen Coupons anmelden lohnt sich nicht, wenn kein Sportkauf geplant ist.",
+        ],
+      },
+    },
+  },
+  {
+    id: "amazon-prime-18-22",
+    rank: 22,
+    brand: "Amazon Prime 18-22",
+    category: "shopping",
+    status: "ongoing",
+    officialUrl: "https://www.aboutamazon.de/news/amazon-prime-und-shopping/prime-student",
+    verifiedAt: VERIFIED_AT,
+    copy: {
+      en: {
+        title: "Amazon Prime is 50% off for 18- to 22-year-olds in Germany",
+        summary:
+          "Amazon Germany says the former student-only Prime discount has been replaced by a 50% Prime discount for all 18- to 22-year-olds, with no student proof required.",
+        benefit: "Discounted Prime at EUR 4.49/month or EUR 44.90/year instead of the regular German Prime price listed by Amazon.",
+        eligibility: "Amazon account holder aged 18 to 22 in Germany, subject to Amazon's verification and current terms.",
+        whyItMatters:
+          "This is useful for students, apprentices, trainees, and young workers setting up life in Germany, especially when delivery and video are both used.",
+        watchouts: [
+          "It becomes poor value if Prime mainly triggers extra impulse purchases.",
+          "Check renewal and age-out terms before relying on the discounted price.",
+        ],
+      },
+      de: {
+        title: "Amazon Prime gibt es in Deutschland 50 Prozent günstiger für 18- bis 22-Jährige",
+        summary:
+          "Amazon Deutschland schreibt, dass der frühere reine Studentenrabatt durch 50 Prozent Prime-Rabatt für alle 18- bis 22-Jährigen ersetzt wurde, ohne Studentennachweis.",
+        benefit: "Vergünstigtes Prime für EUR 4,49/Monat oder EUR 44,90/Jahr statt des von Amazon genannten regulären Deutschland-Preises.",
+        eligibility: "Amazon Konto in Deutschland und Alter von 18 bis 22 Jahren, vorbehaltlich Amazons Prüfung und aktueller Bedingungen.",
+        whyItMatters:
+          "Nützlich für Studierende, Azubis, Trainees und junge Berufseinsteiger, wenn Lieferung und Video tatsächlich genutzt werden.",
+        watchouts: [
+          "Schlechter Deal, wenn Prime vor allem zusätzliche Impulskäufe auslöst.",
+          "Vor Nutzung die Verlängerungs- und Altersgrenzen prüfen.",
+        ],
+      },
+    },
+  },
+  {
     id: "thalia-kultclub",
-    rank: 20,
+    rank: 24,
     brand: "Thalia KultClub",
     category: "shopping",
     status: "ongoing",

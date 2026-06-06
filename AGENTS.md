@@ -90,7 +90,7 @@ Blog loading happens in [`lib/blog.ts`](./lib/blog.ts).
 
 ### Offers
 
-Offers are code-backed, not MDX-backed. They live in [`lib/offers.ts`](./lib/offers.ts) and currently expose 20 ranked entries with localized copy and a shared verification timestamp constant.
+Offers are code-backed, not MDX-backed. They live in [`lib/offers.ts`](./lib/offers.ts) and currently expose 24 ranked entries with localized copy and a shared verification timestamp constant.
 
 ## Design System
 

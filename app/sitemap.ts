@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/guides", lastmod: new Date("2026-02-01") },
     { path: "/tips", lastmod: new Date("2026-02-01") },
     { path: "/blog", lastmod: latestSiteUpdate }, // updates with new posts
-    { path: "/offers", lastmod: new Date("2026-02-01") },
+    { path: "/offers", lastmod: new Date("2026-06-06") },
     { path: "/tools", lastmod: new Date("2026-02-01") },
     { path: "/tools/gross-net-salary-calculator", lastmod: new Date("2026-02-01") },
     { path: "/about", lastmod: new Date("2026-01-01") },

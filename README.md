@@ -7,7 +7,7 @@ Life Hacks Germany is a bilingual editorial utility site for people navigating l
 - Next.js 16 App Router site with `/en` and `/de` routes
 - 78 MDX guides total: 39 English, 39 German
 - 8 MDX blog posts total: 4 English, 4 German
-- 20 curated offer cards sourced from official brand pages
+- 24 curated offer cards sourced from official brand pages
 - Interactive tools for salary, rent, tax, blocked account, emergency fund, permit timing, and rail-trip planning
 - Dynamic OG image generation, sitemap, robots, RSS, JSON-LD, and on-site search
 

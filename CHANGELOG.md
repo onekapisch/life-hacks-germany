@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2026-06-06
+
+- Top Offers refresh:
+  - Re-verified offer cards against official provider pages and refreshed the shared verification timestamp.
+  - Removed the stale DeutschlandCard entry because the previous Netto/EDEKA positioning is no longer accurate after the PAYBACK migration.
+  - Merged the duplicate IKEA Family Rewards card into the main IKEA Family card.
+  - Added verified mainstream savings cards for EDEKA App, Netto plus App, Deutschlandticket, Müller App, Decathlon Membership, and Amazon Prime 18-22.
+  - Updated Lidl Plus for the new Lidl Points system launched on 2026-06-01 and refreshed Kaufland XTRA / MediaMarkt / Lidl Family Club copy and links.
+
 ## 2026-05-02
 
 - May 2026 factual refresh:
