@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026-06-07
+
+- Homepage hero:
+  - Added a prominent bilingual Top Offers shortcut widget in the hero section linking directly to the localized offers page.
+
 ## 2026-06-06
 
 - Top Offers refresh:

@@ -350,6 +350,19 @@ export default async function HomePage({
   const base = `/${l}`;
   const guides = getAllGuides(l);
   const featuredOffers = getFeaturedOffers(l);
+  const heroOffersWidget = l === "en"
+    ? {
+        eyebrow: "Freshly verified",
+        title: "Check out latest Top offers in Germany",
+        copy: "24 practical savings picks for groceries, transport, family, apps, and everyday spend.",
+        cta: "Open Top Offers",
+      }
+    : {
+        eyebrow: "Frisch geprüft",
+        title: "Aktuelle Top-Angebote in Deutschland ansehen",
+        copy: "24 praktische Spar-Tipps für Supermarkt, Mobilität, Familie, Apps und Alltag.",
+        cta: "Top-Angebote öffnen",
+      };
   const guideCount = guides.length;
   const smartLife = getSmartLifeSectionCopy(l);
   const weeklyQuickRoutes = getWeeklyQuickRoutes(l);
@@ -425,16 +438,40 @@ export default async function HomePage({
                 </div>
               </div>
 
-              {/* Hero Image */}
-              <div className="hero-image-wrapper aspect-[4/3]">
-                <Image
-                  src="/images/hero/berlin-brandenburg-gate.jpg"
-                  alt="Brandenburg Gate in Berlin, Germany"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="space-y-4">
+                {/* Hero Image */}
+                <div className="hero-image-wrapper aspect-[4/3]">
+                  <Image
+                    src="/images/hero/berlin-brandenburg-gate.jpg"
+                    alt="Brandenburg Gate in Berlin, Germany"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+
+                <Link
+                  href={`${base}/offers`}
+                  className="group block rounded-2xl border border-[rgba(180,138,51,0.28)] bg-[linear-gradient(135deg,rgba(255,251,235,0.94),rgba(255,255,255,0.82))] p-4 no-underline text-ink shadow-[0_16px_40px_rgba(15,23,42,0.10)] transition duration-200 hover:-translate-y-0.5 hover:border-[rgba(180,138,51,0.5)] hover:shadow-[0_20px_52px_rgba(15,23,42,0.16)]"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                    <div>
+                      <span className="mb-2 inline-flex rounded-full border border-[rgba(180,138,51,0.35)] bg-accent-3/10 px-2.5 py-1 text-[0.64rem] font-black uppercase tracking-[0.14em] text-accent-3">
+                        {heroOffersWidget.eyebrow}
+                      </span>
+                      <h2 className="m-0 text-lg font-black leading-tight tracking-tight group-hover:text-accent-2 transition-colors">
+                        {heroOffersWidget.title}
+                      </h2>
+                      <p className="mt-1.5 mb-0 text-xs leading-relaxed text-ink-2">
+                        {heroOffersWidget.copy}
+                      </p>
+                    </div>
+                    <span className="inline-flex shrink-0 items-center justify-center rounded-full bg-ink px-3.5 py-2 text-xs font-black uppercase tracking-[0.08em] text-paper shadow-[0_10px_24px_rgba(15,23,42,0.22)] transition-colors group-hover:bg-accent-2">
+                      {heroOffersWidget.cta} &rarr;
+                    </span>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
