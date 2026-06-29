@@ -264,9 +264,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
   if (lang === "de") {
     return [
       {
-        href: "/de/blog/top-changes-germany-may-2026",
-        title: "Mai 2026: neue Deutschland-Änderungen",
-        note: "Spritsteuer, Entlastungsprämie, Krankenhausreform und Kindergeld-Basiswerte",
+        href: "/de/blog/top-changes-germany-june-2026",
+        title: "Juni 2026: neue Deutschland-Änderungen",
+        note: "E-Auto-Förderung, GEAS, Kündigungsbutton, Energy Sharing und geprüfte Basiswerte",
       },
       {
         href: "/de/guides/bureaucracy/anmeldung",
@@ -293,9 +293,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
 
   return [
     {
-      href: "/en/blog/top-changes-germany-may-2026",
-      title: "May 2026 Germany Changes",
-      note: "Fuel tax relief, employer premium, hospital reform, and Kindergeld baselines",
+      href: "/en/blog/top-changes-germany-june-2026",
+      title: "June 2026 Germany Changes",
+      note: "E-car subsidy, GEAS, cancellation button, energy sharing, and verified baseline values",
     },
     {
       href: "/en/guides/bureaucracy/anmeldung",

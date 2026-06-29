@@ -9,6 +9,10 @@ const TIMEOUT_MS = 15000;
 const CONCURRENCY = 8;
 const IS_CI = Boolean(process.env.CI) || process.env.GITHUB_ACTIONS === "true";
 const FORCE_STRICT = process.env.LINK_CHECK_STRICT === "1";
+const IGNORED_URLS = new Set([
+  "http://localhost:3000",
+  "https://v6.db.transport.rest",
+]);
 
 function walkFiles(entryPath, collected) {
   if (!fs.existsSync(entryPath)) return;
@@ -33,7 +37,8 @@ function extractUrls(filePath) {
   const matches = content.match(URL_PATTERN) ?? [];
   return matches
     .map((url) => url.trim().replace(/[),.;]+$/, ""))
-    .filter((url) => !url.includes("{") && !url.includes("}") && !url.includes("$"));
+    .filter((url) => !url.includes("{") && !url.includes("}") && !url.includes("$"))
+    .filter((url) => !IGNORED_URLS.has(url));
 }
 
 function withTimeout(ms) {
