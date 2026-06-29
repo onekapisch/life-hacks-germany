@@ -21,8 +21,8 @@ export async function generateMetadata({
     ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing & More"
     : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen & mehr";
   const metaDescription = l === "en"
-    ? "May 2026 Germany updates plus verification-first guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and practical decision tools."
-    : "Mai-2026-Updates für Deutschland plus verifizierte Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
+    ? "June 2026 verified Germany baseline values plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
+    : "Juni-2026-verifizierte Basiswerte für Deutschland plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
