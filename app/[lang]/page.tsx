@@ -264,9 +264,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
   if (lang === "de") {
     return [
       {
-        href: "/de/blog/top-changes-germany-june-2026",
-        title: "Juni 2026: neue Deutschland-Änderungen",
-        note: "E-Auto-Förderung, GEAS, Kündigungsbutton, Energy Sharing und geprüfte Basiswerte",
+        href: "/de/blog/top-changes-germany-july-2026",
+        title: "Juli 2026: neue Deutschland-Änderungen",
+        note: "Renten, Pflege-Mindestlöhne, Minijob-Opt-in, Zollregeln und geprüfte Basiswerte",
       },
       {
         href: "/de/guides/bureaucracy/anmeldung",
@@ -293,9 +293,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
 
   return [
     {
-      href: "/en/blog/top-changes-germany-june-2026",
-      title: "June 2026 Germany Changes",
-      note: "E-car subsidy, GEAS, cancellation button, energy sharing, and verified baseline values",
+      href: "/en/blog/top-changes-germany-july-2026",
+      title: "July 2026 Germany Changes",
+      note: "Pensions, care wages, minijob opt-back-in, customs rules, and verified baseline values",
     },
     {
       href: "/en/guides/bureaucracy/anmeldung",

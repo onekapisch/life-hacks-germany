@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-07-06
+
+- Weekly factual audit refresh:
+  - Added EN/DE July 2026 monthly update posts from the Federal Government July 2026 legal update.
+  - Promoted the July 2026 monthly update on the homepage quick routes and `public/llms.txt`.
+  - Re-verified priority baseline values against official sources: Deutschlandticket EUR 63, Rundfunkbeitrag EUR 18.36, Kindergeld EUR 259, EU Blue Card thresholds EUR 50,700 / EUR 45,934.20, and student blocked-account proof of at least EUR 11,904.
+
 ## 2026-06-29
 
 - Weekly factual audit refresh:
