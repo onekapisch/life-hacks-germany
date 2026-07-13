@@ -21,8 +21,8 @@ export async function generateMetadata({
     ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing & More"
     : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen & mehr";
   const metaDescription = l === "en"
-    ? "June 2026 verified Germany baseline values plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
-    : "Juni-2026-verifizierte Basiswerte für Deutschland plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
+    ? "July 2026 verified Germany baseline values plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
+    : "Juli-2026-verifizierte Basiswerte für Deutschland plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
@@ -352,13 +352,13 @@ export default async function HomePage({
   const featuredOffers = getFeaturedOffers(l);
   const heroOffersWidget = l === "en"
     ? {
-        eyebrow: "Freshly verified",
+        eyebrow: "Verified picks",
         title: "Check out latest Top offers in Germany",
         copy: "24 practical savings picks for groceries, transport, family, apps, and everyday spend.",
         cta: "Open Top Offers",
       }
     : {
-        eyebrow: "Frisch geprüft",
+        eyebrow: "Geprüfte Auswahl",
         title: "Aktuelle Top-Angebote in Deutschland ansehen",
         copy: "24 praktische Spar-Tipps für Supermarkt, Mobilität, Familie, Apps und Alltag.",
         cta: "Top-Angebote öffnen",

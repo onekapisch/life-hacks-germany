@@ -1,6 +1,6 @@
 # TODO
 
-Audit date: `2026-07-06`
+Audit date: `2026-07-13`
 
 No inline `TODO` / `FIXME` / `XXX` markers were found in the active app code. The items below come from the current implementation, runtime behavior, and stale or partially wired features.
 

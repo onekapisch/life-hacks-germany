@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2026-07-13
+
+- Weekly factual audit refresh:
+  - Corrected EN/DE Deutschlandticket and public-transport decision guides: replaced the obsolete EUR 34.30 Jobticket example with the official 2026 maximum employee price of EUR 44.10, corrected DB's cancellation deadline to the 10th calendar day, and removed a misleading airport-service exclusion example.
+  - Corrected EN/DE Rundfunkbeitrag payment rhythms, Beitragsnummer length, reminder expectations, and late-surcharge wording against the official Beitragsservice payment guidance.
+  - Refreshed homepage EN/DE metadata from June to July verification language and removed the unsupported recency implication from the Top Offers eyebrow.
+  - Re-verified priority baseline values against official sources; kept the shared Top Offers verification timestamp unchanged because anti-bot responses prevented full provider-page verification.
+
 ## 2026-07-06
 
 - Weekly factual audit refresh:
