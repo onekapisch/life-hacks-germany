@@ -101,18 +101,18 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und präzise Standorthilfe.",
       fuelWatch: {
         badge: "Spritpreis-Watch",
-        title: "Deutschland: Spritpreise steigen vor Mai-Steuerentlastung wieder",
+        title: "Deutschland: Spritpreise nach Ende des Tankrabatts weiter hoch",
         body:
-          "Laut ADAC-Wochenauswertung vom 29.04.2026 sind Super E10 und Diesel vor der Energiesteuersenkung zum 1. Mai wieder teurer geworden. Livevergleich bleibt wichtig, weil die Entlastung schrittweise ankommen kann.",
-        stats: ["Super E10: 2,103 Euro/Liter", "Diesel: 2,200 Euro/Liter"],
-        lastChecked: "2. Mai 2026",
+          "Die ADAC-Auswertung vom 7. Juli nennt für den 6. Juli im Bundesmittel 2,020 Euro je Liter Super E10 und 1,949 Euro je Liter Diesel. Preise vor Ort live vergleichen; seit April ist kurz vor 12 Uhr meist der günstigste Zeitpunkt.",
+        stats: ["Super E10: 2,020 Euro/Liter", "Diesel: 1,949 Euro/Liter"],
+        lastChecked: "7. Juli 2026",
         sourcePrimary: {
-          label: "ADAC Presse (29.04.2026)",
-          href: "https://presse.adac.de/meldungen/adac-ev/verkehr/tanken-wieder-deutlich-teurer.html",
+          label: "ADAC Spritpreis-Update (07.07.2026)",
+          href: "https://www.adac.de/news/aktueller-spritpreis/",
         },
         sourceSecondary: {
-          label: "ADAC Kraftstoffmarkt",
-          href: "https://www.adac.de/tanken/",
+          label: "ADAC: neue Spritpreis-Regeln seit April 2026",
+          href: "https://www.adac.de/verkehr/tanken-kraftstoff-antrieb/tipps-zum-tanken/spritpreise-tagesverlauf/",
         },
         cta: "Tank Alert Preisalarm setzen",
       },
@@ -184,18 +184,18 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
     fuelWatch: {
       badge: "Fuel Price Watch",
-      title: "Germany: fuel prices rose again before May tax relief",
+      title: "Germany: fuel prices remain high after the tax relief ended",
       body:
-        "ADAC's April 29, 2026 weekly report shows Super E10 and diesel rose again before the May 1 energy-tax relief. Compare live prices because the tax cut may be passed through gradually.",
-      stats: ["Super E10: EUR 2.103/liter", "Diesel: EUR 2.200/liter"],
-      lastChecked: "May 2, 2026",
+        "ADAC's July 7 update lists national averages for July 6 of EUR 2.020/liter for Super E10 and EUR 1.949/liter for diesel. Compare local prices live; under the rules in force since April, shortly before noon is usually cheapest.",
+      stats: ["Super E10: EUR 2.020/liter", "Diesel: EUR 1.949/liter"],
+      lastChecked: "July 7, 2026",
       sourcePrimary: {
-        label: "ADAC press (April 29, 2026)",
-        href: "https://presse.adac.de/meldungen/adac-ev/verkehr/tanken-wieder-deutlich-teurer.html",
+        label: "ADAC fuel-price update (July 7, 2026)",
+        href: "https://www.adac.de/news/aktueller-spritpreis/",
       },
       sourceSecondary: {
-        label: "ADAC fuel market",
-        href: "https://www.adac.de/tanken/",
+        label: "ADAC: fuel-price timing rules since April 2026",
+        href: "https://www.adac.de/verkehr/tanken-kraftstoff-antrieb/tipps-zum-tanken/spritpreise-tagesverlauf/",
       },
       cta: "Set Tank Alert price alarms",
     },
