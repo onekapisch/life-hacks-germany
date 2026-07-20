@@ -272,33 +272,33 @@ const offerDefinitions: OfferDefinition[] = [
     brand: "Lidl Plus x Disney+",
     category: "shopping",
     status: "limited",
-    officialUrl: "https://www.lidl.de/c/lidl-plus/s10007388",
-    verifiedAt: VERIFIED_AT,
+    officialUrl: "https://www.lidl.de/c/lidl-plus-x-disney/s10057267",
+    verifiedAt: "2026-07-20T10:00:00+02:00",
     copy: {
       en: {
-        title: "Get the current Lidl Plus Disney+ partner price while it is live",
+        title: "Redeem Lidl Points for a lower Disney+ monthly price",
         summary:
-          "Lidl Plus currently highlights a Disney+ partner offer inside the benefits area, making it one of the more visible app perks.",
-        benefit: "Discounted Disney+ access through the Lidl Plus partner offer.",
-        eligibility: "Lidl Plus account and the current partner promotion.",
+          "Lidl Plus lists monthly Disney+ point-redemption tiers and a free first month for eligible new customers after a EUR 20 minimum purchase.",
+        benefit: "Lower monthly Disney+ prices by redeeming Lidl Points.",
+        eligibility: "Lidl Plus account; the free first month is limited to eligible new customers and requires a EUR 20 minimum purchase.",
         whyItMatters:
           "This is a mainstream entertainment perk tied to a mass-market grocery app, so awareness is high and adoption is easy.",
         watchouts: [
-          "This is a partner offer and can change or disappear.",
-          "Check the exact plan conditions before activating.",
+          "Point requirements and plan prices differ by Disney+ tier.",
+          "Check the current Lidl terms before redeeming because partner conditions can change.",
         ],
       },
       de: {
-        title: "Den aktuellen Lidl Plus Disney+ Partnervorteil nutzen, solange er live ist",
+        title: "Lidl Punkte für einen günstigeren Disney+ Monatspreis einlösen",
         summary:
-          "Lidl Plus hebt derzeit ein Disney+ Angebot im Vorteilebereich hervor und macht es damit zu einem der sichtbarsten App-Perks.",
-        benefit: "Vergünstigter Disney+ Zugang über den Lidl Plus Partnervorteil.",
-        eligibility: "Lidl Plus Konto und die aktuell laufende Partneraktion.",
+          "Lidl Plus nennt monatliche Disney+ Einlösestufen und einen Gratismonat für berechtigte Neukunden nach einem Mindesteinkauf von 20 Euro.",
+        benefit: "Niedrigere monatliche Disney+ Preise durch das Einlösen von Lidl Punkten.",
+        eligibility: "Lidl Plus Konto; der Gratismonat gilt nur für berechtigte Neukunden und setzt 20 Euro Mindesteinkauf voraus.",
         whyItMatters:
           "Der Vorteil verbindet einen Mainstream-Streamingdienst mit einer sehr verbreiteten Einkaufs-App und ist dadurch für viele sofort nutzbar.",
         watchouts: [
-          "Als Partneraktion kann das Angebot angepasst oder beendet werden.",
-          "Vor Aktivierung die genauen Tarifbedingungen prüfen.",
+          "Punktebedarf und Tarifpreis unterscheiden sich je nach Disney+ Paket.",
+          "Vor dem Einlösen die aktuellen Lidl Bedingungen prüfen, da sich Partnerkonditionen ändern können.",
         ],
       },
     },

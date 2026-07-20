@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-07-20
+
+- Weekly factual audit refresh:
+  - Refreshed the bilingual homepage fuel snapshot to ADAC's July 16 national averages of EUR 2.083/liter for Super E10 and EUR 2.070/liter for diesel.
+  - Replaced vague Lidl Plus Disney+ offer wording with the dedicated official offer URL, point-redemption terms, and the EUR 20 new-customer purchase condition.
+  - Re-verified the July monthly update and priority official baselines for transport, household fees, family benefits, EU Blue Card thresholds, and student financing.
+
 ## 2026-07-13
 
 - Weekly factual audit refresh:

@@ -101,13 +101,13 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und präzise Standorthilfe.",
       fuelWatch: {
         badge: "Spritpreis-Watch",
-        title: "Deutschland: Spritpreise nach Ende des Tankrabatts weiter hoch",
+        title: "Deutschland: Spritpreise zum Sommerreiseverkehr wieder über zwei Euro",
         body:
-          "Die ADAC-Auswertung vom 7. Juli nennt für den 6. Juli im Bundesmittel 2,020 Euro je Liter Super E10 und 1,949 Euro je Liter Diesel. Preise vor Ort live vergleichen; seit April ist kurz vor 12 Uhr meist der günstigste Zeitpunkt.",
-        stats: ["Super E10: 2,020 Euro/Liter", "Diesel: 1,949 Euro/Liter"],
-        lastChecked: "7. Juli 2026",
+          "Die ADAC-Auswertung vom 16. Juli nennt im Bundesmittel 2,083 Euro je Liter Super E10 und 2,070 Euro je Liter Diesel. Preise vor Ort live vergleichen; seit April ist kurz vor 12 Uhr meist der günstigste Zeitpunkt.",
+        stats: ["Super E10: 2,083 Euro/Liter", "Diesel: 2,070 Euro/Liter"],
+        lastChecked: "16. Juli 2026",
         sourcePrimary: {
-          label: "ADAC Spritpreis-Update (07.07.2026)",
+          label: "ADAC Spritpreis-Update (16.07.2026)",
           href: "https://www.adac.de/news/aktueller-spritpreis/",
         },
         sourceSecondary: {
@@ -184,13 +184,13 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
     fuelWatch: {
       badge: "Fuel Price Watch",
-      title: "Germany: fuel prices remain high after the tax relief ended",
+      title: "Germany: summer-travel fuel prices are back above two euros",
       body:
-        "ADAC's July 7 update lists national averages for July 6 of EUR 2.020/liter for Super E10 and EUR 1.949/liter for diesel. Compare local prices live; under the rules in force since April, shortly before noon is usually cheapest.",
-      stats: ["Super E10: EUR 2.020/liter", "Diesel: EUR 1.949/liter"],
-      lastChecked: "July 7, 2026",
+        "ADAC's July 16 update lists national averages of EUR 2.083/liter for Super E10 and EUR 2.070/liter for diesel. Compare local prices live; under the rules in force since April, shortly before noon is usually cheapest.",
+      stats: ["Super E10: EUR 2.083/liter", "Diesel: EUR 2.070/liter"],
+      lastChecked: "July 16, 2026",
       sourcePrimary: {
-        label: "ADAC fuel-price update (July 7, 2026)",
+        label: "ADAC fuel-price update (July 16, 2026)",
         href: "https://www.adac.de/news/aktueller-spritpreis/",
       },
       sourceSecondary: {
