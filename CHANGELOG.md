@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-07-27
+
+- Weekly factual audit refresh:
+  - Corrected the EN/DE July monthly update by removing an unsupported September 30 deadline for reversing a minijob pension-insurance exemption.
+  - Added the official Minijob-Zentrale process details and primary source, including the one-time nature of the reversal and when it takes effect.
+  - Re-verified the July monthly update and priority transport, household-fee, family-benefit, immigration-finance, and tax-deadline baselines.
+
 ## 2026-07-20
 
 - Weekly factual audit refresh:
