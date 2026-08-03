@@ -40,9 +40,10 @@ export default function AnalyticsPageview({
 
     if (provider === "ga4" && ga4MeasurementId && typeof window.gtag === "function") {
       if (lastGa4PathRef.current === pathWithQuery) return;
-      window.gtag("config", ga4MeasurementId, {
+      window.gtag("event", "page_view", {
         page_path: pathWithQuery,
         page_location: window.location.href,
+        send_to: ga4MeasurementId,
       });
       lastGa4PathRef.current = pathWithQuery;
       return;
@@ -56,9 +57,10 @@ export default function AnalyticsPageview({
 
         if (typeof window.gtag === "function") {
           if (lastGa4PathRef.current !== pathWithQuery) {
-            window.gtag("config", ga4MeasurementId, {
+            window.gtag("event", "page_view", {
               page_path: pathWithQuery,
               page_location: window.location.href,
+              send_to: ga4MeasurementId,
             });
             lastGa4PathRef.current = pathWithQuery;
           }

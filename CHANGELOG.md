@@ -2,6 +2,10 @@
 
 ## 2026-08-03
 
+- Analytics reliability:
+  - Fixed GA4 page-view reporting after consent by emitting explicit `page_view` events on initial load and client-side navigation.
+  - Preserved the existing consent boundary: GA4 still does not load or transmit before analytics consent.
+
 - Weekly factual audit refresh:
   - Added bilingual August 2026 monthly updates covering first-grade all-day care, AI-content transparency, EU packaging rules, future repair rights, pharmacy services, and voluntary biometric airport processing.
   - Promoted the August update on the bilingual homepage and refreshed homepage metadata.
