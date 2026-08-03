@@ -23,7 +23,7 @@ export default function AnalyticsPageview({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const didRunOnce = useRef(false);
-  const lastGa4PathRef = useRef<string | null>(null);
+  const didSendInitialGa4Pageview = useRef(false);
 
   useEffect(() => {
     const query = searchParams.toString();
@@ -39,30 +39,31 @@ export default function AnalyticsPageview({
     }
 
     if (provider === "ga4" && ga4MeasurementId && typeof window.gtag === "function") {
-      if (lastGa4PathRef.current === pathWithQuery) return;
+      if (didSendInitialGa4Pageview.current) return;
       window.gtag("event", "page_view", {
         page_path: pathWithQuery,
         page_location: window.location.href,
         send_to: ga4MeasurementId,
       });
-      lastGa4PathRef.current = pathWithQuery;
+      didSendInitialGa4Pageview.current = true;
       return;
     }
 
     if (provider === "ga4" && ga4MeasurementId) {
+      if (didSendInitialGa4Pageview.current) return;
       let attempts = 0;
       const maxAttempts = 20;
       const intervalId = window.setInterval(() => {
         attempts += 1;
 
         if (typeof window.gtag === "function") {
-          if (lastGa4PathRef.current !== pathWithQuery) {
+          if (!didSendInitialGa4Pageview.current) {
             window.gtag("event", "page_view", {
               page_path: pathWithQuery,
               page_location: window.location.href,
               send_to: ga4MeasurementId,
             });
-            lastGa4PathRef.current = pathWithQuery;
+            didSendInitialGa4Pageview.current = true;
           }
           window.clearInterval(intervalId);
           return;

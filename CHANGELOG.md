@@ -3,7 +3,8 @@
 ## 2026-08-03
 
 - Analytics reliability:
-  - Fixed GA4 page-view reporting after consent by emitting explicit `page_view` events on initial load and client-side navigation.
+  - Fixed GA4 page-view reporting after consent by emitting an explicit initial `page_view` event.
+  - Kept client-side navigation reporting with GA4 enhanced measurement to prevent duplicate page views.
   - Preserved the existing consent boundary: GA4 still does not load or transmit before analytics consent.
 
 - Weekly factual audit refresh:
