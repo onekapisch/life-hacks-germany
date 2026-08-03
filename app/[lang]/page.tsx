@@ -21,8 +21,8 @@ export async function generateMetadata({
     ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing & More"
     : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen & mehr";
   const metaDescription = l === "en"
-    ? "July 2026 verified Germany baseline values plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
-    : "Juli-2026-verifizierte Basiswerte für Deutschland plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
+    ? "August 2026 verified Germany updates plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
+    : "August-2026-verifizierte Deutschland-Updates plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
@@ -264,9 +264,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
   if (lang === "de") {
     return [
       {
-        href: "/de/blog/top-changes-germany-july-2026",
-        title: "Juli 2026: neue Deutschland-Änderungen",
-        note: "Renten, Pflege-Mindestlöhne, Minijob-Opt-in, Zollregeln und geprüfte Basiswerte",
+        href: "/de/blog/top-changes-germany-august-2026",
+        title: "August 2026: neue Deutschland-Änderungen",
+        note: "Ganztagsbetreuung, KI-Transparenz, Verpackungsregeln und geprüfte Basiswerte",
       },
       {
         href: "/de/guides/bureaucracy/anmeldung",
@@ -293,9 +293,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
 
   return [
     {
-      href: "/en/blog/top-changes-germany-july-2026",
-      title: "July 2026 Germany Changes",
-      note: "Pensions, care wages, minijob opt-back-in, customs rules, and verified baseline values",
+      href: "/en/blog/top-changes-germany-august-2026",
+      title: "August 2026 Germany Changes",
+      note: "All-day care, AI transparency, packaging rules, and verified baseline values",
     },
     {
       href: "/en/guides/bureaucracy/anmeldung",

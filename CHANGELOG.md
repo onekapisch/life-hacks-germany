@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2026-08-03
+
+- Weekly factual audit refresh:
+  - Added bilingual August 2026 monthly updates covering first-grade all-day care, AI-content transparency, EU packaging rules, future repair rights, pharmacy services, and voluntary biometric airport processing.
+  - Promoted the August update on the bilingual homepage and refreshed homepage metadata.
+  - Updated the EN/DE tax-deadline guides with immediate guidance after the July 31, 2026 self-filing deadline.
+  - Re-verified the Deutschlandticket, Rundfunkbeitrag, Kindergeld, and EU Blue Card baseline values against official sources.
+
 ## 2026-07-27
 
 - Weekly factual audit refresh:

@@ -8,8 +8,8 @@
 Life Hacks Germany publishes bilingual, official-source-backed guides for German bureaucracy, taxes, housing, mobility, and everyday life. The site is built for practical decisions: what changed, what to do next, which authority or official source to check, and what mistakes to avoid.
 
 ## High-priority current updates
-- [Top Changes in Germany: July 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-july-2026) — pension increase, care-sector minimum wages, minijob pension-insurance opt-back-in window, aviation tax, e-cigarette disposal, customs rules, Deutschlandticket, Rundfunkbeitrag, Kindergeld, Blue Card, and blocked-account baselines.
-- [Top-Aenderungen in Deutschland: Juli 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-july-2026) — German version of the July 2026 monthly update.
+- [Top Changes in Germany: August 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-august-2026) — all-day care, AI transparency, packaging rules, repair-right timing, pharmacy services, and verified household baselines.
+- [Top-Aenderungen in Deutschland: August 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-august-2026) — German version of the August 2026 monthly update.
 - [Top Changes in Germany: June 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-june-2026) — E-car subsidy, GEAS asylum procedure changes, online cancellation buttons, energy sharing, food-label rules, public-viewing exceptions, Deutschlandticket, Rundfunkbeitrag, Kindergeld, Blue Card, and blocked-account baselines.
 - [Top-Aenderungen in Deutschland: Juni 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-june-2026) — German version of the June 2026 monthly update.
 - [Top Changes in Germany: May 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-may-2026) — fuel-tax relief, Bundesrat rejection of the employer relief premium proposal, hospital reform adjustment, hydrogen infrastructure acceleration, Deutschlandticket, Rundfunkbeitrag, and Kindergeld baselines.
@@ -100,7 +100,7 @@ Life Hacks Germany publishes bilingual, official-source-backed guides for German
 - [Mobilitaets- und Reise-Tools](https://www.lifehacksgermany.com/de/tools)
 
 ## Blog archive
-- [Top Changes in Germany: July 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-july-2026)
+- [Top Changes in Germany: August 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-august-2026)
 - [Top Changes in Germany: June 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-june-2026)
 - [Top Changes in Germany: May 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-may-2026)
 - [Top Changes in Germany: April 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-april-2026)
@@ -108,7 +108,7 @@ Life Hacks Germany publishes bilingual, official-source-backed guides for German
 - [Top Changes in Germany: February 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-february-2026)
 - [Top Changes in Germany: January 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-january-2026)
 - [AI for Expats in Germany](https://www.lifehacksgermany.com/en/blog/ai-for-expats-germany-time-money)
-- [Top-Aenderungen in Deutschland: Juli 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-july-2026)
+- [Top-Aenderungen in Deutschland: August 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-august-2026)
 - [Top-Aenderungen in Deutschland: Juni 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-june-2026)
 - [Top-Aenderungen in Deutschland: Mai 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-may-2026)
 - [Top-Aenderungen in Deutschland: April 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-april-2026)
