@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2026-08-10
+
+- Weekly factual audit refresh:
+  - Added the July 29 Gebäudemodernisierungsgesetz change to the bilingual August update, including removal of the uniform 65% renewable-heating requirement and a warning to check project-specific transition rules.
+  - Corrected the gross-net calculator's 2026 Grundfreibetrag from EUR 12,096 to EUR 12,348 in both languages and in its simplified calculation assumption.
+  - Replaced the calculator's unsafe "exact" result claim with explicit estimation language.
+  - Re-verified the Deutschlandticket, Rundfunkbeitrag, Kindergeld, and EU Blue Card baseline values against official sources.
+
 ## 2026-08-03
 
 - Analytics reliability:

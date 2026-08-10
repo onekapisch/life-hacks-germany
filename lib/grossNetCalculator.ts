@@ -18,6 +18,8 @@ export const CITY_PRESETS: Record<CityKey, CityCosts> = {
 
 export const CITY_ORDER: CityKey[] = ["berlin", "munich", "hamburg", "frankfurt", "cologne"];
 
+const BASIC_TAX_FREE_ALLOWANCE_2026 = 12348;
+
 export type GrossNetComparisonInput = {
   grossAnnual: number;
   taxClass: TaxClass;
@@ -69,8 +71,8 @@ function getTaxClassFactor(taxClass: TaxClass): number {
 }
 
 function calculateIncomeTaxApprox(taxableIncome: number): number {
-  if (taxableIncome <= 12000) return 0;
-  if (taxableIncome <= 20000) return (taxableIncome - 12000) * 0.14;
+  if (taxableIncome <= BASIC_TAX_FREE_ALLOWANCE_2026) return 0;
+  if (taxableIncome <= 20000) return (taxableIncome - BASIC_TAX_FREE_ALLOWANCE_2026) * 0.14;
   if (taxableIncome <= 66000) return 1120 + (taxableIncome - 20000) * 0.3;
   if (taxableIncome <= 278000) return 14920 + (taxableIncome - 66000) * 0.42;
   return 103960 + (taxableIncome - 278000) * 0.45;
@@ -99,7 +101,7 @@ export function calculateGrossNetComparison(
   const care = grossAnnual * (childlessCare ? 0.024 : 0.018);
   const socialContributions = pension + unemployment + health + care;
 
-  const taxable = Math.max(grossAnnual - socialContributions - 12000, 0);
+  const taxable = Math.max(grossAnnual - socialContributions - BASIC_TAX_FREE_ALLOWANCE_2026, 0);
   const estimatedTaxBase = calculateIncomeTaxApprox(taxable);
   const incomeTax = estimatedTaxBase * getTaxClassFactor(taxClass);
   const solidarity = incomeTax > 18000 ? incomeTax * 0.055 : 0;

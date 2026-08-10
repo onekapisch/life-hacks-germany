@@ -11,7 +11,7 @@ const content = {
     badge: "Free Tool",
     title: "Germany Gross-Net Salary Calculator 2026",
     subtitle:
-      "Calculate your exact monthly take-home pay after all German taxes and social contributions. Compare city-by-city cost of living to find where your salary goes furthest.",
+      "Estimate your monthly take-home pay after German taxes and social contributions. Compare city-by-city cost of living to see where your salary may go furthest.",
     metaDescription:
       "Free Germany gross-net salary calculator 2026. Calculate your monthly net income after income tax, social insurance, and compare costs in Berlin, Munich, Hamburg, Frankfurt, and Cologne.",
     intro: `
@@ -55,7 +55,7 @@ For 2026, the GKV contribution ceiling is EUR 5,812.50/month — if you earn mor
       },
       {
         q: "What is the Grundfreibetrag (tax-free allowance) in 2026?",
-        a: "The Grundfreibetrag is the amount of annual income exempt from income tax. For 2026, it is EUR 12,096. This calculator uses an approximation of EUR 12,000 for simplicity. If your annual income is below this threshold, you pay no income tax.",
+        a: "The Grundfreibetrag is the amount of annual taxable income covered by the basic tax-free allowance. For 2026, it is EUR 12,348. This calculator uses that amount inside a simplified orientation model. Actual payroll withholding can differ.",
       },
       {
         q: "What is the Solidaritätszuschlag (solidarity surcharge)?",
@@ -81,7 +81,7 @@ For 2026, the GKV contribution ceiling is EUR 5,812.50/month — if you earn mor
     badge: "Kostenloses Tool",
     title: "Brutto-Netto-Rechner Deutschland 2026",
     subtitle:
-      "Berechne dein exaktes monatliches Nettoeinkommen nach allen deutschen Steuern und Sozialabgaben. Vergleiche die Lebenshaltungskosten nach Stadt.",
+      "Schätze dein monatliches Nettoeinkommen nach deutschen Steuern und Sozialabgaben. Vergleiche die Lebenshaltungskosten nach Stadt.",
     metaDescription:
       "Kostenloser Brutto-Netto-Rechner für Deutschland 2026. Berechne dein Nettoeinkommen nach Einkommensteuer und Sozialversicherung und vergleiche Kosten in Berlin, München, Hamburg, Frankfurt und Köln.",
     intro: `
@@ -125,7 +125,7 @@ Für 2026 gilt als GKV-Beitragsbemessungsgrenze EUR 5.812,50/Monat – bei höhe
       },
       {
         q: "Was ist der Grundfreibetrag 2026?",
-        a: "Der Grundfreibetrag ist der steuerfreie Jahresbetrag. Für 2026 beträgt er EUR 12.096. Dieser Rechner verwendet eine Näherung von EUR 12.000. Liegt das Jahreseinkommen darunter, fällt keine Einkommensteuer an.",
+        a: "Der Grundfreibetrag deckt einen Grundbetrag des jährlich zu versteuernden Einkommens ab. Für 2026 beträgt er EUR 12.348. Der Rechner verwendet diesen Betrag in einem vereinfachten Orientierungsmodell. Der tatsächliche Lohnsteuerabzug kann abweichen.",
       },
       {
         q: "Was ist der Solidaritätszuschlag?",
