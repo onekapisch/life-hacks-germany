@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-08-24
+
+- Weekly factual audit refresh:
+  - Updated the bilingual homepage fuel snapshot to ADAC's August 12 national averages of EUR 2.125/liter for Super E10 and EUR 2.200/liter for diesel.
+  - Re-verified the August monthly update and priority official baselines for Deutschlandticket, Rundfunkbeitrag, Kindergeld, EU Blue Card thresholds, student blocked-account proof, tax deadlines, and statutory health-insurance assumptions.
+  - Kept the shared Top Offers verification date unchanged because the complete provider inventory was not independently reverified.
+
 ## 2026-08-18
 
 - Weekly factual audit refresh:

@@ -103,11 +103,11 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         badge: "Spritpreis-Watch",
         title: "Deutschland: Diesel wieder teurer als Super E10",
         body:
-          "Die ADAC-Auswertung vom 29. Juli nennt im Bundesmittel 2,139 Euro je Liter Super E10 und 2,190 Euro je Liter Diesel. Preise vor Ort live vergleichen; seit April ist kurz vor 12 Uhr meist der günstigste Zeitpunkt.",
-        stats: ["Super E10: 2,139 Euro/Liter", "Diesel: 2,190 Euro/Liter"],
-        lastChecked: "29. Juli 2026",
+          "Die ADAC-Auswertung vom 12. August nennt im Bundesmittel 2,125 Euro je Liter Super E10 und 2,200 Euro je Liter Diesel. Preise vor Ort live vergleichen; seit April ist kurz vor 12 Uhr meist der günstigste Zeitpunkt.",
+        stats: ["Super E10: 2,125 Euro/Liter", "Diesel: 2,200 Euro/Liter"],
+        lastChecked: "12. August 2026",
         sourcePrimary: {
-          label: "ADAC Spritpreis-Update (29.07.2026)",
+          label: "ADAC Spritpreis-Update (12.08.2026)",
           href: "https://www.adac.de/news/aktueller-spritpreis/",
         },
         sourceSecondary: {
@@ -186,11 +186,11 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       badge: "Fuel Price Watch",
       title: "Germany: diesel is again more expensive than Super E10",
       body:
-        "ADAC's July 29 update lists national averages of EUR 2.139/liter for Super E10 and EUR 2.190/liter for diesel. Compare local prices live; under the rules in force since April, shortly before noon is usually cheapest.",
-      stats: ["Super E10: EUR 2.139/liter", "Diesel: EUR 2.190/liter"],
-      lastChecked: "July 29, 2026",
+        "ADAC's August 12 update lists national averages of EUR 2.125/liter for Super E10 and EUR 2.200/liter for diesel. Compare local prices live; under the rules in force since April, shortly before noon is usually cheapest.",
+      stats: ["Super E10: EUR 2.125/liter", "Diesel: EUR 2.200/liter"],
+      lastChecked: "August 12, 2026",
       sourcePrimary: {
-        label: "ADAC fuel-price update (July 29, 2026)",
+        label: "ADAC fuel-price update (August 12, 2026)",
         href: "https://www.adac.de/news/aktueller-spritpreis/",
       },
       sourceSecondary: {
