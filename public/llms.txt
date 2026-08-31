@@ -2,12 +2,14 @@
 > Verification-first practical guides for expats, students, workers, families, and locals living in Germany.
 > Languages: English at /en and German at /de
 > Contact: golifehacks@gmx.de
-> Updated: 2026-07-06
+> Updated: 2026-08-31
 
 ## About
 Life Hacks Germany publishes bilingual, official-source-backed guides for German bureaucracy, taxes, housing, mobility, and everyday life. The site is built for practical decisions: what changed, what to do next, which authority or official source to check, and what mistakes to avoid.
 
 ## High-priority current updates
+- [Top Changes in Germany: September 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-september-2026) — broader tax-assistance eligibility, environmental-advertising rules, and phased alcohol restrictions at DB stations.
+- [Top-Aenderungen in Deutschland: September 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-september-2026) — German version of the September 2026 monthly update.
 - [Top Changes in Germany: August 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-august-2026) — all-day care, AI transparency, packaging rules, repair-right timing, pharmacy services, and verified household baselines.
 - [Top-Aenderungen in Deutschland: August 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-august-2026) — German version of the August 2026 monthly update.
 - [Top Changes in Germany: June 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-june-2026) — E-car subsidy, GEAS asylum procedure changes, online cancellation buttons, energy sharing, food-label rules, public-viewing exceptions, Deutschlandticket, Rundfunkbeitrag, Kindergeld, Blue Card, and blocked-account baselines.
@@ -100,6 +102,7 @@ Life Hacks Germany publishes bilingual, official-source-backed guides for German
 - [Mobilitaets- und Reise-Tools](https://www.lifehacksgermany.com/de/tools)
 
 ## Blog archive
+- [Top Changes in Germany: September 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-september-2026)
 - [Top Changes in Germany: August 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-august-2026)
 - [Top Changes in Germany: June 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-june-2026)
 - [Top Changes in Germany: May 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-may-2026)
@@ -109,6 +112,7 @@ Life Hacks Germany publishes bilingual, official-source-backed guides for German
 - [Top Changes in Germany: January 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-january-2026)
 - [AI for Expats in Germany](https://www.lifehacksgermany.com/en/blog/ai-for-expats-germany-time-money)
 - [Top-Aenderungen in Deutschland: August 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-august-2026)
+- [Top-Aenderungen in Deutschland: September 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-september-2026)
 - [Top-Aenderungen in Deutschland: Juni 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-june-2026)
 - [Top-Aenderungen in Deutschland: Mai 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-may-2026)
 - [Top-Aenderungen in Deutschland: April 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-april-2026)

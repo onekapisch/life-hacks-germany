@@ -21,8 +21,8 @@ export async function generateMetadata({
     ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing & More"
     : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen & mehr";
   const metaDescription = l === "en"
-    ? "August 2026 verified Germany updates plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
-    : "August-2026-verifizierte Deutschland-Updates plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
+    ? "September 2026 verified Germany updates plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
+    : "September-2026-verifizierte Deutschland-Updates plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
@@ -101,13 +101,13 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und präzise Standorthilfe.",
       fuelWatch: {
         badge: "Spritpreis-Watch",
-        title: "Deutschland: Diesel wieder teurer als Super E10",
+        title: "Deutschland: Spritpreise sinken leicht, bleiben aber hoch",
         body:
-          "Die ADAC-Auswertung vom 12. August nennt im Bundesmittel 2,125 Euro je Liter Super E10 und 2,200 Euro je Liter Diesel. Preise vor Ort live vergleichen; seit April ist kurz vor 12 Uhr meist der günstigste Zeitpunkt.",
-        stats: ["Super E10: 2,125 Euro/Liter", "Diesel: 2,200 Euro/Liter"],
-        lastChecked: "12. August 2026",
+          "Die ADAC-Auswertung vom 26. August nennt im Bundesmittel 2,155 Euro je Liter Super E10 und 2,248 Euro je Liter Diesel. Beide Werte sanken leicht zur Vorwoche; Preise vor Ort live vergleichen, kurz vor 12 Uhr ist meist der günstigste Zeitpunkt.",
+        stats: ["Super E10: 2,155 Euro/Liter", "Diesel: 2,248 Euro/Liter"],
+        lastChecked: "26. August 2026",
         sourcePrimary: {
-          label: "ADAC Spritpreis-Update (12.08.2026)",
+          label: "ADAC Spritpreis-Update (26.08.2026)",
           href: "https://www.adac.de/news/aktueller-spritpreis/",
         },
         sourceSecondary: {
@@ -184,13 +184,13 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
     fuelWatch: {
       badge: "Fuel Price Watch",
-      title: "Germany: diesel is again more expensive than Super E10",
+      title: "Germany: fuel prices ease slightly but remain high",
       body:
-        "ADAC's August 12 update lists national averages of EUR 2.125/liter for Super E10 and EUR 2.200/liter for diesel. Compare local prices live; under the rules in force since April, shortly before noon is usually cheapest.",
-      stats: ["Super E10: EUR 2.125/liter", "Diesel: EUR 2.200/liter"],
-      lastChecked: "August 12, 2026",
+        "ADAC's August 26 update lists national averages of EUR 2.155/liter for Super E10 and EUR 2.248/liter for diesel. Both eased slightly week over week; compare local prices live, with shortly before noon usually cheapest.",
+      stats: ["Super E10: EUR 2.155/liter", "Diesel: EUR 2.248/liter"],
+      lastChecked: "August 26, 2026",
       sourcePrimary: {
-        label: "ADAC fuel-price update (August 12, 2026)",
+        label: "ADAC fuel-price update (August 26, 2026)",
         href: "https://www.adac.de/news/aktueller-spritpreis/",
       },
       sourceSecondary: {
@@ -264,9 +264,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
   if (lang === "de") {
     return [
       {
-        href: "/de/blog/top-changes-germany-august-2026",
-        title: "August 2026: neue Deutschland-Änderungen",
-        note: "Ganztagsbetreuung, KI-Transparenz, Verpackungsregeln und geprüfte Basiswerte",
+        href: "/de/blog/top-changes-germany-september-2026",
+        title: "September 2026: neue Deutschland-Änderungen",
+        note: "Lohnsteuerhilfe, Umweltwerbung und neue Regeln an DB-Bahnhöfen",
       },
       {
         href: "/de/guides/bureaucracy/anmeldung",
@@ -293,9 +293,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
 
   return [
     {
-      href: "/en/blog/top-changes-germany-august-2026",
-      title: "August 2026 Germany Changes",
-      note: "All-day care, AI transparency, packaging rules, and verified baseline values",
+      href: "/en/blog/top-changes-germany-september-2026",
+      title: "September 2026 Germany Changes",
+      note: "Tax assistance, environmental advertising, and new DB station rules",
     },
     {
       href: "/en/guides/bureaucracy/anmeldung",

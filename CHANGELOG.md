@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2026-08-31
+
+- Weekly factual audit refresh:
+  - Added bilingual September 2026 monthly updates from the Federal Government's August 28 overview, covering expanded Lohnsteuerhilfe advice, environmental-advertising rules, and Deutsche Bahn's phased station alcohol ban.
+  - Promoted the September update on the bilingual homepage and in `public/llms.txt`.
+  - Updated the bilingual homepage fuel snapshot to ADAC's August 26 national averages of EUR 2.155/liter for Super E10 and EUR 2.248/liter for diesel.
+  - Re-verified priority official baselines for Deutschlandticket, Rundfunkbeitrag, Kindergeld, and 2026 EU Blue Card thresholds.
+  - Kept the shared Top Offers verification date unchanged because the complete provider inventory was not independently reverified.
+
 ## 2026-08-24
 
 - Weekly factual audit refresh:
