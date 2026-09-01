@@ -9,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { createSocialMetadata } from "@/lib/seo";
 import { AnimatedShaderBackground } from "@/components/ui/animated-shader-hero";
+import { withOwnedReferral, type OwnedReferralTarget } from "@/lib/ownedReferral";
 
 export async function generateMetadata({
   params,
@@ -58,6 +59,8 @@ const pillarIcons: Record<PillarKey, string> = {
 type SmartLifeTool = {
   name: string;
   href: string;
+  targetProduct: OwnedReferralTarget;
+  surface: string;
   utmContent: string;
   kicker: string;
   features: string[];
@@ -98,7 +101,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       badge: "Featured Smart-Life Tools",
       title: "Smart-Life Stack: schneller handeln, sauberer entscheiden, Kosten senken",
       intro:
-        "Drei fokussierte Tools, die den Deutschland-Alltag praktischer machen: KI-Workflows, Spritkosten-Optimierung und präzise Standorthilfe.",
+        "Zwei fokussierte Empfehlungen für konkrete Situationen: günstiger tanken und auch ohne Netz präzise Standortdaten erhalten.",
       fuelWatch: {
         badge: "Spritpreis-Watch",
         title: "Deutschland: Spritpreise sinken leicht, bleiben aber hoch",
@@ -118,32 +121,10 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       },
       tools: [
         {
-          name: "T-Minus AI",
-          href: "https://www.tminusai.com",
-          utmContent: "tminusai-card",
-          kicker: "KI-Workflows für Behörden, Jobsuche und Alltagsplanung",
-          features: [
-            "Prompt-Frameworks für Mails, Checklisten und Formulare",
-            "Modellauswahl nach Aufgabentyp statt Zufall",
-            "Wiederverwendbare Arbeitsroutinen für wiederkehrende Prozesse",
-          ],
-          outcome: "Spart vor allem bei wiederkehrender Adminarbeit mehrere Stunden pro Woche.",
-        },
-        {
-          name: "Tank Alert",
-          href: "https://www.tankalert.de",
-          utmContent: "tankalert-card",
-          kicker: "Live-Spritpreise, Alerts und Kostenrechner für Autofahrer",
-          features: [
-            "Stationen vergleichen und Preisalarme setzen",
-            "Detour-Rechner für echte Nettoersparnis",
-            "Bessere Tank-Entscheidungen für Pendelroutinen",
-          ],
-          outcome: "Hilft, vermeidbare Mobilitätskosten im Alltag sichtbar zu senken.",
-        },
-        {
           name: "SkyLocation",
           href: "https://www.skylocation.app",
+          targetProduct: "skylocation",
+          surface: "home-companion",
           utmContent: "skylocation-card",
           kicker: "Offline GPS für iPhone: Koordinaten überall, auch im Flugzeug",
           features: [
@@ -173,7 +154,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       blogCta: "AI-Anwendungsfälle für Expats lesen",
       toolsCta: "Alle Smart-Life Tools ansehen",
       disclosure:
-        "Hinweis: Diese Featured Tools werden vom gleichen Publisher betrieben und sind hier als praktische Helfer integriert.",
+        "Hinweis: Diese Produkte wurden von Kapisch Bhardwaj entwickelt. Tank Alert wird von Aeon GbR betrieben.",
     };
   }
 
@@ -181,7 +162,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
     badge: "Featured Smart-Life Tools",
     title: "Smart-Life Stack: move faster, decide better, spend less",
     intro:
-      "Three focused tools for day-to-day life in Germany: AI workflows, fuel-cost optimization, and precise location support.",
+      "Two focused recommendations for specific moments: finding better fuel prices and getting precise location data without a connection.",
     fuelWatch: {
       badge: "Fuel Price Watch",
       title: "Germany: fuel prices ease slightly but remain high",
@@ -201,32 +182,10 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
     },
     tools: [
       {
-        name: "T-Minus AI",
-        href: "https://www.tminusai.com",
-        utmContent: "tminusai-card",
-        kicker: "AI workflows for bureaucracy, job search, and daily planning",
-        features: [
-          "Prompt frameworks for emails, checklists, and forms",
-          "Model guidance by task type instead of guesswork",
-          "Reusable workflows for recurring Germany admin tasks",
-        ],
-        outcome: "Saves significant time each week on repetitive admin and planning work.",
-      },
-      {
-        name: "Tank Alert",
-        href: "https://www.tankalert.de",
-        utmContent: "tankalert-card",
-        kicker: "Live fuel prices, alerts, and cost calculators for drivers",
-        features: [
-          "Compare stations and set price alerts",
-          "Detour calculator to protect real net savings",
-          "Better refuel decisions for commute routines",
-        ],
-        outcome: "Helps reduce avoidable transport spend in everyday driving.",
-      },
-      {
         name: "SkyLocation",
         href: "https://www.skylocation.app",
+        targetProduct: "skylocation",
+        surface: "home-companion",
         utmContent: "skylocation-card",
         kicker: "Offline GPS for iPhone: coordinates anywhere, even in-flight",
         features: [
@@ -256,7 +215,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
     blogCta: "Read AI use cases for expats",
     toolsCta: "Explore all smart-life tools",
     disclosure:
-      "Disclosure: these featured tools are operated by the same publisher and are integrated here as practical helpers.",
+      "Disclosure: these products were built by Kapisch Bhardwaj. Tank Alert is operated by Aeon GbR.",
   };
 }
 
@@ -318,25 +277,6 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
       note: "A survival-first route from zero to B1 for real daily-life use",
     },
   ];
-}
-
-function withSmartLifeUtm(
-  url: string,
-  lang: Lang,
-  content: string,
-  campaign = "smart-life-featured"
-): string {
-  try {
-    const nextUrl = new URL(url);
-    nextUrl.searchParams.set("utm_source", "lifehacksgermany.com");
-    nextUrl.searchParams.set("utm_medium", "referral");
-    nextUrl.searchParams.set("utm_campaign", campaign);
-    nextUrl.searchParams.set("utm_content", content);
-    nextUrl.searchParams.set("utm_term", lang);
-    return nextUrl.toString();
-  } catch {
-    return url;
-  }
 }
 
 export default async function HomePage({
@@ -579,15 +519,14 @@ export default async function HomePage({
               </div>
               <div className="flex flex-wrap items-center gap-3">
                 <TrackedExternalLink
-                  href={withSmartLifeUtm(
-                    "https://www.tankalert.de",
-                    l,
-                    "fuel-watch-cta",
-                    "fuel-price-watch"
-                  )}
+                  href={withOwnedReferral("https://www.tankalert.de", {
+                    targetProduct: "tank-alert",
+                    surface: "home-fuel-watch",
+                    content: "fuel-watch-cta",
+                  })}
                   lang={l}
                   context="app_official"
-                  className="btn btn-primary"
+                  className="btn btn-primary min-h-11"
                 >
                   {smartLife.fuelWatch.cta}
                 </TrackedExternalLink>
@@ -610,11 +549,15 @@ export default async function HomePage({
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 max-w-2xl gap-4">
               {smartLife.tools.map((tool) => (
                 <TrackedExternalLink
                   key={tool.name}
-                  href={withSmartLifeUtm(tool.href, l, tool.utmContent)}
+                  href={withOwnedReferral(tool.href, {
+                    targetProduct: tool.targetProduct,
+                    surface: tool.surface,
+                    content: tool.utmContent,
+                  })}
                   lang={l}
                   context="app_official"
                   className="glass-card-link no-underline text-ink rounded-2xl p-5 h-full flex flex-col"

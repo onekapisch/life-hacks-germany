@@ -2,6 +2,8 @@
 
 Life Hacks Germany is a bilingual editorial utility site for people navigating life in Germany. The current app ships verified MDX guides, monthly blog updates, practical planning tools, a custom search experience, localized legal pages, and a live transport/weather-powered mobility finder.
 
+The homepage also contains a restrained owned-product layer: a contextual Tank Alert fuel-price action and one SkyLocation travel companion. The footer places the OneKapisch Editorial Monogram directly below the Life Hacks Germany lockup, using the official K mark and a same-tab studio link. These links use the shared Studio attribution contract and explicitly distinguish Kapisch Bhardwaj's maker role from Aeon GbR's operation of Tank Alert.
+
 ## What Is In The Repo
 
 - Next.js 16 App Router site with `/en` and `/de` routes

@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2026-09-01
+
+- Replaced the noisy three-product homepage promotion with two situation-specific recommendations: Tank Alert within the verified fuel-price module and SkyLocation as the single companion card.
+- Removed T-Minus AI from the homepage cross-promotion surface and removed the duplicate Tank Alert product card.
+- Added the shared OneKapisch Studio owned-referral query contract and regression tests.
+- Replaced the footer plaque with the OneKapisch Editorial Monogram directly below the Life Hacks Germany lockup, using the official K mark, same-tab navigation, and the same non-identifying Studio contract.
+- Corrected the disclosure to distinguish products built by Kapisch Bhardwaj from Tank Alert's operation by Aeon GbR.
+
 ## 2026-08-31
 
 - Weekly factual audit refresh:

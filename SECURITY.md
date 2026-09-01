@@ -92,6 +92,9 @@ Relevant CSP behavior:
 
 Outbound content links frequently use [`components/TrackedExternalLink.tsx`](./components/TrackedExternalLink.tsx), which adds `noopener noreferrer` and optional `sponsored` rel values.
 
+Owned-product referrals append campaign and placement metadata only. They do not include user identifiers, page inputs, search terms, or other personal data.
+The footer Editorial Monogram uses the same fixed same-tab outbound-link contract and adds no script, browser storage, or separate tracking event.
+
 ## Auth, Middleware, And RLS
 
 - Auth: none

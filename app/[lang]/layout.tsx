@@ -82,7 +82,7 @@ export default async function LangLayout({
   const l = lang as Lang;
 
   return (
-    <html lang={l} className={`${cormorant.variable} ${manrope.variable}`}>
+    <html lang={l} className={`${cormorant.variable} ${manrope.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

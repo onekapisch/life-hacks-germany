@@ -2,6 +2,8 @@
 
 Audit date: `2026-08-31`
 
+Cross-promotion audit date: `2026-09-01`. The intentionally limited Tank Alert and SkyLocation homepage placements and the footer Editorial Monogram are complete; keep the monogram directly below the brand lockup and do not expand recommendations without conversion evidence.
+
 No inline `TODO` / `FIXME` / `XXX` markers were found in the active app code. The items below come from the current implementation, runtime behavior, and stale or partially wired features.
 
 ## Critical
