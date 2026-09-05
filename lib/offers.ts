@@ -859,20 +859,20 @@ const offerDefinitions: OfferDefinition[] = [
     },
   },
   {
-    id: "amazon-prime-18-22",
+    id: "amazon-prime-18-24",
     rank: 22,
-    brand: "Amazon Prime 18-22",
+    brand: "Amazon Prime 18-24",
     category: "shopping",
     status: "ongoing",
     officialUrl: "https://www.aboutamazon.de/news/amazon-prime-und-shopping/prime-student",
-    verifiedAt: VERIFIED_AT,
+    verifiedAt: "2026-09-05T09:00:00+02:00",
     copy: {
       en: {
-        title: "Amazon Prime is 50% off for 18- to 22-year-olds in Germany",
+        title: "Amazon Prime is 50% off for 18- to 24-year-olds in Germany",
         summary:
-          "Amazon Germany says the former student-only Prime discount has been replaced by a 50% Prime discount for all 18- to 22-year-olds, with no student proof required.",
+          "Amazon Germany offers all eligible 18- to 24-year-olds a six-month free trial followed by 50% off Prime, with no student proof required.",
         benefit: "Discounted Prime at EUR 4.49/month or EUR 44.90/year instead of the regular German Prime price listed by Amazon.",
-        eligibility: "Amazon account holder aged 18 to 22 in Germany, subject to Amazon's verification and current terms.",
+        eligibility: "Eligible Amazon account holder aged 18 to 24 in Germany, subject to Amazon's verification and current terms.",
         whyItMatters:
           "This is useful for students, apprentices, trainees, and young workers setting up life in Germany, especially when delivery and video are both used.",
         watchouts: [
@@ -881,11 +881,11 @@ const offerDefinitions: OfferDefinition[] = [
         ],
       },
       de: {
-        title: "Amazon Prime gibt es in Deutschland 50 Prozent günstiger für 18- bis 22-Jährige",
+        title: "Amazon Prime gibt es in Deutschland 50 Prozent günstiger für 18- bis 24-Jährige",
         summary:
-          "Amazon Deutschland schreibt, dass der frühere reine Studentenrabatt durch 50 Prozent Prime-Rabatt für alle 18- bis 22-Jährigen ersetzt wurde, ohne Studentennachweis.",
+          "Amazon Deutschland bietet berechtigten 18- bis 24-Jährigen sechs kostenlose Probemonate und anschließend 50 Prozent Prime-Rabatt, ohne Studentennachweis.",
         benefit: "Vergünstigtes Prime für EUR 4,49/Monat oder EUR 44,90/Jahr statt des von Amazon genannten regulären Deutschland-Preises.",
-        eligibility: "Amazon Konto in Deutschland und Alter von 18 bis 22 Jahren, vorbehaltlich Amazons Prüfung und aktueller Bedingungen.",
+        eligibility: "Berechtigtes Amazon Konto in Deutschland und Alter von 18 bis 24 Jahren, vorbehaltlich Amazons Prüfung und aktueller Bedingungen.",
         whyItMatters:
           "Nützlich für Studierende, Azubis, Trainees und junge Berufseinsteiger, wenn Lieferung und Video tatsächlich genutzt werden.",
         watchouts: [

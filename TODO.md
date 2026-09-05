@@ -1,6 +1,6 @@
 # TODO
 
-Audit date: `2026-08-31`
+Audit date: `2026-09-05`
 
 Cross-promotion audit date: `2026-09-01`. The intentionally limited Tank Alert and SkyLocation homepage placements and the footer Editorial Monogram are complete; keep the monogram directly below the brand lockup and do not expand recommendations without conversion evidence.
 

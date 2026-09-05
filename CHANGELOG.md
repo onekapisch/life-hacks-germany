@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026-09-05
+
+- Full-site factual refresh:
+  - Updated the bilingual homepage fuel snapshot to ADAC's September 3 report for September 2: EUR 2.183/liter Super E10 and EUR 2.232/liter diesel.
+  - Corrected the 2026 GKV family-insurance income limits to EUR 565/month generally and EUR 603/month for marginal employment.
+  - Corrected the 2025 advised tax-return deadline to March 1, 2027 and clarified that the EUR 410 Pflichtveranlagung trigger is an annual total, not a monthly Elterngeld threshold.
+  - Removed stale local fare examples from the bilingual Deutschlandticket decision guides and replaced them with a current-provider calculation method.
+  - Updated Amazon Prime young-adult eligibility from ages 18–22 to 18–24, including the official six-month trial statement and an entry-specific verification timestamp.
+  - Re-verified the Deutschlandticket, Rundfunkbeitrag, Kindergeld, EU Blue Card, student blocked-account, and 2026 GKV baseline values against official sources.
+
 ## 2026-09-01
 
 - Replaced the noisy three-product homepage promotion with two situation-specific recommendations: Tank Alert within the verified fuel-price module and SkyLocation as the single companion card.
