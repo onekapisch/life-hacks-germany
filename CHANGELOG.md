@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026-09-07
+
+- Replaced the bilingual homepage fuel-price snapshot with ADAC-backed local price-comparison advice. The September 3 source gives conflicting September 2 Super E10 averages; no replacement price was inferred.
+- Dated the focused homepage advice check September 7 and recorded the unresolved figures in TODO.md. Shared offer verification dates remain unchanged.
+
 ## 2026-09-05
 
 - Full-site factual refresh:

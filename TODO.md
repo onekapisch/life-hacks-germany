@@ -1,6 +1,6 @@
 # TODO
 
-Audit date: `2026-09-05`
+Audit date: `2026-09-07`
 
 Cross-promotion audit date: `2026-09-01`. The intentionally limited Tank Alert and SkyLocation homepage placements and the footer Editorial Monogram are complete; keep the monogram directly below the brand lockup and do not expand recommendations without conversion evidence.
 
@@ -18,8 +18,10 @@ No inline `TODO` / `FIXME` / `XXX` markers were found in the active app code. Th
 
 ## Medium
 
+- Recheck ADAC fuel figures: the September 3 article gives both EUR 2.215 and EUR 2.183/liter for Super E10 on September 2. Homepage numerical snapshot removed pending unambiguous evidence; use current local prices.
+
 - Make the API CORS policy explicit. None of the public API routes in [`app/api/search/route.ts`](./app/api/search/route.ts), [`app/api/newsletter/route.ts`](./app/api/newsletter/route.ts), [`app/api/mobility-finder/route.ts`](./app/api/mobility-finder/route.ts), or [`app/api/og/route.tsx`](./app/api/og/route.tsx) set `Access-Control-*` headers.
-- Move time-sensitive homepage and offer freshness data out of route code. [`app/[lang]/page.tsx`](./app/[lang]/page.tsx) still hardcodes a weekly fuel-price snapshot, and [`lib/offers.ts`](./lib/offers.ts) applies one shared verification timestamp to all offer entries.
+- Move time-sensitive homepage and offer freshness data out of route code. [`app/[lang]/page.tsx`](./app/[lang]/page.tsx) still hardcodes the fuel-advice verification date, and [`lib/offers.ts`](./lib/offers.ts) still applies a shared verification timestamp to most offer entries.
 - Add a weekly source-health report for official and offer URLs so `403/429` anti-bot responses are separated from true link rot before publishing editorial updates.
 - Split the largest mixed-responsibility files. The heaviest current modules are:
   - [`app/[lang]/guides/[pillar]/[slug]/page.tsx`](./app/%5Blang%5D/guides/%5Bpillar%5D/%5Bslug%5D/page.tsx) at 1128 lines
