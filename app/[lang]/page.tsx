@@ -22,8 +22,8 @@ export async function generateMetadata({
     ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing & More"
     : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen & mehr";
   const metaDescription = l === "en"
-    ? "September 2026 verified Germany updates plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
-    : "September-2026-verifizierte Deutschland-Updates plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
+    ? "October 2026 verified Germany updates plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
+    : "Oktober-2026-verifizierte Deutschland-Updates plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
@@ -106,12 +106,12 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
         badge: "Spritpreis-Watch",
         title: "Spritpreise vor Ort vergleichen",
         body:
-          "Vergleiche vor dem Tanken die aktuellen Preise an Tankstellen in deiner Nähe. Laut ADAC-Auswertung ist kurz vor 12 Uhr meist der günstigste Tankzeitpunkt. Das ist ein Durchschnittsmuster, keine Preisgarantie für eine einzelne Tankstelle.",
+          "Laut BMF sinkt die Energiesteuer auf Benzin und Diesel vom 1. Oktober bis 31. Dezember 2026 um 14,04 Cent/Liter, mit Umsatzsteuereffekt um rund 17 Cent. Die Weitergabe an der Zapfsäule ist nicht garantiert. Weiterhin lokale Preise vergleichen; laut ADAC ist kurz vor 12 Uhr meist günstig.",
         stats: ["Preise vor Ort prüfen", "Kurz vor 12 Uhr vergleichen"],
-        lastChecked: "7. September 2026",
+        lastChecked: "19. Oktober 2026",
         sourcePrimary: {
-          label: "ADAC: aktuelle Spritpreis-Entwicklung",
-          href: "https://www.adac.de/news/aktueller-spritpreis/",
+          label: "BMF: befristete Energiesteuersenkung",
+          href: "https://www.bundesfinanzministerium.de/Content/DE/FAQ/energiesteuersenkung.html",
         },
         sourceSecondary: {
           label: "ADAC: neue Spritpreis-Regeln seit April 2026",
@@ -167,12 +167,12 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       badge: "Fuel Price Watch",
       title: "Compare fuel prices near you",
       body:
-        "Compare current prices at nearby stations before filling up. ADAC's analysis finds that shortly before noon is usually the cheapest time. This is an average pattern, not a price guarantee for an individual station.",
+        "BMF specifies a 14.04-cent/litre petrol and diesel energy-tax cut for October 1–December 31, 2026, roughly 17 cents including VAT. Pump-price pass-through is not guaranteed. Keep comparing local prices; ADAC finds shortly before noon is usually cheapest.",
       stats: ["Check local prices", "Compare shortly before noon"],
-      lastChecked: "September 7, 2026",
+      lastChecked: "October 19, 2026",
       sourcePrimary: {
-        label: "ADAC: current fuel-price trends",
-        href: "https://www.adac.de/news/aktueller-spritpreis/",
+        label: "BMF: temporary fuel-tax reduction",
+        href: "https://www.bundesfinanzministerium.de/Content/DE/FAQ/energiesteuersenkung.html",
       },
       sourceSecondary: {
         label: "ADAC: fuel-price timing rules since April 2026",
@@ -223,9 +223,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
   if (lang === "de") {
     return [
       {
-        href: "/de/blog/top-changes-germany-september-2026",
-        title: "September 2026: neue Deutschland-Änderungen",
-        note: "Lohnsteuerhilfe, Umweltwerbung und neue Regeln an DB-Bahnhöfen",
+        href: "/de/blog/top-changes-germany-october-2026",
+        title: "Oktober 2026: neue Deutschland-Änderungen",
+        note: "Digitales Führungszeugnis, PFHxA-Regeln, DB-Regeln und Kraftstoffsteuer",
       },
       {
         href: "/de/guides/bureaucracy/anmeldung",
@@ -252,9 +252,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
 
   return [
     {
-      href: "/en/blog/top-changes-germany-september-2026",
-      title: "September 2026 Germany Changes",
-      note: "Tax assistance, environmental advertising, and new DB station rules",
+      href: "/en/blog/top-changes-germany-october-2026",
+      title: "October 2026 Germany Changes",
+      note: "Digital certificates, PFHxA rules, DB rules, and fuel tax",
     },
     {
       href: "/en/guides/bureaucracy/anmeldung",

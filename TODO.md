@@ -1,6 +1,6 @@
 # TODO
 
-Audit date: `2026-09-07`
+Audit date: `2026-10-19`
 
 Cross-promotion audit date: `2026-09-01`. The intentionally limited Tank Alert and SkyLocation homepage placements and the footer Editorial Monogram are complete; keep the monogram directly below the brand lockup and do not expand recommendations without conversion evidence.
 
@@ -17,6 +17,8 @@ No inline `TODO` / `FIXME` / `XXX` markers were found in the active app code. Th
 - Resolve the partial newsletter implementation. [`components/EmailCapture.tsx`](./components/EmailCapture.tsx) exists, the home-page copy still references a newsletter, and [`app/api/newsletter/route.ts`](./app/api/newsletter/route.ts) is live, but the signup component is not mounted anywhere in the actual route tree.
 
 ## Medium
+
+- Recheck the fuel-tax expiry on December 31, residential-deposit refund/deduction claims, fuel-guide numerical assumptions, PFHxA phase-in details, and all remaining offer terms before advancing shared verification dates.
 
 - Recheck ADAC fuel figures: the September 3 article gives both EUR 2.215 and EUR 2.183/liter for Super E10 on September 2. Homepage numerical snapshot removed pending unambiguous evidence; use current local prices.
 

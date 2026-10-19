@@ -824,35 +824,35 @@ const offerDefinitions: OfferDefinition[] = [
   {
     id: "decathlon-membership",
     rank: 21,
-    brand: "Decathlon Membership",
+    brand: "Decathlon",
     category: "shopping",
     status: "ongoing",
-    officialUrl: "https://www.decathlon.de/MyDecathlon-LP-Account_lp-GAOG77",
-    verifiedAt: VERIFIED_AT,
+    officialUrl: "https://www.decathlon.de/lp/i/newsletter-anmeldung",
+    verifiedAt: "2026-09-28T09:00:00+02:00",
     copy: {
       en: {
-        title: "Decathlon Membership can save on sports and outdoor basics",
+        title: "Get a one-time 10% Decathlon newsletter welcome discount",
         summary:
-          "Decathlon Germany promotes membership benefits such as a newsletter welcome discount, app customer card, account-based receipts, exclusive offers, and easier returns.",
-        benefit: "One-time welcome discount plus member services and future exclusive offers.",
-        eligibility: "Decathlon account and, for the welcome discount, newsletter confirmation under Decathlon's conditions.",
+          "Decathlon offers 10% off eligible online purchases after your first confirmed newsletter signup, capped at EUR 75.",
+        benefit: "10% online welcome discount, up to EUR 75.",
+        eligibility: "First newsletter signup and confirmation; repeated subscriptions do not qualify again.",
         whyItMatters:
-          "Sports gear, bikes, backpacks, and kids' equipment can be large one-off purchases where a verified member discount matters.",
+          "Sports gear, bikes, backpacks, and kids' equipment can be large one-off purchases where a welcome discount can help.",
         watchouts: [
-          "The welcome discount is one-time, online-only, time-limited, and excludes marketplace or reduced items.",
+          "Code arrives by email within one week after confirmation and is valid for two weeks after receipt. Online only; excludes marketplace and reduced items; cannot be combined with other promotions.",
           "Do not join just for coupons if you are not already planning a sports purchase.",
         ],
       },
       de: {
-        title: "Decathlon Membership kann bei Sport- und Outdoor-Basics sparen",
+        title: "Einmalig 10 Prozent Decathlon-Willkommensrabatt per Newsletter",
         summary:
-          "Decathlon Deutschland bewirbt Membership-Vorteile wie Newsletter-Willkommensrabatt, App-Kundenkarte, accountbasierte Bons, exklusive Angebote und einfachere Retouren.",
-        benefit: "Einmaliger Willkommensrabatt plus Member-Services und künftige exklusive Angebote.",
-        eligibility: "Decathlon Konto und für den Willkommensrabatt Newsletter-Bestätigung nach Decathlon-Bedingungen.",
+          "Decathlon bietet nach der ersten bestätigten Newsletter-Anmeldung 10 Prozent Rabatt auf berechtigte Onlinekäufe, maximal 75 EUR.",
+        benefit: "10 Prozent Online-Willkommensrabatt, maximal 75 EUR.",
+        eligibility: "Erste Newsletter-Anmeldung und Bestätigung; wiederholtes Abonnieren berechtigt nicht erneut zum Rabatt.",
         whyItMatters:
-          "Sportausrüstung, Fahrradzubehör, Rucksäcke und Kinder-Equipment sind oft größere Einzelkäufe, bei denen ein verifizierter Member-Rabatt zählt.",
+          "Sportausrüstung, Fahrradzubehör, Rucksäcke und Kinder-Equipment sind oft größere Einzelkäufe, bei denen ein Willkommensrabatt helfen kann.",
         watchouts: [
-          "Der Willkommensrabatt ist einmalig, nur online, zeitlich begrenzt und nicht für Marktplatz- oder reduzierte Artikel gültig.",
+          "Code per E-Mail spätestens eine Woche nach Bestätigung, gültig für zwei Wochen ab Erhalt. Nur online; keine Marktplatz- oder reduzierten Artikel; nicht mit anderen Rabattaktionen kombinierbar.",
           "Nur wegen Coupons anmelden lohnt sich nicht, wenn kein Sportkauf geplant ist.",
         ],
       },

@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## 2026-10-19
+
+- Published bilingual October 2026 updates using Federal Government, Federal Environment Agency, Deutsche Bahn, and BMF sources: digital certificates of conduct, product-specific PFHxA restrictions, the now-effective DB station alcohol-consumption ban, and the continuing temporary fuel-tax reduction.
+- Corrected the September DB update after DB confirmed the nationwide alcohol-consumption rule applies at all 5,700 DB stations from October 15.
+- Removed the unsupported claim that a pending foreign-driving-licence exchange application preserves the right to drive after the statutory six-month period; both language guides now direct readers to the local authority for any exception or extension.
+- Refreshed homepage metadata, the featured monthly route, and time-sensitive fuel advice check date.
+
+## 2026-10-05
+
+- Replaced the fragile direct PIN-reset-letter link in the EN/DE online-registration guides with the current official AusweisApp provider-list entry. The guidance now states the German-address condition, avoids an unsupported delivery-time promise, and keeps the responsible ID-card authority as the fallback.
+- Made the bilingual Top Offers sitemap timestamp derive from the newest entry-specific verification date instead of the stale June 6 constant.
+
+## 2026-09-28
+
+- Updated EN/DE September posts and homepage with BMF’s September 25 fuel-tax FAQ: 14.04 cents/litre for October 1–December 31; approximately 17 cents including VAT, without guaranteed pump-price pass-through.
+- Updated environmental-advertising action wording after September 27 and added the environment ministry’s September 25 source.
+- Clarified actual employee GKV contributions versus annual reference and start-of-year averages; corrected MTS-K attribution in both fuel guides.
+- Replaced generic Decathlon membership copy with the verified newsletter offer, exact 10%/EUR 75 limit, validity and exclusions; updated only that entry’s verification date.
+- Aligned discovery copy and recorded remaining factual-review items. Shared offer verification dates remain unchanged.
+
 ## 2026-09-07
 
 - Replaced the bilingual homepage fuel-price snapshot with ADAC-backed local price-comparison advice. The September 3 source gives conflicting September 2 Super E10 averages; no replacement price was inferred.
