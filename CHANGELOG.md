@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-10-27
+
+- Added the bilingual October update on the Digital Identity Act after the Bundestag passed it on October 15. The copy keeps the EUDI wallet's January 2027 timing explicitly planned and does not present it as a current identification option.
+- Re-verified the priority 2026 facts against official sources: Deutschlandticket (€63/month), Rundfunkbeitrag (€18.36/month per dwelling), EU Blue Card thresholds (€50,700 / €45,934.20), Kindergeld (€259/month per child), statutory-health-insurance reference values, and the student blocked-account baseline (€11,904 / €992 monthly release).
+- Kept the shared Top Offers verification date unchanged because the full provider inventory was not independently rechecked.
+
 ## 2026-10-19
 
 - Published bilingual October 2026 updates using Federal Government, Federal Environment Agency, Deutsche Bahn, and BMF sources: digital certificates of conduct, product-specific PFHxA restrictions, the now-effective DB station alcohol-consumption ban, and the continuing temporary fuel-tax reduction.

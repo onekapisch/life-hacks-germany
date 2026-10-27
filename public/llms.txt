@@ -2,13 +2,13 @@
 > Verification-first practical guides for expats, students, workers, families, and locals living in Germany.
 > Languages: English at /en and German at /de
 > Contact: golifehacks@gmx.de
-> Updated: 2026-10-19
+> Updated: 2026-10-27
 
 ## About
 Life Hacks Germany publishes bilingual, official-source-backed guides for German bureaucracy, taxes, housing, mobility, and everyday life. The site is built for practical decisions: what changed, what to do next, which authority or official source to check, and what mistakes to avoid.
 
 ## High-priority current updates
-- [Top Changes in Germany: October 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-october-2026) — digital certificates of conduct, PFHxA restrictions, nationwide DB station alcohol rules, and temporary fuel-tax relief.
+- [Top Changes in Germany: October 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-october-2026) — digital identity developments, PFHxA restrictions, nationwide DB station alcohol rules, and temporary fuel-tax relief.
 - [Top-Aenderungen in Deutschland: Oktober 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-october-2026) — German version of the October 2026 monthly update.
 - [Top Changes in Germany: August 2026](https://www.lifehacksgermany.com/en/blog/top-changes-germany-august-2026) — all-day care, AI transparency, packaging rules, repair-right timing, pharmacy services, and verified household baselines.
 - [Top-Aenderungen in Deutschland: August 2026](https://www.lifehacksgermany.com/de/blog/top-changes-germany-august-2026) — German version of the August 2026 monthly update.
