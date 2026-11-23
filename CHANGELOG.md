@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2026-11-23
+
+- Weekly factual audit refresh:
+  - Added bilingual November 2026 monthly updates from the Federal Government's October 29 legal-change overview and Deutsche Bahn's official family-ticket page.
+  - Updated homepage metadata and monthly quick routes to the November update, and refreshed `public/llms.txt` for discoverability.
+  - Re-verified priority public baselines: Deutschlandticket is EUR 63 through December 2026 and EUR 66.80 from January 1, 2027; Rundfunkbeitrag is EUR 18.36/month; EU Blue Card thresholds remain EUR 50,700 / EUR 45,934.20 in 2026; the BMG reference additional contribution is 2.9% for 2026 and 2027.
+  - Kept Top Offers verification timestamps unchanged because the full provider inventory was not independently rechecked.
+
 ## 2026-10-27
 
 - Added the bilingual October update on the Digital Identity Act after the Bundestag passed it on October 15. The copy keeps the EUDI wallet's January 2027 timing explicitly planned and does not present it as a current identification option.

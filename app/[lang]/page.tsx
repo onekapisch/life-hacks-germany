@@ -22,8 +22,8 @@ export async function generateMetadata({
     ? "Life Hacks Germany 2026: Anmeldung, Taxes, Housing & More"
     : "Life Hacks Germany 2026: Anmeldung, Steuern, Wohnen & mehr";
   const metaDescription = l === "en"
-    ? "October 2026 verified Germany updates, including planned digital-ID changes, plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
-    : "Oktober-2026-verifizierte Deutschland-Updates einschließlich geplanter Digital-ID-Änderungen plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
+    ? "November 2026 verified Germany updates, plus practical guides for Anmeldung, ELSTER taxes, rent rules, transport, Kindergeld, and decision tools."
+    : "November-2026-verifizierte Deutschland-Updates plus praktische Guides zu Anmeldung, ELSTER, Mietregeln, Mobilität, Kindergeld und Entscheidungstools.";
   const social = createSocialMetadata({
     title: metaTitle,
     description: metaDescription,
@@ -223,9 +223,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
   if (lang === "de") {
     return [
       {
-        href: "/de/blog/top-changes-germany-october-2026",
-        title: "Oktober 2026: neue Deutschland-Änderungen",
-        note: "Digitale Identität, PFHxA-Regeln, DB-Regeln und Kraftstoffsteuer",
+        href: "/de/blog/top-changes-germany-november-2026",
+        title: "November 2026: neue Deutschland-Änderungen",
+        note: "Kleinkredite, DB-Familienticket, Zollgebühr und Deutschlandticket",
       },
       {
         href: "/de/guides/bureaucracy/anmeldung",
@@ -252,9 +252,9 @@ function getWeeklyQuickRoutes(lang: Lang): WeeklyQuickRoute[] {
 
   return [
     {
-      href: "/en/blog/top-changes-germany-october-2026",
-      title: "October 2026 Germany Changes",
-      note: "Digital identity, PFHxA rules, DB rules, and fuel tax",
+      href: "/en/blog/top-changes-germany-november-2026",
+      title: "November 2026 Germany Changes",
+      note: "Small loans, DB family ticket, customs charge, and Deutschlandticket",
     },
     {
       href: "/en/guides/bureaucracy/anmeldung",
