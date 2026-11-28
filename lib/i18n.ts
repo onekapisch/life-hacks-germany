@@ -9,6 +9,7 @@ export const siteConfig = {
   name: "Life Hacks Germany",
   domain: "https://www.lifehacksgermany.com",
   email: "golifehacks@gmx.de",
+  impressumEmail: "hello@onekapisch.com",
 };
 
 export const t = {

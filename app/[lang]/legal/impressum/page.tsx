@@ -106,10 +106,10 @@ export default async function ImpressumPage({
             <p className="text-ink-2 leading-relaxed m-0">
               E-Mail:{" "}
               <a
-                href={`mailto:${siteConfig.email}`}
+                href={`mailto:${siteConfig.impressumEmail}`}
                 className="text-accent-2 font-semibold hover:underline"
               >
-                {siteConfig.email}
+                {siteConfig.impressumEmail}
               </a>
             </p>
 
