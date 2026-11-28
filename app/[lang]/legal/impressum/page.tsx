@@ -14,6 +14,7 @@ function getImpressumContent(lang: Lang) {
         ? "Information pursuant to Section 5 DDG."
         : "Angaben gemäß Section 5 DDG.",
     company: "Aeon GbR",
+    phoneLabel: lang === "en" ? "Phone" : "Telefon",
     representatives:
       lang === "en"
         ? "Represented by the managing partners Sophia Schmieder and Kapish Bhardwaj."
@@ -109,6 +110,16 @@ export default async function ImpressumPage({
                 className="text-accent-2 font-semibold hover:underline"
               >
                 {siteConfig.email}
+              </a>
+            </p>
+
+            <p className="text-ink-2 leading-relaxed m-0">
+              {content.phoneLabel}:{" "}
+              <a
+                href="tel:+4915154096966"
+                className="text-accent-2 font-semibold hover:underline"
+              >
+                +49 1515 4096966
               </a>
             </p>
 

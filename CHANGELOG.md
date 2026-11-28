@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-11-28
+
+- Legal quick fixes:
+  - Added the phone number +49 1515 4096966 to the English and German Impressum, next to the email.
+  - The homepage product disclosure now names the maker by first name only ("Kapisch"). Aeon GbR stays named as Tank Alert's operator, and the Impressum keeps the full legal names.
+
 ## 2026-11-23
 
 - Weekly factual audit refresh:
