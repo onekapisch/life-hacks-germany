@@ -154,7 +154,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
       blogCta: "AI-Anwendungsfälle für Expats lesen",
       toolsCta: "Alle Smart-Life Tools ansehen",
       disclosure:
-        "Hinweis: Diese Produkte wurden von Kapisch Bhardwaj entwickelt. Tank Alert wird von Aeon GbR betrieben.",
+        "Hinweis: Diese Produkte wurden von Kapisch entwickelt. Tank Alert wird von Aeon GbR betrieben.",
     };
   }
 
@@ -215,7 +215,7 @@ function getSmartLifeSectionCopy(lang: Lang): SmartLifeSectionCopy {
     blogCta: "Read AI use cases for expats",
     toolsCta: "Explore all smart-life tools",
     disclosure:
-      "Disclosure: these products were built by Kapisch Bhardwaj. Tank Alert is operated by Aeon GbR.",
+      "Disclosure: these products were built by Kapisch. Tank Alert is operated by Aeon GbR.",
   };
 }
 
